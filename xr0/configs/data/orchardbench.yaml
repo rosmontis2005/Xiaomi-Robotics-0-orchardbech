@@ -1,0 +1,13 @@
+# @package _global_
+data:
+  type: OrchardBenchDataModule
+  params:
+    processor_path: ${oc.env:PROCESSOR_PATH}
+    num_workers: 2
+    train_datasets:
+      root: ${oc.env:DATASET_ROOT}
+      split: train
+      episode_ids: null
+      stats_path: ${oc.env:ORCHARD_STATS}
+      batch_size: 1
+      action_length: 30

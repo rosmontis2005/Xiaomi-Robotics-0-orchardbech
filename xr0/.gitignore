@@ -1,0 +1,7 @@
+# Local post-training environments and generated runtime caches.
+.venv-orchard/
+__pycache__/
+outputs/
+wandb/
+assets/config.py
+artifacts/orchardbench/runs/

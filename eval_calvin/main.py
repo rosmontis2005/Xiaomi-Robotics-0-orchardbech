@@ -9,12 +9,16 @@ import pickle
 import random
 import dataclasses
 import hashlib
+import time
 
 from datetime import datetime
 from multiprocessing import Manager, Pool
 from pathlib import Path
 
-os.environ["PYOPENGL_PLATFORM"] = "osmesa"
+if "--show-gui" in sys.argv:
+    os.environ.pop("PYOPENGL_PLATFORM", None)
+else:
+    os.environ.setdefault("PYOPENGL_PLATFORM", "osmesa")
 
 import hydra
 import tyro
@@ -68,6 +72,8 @@ class Args:
     # Parallel / debug settings
     #################################################################################################################
     debug: bool = False  # Print debug info and visualize environment.
+    show_gui: bool = False  # Show the native PyBullet GUI.
+    gui_step_sleep: float = 0.0  # Optional wall-clock delay after each environment step.
     num_workers: int = 8  # Number of multiprocessing workers per rank.
 
     #################################################################################################################
@@ -158,7 +164,7 @@ def random_crop(images, crop_ratio=0.98, center_crop=True):
     return [_crop(image, crop_ratio=crop_ratio, center_crop=center_crop) for image in images]
 
 
-def make_env(dataset_path: str):
+def make_env(dataset_path: str, show_gui: bool = False):
     """
     Create a CALVIN validation environment.
 
@@ -169,7 +175,7 @@ def make_env(dataset_path: str):
         A Gym-like CALVIN environment instance.
     """
     val_folder = Path(dataset_path) / "validation"
-    return make_calvin_env(val_folder, show_gui=False)
+    return make_calvin_env(val_folder, show_gui=show_gui)
 
 
 def get_eval_log_dir(args) -> str:
@@ -282,6 +288,8 @@ def evaluate_policy(
                 shared_results,
                 eval_sr_path,
                 rank,
+                local_idx,
+                len(eval_sequences),
             )
         )
 
@@ -298,8 +306,9 @@ def evaluate_policy(
                 result = future.get()
                 results.append(result)
     else:
+        debug_env = make_env(args.dataset_path, show_gui=args.show_gui)
         for job_args in jobs:
-            result = evaluate_sequence(*job_args)
+            result = evaluate_sequence(*job_args, env=debug_env)
             results.append(result)
 
     logger.info("Rank %d: finished evaluation of %d sequences (shared_results_len=%d).", rank, len(results), len(shared_results))
@@ -319,6 +328,9 @@ def evaluate_sequence(
     shared_results,
     eval_sr_path: str,
     rank: int,
+    sequence_i: int,
+    num_sequences: int,
+    env=None,
 ) -> int:
     """
     Evaluate a single multi-step instruction sequence.
@@ -345,17 +357,21 @@ def evaluate_sequence(
     Returns:
         Number of successfully completed subtasks in this sequence.
     """
-    # Each worker process creates its own env instance
-    env = make_env(args.dataset_path)
+    # Multiprocessing workers create their own env. Debug spectator mode reuses
+    # one env so the native GUI stays open between sequence resets.
+    if env is None:
+        env = make_env(args.dataset_path, show_gui=args.show_gui)
 
     robot_obs, scene_obs = get_env_state_for_initial_condition(initial_state)
     env.reset(robot_obs=robot_obs, scene_obs=scene_obs)
 
     success_counter = 0
     if debug:
-        print()
-        print(f"Evaluating sequence: {' -> '.join(eval_sequence)}")
-        print("Subtask: ", end="")
+        print("\n" + "=" * 64)
+        print(f"Sequence {sequence_i + 1} / {num_sequences}")
+        for task_i, task in enumerate(eval_sequence, start=1):
+            print(f"{task_i}. {task}")
+        print("=" * 64)
 
     # Evaluate subtasks in order; stop at first failure
     for subtask_i, subtask in enumerate(eval_sequence):
@@ -369,12 +385,20 @@ def evaluate_sequence(
             eval_log_dir=eval_log_dir,
             subtask_i=subtask_i,
             rank=rank,
+            sequence_i=sequence_i,
+            num_sequences=num_sequences,
+            num_subtasks=len(eval_sequence),
             lock=lock,
         )
         if success:
             success_counter += 1
         else:
             break
+
+    if debug:
+        print(f"Sequence completed length: {success_counter}/{len(eval_sequence)}", flush=True)
+        if sequence_i + 1 < num_sequences:
+            print("Moving to next sequence...", flush=True)
 
     # Update shared_results and log progress (protected by lock)
     with lock_list:
@@ -409,6 +433,9 @@ def rollout(
     eval_log_dir: str,
     subtask_i: int,
     rank: int,
+    sequence_i: int,
+    num_sequences: int,
+    num_subtasks: int,
     lock,
 ) -> bool:
     """
@@ -434,7 +461,10 @@ def rollout(
         True if the subtask was completed successfully, False otherwise.
     """
     if debug:
-        print(f"{subtask} ", end="")
+        print(
+            f"\n[Sequence {sequence_i + 1}/{num_sequences} | Task {subtask_i + 1}/{num_subtasks}] {subtask}",
+            flush=True,
+        )
         img_list = []
 
     obs = env.get_obs()
@@ -473,22 +503,32 @@ def rollout(
         # Step through each low-level action
         for single_action in action:
             obs, _, _, current_info = env.step(single_action)
+            if args.show_gui and args.gui_step_sleep > 0:
+                time.sleep(args.gui_step_sleep)
             if debug:
                 img_copy = copy.deepcopy(obs["rgb_obs"]["rgb_static"])
                 img_list.append(img_copy)
             current_task_info = task_oracle.get_task_info_for_set(start_info, current_info, {subtask})
             if len(current_task_info) > 0:
                 if debug:
-                    print(colored("success", "green"), end=" ")
+                    print(colored("SUCCESS", "green"), flush=True)
                     clip = ImageSequenceClip(img_list, fps=30)
-                    gif_path = Path(eval_log_dir) / "visualize" / f"{rank}-{subtask_i}-{subtask}-succ.gif"
+                    gif_path = (
+                        Path(eval_log_dir)
+                        / "visualize"
+                        / f"rank{rank}-seq{sequence_i + 1:04d}-task{subtask_i + 1}-{subtask}-succ.gif"
+                    )
                     clip.write_gif(str(gif_path), fps=30)
                 return True
 
     if debug:
-        print(colored("fail", "red"), end=" ")
+        print(colored("FAILED", "red"), flush=True)
         clip = ImageSequenceClip(img_list, fps=30)
-        gif_path = Path(eval_log_dir) / "visualize" / f"{rank}-{subtask_i}-{subtask}-fail.gif"
+        gif_path = (
+            Path(eval_log_dir)
+            / "visualize"
+            / f"rank{rank}-seq{sequence_i + 1:04d}-task{subtask_i + 1}-{subtask}-fail.gif"
+        )
         clip.write_gif(str(gif_path), fps=30)
     return False
 

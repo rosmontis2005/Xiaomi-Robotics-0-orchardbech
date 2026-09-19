@@ -44,7 +44,7 @@ def helper(cfg: DictConfig) -> Config:
 def strategy_helper(cfg: Config) -> Config:
     """Instantiate and attach the distributed training strategy.
 
-    Currently only DeepSpeed is supported.
+    Supports DeepSpeed and the native Lightning auto/DDP strategies.
 
     Args:
         cfg: The configuration object to modify in-place.
@@ -56,6 +56,8 @@ def strategy_helper(cfg: Config) -> Config:
     strategy_type: str = cfg.trainer.strategy.type
     if strategy_type == "deepspeed":
         strategy = DeepSpeedStrategy(**cfg.trainer.strategy.params)
+    elif strategy_type in ("auto", "ddp"):
+        strategy = strategy_type
     else:
         raise TypeError("Unsupported strategy.")
     cfg.trainer.strategy = strategy

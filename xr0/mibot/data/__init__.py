@@ -4,3 +4,5 @@
 from mibot.data.datamodule.base_datamodule import BaseDataModule
 
 __all__ = ["BaseDataModule"]
+
+from mibot.data.datamodule.orchardbench_datamodule import OrchardBenchDataModule

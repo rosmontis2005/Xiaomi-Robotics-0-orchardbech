@@ -1,0 +1,10 @@
+checkpoints/
+
+# External repositories / dependencies
+eval_calvin/calvin/
+eval_calvin/flower_vla_calvin/
+
+# Runtime-generated files
+deploy/__pycache__/
+logs/
+xr0/artifacts/

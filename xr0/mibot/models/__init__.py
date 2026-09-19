@@ -15,3 +15,5 @@ from mibot.models.runner.base_runner import BaseRunner
 from mibot.models.VLA.XR0 import XR0
 
 __all__ = ["BaseRunner", "XR0"]
+
+from mibot.models.runner.orchard_runner import OrchardRunner

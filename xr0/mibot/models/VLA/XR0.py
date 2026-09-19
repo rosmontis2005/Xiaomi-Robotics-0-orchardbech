@@ -8,7 +8,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.distributions import Beta, LogisticNormal
 
-from transformers import Qwen3VLTextConfig
 from transformers.activations import ACT2FN
 from transformers.models.qwen2.modeling_qwen2 import Qwen2RMSNorm, rotate_half
 from transformers.models.qwen3_vl.modeling_qwen3_vl import Qwen3VLTextRotaryEmbedding
@@ -416,8 +415,10 @@ class XR0(nn.Module):
         enable_freq: bool = False,
         prefix_mask_prob: float = 0.5,
         async_train: bool = False,
+        vlm_config_path: Optional[str] = None,
     ):
         super().__init__()
+        self.vlm_config_path = vlm_config_path
         self.state_shape = state_shape
         self.action_shape = action_shape
         self.dit_num_layers = dit_num_layers
@@ -439,9 +440,19 @@ class XR0(nn.Module):
     def _build_model(self) -> None:
         """Instantiate all sub-modules: VLM backbone, DiT head, projectors, and embeddings."""
         # VLM backbone
-        self.vlm = Qwen3VLForConditionalGeneration.from_pretrained(
-            "Qwen/Qwen3-VL-4B-Instruct", attn_implementation="flash_attention_2", dtype=torch.bfloat16
-        ).train()
+        if self.vlm_config_path:
+            # Build the official training architecture from a local HF XR-0 config.
+            # OrchardRunner immediately strictly loads ALL weights; no hub fallback.
+            import json
+            from pathlib import Path
+            from transformers import Qwen3VLConfig
+            config = Qwen3VLConfig(**json.loads(Path(self.vlm_config_path).read_text())["vlm_config"])
+            config._attn_implementation = "flash_attention_2"
+            self.vlm = Qwen3VLForConditionalGeneration(config).to(torch.bfloat16).train()
+        else:
+            self.vlm = Qwen3VLForConditionalGeneration.from_pretrained(
+                "Qwen/Qwen3-VL-4B-Instruct", attn_implementation="flash_attention_2", dtype=torch.bfloat16
+            ).train()
         self.vlm.model.get_input_embeddings().requires_grad_(False)
         self.vlm.model.visual.gradient_checkpointing_enable()
 
@@ -464,7 +475,7 @@ class XR0(nn.Module):
         self.t_projector = MLPProjector(input_dim=self.dit_hidden_size, output_dim=6 * self.dit_hidden_size, bias=True)
 
         # RoPE for DiT (same config as VLM)
-        self.rotary_emb = Qwen3VLTextRotaryEmbedding(Qwen3VLTextConfig.from_pretrained("Qwen/Qwen3-VL-4B-Instruct"))
+        self.rotary_emb = Qwen3VLTextRotaryEmbedding(self.vlm.config.text_config)
 
         # Sink token prepended to DiT input
         self.sink = nn.Embedding(1, self.dit_hidden_size)

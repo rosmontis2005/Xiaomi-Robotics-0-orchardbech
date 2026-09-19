@@ -10,7 +10,7 @@ export PYTHONPATH=$(pwd):${PYTHONPATH}
 
 set -e -x
 
-torchrun \
+"${PYTHON_BIN:-python}" -m torch.distributed.run \
     --nnodes=$MLP_WORKER_NUM \
     --node_rank=$MLP_ROLE_INDEX \
     --nproc_per_node=$MLP_WORKER_GPU \
