@@ -1,0 +1,28 @@
+M0 固定数据概况（selection revision 2）
+此文件只汇总已冻结清单；未重新筛样本、解码视频、修改 selection/cache/source，亦未启动新实验。
+最终 selection SHA256: b4ac020fd2be3bf679f7e47f19132e5938195f5545c31da5d95a33bed74e12c6
+
+8 train + 8 val，每条10个唯一真实完整窗口，共80 train / 80 val。episode与seed跨split均不重叠。val沿用原split，并排除先前诊断episode_000010/000020/000030/000040。
+每窗保留原30目标、固定anchor、原action contract与同一train stats；阶段按physics trace frame/60对齐30Hz timestamps。以下为anchor phase，不代表30个未来目标全部处于同一阶段。
+共同准入：既有strict GT replay PASS、IK失败0、dwell timeout0，初始raw best-view目标可见像素>=128；再以方向、距离、高度及像素规模做确定性覆盖。没有使用模型表现筛选。
+
+train:
+episode_id / seed: episode_001319 / 2013322, episode_000023 / 2010054, episode_000613 / 2011476, episode_000974 / 2012376, episode_001796 / 2014461, episode_000703 / 2011728, episode_001129 / 2012769, episode_001212 / 2012997
+anchor counts: REACH=24, GRASP=29, PULL=19, TRANSPORT=8, DROP=0; REACH+GRASP=66.25%。
+reset frame0=8（10%）；前5 anchor frames 0–4=17。reset属于REACH，分类有重叠。
+初始raw best-view可见像素范围 132–232；reset TCP到专家目标距离约 0.257–0.392 m；目标世界高度 0.984–1.143 m；世界接近方位角 -164.2°–150.7°。
+
+val:
+episode_id / seed: episode_000380 / 2010914, episode_002440 / 2016063, episode_000210 / 2010502, episode_000430 / 2011031, episode_001020 / 2012485, episode_002430 / 2016038, episode_000630 / 2011527, episode_000110 / 2010257
+anchor counts: REACH=24, GRASP=31, PULL=17, TRANSPORT=8, DROP=0; REACH+GRASP=68.75%。
+reset frame0=8（10%）；前5 anchor frames 0–4=17。reset属于REACH，分类有重叠。
+初始raw best-view可见像素范围 128–221；reset TCP到专家目标距离约 0.241–0.390 m；目标世界高度 0.987–1.158 m；世界接近方位角 -165.9°–159.5°。
+
+前段窗口覆盖reset、early reach、GRASP进入/中段、宽度关闭参考之前/起点/之后，另有少量PULL和TRANSPORT。最终16条均不需要重复窗口或缺失landmark补位，没有虚构阶段；每个窗口满足frame<=num_frames-30。关闭参考来自原width-intent方法逐专家30Hz目标计算，不能当作reach执行时刻。
+
+校验：selection_validation.json PASS；32路视频已完整解码，共6766个双视角视频帧，各自与JSON num_frames及30FPS一致；原RGB为192x144，实际prepare_rgb为192x128。next-state逐帧对齐、归一化契约、有限值、动作encode/decode往返全部PASS。原stats SHA未变，不为这16条重算stats。
+四个闭环诊断场景固定为train 2013322、2014461及val 2010914、2012485；视觉修订前后完全相同。
+
+模型运行前的视觉修订：train episode_000656→000613、000598→001129。排除理由为实际预处理图像中的边缘截断/视觉歧义，不宣称目标完全不可见；替代候选在保留六条train的条件下按原几何尺度farthest-point顺序产生，raw best-view>=160。8 val保持不变。初版script、清单、校验与联系图保留于pre_visual_review。root已在模型运行前目视两overview及六张单episode联系图并接受M0用途。
+
+限制：这是可观察易例开发小集，不能估计自然场景成功率，也不改变自然新seed测试的纳入规则。raw可见像素并非crop后分割计数或VLM可辨识性证明；接受样本不意味着果实居中、无遮挡或已精确视觉确认fruit ID。613保留下沿截断，1129有局部叶遮挡，val210/2430保留边缘/多果歧义。RGB视频经过压缩，其decoded像素hash不能直接等同仿真raw reset RGB hash。几何覆盖数值由既有专家trace/stance计算，仅表示样本覆盖。

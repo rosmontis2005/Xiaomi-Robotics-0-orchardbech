@@ -1,0 +1,7 @@
+D1 fixed5mm acceptance/reach pilot: COMPLETE
+GT_pos5mm n=4; D0 held15/strict=4/4; D1=4/4; D1 extra5to10mm candidates/held-arm=0/0
+B_pos5mm n=4; D0 held15/strict=2/0; D1=2/0; D1 extra5to10mm candidates/held-arm=194/194
+D1 changes both IK result acceptance and actual reach position threshold10mm to5mm; solver32iterations and objective weights unchanged.
+Recorded IK_failed in D0 and D1 uses different thresholds; residual bins and held command counts are reported explicitly.
+Ideal FK residual and measured servo target tracking error are distinct.
+Four predeclared diagnostic scenes are not an unbiased success-rate estimate; no automatic expansion follows failed GT control.

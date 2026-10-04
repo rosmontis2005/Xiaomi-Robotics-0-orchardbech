@@ -1,0 +1,24 @@
+B8000 vs L8000配对离线分析
+原240与新增144分别报告；联合335已去重49，两个模型重叠NPZ逐array完全一致。
+负的L−B表示误差降低。单位position m、rotation rad、width m。这里只报告预测误差，不构成抓持或释放成功。
+
+original240 / combined_val / contact_event / first5:
+  position_error_m: scene-equal B=0.0348722, L=0.0360521, delta=+0.00117984; better/worse=2/14 of 16
+  rotation_error_rad: scene-equal B=0.0682971, L=0.073091, delta=+0.0047939; better/worse=0/16 of 16
+  width_error_m: scene-equal B=0.00554621, L=0.00579391, delta=+0.000247696; better/worse=3/13 of 16
+original240 / combined_val / contact_event / first30:
+  position_error_m: scene-equal B=0.0503732, L=0.0520275, delta=+0.00165436; better/worse=2/14 of 16
+  rotation_error_rad: scene-equal B=0.0867556, L=0.0930791, delta=+0.00632345; better/worse=0/16 of 16
+  width_error_m: scene-equal B=0.00616525, L=0.0064676, delta=+0.000302354; better/worse=2/14 of 16
+auxiliary144 / combined_val / contact_event / first5:
+  position_error_m: scene-equal B=0.0342974, L=0.0357887, delta=+0.00149133; better/worse=3/13 of 16
+  rotation_error_rad: scene-equal B=0.0669469, L=0.0720243, delta=+0.00507739; better/worse=0/16 of 16
+  width_error_m: scene-equal B=0.00591454, L=0.00588945, delta=-2.50919e-05; better/worse=6/10 of 16
+auxiliary144 / combined_val / DROP / first30:
+  position_error_m: scene-equal B=0.0397361, L=0.0305443, delta=-0.00919182; better/worse=14/2 of 16
+  rotation_error_rad: scene-equal B=0.114788, L=0.0962092, delta=-0.0185791; better/worse=13/3 of 16
+  width_error_m: scene-equal B=0.00485847, L=0.00396362, delta=-0.000894847; better/worse=13/3 of 16
+auxiliary144 / combined_val / DONE / first30:
+  position_error_m: scene-equal B=0.048909, L=0.0223362, delta=-0.0265727; better/worse=13/3 of 16
+  rotation_error_rad: scene-equal B=0.125594, L=0.100855, delta=-0.0247391; better/worse=6/10 of 16
+  width_error_m: scene-equal B=0.0106215, L=0.0100068, delta=-0.000614767; better/worse=7/9 of 16

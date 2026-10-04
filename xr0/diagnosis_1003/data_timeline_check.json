@@ -1,0 +1,429 @@
+{
+  "schema": "orchard_training_timeline_check_1003_v1",
+  "scope": "Only the 4 fixed offline train episodes and 3 GT diagnostic val episodes; no broader data audit.",
+  "official_execution_policy": "reach-conditioned; time-indexed is only a negative control and is not proposed as deployment policy.",
+  "finding": "All 7 checked filtered annotations are symlinks resolving to original raw JSON. Their original 30Hz expert RGB, proprioception, next-measured-state actions and timestamps are unchanged. In these actual training inputs, reach conditioning is represented by replay acceptance and the execution protocol, not by inserting student wait observations/labels or resampling to the student clock.",
+  "caveat": "This does not mean the dataset was not organized according to reach-conditioned replay: it was filtered by that criterion. The distinction is successful reach-conditioned trajectory screening versus recording the observations seen during student waits. No conclusion here requires replacing the official reach-conditioned policy.",
+  "sources": {
+    "dataset_loader": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/datasets/orchardbench_dataset.py:117",
+    "collector_next_state_actions": "/home/rosmontis/Projects/orchardbench/scripts/collect_autopicker_dataset.py:466",
+    "filtered_manifest": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/manifest.jsonl"
+  },
+  "aggregate": {
+    "train": {
+      "episodes": 4,
+      "symlink_to_original_raw": 4,
+      "total_recorded_frames": 845,
+      "total_full_windows": 729,
+      "expert_duration_s": [
+        7.4666666666666455,
+        6.6999999999999815,
+        7.299999999999979,
+        6.566666666666649
+      ],
+      "historical_student_replay_control_steps": [
+        494,
+        507,
+        490,
+        494
+      ]
+    },
+    "val": {
+      "episodes": 3,
+      "symlink_to_original_raw": 3,
+      "total_recorded_frames": 645,
+      "total_full_windows": 558,
+      "expert_duration_s": [
+        7.233333333333313,
+        7.399999999999979,
+        6.766666666666648
+      ],
+      "historical_student_replay_control_steps": [
+        489,
+        516,
+        573
+      ]
+    }
+  },
+  "episodes": [
+    {
+      "split": "train",
+      "episode_id": "episode_000001",
+      "seed": 2010004,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000001.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000001.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000001.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000001.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "a2e5bbf7a43ed9c02e8ffbfdb20bcc656745e50556beadcbea1c850c219db5ea",
+      "num_frames": 225,
+      "full_30_target_windows": 196,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 7.4666666666666455,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.033333333333333236,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000001_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000001_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 202,
+        "total_targets": 225,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 164,
+        "control_steps": 494,
+        "sim_duration": 16.466666666667013
+      }
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000002",
+      "seed": 2010006,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000002.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000002.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000002.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000002.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "9a5bdfe53655150879e0b39338018f98a7f3ee9d9e5e4dee6a982961bf3ff867",
+      "num_frames": 202,
+      "full_30_target_windows": 173,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 6.6999999999999815,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.03333333333333324,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000002_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000002_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 175,
+        "total_targets": 202,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 189,
+        "control_steps": 507,
+        "sim_duration": 16.900000000000322
+      }
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000003",
+      "seed": 2010007,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000003.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000003.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000003.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000003.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "4362c32701e6541dea3ca8d024e43b94066f65b82c6768213fae97456ea42cff",
+      "num_frames": 220,
+      "full_30_target_windows": 191,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 7.299999999999979,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.03333333333333324,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000003_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000003_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 199,
+        "total_targets": 220,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 128,
+        "control_steps": 490,
+        "sim_duration": 16.333333333333687
+      }
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000004",
+      "seed": 2010014,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000004.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000004.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000004.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/train/episode_000004.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "17de409229630462e1e265481a3783c21935cfe5c75d7833c0c55375d3097a87",
+      "num_frames": 198,
+      "full_30_target_windows": 169,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 6.566666666666649,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.03333333333333324,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000004_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000004_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 172,
+        "total_targets": 198,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 213,
+        "control_steps": 494,
+        "sim_duration": 16.466666666667013
+      }
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000010",
+      "seed": 2010027,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000010.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000010.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000010.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000010.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "9551961020b203f1605071b83791f0a1e9991f667fa6a46b7bdbe646af64c5f3",
+      "num_frames": 218,
+      "full_30_target_windows": 189,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 7.233333333333313,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.03333333333333324,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000010_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000010_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 197,
+        "total_targets": 218,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 148,
+        "control_steps": 489,
+        "sim_duration": 16.300000000000356
+      },
+      "current_gt_reach_conditioned": {
+        "summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/diagnosis_1003/rollouts/gt_reach-conditioned_2010027/summary.json",
+        "success": true,
+        "control_steps": 489,
+        "student_elapsed_sim_s": 16.300000000000356,
+        "final_target_index": 197,
+        "unique_targets_commanded": 198,
+        "hold_control_steps": 291,
+        "original_expert_time_of_final_command_target_s": 6.599999999999982,
+        "student_vs_original_time_at_final_target_ratio": 2.4696969696970306,
+        "dwell_timeouts": 0
+      }
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000020",
+      "seed": 2010042,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000020.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000020.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000020.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000020.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "ba4171c5f72e6c46a7663cb1cb3bff4d22316aa23ed158fbecf1ec30a76bf199",
+      "num_frames": 223,
+      "full_30_target_windows": 194,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 7.399999999999979,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.033333333333333236,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000020_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000020_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 202,
+        "total_targets": 223,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 144,
+        "control_steps": 516,
+        "sim_duration": 17.200000000000305
+      },
+      "current_gt_reach_conditioned": {
+        "summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/diagnosis_1003/rollouts/gt_reach-conditioned_2010042/summary.json",
+        "success": true,
+        "control_steps": 516,
+        "student_elapsed_sim_s": 17.200000000000305,
+        "final_target_index": 202,
+        "unique_targets_commanded": 203,
+        "hold_control_steps": 313,
+        "original_expert_time_of_final_command_target_s": 6.766666666666648,
+        "student_vs_original_time_at_final_target_ratio": 2.541871921182318,
+        "dwell_timeouts": 0
+      }
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000030",
+      "seed": 2010067,
+      "filtered_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000030.json",
+      "raw_annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000030.json",
+      "filtered_is_symlink": true,
+      "filtered_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000030.json",
+      "raw_resolved_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/json/val/episode_000030.json",
+      "same_resolved_file": true,
+      "whole_json_equal": true,
+      "annotation_sha256": "d6fe9501de973e4fa00ac3142f68a25471315f429c624966bcf753c266e23ad0",
+      "num_frames": 204,
+      "full_30_target_windows": 175,
+      "record_fps": 30,
+      "first_timestamp_s": 0.0,
+      "last_timestamp_s": 6.766666666666648,
+      "timestamp_interval_s": {
+        "min": 0.033333333333333215,
+        "max": 0.03333333333333366,
+        "mean": 0.03333333333333324,
+        "all_30hz": true
+      },
+      "filtered_video_paths": {
+        "ego": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000030_ego.mp4",
+        "wrist_left": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/raw/videos/episode_000030_wrist_left.mp4"
+      },
+      "same_videos_as_raw": true,
+      "action_is_shifted_next_measured_state": {
+        "ee_pos": true,
+        "ee_rotm": true,
+        "arm_joint": true,
+        "gripper_pos": true
+      },
+      "historical_replay_filter": {
+        "final_phase": "DROP",
+        "final_target_index": 177,
+        "total_targets": 204,
+        "termination_reason": "strict_bucket_success",
+        "grasped": true,
+        "detached": true,
+        "dwell_timeout_count": 0,
+        "forced_advancement_count": 0,
+        "IK_failed_steps": 0,
+        "clipped_steps": 309,
+        "control_steps": 573,
+        "sim_duration": 19.100000000000197
+      },
+      "current_gt_reach_conditioned": {
+        "summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/diagnosis_1003/rollouts/gt_reach-conditioned_2010067/summary.json",
+        "success": true,
+        "control_steps": 572,
+        "student_elapsed_sim_s": 19.066666666666865,
+        "final_target_index": 177,
+        "unique_targets_commanded": 178,
+        "hold_control_steps": 395,
+        "original_expert_time_of_final_command_target_s": 5.933333333333318,
+        "student_vs_original_time_at_final_target_ratio": 3.2134831460674578,
+        "dwell_timeouts": 0
+      }
+    }
+  ]
+}

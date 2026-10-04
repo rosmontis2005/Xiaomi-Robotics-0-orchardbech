@@ -1,0 +1,939 @@
+{
+  "schema": "orchard_offline_probe_1003_v1",
+  "contract": "orchard_cartesian_local_rotvec_width_v1",
+  "model_seed": 42,
+  "dataset_root": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered",
+  "stats_path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/action_stats.json",
+  "stats_sha256": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371",
+  "source_sha256": {
+    "/home/rosmontis/Projects/orchardbench/treesim/orchard_action.py": "1e54d88994d9f001b2a3db82526561a9eaee38da5a43d51db7edd952d7df3866",
+    "/home/rosmontis/Projects/orchardbench/treesim/vla_env.py": "2731a4d747d9c6fbecd37db8ce2c8367b94f2b1a5c196bd0243c65a4a0635c57",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/server/orchard_policy.py": "737781475659df77c265841b222e3f6724d14aa29c987986226b56178febc0e7",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/datasets/orchardbench_dataset.py": "50a0bcb8775e961a79dbdffba9ef8556fe10aa7902fc824fc51034ee3cf7fb33"
+  },
+  "selection_rule": "Fixed episode IDs, then 10 deterministic phase windows; no model results consulted.",
+  "phase_mapping": "physics_frame/60 -> first recorded timestamps >= event_time - 1e-7; trace sim_time is rounded.",
+  "intent_reference": {
+    "constants": {
+      "gripper_open_width": 0.075,
+      "gripper_open_steps": 5,
+      "gripper_close_deadband": 0.001
+    },
+    "source_method": "treesim.vla_env.OrchardVLAEnv._update_width_intent (AST extracted unchanged)",
+    "interpretation": "Proxy from clipped expert measured-width targets, one target per 30Hz step; historical reference from episode reset. Not expert intent or reach-conditioned execution."
+  },
+  "episodes": [
+    {
+      "split": "train",
+      "episode_id": "episode_000001",
+      "seed": 2010004,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000001.json",
+      "annotation_sha256": "a2e5bbf7a43ed9c02e8ffbfdb20bcc656745e50556beadcbea1c850c219db5ea",
+      "num_frames": 225,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 14,
+          "event_time_s": 0.23333333333333334,
+          "recorded_frame": 7,
+          "mapped_time_s": 0.2333333333333333
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 30,
+          "event_time_s": 0.5,
+          "recorded_frame": 15,
+          "mapped_time_s": 0.49999999999999994
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 136,
+          "event_time_s": 2.2666666666666666,
+          "recorded_frame": 68,
+          "mapped_time_s": 2.2666666666666635
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 384,
+          "event_time_s": 6.4,
+          "recorded_frame": 192,
+          "mapped_time_s": 6.399999999999983
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 444,
+          "event_time_s": 7.4,
+          "recorded_frame": 222,
+          "mapped_time_s": 7.399999999999979
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 5,
+          "time_s": 0.16666666666666666,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 7,
+          "time_s": 0.2333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 9,
+          "time_s": 0.3,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 13,
+          "time_s": 0.4333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 15,
+          "time_s": 0.49999999999999994,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 18,
+          "time_s": 0.6000000000000002,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 68,
+          "time_s": 2.2666666666666635,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 130,
+          "time_s": 4.333333333333323,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 192,
+          "time_s": 6.399999999999983,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000002",
+      "seed": 2010006,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000002.json",
+      "annotation_sha256": "9a5bdfe53655150879e0b39338018f98a7f3ee9d9e5e4dee6a982961bf3ff867",
+      "num_frames": 202,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 16,
+          "event_time_s": 0.26666666666666666,
+          "recorded_frame": 8,
+          "mapped_time_s": 0.26666666666666666
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 32,
+          "event_time_s": 0.5333333333333333,
+          "recorded_frame": 16,
+          "mapped_time_s": 0.5333333333333333
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 135,
+          "event_time_s": 2.25,
+          "recorded_frame": 68,
+          "mapped_time_s": 2.2666666666666635
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 337,
+          "event_time_s": 5.616666666666666,
+          "recorded_frame": 169,
+          "mapped_time_s": 5.633333333333319
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 397,
+          "event_time_s": 6.616666666666666,
+          "recorded_frame": 199,
+          "mapped_time_s": 6.633333333333315
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 6,
+          "time_s": 0.19999999999999998,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 8,
+          "time_s": 0.26666666666666666,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 10,
+          "time_s": 0.3333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 14,
+          "time_s": 0.4666666666666666,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 16,
+          "time_s": 0.5333333333333333,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 19,
+          "time_s": 0.6333333333333336,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 68,
+          "time_s": 2.2666666666666635,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 118,
+          "time_s": 3.9333333333333242,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 169,
+          "time_s": 5.633333333333319,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000003",
+      "seed": 2010007,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000003.json",
+      "annotation_sha256": "4362c32701e6541dea3ca8d024e43b94066f65b82c6768213fae97456ea42cff",
+      "num_frames": 220,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 12,
+          "event_time_s": 0.2,
+          "recorded_frame": 6,
+          "mapped_time_s": 0.19999999999999998
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 28,
+          "event_time_s": 0.4666666666666667,
+          "recorded_frame": 14,
+          "mapped_time_s": 0.4666666666666666
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 126,
+          "event_time_s": 2.1,
+          "recorded_frame": 63,
+          "mapped_time_s": 2.0999999999999974
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 374,
+          "event_time_s": 6.233333333333333,
+          "recorded_frame": 187,
+          "mapped_time_s": 6.2333333333333165
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 434,
+          "event_time_s": 7.233333333333333,
+          "recorded_frame": 217,
+          "mapped_time_s": 7.233333333333313
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 4,
+          "time_s": 0.13333333333333333,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 6,
+          "time_s": 0.19999999999999998,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 8,
+          "time_s": 0.26666666666666666,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 12,
+          "time_s": 0.39999999999999997,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 14,
+          "time_s": 0.4666666666666666,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 17,
+          "time_s": 0.5666666666666668,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 63,
+          "time_s": 2.0999999999999974,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 125,
+          "time_s": 4.166666666666657,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 187,
+          "time_s": 6.2333333333333165,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000004",
+      "seed": 2010014,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000004.json",
+      "annotation_sha256": "17de409229630462e1e265481a3783c21935cfe5c75d7833c0c55375d3097a87",
+      "num_frames": 198,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 16,
+          "event_time_s": 0.26666666666666666,
+          "recorded_frame": 8,
+          "mapped_time_s": 0.26666666666666666
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 32,
+          "event_time_s": 0.5333333333333333,
+          "recorded_frame": 16,
+          "mapped_time_s": 0.5333333333333333
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 129,
+          "event_time_s": 2.15,
+          "recorded_frame": 65,
+          "mapped_time_s": 2.166666666666664
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 329,
+          "event_time_s": 5.483333333333333,
+          "recorded_frame": 165,
+          "mapped_time_s": 5.499999999999986
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 389,
+          "event_time_s": 6.483333333333333,
+          "recorded_frame": 195,
+          "mapped_time_s": 6.499999999999982
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 6,
+          "time_s": 0.19999999999999998,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 8,
+          "time_s": 0.26666666666666666,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 10,
+          "time_s": 0.3333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 14,
+          "time_s": 0.4666666666666666,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 16,
+          "time_s": 0.5333333333333333,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 19,
+          "time_s": 0.6333333333333336,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 65,
+          "time_s": 2.166666666666664,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 115,
+          "time_s": 3.8333333333333246,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 165,
+          "time_s": 5.499999999999986,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000010",
+      "seed": 2010027,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000010.json",
+      "annotation_sha256": "9551961020b203f1605071b83791f0a1e9991f667fa6a46b7bdbe646af64c5f3",
+      "num_frames": 218,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 13,
+          "event_time_s": 0.21666666666666667,
+          "recorded_frame": 7,
+          "mapped_time_s": 0.2333333333333333
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 28,
+          "event_time_s": 0.4666666666666667,
+          "recorded_frame": 14,
+          "mapped_time_s": 0.4666666666666666
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 121,
+          "event_time_s": 2.0166666666666666,
+          "recorded_frame": 61,
+          "mapped_time_s": 2.033333333333331
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 369,
+          "event_time_s": 6.15,
+          "recorded_frame": 185,
+          "mapped_time_s": 6.16666666666665
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 429,
+          "event_time_s": 7.15,
+          "recorded_frame": 215,
+          "mapped_time_s": 7.1666666666666465
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 5,
+          "time_s": 0.16666666666666666,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 7,
+          "time_s": 0.2333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 9,
+          "time_s": 0.3,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 12,
+          "time_s": 0.39999999999999997,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 14,
+          "time_s": 0.4666666666666666,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 17,
+          "time_s": 0.5666666666666668,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 61,
+          "time_s": 2.033333333333331,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 123,
+          "time_s": 4.099999999999991,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 185,
+          "time_s": 6.16666666666665,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000020",
+      "seed": 2010042,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000020.json",
+      "annotation_sha256": "ba4171c5f72e6c46a7663cb1cb3bff4d22316aa23ed158fbecf1ec30a76bf199",
+      "num_frames": 223,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 14,
+          "event_time_s": 0.23333333333333334,
+          "recorded_frame": 7,
+          "mapped_time_s": 0.2333333333333333
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 29,
+          "event_time_s": 0.48333333333333334,
+          "recorded_frame": 15,
+          "mapped_time_s": 0.49999999999999994
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 132,
+          "event_time_s": 2.2,
+          "recorded_frame": 66,
+          "mapped_time_s": 2.199999999999997
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 380,
+          "event_time_s": 6.333333333333333,
+          "recorded_frame": 190,
+          "mapped_time_s": 6.333333333333316
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 440,
+          "event_time_s": 7.333333333333333,
+          "recorded_frame": 220,
+          "mapped_time_s": 7.333333333333313
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 5,
+          "time_s": 0.16666666666666666,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 7,
+          "time_s": 0.2333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 9,
+          "time_s": 0.3,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 13,
+          "time_s": 0.4333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 15,
+          "time_s": 0.49999999999999994,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 18,
+          "time_s": 0.6000000000000002,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 66,
+          "time_s": 2.199999999999997,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 128,
+          "time_s": 4.266666666666657,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 190,
+          "time_s": 6.333333333333316,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000030",
+      "seed": 2010067,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000030.json",
+      "annotation_sha256": "d6fe9501de973e4fa00ac3142f68a25471315f429c624966bcf753c266e23ad0",
+      "num_frames": 204,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 38,
+          "event_time_s": 0.6333333333333333,
+          "recorded_frame": 19,
+          "mapped_time_s": 0.6333333333333336
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 58,
+          "event_time_s": 0.9666666666666667,
+          "recorded_frame": 29,
+          "mapped_time_s": 0.966666666666668
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 143,
+          "event_time_s": 2.3833333333333333,
+          "recorded_frame": 72,
+          "mapped_time_s": 2.3999999999999964
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 342,
+          "event_time_s": 5.7,
+          "recorded_frame": 171,
+          "mapped_time_s": 5.699999999999985
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 402,
+          "event_time_s": 6.7,
+          "recorded_frame": 201,
+          "mapped_time_s": 6.6999999999999815
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 17,
+          "time_s": 0.5666666666666668,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 19,
+          "time_s": 0.6333333333333336,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 21,
+          "time_s": 0.7000000000000005,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 27,
+          "time_s": 0.9000000000000011,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 29,
+          "time_s": 0.966666666666668,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 32,
+          "time_s": 1.0666666666666678,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 72,
+          "time_s": 2.3999999999999964,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 121,
+          "time_s": 4.033333333333324,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 171,
+          "time_s": 5.699999999999985,
+          "anchor_phase": "DROP"
+        }
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000040",
+      "seed": 2010096,
+      "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000040.json",
+      "annotation_sha256": "e2bb3d281d1066407ba7c2e046b38307a6f5e834442ab8d58d9828297ee1b723",
+      "num_frames": 217,
+      "events": [
+        {
+          "phase": "REACH",
+          "physics_frame": 0,
+          "event_time_s": 0.0,
+          "recorded_frame": 0,
+          "mapped_time_s": 0.0
+        },
+        {
+          "phase": "GRASP",
+          "physics_frame": 13,
+          "event_time_s": 0.21666666666666667,
+          "recorded_frame": 7,
+          "mapped_time_s": 0.2333333333333333
+        },
+        {
+          "phase": "PULL",
+          "physics_frame": 28,
+          "event_time_s": 0.4666666666666667,
+          "recorded_frame": 14,
+          "mapped_time_s": 0.4666666666666666
+        },
+        {
+          "phase": "TRANSPORT",
+          "physics_frame": 119,
+          "event_time_s": 1.9833333333333334,
+          "recorded_frame": 60,
+          "mapped_time_s": 1.9999999999999978
+        },
+        {
+          "phase": "DROP",
+          "physics_frame": 367,
+          "event_time_s": 6.116666666666666,
+          "recorded_frame": 184,
+          "mapped_time_s": 6.133333333333317
+        },
+        {
+          "phase": "DONE",
+          "physics_frame": 427,
+          "event_time_s": 7.116666666666666,
+          "recorded_frame": 214,
+          "mapped_time_s": 7.133333333333313
+        }
+      ],
+      "windows": [
+        {
+          "label": "reset",
+          "frame": 0,
+          "time_s": 0.0,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "before_grasp",
+          "frame": 5,
+          "time_s": 0.16666666666666666,
+          "anchor_phase": "REACH"
+        },
+        {
+          "label": "grasp_entry",
+          "frame": 7,
+          "time_s": 0.2333333333333333,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "after_grasp_entry",
+          "frame": 9,
+          "time_s": 0.3,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "before_pull",
+          "frame": 12,
+          "time_s": 0.39999999999999997,
+          "anchor_phase": "GRASP"
+        },
+        {
+          "label": "pull_entry",
+          "frame": 14,
+          "time_s": 0.4666666666666666,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "after_pull_entry",
+          "frame": 17,
+          "time_s": 0.5666666666666668,
+          "anchor_phase": "PULL"
+        },
+        {
+          "label": "transport_entry",
+          "frame": 60,
+          "time_s": 1.9999999999999978,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "transport_middle",
+          "frame": 122,
+          "time_s": 4.0666666666666575,
+          "anchor_phase": "TRANSPORT"
+        },
+        {
+          "label": "drop_entry_or_last_full_window",
+          "frame": 184,
+          "time_s": 6.133333333333317,
+          "anchor_phase": "DROP"
+        }
+      ]
+    }
+  ]
+}

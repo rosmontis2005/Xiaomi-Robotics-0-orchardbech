@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "primary_episodes": 84,
+  "GT_episodes": 20,
+  "model_episodes": 64,
+  "raw_control_steps_recomputed": 67265,
+  "all_completed_artifact_hashes_valid": true,
+  "all_fixed_thresholds_and_event_counts_recomputed": true,
+  "branch_bucket_release_raw_audit": "PASS",
+  "model_release_before_bucket_success_observed": 0,
+  "model_existing_benchmark_successes": 2,
+  "existing_success_definition_not_changed": true,
+  "secondary_included": false,
+  "files_sha256": {
+    "closed_loop_report.txt": "0f33735cf7ac40fc5c14fdefaf8574e7268592f9e39cef9e83c0e1c7363add43",
+    "closed_loop_summary.json": "31ae199736ba69f25d082d3ce318aed7729760fff90de2e97451a0f038276142",
+    "episodes.csv": "d1258e42c3f329c7800e6d872fcc4c778621655b8aa1b7d1dc424188de6c05a7",
+    "branch_bucket_release_audit.json": "a857aec930518d5deb0c2d987f3a27ee263dfdff338b8654e708f84a4b93c0eb",
+    "closed_loop_findings_zh.txt": "769709eab1da95ce38b5db13e113fc1a1058c8c183e2e75750830ebaff6f5e8f",
+    "summarize_closed_loop_source.py": "812080291c54ad9526574a24c2390840b1134bad2ad8bb94d2bd947ea821338d"
+  }
+}

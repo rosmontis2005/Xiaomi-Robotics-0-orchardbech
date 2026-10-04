@@ -1,0 +1,11 @@
+{
+  "selection": "first five frozen benchmark seeds, before any model rollout",
+  "benchmark_seeds_sha256": "d7e76922e6c3cde373998ef0732b55e0342c09c4b13b7dc12c49d5a47e683494",
+  "seeds": [
+    3010000,
+    3010001,
+    3010002,
+    3010003,
+    3010004
+  ]
+}

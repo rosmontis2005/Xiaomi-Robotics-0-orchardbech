@@ -1,0 +1,40 @@
+A/B 主闭环独立核验与解读
+
+主端点固定A8000/B8000，20GT+64模型回合全部完成；所有completed产物哈希、reset配对、seed传递和67,265个原始控制步的推进/held15/300步/释放/IK/裁剪门槛重算PASS。没有剔除模型失败场景，没有按结果换checkpoint。
+
+主要结论：B已经获得比A更多、可在相同场景的两个推理种子下重复的抓取证据。尚未取得模型完成“松爪后入桶”的证据；当前主要失败已大量进入抓取之后。
+
+固定样本结果（抓取数与held15数相同，且所有held15都在300控制步内达标）：
+集合 | A grasp/held15 | B grasp/held15 | A benchmark success | B benchmark success
+dev8、rng42 | 1/8 | 6/8 | 0/8 | 0/8
+heldout12、rng42 | 4/12 | 8/12 | 0/12 | 1/12
+heldout12、rng43 | 6/12 | 8/12 | 0/12 | 1/12
+heldout12×2、24回合 | 10/24 | 16/24 | 0/24 | 2/24
+全部模型回合合计：A grasp/held15=11/32，B=22/32；A success=0/32，B=2/32。32回合每arm覆盖20个独立场景（8dev+12heldout），不是32个独立场景。
+
+按相同scene与推理seed配对（B-only即B抓到而A未抓到；A-only反之）：
+dev/seed42: B-only 6, A-only 1, 双方通过 0, 双方未过 1，共8对。
+heldout/seed42: B-only 4, A-only 0, 双方通过 4, 双方未过 4，共12对。
+heldout/seed43: B-only 2, A-only 0, 双方通过 6, 双方未过 4，共12对。
+heldout/both_seeds_scene_unit: B-only 4, A-only 0, 双方通过 4, 双方未过 4，共12对。
+heldout按12个scene作为独立单位，两seed均有grasp/held15：A4/12、B8/12；至少一个seed有：A6/12、B8/12。B的8个成功抓取scene在42/43两seed下都通过；另4个scene两seed均未抓取。此为固定有限cohort内的重复性，不是自然新seed总体成功率保证。
+
+桶、释放、摘离与枝条：
+GT20/20抓取、held15、摘离计数和benchmark success，20/20均在success之前观测到held→None释放，success边界未持果；IK失败0、dwell timeout0。这一学生执行通路确有完成示教的阳性对照。
+B的2条benchmark success均为同一scene2010600（episode_000250），rng42第760步、rng43第697步，成功时仍held_apple_id=26，整条回合release事件0。它们证明在现有辅助抓取环境中把果实带到了桶内，但未证明松爪后完成投放。
+原环境终止定义是至少一枚已脱离苹果物理上在桶内，并不要求先松爪。本报告保留官方success=2/32，同时单独报告观察到释放后入桶的模型success=0。由于success后立即终止，不能断言若继续执行这些轨迹也绝不会释放。
+A有4/32回合、B有12/32回合在别处出现过held→None释放，但都未成为释放后入桶成功；发生过释放本身不能代替正确放置。
+A的any-detach=12/32、grasp AND any-detach=11/32；B分别22/32和21/32。any-detach只是环境聚合计数，不能自动证明摘离的就是抓住的同一枚果实。B有一条抓持却未检测到摘离（scene2015662 rng42），另有未抓取却检测到果实摘离（2014304 rng42）；A也有未抓取而摘离的记录（2014304 rng43）。
+枝条损伤：A有1/32回合出现branch_break_count，最大2（scene2010387 rng43，首次第745步）；B0/32，GT0/20。这是分离的损伤观察，不更改冻结成功判据。
+
+失败阶段与离线证据衔接：
+A：21条未抓取，11条抓取后未入桶。B：10条未抓取，20条抓取后未入桶，另2条持果进入桶触发终止。故B不是只有更好看的裁剪/IK指标，而是实际跨过抓取门槛；但完整任务仍未闭合，剩余抓取失败也未消失。
+此前offline显示B reset/full和未来REACH/GRASP目标更接近专家，和当前抓取增多方向一致；不能把这一相关性当作单独因果证明，因为B同时改变phase比例、episode平衡与有放回曝光。
+TRANSPORT远期位移欠幅/方向偏和GRASP-anchor后半段偏差，可作为抓取后失败的后续诊断线索；应结合代表性raw轨迹而非仅据离线误差宣布根因。
+240固定offline窗口没有DROP anchor/目标，因此离线面板没有验证晚期释放能力。当前模型的持果入桶终止尤其说明，完整采摘验收还需将“进入桶内”和“释放后稳定投放”分别记录和解释。
+
+统计与验证边界：
+held15是同一枚果实在15个连续post-control边界保持held；不是额外保持姿态的控制门，也不宣称观察到了全部physics子步。所有grasp是原benchmark_assist环境真实接触/持果事件，不是宽度输出代理。
+heldout24是12场景的两个噪声重复，不按24独立样本作显著性宣称；每arm只训练seed42一次。dev8与heldout12均经过历史GT可靠性/可观察性筛选，结论不能外推自然场景分布。
+少数成功/抓取条件下的耗时均值有选择偏差；大量900步是预算截断，不当作完成效率。
+主64模型结果仅含step8000。B4000开发集8条secondary另行报告，不混入本汇总，不接触heldout作checkpoint选择。

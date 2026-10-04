@@ -1,0 +1,350 @@
+{
+  "status": "COMPLETE",
+  "created_unix": 1791096276.762548,
+  "training_updates": 8000,
+  "closed_loop_episodes": 60,
+  "D0_groups": {
+    "GT30": {
+      "episodes": 8,
+      "held15": 8,
+      "held15_by300": 8,
+      "same_grasped_fruit_detach": 8,
+      "legacy_success_ever": 8,
+      "strict_success": 8,
+      "first_grasp_step": {
+        "n": 8,
+        "mean": 77.25,
+        "min": 68,
+        "max": 86,
+        "median": 77.5
+      },
+      "replans": {
+        "n": 8,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0.0
+      },
+      "prediction_seconds": {
+        "n": 8,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "release_episodes": 8,
+      "branch_breaks": 0,
+      "ik_fail_steps": 0,
+      "clip_steps": 1363,
+      "total_control_steps": 4474,
+      "control_exact_prefixes": 0
+    },
+    "GT5": {
+      "episodes": 8,
+      "held15": 8,
+      "held15_by300": 8,
+      "same_grasped_fruit_detach": 8,
+      "legacy_success_ever": 8,
+      "strict_success": 8,
+      "first_grasp_step": {
+        "n": 8,
+        "mean": 77.25,
+        "min": 68,
+        "max": 86,
+        "median": 77.5
+      },
+      "replans": {
+        "n": 8,
+        "mean": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0.0
+      },
+      "prediction_seconds": {
+        "n": 8,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "release_episodes": 8,
+      "branch_breaks": 0,
+      "ik_fail_steps": 0,
+      "clip_steps": 1363,
+      "total_control_steps": 4475,
+      "control_exact_prefixes": 0
+    },
+    "B30": {
+      "episodes": 8,
+      "held15": 6,
+      "held15_by300": 6,
+      "same_grasped_fruit_detach": 6,
+      "legacy_success_ever": 0,
+      "strict_success": 0,
+      "first_grasp_step": {
+        "n": 6,
+        "mean": 92,
+        "min": 74,
+        "max": 110,
+        "median": 92.5
+      },
+      "replans": {
+        "n": 8,
+        "mean": 8.75,
+        "min": 7,
+        "max": 11,
+        "median": 9.0
+      },
+      "prediction_seconds": {
+        "n": 8,
+        "mean": 0.9662894475013672,
+        "min": 0.7292340850108303,
+        "max": 1.1794454410046455,
+        "median": 0.9879250259982655
+      },
+      "release_episodes": 4,
+      "branch_breaks": 0,
+      "ik_fail_steps": 3045,
+      "clip_steps": 3137,
+      "total_control_steps": 7200,
+      "control_exact_prefixes": 0
+    },
+    "B5": {
+      "episodes": 8,
+      "held15": 0,
+      "held15_by300": 0,
+      "same_grasped_fruit_detach": 0,
+      "legacy_success_ever": 0,
+      "strict_success": 0,
+      "first_grasp_step": null,
+      "replans": {
+        "n": 8,
+        "mean": 16.5,
+        "min": 10,
+        "max": 36,
+        "median": 13.5
+      },
+      "prediction_seconds": {
+        "n": 8,
+        "mean": 1.738124689995857,
+        "min": 1.0399281100035296,
+        "max": 3.924710140985553,
+        "median": 1.4011659324933134
+      },
+      "release_episodes": 0,
+      "branch_breaks": 0,
+      "ik_fail_steps": 1267,
+      "clip_steps": 5861,
+      "total_control_steps": 7200,
+      "control_exact_prefixes": 0
+    },
+    "regression_B30": {
+      "episodes": 2,
+      "held15": 2,
+      "held15_by300": 2,
+      "same_grasped_fruit_detach": 2,
+      "legacy_success_ever": 2,
+      "strict_success": 0,
+      "first_grasp_step": {
+        "n": 2,
+        "mean": 95.5,
+        "min": 92,
+        "max": 99,
+        "median": 95.5
+      },
+      "replans": {
+        "n": 2,
+        "mean": 6.5,
+        "min": 6,
+        "max": 7,
+        "median": 6.5
+      },
+      "prediction_seconds": {
+        "n": 2,
+        "mean": 0.768712143493758,
+        "min": 0.62258017899876,
+        "max": 0.9148441079887562,
+        "median": 0.768712143493758
+      },
+      "release_episodes": 0,
+      "branch_breaks": 0,
+      "ik_fail_steps": 525,
+      "clip_steps": 1149,
+      "total_control_steps": 1800,
+      "control_exact_prefixes": 0
+    }
+  },
+  "B_vs_L_development": {
+    "B_targets30": {
+      "n": 8,
+      "held_any": 6,
+      "held15": 6,
+      "held15_by300": 6,
+      "same_fruit_detach": 6,
+      "released": 4,
+      "valid_chain_release": 4,
+      "strict_success": 0,
+      "legacy_success_ever": 0,
+      "ik_fail_steps": 3045,
+      "dwell_timeouts": 98,
+      "branch_break_count": 0,
+      "mean_replans": 8.75,
+      "mean_prediction_seconds": 0.9662894475013672,
+      "first_grasp_steps": [
+        91,
+        94,
+        110,
+        96,
+        74,
+        87
+      ]
+    },
+    "L_targets30": {
+      "n": 8,
+      "held_any": 7,
+      "held15": 7,
+      "held15_by300": 7,
+      "same_fruit_detach": 7,
+      "released": 6,
+      "valid_chain_release": 6,
+      "strict_success": 0,
+      "legacy_success_ever": 0,
+      "ik_fail_steps": 3218,
+      "dwell_timeouts": 104,
+      "branch_break_count": 0,
+      "mean_replans": 8.125,
+      "mean_prediction_seconds": 0.901678693251597,
+      "first_grasp_steps": [
+        89,
+        91,
+        109,
+        93,
+        85,
+        74,
+        85
+      ]
+    },
+    "B_targets5": {
+      "n": 8,
+      "held_any": 0,
+      "held15": 0,
+      "held15_by300": 0,
+      "same_fruit_detach": 0,
+      "released": 0,
+      "valid_chain_release": 0,
+      "strict_success": 0,
+      "legacy_success_ever": 0,
+      "ik_fail_steps": 1267,
+      "dwell_timeouts": 170,
+      "branch_break_count": 0,
+      "mean_replans": 16.5,
+      "mean_prediction_seconds": 1.738124689995857,
+      "first_grasp_steps": []
+    },
+    "L_targets5": {
+      "n": 8,
+      "held_any": 0,
+      "held15": 0,
+      "held15_by300": 0,
+      "same_fruit_detach": 0,
+      "released": 0,
+      "valid_chain_release": 0,
+      "strict_success": 0,
+      "legacy_success_ever": 0,
+      "ik_fail_steps": 385,
+      "dwell_timeouts": 147,
+      "branch_break_count": 2,
+      "mean_replans": 22.875,
+      "mean_prediction_seconds": 2.4006945276269107,
+      "first_grasp_steps": []
+    }
+  },
+  "auxiliary_scene_2010600_separate": {
+    "B": {
+      "n": 2,
+      "held15": 2,
+      "strict": 0
+    },
+    "L": {
+      "n": 2,
+      "held15": 1,
+      "strict": 1,
+      "success_inference_seed": 42,
+      "strict_step": 706,
+      "final_release_step": 647
+    }
+  },
+  "D1_pilot": {
+    "GT_pos5mm": {
+      "n": 4,
+      "D1": {
+        "held15": 4,
+        "strict_success": 4,
+        "legacy_success_ever": 4,
+        "same_fruit_detach": 4,
+        "releases": 4,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0
+      },
+      "D0": {
+        "held15": 4,
+        "strict_success": 4,
+        "legacy_success_ever": 4,
+        "same_fruit_detach": 4,
+        "releases": 4,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0
+      }
+    },
+    "B_pos5mm": {
+      "n": 4,
+      "D1": {
+        "held15": 2,
+        "strict_success": 0,
+        "legacy_success_ever": 0,
+        "same_fruit_detach": 2,
+        "releases": 0,
+        "dwell_timeouts": 18,
+        "ik_failed_recorded": 585,
+        "solver_residual_5to10mm_rotation_acceptable": 194,
+        "candidate_arm_command_held": 194,
+        "branch_breaks": 0
+      },
+      "D0": {
+        "held15": 2,
+        "strict_success": 0,
+        "legacy_success_ever": 0,
+        "same_fruit_detach": 2,
+        "releases": 1,
+        "dwell_timeouts": 42,
+        "ik_failed_recorded": 1306,
+        "solver_residual_5to10mm_rotation_acceptable": 72,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0
+      }
+    }
+  },
+  "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/training/arms/L/checkpoints/step_8000_trainable.pt",
+  "checkpoint_sha256": "6fc073d1f6e1d8b76a2fbfa35ab23ce1ba1095783e64492748dca20504a5535c",
+  "decisions": {
+    "production_replacement": false,
+    "processed5_adopted": false,
+    "global5mm_adopted": false,
+    "L_retained_as_candidate": true,
+    "next_priority": "actual_student_state_contact_and_postgrasp_recovery_supervision",
+    "fresh24_unexposed": true
+  },
+  "source_reports": {
+    "methods": "experiment_methods.txt",
+    "narrative": "final_report.txt",
+    "closed_loop": "analysis/closed_loop_final/failure_evidence.json",
+    "offline": "analysis/endpoint_offline_findings.json",
+    "integrity": "final_integrity.json"
+  }
+}

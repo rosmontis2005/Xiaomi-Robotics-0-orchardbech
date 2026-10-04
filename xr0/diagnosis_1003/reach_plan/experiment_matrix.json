@@ -1,0 +1,114 @@
+{
+  "schema": "orchard_reach_repair_plan_v1",
+  "status": "proposal_only_no_repair_or_training_executed",
+  "official_executor": "reach-conditioned",
+  "authoritative_plan": "reach_repair_plan.txt",
+  "prohibited_in_this_turn": [
+    "production source edits",
+    "training",
+    "repair execution"
+  ],
+  "common": {
+    "initialize": "10k weights-only, fresh AdamW",
+    "lr": 1e-05,
+    "batch_size": 1,
+    "grad_accum": 1,
+    "frozen_vlm": true,
+    "horizon": 30,
+    "stats": "unchanged full train for sampling-only trials"
+  },
+  "disjoint_sampling": [
+    {
+      "name": "reset",
+      "predicate": "frame == 0",
+      "probability": 0.1
+    },
+    {
+      "name": "early",
+      "predicate": "1 <= frame <= 4",
+      "probability": 0.1
+    },
+    {
+      "name": "reach",
+      "predicate": "frame >= 5 and phase == REACH",
+      "probability": 0.15
+    },
+    {
+      "name": "grasp",
+      "predicate": "frame >= 5 and phase == GRASP",
+      "probability": 0.25
+    },
+    {
+      "name": "pull",
+      "predicate": "frame >= 5 and phase == PULL",
+      "probability": 0.15
+    },
+    {
+      "name": "transport",
+      "predicate": "frame >= 5 and phase == TRANSPORT",
+      "probability": 0.2
+    },
+    {
+      "name": "drop",
+      "predicate": "frame >= 5 and phase == DROP",
+      "probability": 0.05
+    }
+  ],
+  "stages": [
+    {
+      "id": "R0",
+      "kind": "teacher metric calibration",
+      "budget": "3 existing development scenes then 5-10",
+      "gate": "calibrate close-ready geometry B and real grasp C using original GT reach replay; strict goal-hold A requires a separate new supervised dataset branch"
+    },
+    {
+      "id": "M0",
+      "kind": "microfit",
+      "train": "8 train episodes x 10 fixed windows, visually verified after preprocess",
+      "updates_max": 2000,
+      "loss": "unchanged full horizon",
+      "eval": "true generation with fixed seeds 42/43/44; separate val episodes"
+    },
+    {
+      "id": "S1",
+      "kind": "phase sampling trial",
+      "train": "all 2144 original train episodes",
+      "updates_initial": 10000,
+      "extension_if_improving": 10000,
+      "comparison": "equal-presentation uniform continuation from same original 10k weights and fresh optimizer"
+    },
+    {
+      "id": "E1",
+      "kind": "closed loop development",
+      "scene_counts": [
+        5,
+        20
+      ],
+      "proposed_gate_original_labels": "16/20 reach calibrated close-ready geometry B or achieve true grasp C; A hold is observational only",
+      "proposed_gate_new_goal_hold_labels": "16/20 strict pregrasp A only if goal-hold supervision was explicitly introduced"
+    },
+    {
+      "id": "T1",
+      "kind": "heldout evaluation",
+      "filter_visibility": false,
+      "note": "known 3 val diagnostic scenes excluded from claims of fresh testing"
+    }
+  ],
+  "conditional_trials": {
+    "H1": "loss-only prefix weighting if near-horizon generated error remains limiting; retain nonzero suffix",
+    "D1": "50-100 student execution episodes if expert-observation fit passes but student-state failure persists",
+    "V1": "native camera/resolution or observable teacher target repair if input visibility gap is confirmed",
+    "X1": "chunk control-age cap 30 then optionally 15, only after useful targets; do not default to 5-target truncation",
+    "B1": "accumulation 4 only when optimization variance evidence supports it; compare window presentations",
+    "A1": "local visual adaptation only after visible-input and data/label checks fail to yield sufficient fit"
+  },
+  "evaluation_truth_boundary": "GT identity/pose/phase only labels or observers; never drive policy goal selection, online phase handoff or gripper triggering",
+  "new_pregrasp_thresholds": {
+    "position_m": 0.01,
+    "orientation_rad": 0.08,
+    "actual_total_width_min_m": 0.075,
+    "consecutive_control_steps": 5,
+    "status": "proposed only for separately supervised goal-hold branch; teacher verification and corresponding labels required; not a hard gate for original-label S1"
+  },
+  "evidence_boundary": "Sampling exposure counts are expectations; visibility is raw-image expert-target mask area; current 3-scene probes are developmental; all plan success thresholds are untested."
+}

@@ -1,0 +1,2533 @@
+{
+  "status": "PASS",
+  "schema": "orchard_ab_secondary_train_best_dev8_v1",
+  "protocol_sha256": "e1f4f9fc6368cb02cd39503a2d6b5713283c9363d55d375a818e9b041f55ae9a",
+  "script_sha256": "262d42a546d77f24fc1f6d6f454bdf6ba3b333a69fe9d126b07458a9382833e9",
+  "independent_auditor_sha256": "812080291c54ad9526574a24c2390840b1134bad2ad8bb94d2bd947ea821338d",
+  "checkpoint": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_4000_trainable.pt",
+    "step": 4000,
+    "sha256": "1835207d9521e5cf4aff31e6ca1bb33960ff1107928213bae21b81c83cbb2715",
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "train_best_record_sha256": "057e1e9bb318614fe0b15124bfd1aadc8da651ed090cfc97f63ae0bab1652007"
+  },
+  "all24_primary_secondary_dev_hashes_and_raw_steps_valid": true,
+  "aggregate": {
+    "A8000": {
+      "episodes": 8,
+      "independent_scenes": 8,
+      "counts": {
+        "grasp": 1,
+        "held15": 1,
+        "grasp_by_step300": 1,
+        "held15_qualified_by_step300": 1,
+        "any_detach": 1,
+        "grasp_and_any_detach": 1,
+        "success": 0
+      },
+      "success_boundary": {
+        "successes": 0,
+        "still_held": 0,
+        "no_held_id": 0,
+        "observed_release_strictly_before": 0,
+        "observed_release_by_boundary": 0
+      },
+      "descriptive": {
+        "steps": {
+          "count": 8,
+          "mean": 900.0,
+          "median": 900.0,
+          "min": 900.0,
+          "max": 900.0
+        },
+        "replans": {
+          "count": 8,
+          "mean": 7.0,
+          "median": 7.5,
+          "min": 4.0,
+          "max": 8.0
+        },
+        "first_grasp_control_step": {
+          "count": 1,
+          "mean": 98.0,
+          "median": 98.0,
+          "min": 98.0,
+          "max": 98.0
+        },
+        "max_same_fruit_held_steps": {
+          "count": 8,
+          "mean": 100.375,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 803.0
+        },
+        "ik_failed_rate": {
+          "count": 8,
+          "mean": 0.4601388888888889,
+          "median": 0.47444444444444445,
+          "min": 0.23777777777777778,
+          "max": 0.6166666666666667
+        },
+        "action_clipped_rate": {
+          "count": 8,
+          "mean": 0.6083333333333333,
+          "median": 0.615,
+          "min": 0.5155555555555555,
+          "max": 0.8022222222222222
+        },
+        "dwell_timeouts": {
+          "count": 8,
+          "mean": 13.375,
+          "median": 13.5,
+          "min": 7.0,
+          "max": 18.0
+        },
+        "planned_pregrasp_min_tcp_distance_m": {
+          "count": 8,
+          "mean": 0.058660712743575566,
+          "median": 0.0585766405739008,
+          "min": 0.022153987868296195,
+          "max": 0.10155431393900319
+        },
+        "nearest_pregrasp_min_tcp_distance_m": {
+          "count": 8,
+          "mean": 0.058660712743575566,
+          "median": 0.0585766405739008,
+          "min": 0.022153987868296195,
+          "max": 0.10155431393900319
+        }
+      },
+      "control_weighted_rates": {
+        "steps": 7200,
+        "IK": 0.4601388888888889,
+        "action_clipping": 0.6083333333333333
+      }
+    },
+    "B8000": {
+      "episodes": 8,
+      "independent_scenes": 8,
+      "counts": {
+        "grasp": 6,
+        "held15": 6,
+        "grasp_by_step300": 6,
+        "held15_qualified_by_step300": 6,
+        "any_detach": 6,
+        "grasp_and_any_detach": 6,
+        "success": 0
+      },
+      "success_boundary": {
+        "successes": 0,
+        "still_held": 0,
+        "no_held_id": 0,
+        "observed_release_strictly_before": 0,
+        "observed_release_by_boundary": 0
+      },
+      "descriptive": {
+        "steps": {
+          "count": 8,
+          "mean": 900.0,
+          "median": 900.0,
+          "min": 900.0,
+          "max": 900.0
+        },
+        "replans": {
+          "count": 8,
+          "mean": 9.5,
+          "median": 9.5,
+          "min": 7.0,
+          "max": 13.0
+        },
+        "first_grasp_control_step": {
+          "count": 6,
+          "mean": 92.0,
+          "median": 92.5,
+          "min": 74.0,
+          "max": 110.0
+        },
+        "max_same_fruit_held_steps": {
+          "count": 8,
+          "mean": 429.875,
+          "median": 447.0,
+          "min": 0.0,
+          "max": 814.0
+        },
+        "ik_failed_rate": {
+          "count": 8,
+          "mean": 0.4008333333333333,
+          "median": 0.40166666666666667,
+          "min": 0.13333333333333333,
+          "max": 0.6
+        },
+        "action_clipped_rate": {
+          "count": 8,
+          "mean": 0.3938888888888889,
+          "median": 0.4116666666666666,
+          "min": 0.23333333333333334,
+          "max": 0.5055555555555555
+        },
+        "dwell_timeouts": {
+          "count": 8,
+          "mean": 11.75,
+          "median": 12.0,
+          "min": 4.0,
+          "max": 18.0
+        },
+        "planned_pregrasp_min_tcp_distance_m": {
+          "count": 8,
+          "mean": 0.026767077192239135,
+          "median": 0.026937462356015768,
+          "min": 0.02184279909700148,
+          "max": 0.03556407182109122
+        },
+        "nearest_pregrasp_min_tcp_distance_m": {
+          "count": 8,
+          "mean": 0.026767077192239135,
+          "median": 0.026937462356015768,
+          "min": 0.02184279909700148,
+          "max": 0.03556407182109122
+        }
+      },
+      "control_weighted_rates": {
+        "steps": 7200,
+        "IK": 0.4008333333333333,
+        "action_clipping": 0.3938888888888889
+      }
+    },
+    "B4000": {
+      "episodes": 8,
+      "independent_scenes": 8,
+      "counts": {
+        "grasp": 5,
+        "held15": 5,
+        "grasp_by_step300": 5,
+        "held15_qualified_by_step300": 5,
+        "any_detach": 4,
+        "grasp_and_any_detach": 4,
+        "success": 0
+      },
+      "success_boundary": {
+        "successes": 0,
+        "still_held": 0,
+        "no_held_id": 0,
+        "observed_release_strictly_before": 0,
+        "observed_release_by_boundary": 0
+      },
+      "descriptive": {
+        "steps": {
+          "count": 8,
+          "mean": 900.0,
+          "median": 900.0,
+          "min": 900.0,
+          "max": 900.0
+        },
+        "replans": {
+          "count": 8,
+          "mean": 13.0,
+          "median": 13.0,
+          "min": 8.0,
+          "max": 18.0
+        },
+        "first_grasp_control_step": {
+          "count": 5,
+          "mean": 101.0,
+          "median": 84.0,
+          "min": 76.0,
+          "max": 152.0
+        },
+        "max_same_fruit_held_steps": {
+          "count": 8,
+          "mean": 239.125,
+          "median": 174.5,
+          "min": 0.0,
+          "max": 787.0
+        },
+        "ik_failed_rate": {
+          "count": 8,
+          "mean": 0.2847222222222222,
+          "median": 0.2538888888888889,
+          "min": 0.042222222222222223,
+          "max": 0.6066666666666667
+        },
+        "action_clipped_rate": {
+          "count": 8,
+          "mean": 0.3165277777777778,
+          "median": 0.28833333333333333,
+          "min": 0.18222222222222223,
+          "max": 0.5488888888888889
+        },
+        "dwell_timeouts": {
+          "count": 8,
+          "mean": 8.25,
+          "median": 7.5,
+          "min": 1.0,
+          "max": 18.0
+        },
+        "planned_pregrasp_min_tcp_distance_m": {
+          "count": 8,
+          "mean": 0.0338123471082833,
+          "median": 0.030714223143023363,
+          "min": 0.021055886868336874,
+          "max": 0.06071215369042294
+        },
+        "nearest_pregrasp_min_tcp_distance_m": {
+          "count": 8,
+          "mean": 0.0338123471082833,
+          "median": 0.030714223143023363,
+          "min": 0.021055886868336874,
+          "max": 0.06071215369042294
+        }
+      },
+      "control_weighted_rates": {
+        "steps": 7200,
+        "IK": 0.2847222222222222,
+        "action_clipping": 0.3165277777777778
+      }
+    }
+  },
+  "paired_B4000_B8000": {
+    "grasp": {
+      "scenes": 8,
+      "B4000_only": 1,
+      "B8000_only": 2,
+      "both": 4,
+      "neither": 1
+    },
+    "held15": {
+      "scenes": 8,
+      "B4000_only": 1,
+      "B8000_only": 2,
+      "both": 4,
+      "neither": 1
+    },
+    "grasp_by_step300": {
+      "scenes": 8,
+      "B4000_only": 1,
+      "B8000_only": 2,
+      "both": 4,
+      "neither": 1
+    },
+    "held15_qualified_by_step300": {
+      "scenes": 8,
+      "B4000_only": 1,
+      "B8000_only": 2,
+      "both": 4,
+      "neither": 1
+    },
+    "any_detach": {
+      "scenes": 8,
+      "B4000_only": 0,
+      "B8000_only": 2,
+      "both": 4,
+      "neither": 2
+    },
+    "grasp_and_any_detach": {
+      "scenes": 8,
+      "B4000_only": 0,
+      "B8000_only": 2,
+      "both": 4,
+      "neither": 2
+    },
+    "success": {
+      "scenes": 8,
+      "B4000_only": 0,
+      "B8000_only": 0,
+      "both": 0,
+      "neither": 8
+    }
+  },
+  "episodes": [
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2013322,
+      "episode_id": "episode_001319",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2013322",
+      "steps": 900,
+      "replans": 8,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 475,
+      "ik_failed_rate": 0.5277777777777778,
+      "action_clipped_steps": 558,
+      "action_clipped_rate": 0.62,
+      "dwell_timeouts": 15,
+      "planned_pregrasp_min_tcp_distance_m": 0.07298512582761266,
+      "nearest_pregrasp_min_tcp_distance_m": 0.07298512582761266,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.02268899628750244,
+            "p50": 0.029996142615099853,
+            "p95": 0.03155256132021417,
+            "max": 0.0319309116824993
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.025730405521885685,
+            "p50": 0.028541360006854404,
+            "p95": 0.03788184555287437,
+            "max": 0.039489791384182904
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.007904992252588273,
+            "p50": 0.007449299097061157,
+            "p95": 0.012693531811237335,
+            "max": 0.013019327074289322
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.07896680066244847,
+            "p50": 0.09272038977118728,
+            "p95": 0.11043638382236283,
+            "max": 0.1168886122171293
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.07044971016015092,
+            "p50": 0.04428075160093124,
+            "p95": 0.20323471102909801,
+            "max": 0.21881224457827678
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.007261603573958079,
+            "p50": 0.005882037803530693,
+            "p95": 0.018992870487272728,
+            "max": 0.024296194314956665
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2013322",
+      "completed_sha256": "077423a8190e4ae4debf8b231cfe81eefa860d1e9b7640eb6dddb940ebef6bb2",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2014461,
+      "episode_id": "episode_001796",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2014461",
+      "steps": 900,
+      "replans": 8,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 344,
+      "ik_failed_rate": 0.38222222222222224,
+      "action_clipped_steps": 469,
+      "action_clipped_rate": 0.5211111111111111,
+      "dwell_timeouts": 11,
+      "planned_pregrasp_min_tcp_distance_m": 0.04416815532018894,
+      "nearest_pregrasp_min_tcp_distance_m": 0.04416815532018894,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.039769350225087166,
+            "p50": 0.04846784479122068,
+            "p95": 0.051252126167840695,
+            "max": 0.05151871570961509
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.04088167994895869,
+            "p50": 0.05079111793582372,
+            "p95": 0.056465318467901954,
+            "max": 0.05648990046450598
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.010716162621974945,
+            "p50": 0.008865199983119965,
+            "p95": 0.019780951738357543,
+            "max": 0.02124381810426712
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.09574484346133019,
+            "p50": 0.10749785450689589,
+            "p95": 0.13612834972606166,
+            "max": 0.13818406802072952
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.10528631297812373,
+            "p50": 0.07112493329632574,
+            "p95": 0.2606998328856373,
+            "max": 0.26712145966546236
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.012990975131591162,
+            "p50": 0.011668577790260315,
+            "p95": 0.027510863076895476,
+            "max": 0.03265885449945927
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2014461",
+      "completed_sha256": "c7514a73ba3728ac8fa76f3d47e443cbaf554e1cd8143146c46bd1ea84ddcf45",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2010914,
+      "episode_id": "episode_000380",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2010914",
+      "steps": 900,
+      "replans": 8,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 470,
+      "ik_failed_rate": 0.5222222222222223,
+      "action_clipped_steps": 552,
+      "action_clipped_rate": 0.6133333333333333,
+      "dwell_timeouts": 16,
+      "planned_pregrasp_min_tcp_distance_m": 0.07681480091302423,
+      "nearest_pregrasp_min_tcp_distance_m": 0.07681480091302423,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.02234795183707175,
+            "p50": 0.02899881399032544,
+            "p95": 0.030936212802005415,
+            "max": 0.031014937250634683
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.02527073821662316,
+            "p50": 0.030421755836804645,
+            "p95": 0.037204257472874265,
+            "max": 0.03889934236190163
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.007330320775508881,
+            "p50": 0.007095396518707275,
+            "p95": 0.011037839949131012,
+            "max": 0.011040225625038147
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.08597259074320393,
+            "p50": 0.1018756905563357,
+            "p95": 0.1229930548690143,
+            "max": 0.1273590201997734
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.07505593789242727,
+            "p50": 0.04773706680606626,
+            "p95": 0.2095361713307898,
+            "max": 0.2265834752483222
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0074578382074832915,
+            "p50": 0.006539151072502136,
+            "p95": 0.019354252144694318,
+            "max": 0.02445155754685402
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2010914",
+      "completed_sha256": "efca3b8e37a05d5c51beb83209463287c3ee2dcb03de070c3e629ca27ef415ad",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2012485,
+      "episode_id": "episode_001020",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2012485",
+      "steps": 900,
+      "replans": 7,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 342,
+      "ik_failed_rate": 0.38,
+      "action_clipped_steps": 555,
+      "action_clipped_rate": 0.6166666666666667,
+      "dwell_timeouts": 11,
+      "planned_pregrasp_min_tcp_distance_m": 0.10155431393900319,
+      "nearest_pregrasp_min_tcp_distance_m": 0.10155431393900319,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.02323837110577242,
+            "p50": 0.019409363768521322,
+            "p95": 0.040546155841877034,
+            "max": 0.04132875229575257
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.043177970727824325,
+            "p50": 0.03367847692470204,
+            "p95": 0.07172553706027199,
+            "max": 0.07302910206360938
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.005298756808042526,
+            "p50": 0.003948979079723358,
+            "p95": 0.010867682099342345,
+            "max": 0.011277500540018082
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.10454714029829944,
+            "p50": 0.12555886997881938,
+            "p95": 0.14612932181317614,
+            "max": 0.15167868105383453
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.08100782360298395,
+            "p50": 0.06179990971427919,
+            "p95": 0.22235375793546178,
+            "max": 0.23433374438371726
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.008770580465594927,
+            "p50": 0.007988259196281433,
+            "p95": 0.02245432008057832,
+            "max": 0.028958331793546677
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2012485",
+      "completed_sha256": "fddd4b659b8c68aaa7fe75c23c6b3f776c9cb7ec54f1f7893343b32fa91b4b90",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2015716,
+      "episode_id": "episode_002270",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2015716",
+      "steps": 900,
+      "replans": 7,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 529,
+      "ik_failed_rate": 0.5877777777777777,
+      "action_clipped_steps": 475,
+      "action_clipped_rate": 0.5277777777777778,
+      "dwell_timeouts": 17,
+      "planned_pregrasp_min_tcp_distance_m": 0.036825846050284126,
+      "nearest_pregrasp_min_tcp_distance_m": 0.036825846050284126,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.045769606191028524,
+            "p50": 0.052423147773665364,
+            "p95": 0.057533898558842625,
+            "max": 0.05780469131817128
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.04139251204348839,
+            "p50": 0.05048058759828632,
+            "p95": 0.05689071003567905,
+            "max": 0.056894729483496026
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.010675294697284699,
+            "p50": 0.008688151836395264,
+            "p95": 0.020421575009822845,
+            "max": 0.02202274650335312
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.05035120279819016,
+            "p50": 0.052183343609226135,
+            "p95": 0.08153209594522956,
+            "max": 0.0905041070556087
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.07734167425898404,
+            "p50": 0.06536931879148251,
+            "p95": 0.17579851367700183,
+            "max": 0.18817840360723231
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.008514395852883657,
+            "p50": 0.006050923839211464,
+            "p95": 0.02458313368260859,
+            "max": 0.028291434049606323
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2015716",
+      "completed_sha256": "910e690ec5b679a41729d629fbcf81c0b7418da34c1e338820cb03ca4c5d5e92",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2014362,
+      "episode_id": "episode_001750",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2014362",
+      "steps": 900,
+      "replans": 4,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 98,
+      "first_detach_control_step": 127,
+      "max_same_fruit_held_steps": 803,
+      "ik_failed_steps": 555,
+      "ik_failed_rate": 0.6166666666666667,
+      "action_clipped_steps": 722,
+      "action_clipped_rate": 0.8022222222222222,
+      "dwell_timeouts": 18,
+      "planned_pregrasp_min_tcp_distance_m": 0.022153987868296195,
+      "nearest_pregrasp_min_tcp_distance_m": 0.022153987868296195,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.03362571321982197,
+            "p50": 0.03943477167183141,
+            "p95": 0.04261295720651098,
+            "max": 0.04337585505411348
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.04602348800673493,
+            "p50": 0.052669775306469595,
+            "p95": 0.06296988808874075,
+            "max": 0.06517415933262179
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.004698754847049713,
+            "p50": 0.0034284666180610657,
+            "p95": 0.009508326649665833,
+            "max": 0.010497815907001495
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.04048111058226403,
+            "p50": 0.03949806874396619,
+            "p95": 0.07204455532272191,
+            "max": 0.07743813378459721
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.03954991481829754,
+            "p50": 0.031592175800640526,
+            "p95": 0.08139568868927857,
+            "max": 0.09497985449437013
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0066146818300088246,
+            "p50": 0.0038807615637779236,
+            "p95": 0.024157806672155828,
+            "max": 0.029327817261219025
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2014362",
+      "completed_sha256": "93daa511650daa30e6c95eec415c6d674cd2fd74697fb9ee78284fd2d95f8105",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2015751,
+      "episode_id": "episode_002290",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2015751",
+      "steps": 900,
+      "replans": 6,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 384,
+      "ik_failed_rate": 0.4266666666666667,
+      "action_clipped_steps": 585,
+      "action_clipped_rate": 0.65,
+      "dwell_timeouts": 12,
+      "planned_pregrasp_min_tcp_distance_m": 0.041733831226906375,
+      "nearest_pregrasp_min_tcp_distance_m": 0.041733831226906375,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.04458547494699165,
+            "p50": 0.051461524073244905,
+            "p95": 0.05551119607159683,
+            "max": 0.05557323042238837
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.044475377010158613,
+            "p50": 0.055469479034447475,
+            "p95": 0.05810575403215635,
+            "max": 0.058106752629105876
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.010553617030382156,
+            "p50": 0.008599743247032166,
+            "p95": 0.020057977735996244,
+            "max": 0.021590102463960648
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.05471418268556299,
+            "p50": 0.055418144545409526,
+            "p95": 0.08878469661178821,
+            "max": 0.09247977122674092
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.07284009475757276,
+            "p50": 0.06836100064164423,
+            "p95": 0.13213218783679095,
+            "max": 0.15470737139125565
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.006868565827608109,
+            "p50": 0.0039596837013959885,
+            "p95": 0.021781622245907784,
+            "max": 0.030648577958345413
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2015751",
+      "completed_sha256": "27e1a7d7d301cbc1a02bcb64adc7883348d66b08786fe18b7a4d94b2718f50b3",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "A",
+      "cohort": "dev",
+      "scene_seed": 2011310,
+      "episode_id": "episode_000540",
+      "inference_seed": 42,
+      "job_id": "A_step8000_rng42_reach-conditioned_2011310",
+      "steps": 900,
+      "replans": 8,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 214,
+      "ik_failed_rate": 0.23777777777777778,
+      "action_clipped_steps": 464,
+      "action_clipped_rate": 0.5155555555555555,
+      "dwell_timeouts": 7,
+      "planned_pregrasp_min_tcp_distance_m": 0.07304964080328882,
+      "nearest_pregrasp_min_tcp_distance_m": 0.07304964080328882,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.03199212846585493,
+            "p50": 0.03777256592170633,
+            "p95": 0.04449972699892932,
+            "max": 0.044809379904288
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.04426105034292246,
+            "p50": 0.054172736046766985,
+            "p95": 0.059932046488063356,
+            "max": 0.060695348134643674
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.007836863398551941,
+            "p50": 0.007449299097061157,
+            "p95": 0.01214025616645813,
+            "max": 0.012240178883075714
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.07786279578639595,
+            "p50": 0.08920314096154991,
+            "p95": 0.1129587639132404,
+            "max": 0.11714040312074327
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.06941455265610894,
+            "p50": 0.05552578797425453,
+            "p95": 0.17834062555621535,
+            "max": 0.18430378420809052
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.007844858864943186,
+            "p50": 0.0053694043308496475,
+            "p95": 0.022005737759172906,
+            "max": 0.02608363702893257
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/A_step8000_rng42_reach-conditioned_2011310",
+      "completed_sha256": "4dff01abf4a6dceedf8744182caf304a66d7c638147804e2ec162788036607f4",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2013322,
+      "episode_id": "episode_001319",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2013322",
+      "steps": 900,
+      "replans": 8,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 91,
+      "first_detach_control_step": 167,
+      "max_same_fruit_held_steps": 810,
+      "ik_failed_steps": 540,
+      "ik_failed_rate": 0.6,
+      "action_clipped_steps": 390,
+      "action_clipped_rate": 0.43333333333333335,
+      "dwell_timeouts": 18,
+      "planned_pregrasp_min_tcp_distance_m": 0.0230264781034032,
+      "nearest_pregrasp_min_tcp_distance_m": 0.0230264781034032,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.03326462431026346,
+            "p50": 0.038191115278281736,
+            "p95": 0.04853574551456777,
+            "max": 0.0497963417440738
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.029072205032375308,
+            "p50": 0.03068139808766464,
+            "p95": 0.04225439315971263,
+            "max": 0.04371535430059846
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.003877753019332886,
+            "p50": 0.004175163805484772,
+            "p95": 0.005447113513946533,
+            "max": 0.005699425935745239
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.025803413453693788,
+            "p50": 0.018862758918431047,
+            "p95": 0.04938696639102923,
+            "max": 0.056282353402406844
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.051137155822346576,
+            "p50": 0.04937951217759508,
+            "p95": 0.09519368630218018,
+            "max": 0.09831239459586759
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0032790500670671465,
+            "p50": 0.003004126250743866,
+            "p95": 0.007169136218726634,
+            "max": 0.012455243617296219
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2013322",
+      "completed_sha256": "732632b895477426fc55a7b9709e111b84e4efb48b4f1cdfef686036fcc264eb",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2014461,
+      "episode_id": "episode_001796",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2014461",
+      "steps": 900,
+      "replans": 13,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 120,
+      "ik_failed_rate": 0.13333333333333333,
+      "action_clipped_steps": 286,
+      "action_clipped_rate": 0.31777777777777777,
+      "dwell_timeouts": 4,
+      "planned_pregrasp_min_tcp_distance_m": 0.03556407182109122,
+      "nearest_pregrasp_min_tcp_distance_m": 0.03556407182109122,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.0508781457872081,
+            "p50": 0.059455129406720895,
+            "p95": 0.06847000257963895,
+            "max": 0.07039787593060655
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.039221688347421006,
+            "p50": 0.04272811510281207,
+            "p95": 0.054149644783066615,
+            "max": 0.05501814123608513
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.006879732012748718,
+            "p50": 0.006387472152709961,
+            "p95": 0.011130651831626892,
+            "max": 0.011591017246246338
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.02899278720717907,
+            "p50": 0.025106836511619726,
+            "p95": 0.060787133714760244,
+            "max": 0.07039787593060655
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.06354637869300944,
+            "p50": 0.05547197153550616,
+            "p95": 0.10266792676499002,
+            "max": 0.13464510034281524
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.00588550108174483,
+            "p50": 0.0045013427734375,
+            "p95": 0.014223494008183478,
+            "max": 0.019117511808872223
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2014461",
+      "completed_sha256": "04475d8c61bd685b7428866db7e3571e2744fb2c34b97485c04d81e21d9d31d9",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2010914,
+      "episode_id": "episode_000380",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2010914",
+      "steps": 900,
+      "replans": 7,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 94,
+      "first_detach_control_step": 183,
+      "max_same_fruit_held_steps": 807,
+      "ik_failed_steps": 525,
+      "ik_failed_rate": 0.5833333333333334,
+      "action_clipped_steps": 363,
+      "action_clipped_rate": 0.4033333333333333,
+      "dwell_timeouts": 17,
+      "planned_pregrasp_min_tcp_distance_m": 0.02184279909700148,
+      "nearest_pregrasp_min_tcp_distance_m": 0.02184279909700148,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.030597262748357244,
+            "p50": 0.034899416303946974,
+            "p95": 0.045292251128380354,
+            "max": 0.046493224145831985
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.02733840470636163,
+            "p50": 0.028888380693827095,
+            "p95": 0.040670477540288,
+            "max": 0.042390209380641336
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0034534916281700133,
+            "p50": 0.0037327706813812256,
+            "p95": 0.0050263598561286925,
+            "max": 0.005349300801753998
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.02741024670198942,
+            "p50": 0.02421222578765557,
+            "p95": 0.04692111413422567,
+            "max": 0.057052805485115606
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.051865984059781184,
+            "p50": 0.0478891544468872,
+            "p95": 0.09940581245263345,
+            "max": 0.10254999201676271
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.00360679030418396,
+            "p50": 0.002605969086289406,
+            "p95": 0.009503249265253538,
+            "max": 0.013668220490217209
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2010914",
+      "completed_sha256": "add558af7fabae659bdff6e714dc7f1528efd7088f620c679288405d3912f467",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2012485,
+      "episode_id": "episode_001020",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2012485",
+      "steps": 900,
+      "replans": 10,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 110,
+      "first_detach_control_step": 197,
+      "max_same_fruit_held_steps": 657,
+      "ik_failed_steps": 320,
+      "ik_failed_rate": 0.35555555555555557,
+      "action_clipped_steps": 360,
+      "action_clipped_rate": 0.4,
+      "dwell_timeouts": 10,
+      "planned_pregrasp_min_tcp_distance_m": 0.025611217534404263,
+      "nearest_pregrasp_min_tcp_distance_m": 0.025611217534404263,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 1,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.043251577225976626,
+            "p50": 0.0510793858548603,
+            "p95": 0.059284769775538634,
+            "max": 0.06114796924546174
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.03343627139700856,
+            "p50": 0.03746461258966504,
+            "p95": 0.047676996048828905,
+            "max": 0.04836677075068408
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.00551166832447052,
+            "p50": 0.005767926573753357,
+            "p95": 0.007877056300640107,
+            "max": 0.008063256740570068
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.03376218647517073,
+            "p50": 0.03415356562259597,
+            "p95": 0.05294976275152002,
+            "max": 0.06114796924546174
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.06204489971196762,
+            "p50": 0.05103314404776276,
+            "p95": 0.11649374606808156,
+            "max": 0.12611620606158486
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.005393897617856662,
+            "p50": 0.004183918237686157,
+            "p95": 0.013917702436447132,
+            "max": 0.016054943203926086
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2012485",
+      "completed_sha256": "d7009063ec85d38295c49b0e8d8841e247a8d68930daf6aa02c74e7a36628cb9",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2015716,
+      "episode_id": "episode_002270",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2015716",
+      "steps": 900,
+      "replans": 10,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 96,
+      "first_detach_control_step": 168,
+      "max_same_fruit_held_steps": 114,
+      "ik_failed_steps": 378,
+      "ik_failed_rate": 0.42,
+      "action_clipped_steps": 394,
+      "action_clipped_rate": 0.43777777777777777,
+      "dwell_timeouts": 12,
+      "planned_pregrasp_min_tcp_distance_m": 0.022853304970895466,
+      "nearest_pregrasp_min_tcp_distance_m": 0.022853304970895466,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 1,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.04145706304650508,
+            "p50": 0.04808325261802871,
+            "p95": 0.05656437724208184,
+            "max": 0.05769334057052054
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.03516554825469896,
+            "p50": 0.036414167536040654,
+            "p95": 0.048768255004480954,
+            "max": 0.04992456326282993
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.005608375370502472,
+            "p50": 0.005325518548488617,
+            "p95": 0.008841416239738465,
+            "max": 0.00912349671125412
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.0317029220970725,
+            "p50": 0.030031819750772876,
+            "p95": 0.06009964836979623,
+            "max": 0.07214483159027545
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.037324158242298934,
+            "p50": 0.03598142845011654,
+            "p95": 0.060879954404318,
+            "max": 0.06480748413584343
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0028493570784727733,
+            "p50": 0.0021136030554771423,
+            "p95": 0.00839448384940624,
+            "max": 0.00912349671125412
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2015716",
+      "completed_sha256": "7a833344bb56b7c16d28ec327eb3be76635c76ed6baca9bd5994c9517721f3b9",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2014362,
+      "episode_id": "episode_001750",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2014362",
+      "steps": 900,
+      "replans": 9,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 280,
+      "ik_failed_rate": 0.3111111111111111,
+      "action_clipped_steps": 378,
+      "action_clipped_rate": 0.42,
+      "dwell_timeouts": 9,
+      "planned_pregrasp_min_tcp_distance_m": 0.028341461756507758,
+      "nearest_pregrasp_min_tcp_distance_m": 0.028341461756507758,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.05225734323104717,
+            "p50": 0.059113123233587396,
+            "p95": 0.06857832902343278,
+            "max": 0.07023471457993512
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.04128605840139269,
+            "p50": 0.044150719143204585,
+            "p95": 0.056471831931218,
+            "max": 0.05774068508507592
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.007829152047634125,
+            "p50": 0.006829902529716492,
+            "p95": 0.013730072975158691,
+            "max": 0.014577656984329224
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.05087069998903346,
+            "p50": 0.04675846478935403,
+            "p95": 0.09793205009512192,
+            "max": 0.10878845148351494
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.044729316775974776,
+            "p50": 0.04257892271255355,
+            "p95": 0.08263859096483521,
+            "max": 0.09375318520155258
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.003860244154930115,
+            "p50": 0.0023292582482099533,
+            "p95": 0.012670592963695514,
+            "max": 0.019150346517562866
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2014362",
+      "completed_sha256": "b090907878288ac888df9979d63e2088e881cef3386508471a6a1ae382fabcf7",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2015751,
+      "episode_id": "episode_002290",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2015751",
+      "steps": 900,
+      "replans": 9,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 74,
+      "first_detach_control_step": 182,
+      "max_same_fruit_held_steps": 237,
+      "ik_failed_steps": 363,
+      "ik_failed_rate": 0.4033333333333333,
+      "action_clipped_steps": 455,
+      "action_clipped_rate": 0.5055555555555555,
+      "dwell_timeouts": 12,
+      "planned_pregrasp_min_tcp_distance_m": 0.02826370717762727,
+      "nearest_pregrasp_min_tcp_distance_m": 0.02826370717762727,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 1,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.0435212746349828,
+            "p50": 0.04995729851109035,
+            "p95": 0.057853947753305754,
+            "max": 0.059554983742978074
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.03602404685221589,
+            "p50": 0.039599031191320716,
+            "p95": 0.049085179731079925,
+            "max": 0.049959042443229226
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.006062887609004974,
+            "p50": 0.005679570138454437,
+            "p95": 0.009812793135643006,
+            "max": 0.010162577033042908
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.034239057897556956,
+            "p50": 0.03272634734401009,
+            "p95": 0.05280249126248668,
+            "max": 0.059554983742978074
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.06843376790552601,
+            "p50": 0.05297440256122195,
+            "p95": 0.12585887185567296,
+            "max": 0.13228338952782953
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.00512598380446434,
+            "p50": 0.0038065891712903976,
+            "p95": 0.01261146906763315,
+            "max": 0.022622328251600266
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2015751",
+      "completed_sha256": "bd53a239ec421029156ab6d2281219f7a43c6cd6c1028ea9af4b5282cb8a6522",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "cohort": "dev",
+      "scene_seed": 2011310,
+      "episode_id": "episode_000540",
+      "inference_seed": 42,
+      "job_id": "B_step8000_rng42_reach-conditioned_2011310",
+      "steps": 900,
+      "replans": 10,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 87,
+      "first_detach_control_step": 171,
+      "max_same_fruit_held_steps": 814,
+      "ik_failed_steps": 360,
+      "ik_failed_rate": 0.4,
+      "action_clipped_steps": 210,
+      "action_clipped_rate": 0.23333333333333334,
+      "dwell_timeouts": 12,
+      "planned_pregrasp_min_tcp_distance_m": 0.028633577076982424,
+      "nearest_pregrasp_min_tcp_distance_m": 0.028633577076982424,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.04663656704173237,
+            "p50": 0.053426772226476106,
+            "p95": 0.06223201585987381,
+            "max": 0.0639870597124145
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.03690513561983645,
+            "p50": 0.041356578347171526,
+            "p95": 0.051572416317917924,
+            "max": 0.0522112408023534
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0067467764019966125,
+            "p50": 0.006210438907146454,
+            "p95": 0.011026638746261596,
+            "max": 0.011461026966571808
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.02596500697388414,
+            "p50": 0.0224182996934741,
+            "p95": 0.05440855974925533,
+            "max": 0.0639870597124145
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.051698524966671607,
+            "p50": 0.04974479124673055,
+            "p95": 0.0887316361948292,
+            "max": 0.09428856903658257
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0035858479638894397,
+            "p50": 0.0017928127199411392,
+            "p95": 0.010483653470873827,
+            "max": 0.018783386796712875
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2011310",
+      "completed_sha256": "9fc077b7da18a843536d04aeffb9217c6538e41f38bd6af3c26cb21c6aaf5eec",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      },
+      "checkpoint_step": 8000,
+      "comparison_role": "primary_endpoint"
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2013322,
+      "episode_id": "episode_001319",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2013322",
+      "steps": 900,
+      "replans": 12,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 84,
+      "first_detach_control_step": 163,
+      "max_same_fruit_held_steps": 301,
+      "ik_failed_steps": 229,
+      "ik_failed_rate": 0.2544444444444444,
+      "action_clipped_steps": 219,
+      "action_clipped_rate": 0.24333333333333335,
+      "dwell_timeouts": 7,
+      "planned_pregrasp_min_tcp_distance_m": 0.03269749571706532,
+      "nearest_pregrasp_min_tcp_distance_m": 0.03269749571706532,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 1,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.012193460294909616,
+            "p50": 0.014188614872696492,
+            "p95": 0.01853192262511266,
+            "max": 0.019588323306474132
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.018056567853501078,
+            "p50": 0.018666613798129752,
+            "p95": 0.02756656024607627,
+            "max": 0.02813946653797173
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0023453772068023683,
+            "p50": 0.0024053603410720825,
+            "p95": 0.004035042226314544,
+            "max": 0.004386134445667267
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.02016260114918679,
+            "p50": 0.019405032304597065,
+            "p95": 0.03420984799819159,
+            "max": 0.04024968649289488
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.03215474589355683,
+            "p50": 0.03149321996687141,
+            "p95": 0.06450141046797633,
+            "max": 0.07161687584791267
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0029232402642567954,
+            "p50": 0.0016689598560333252,
+            "p95": 0.011353318765759457,
+            "max": 0.01990724354982376
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2013322",
+      "completed_sha256": "3c425783c381b0b05c3ead3d5e0c8df6dd9774548f71579e7c88b0b324229e57",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2014461,
+      "episode_id": "episode_001796",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2014461",
+      "steps": 900,
+      "replans": 14,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 315,
+      "ik_failed_rate": 0.35,
+      "action_clipped_steps": 227,
+      "action_clipped_rate": 0.25222222222222224,
+      "dwell_timeouts": 10,
+      "planned_pregrasp_min_tcp_distance_m": 0.06071215369042294,
+      "nearest_pregrasp_min_tcp_distance_m": 0.06071215369042294,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.013536626570566595,
+            "p50": 0.0160391297621995,
+            "p95": 0.02172449820413201,
+            "max": 0.023001048000203757
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.017496396819837844,
+            "p50": 0.019116205841478377,
+            "p95": 0.027186828650884523,
+            "max": 0.0287750630976427
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0027236677706241608,
+            "p50": 0.002670876681804657,
+            "p95": 0.004584965854883194,
+            "max": 0.004999108612537384
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.037429943754720925,
+            "p50": 0.03719646859171376,
+            "p95": 0.06412802045305892,
+            "max": 0.06567989206289558
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.050990390552006166,
+            "p50": 0.052451365770865815,
+            "p95": 0.09963902846634518,
+            "max": 0.10979147861910793
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.005658151706059774,
+            "p50": 0.0027996357530355453,
+            "p95": 0.01827529268339276,
+            "max": 0.01940263621509075
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2014461",
+      "completed_sha256": "8816bea8d242318da0417dd5f1deda9439b4d325c7bedd7b6b652aa3755602ef",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2010914,
+      "episode_id": "episode_000380",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2010914",
+      "steps": 900,
+      "replans": 12,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 228,
+      "ik_failed_rate": 0.25333333333333335,
+      "action_clipped_steps": 384,
+      "action_clipped_rate": 0.4266666666666667,
+      "dwell_timeouts": 8,
+      "planned_pregrasp_min_tcp_distance_m": 0.03252659154726105,
+      "nearest_pregrasp_min_tcp_distance_m": 0.03252659154726105,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.010739690518461948,
+            "p50": 0.011210635867966287,
+            "p95": 0.01672735993347933,
+            "max": 0.017762416194890693
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.017215953155229585,
+            "p50": 0.018152181496739573,
+            "p95": 0.026540772869623214,
+            "max": 0.02744789554816402
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.002218497544527054,
+            "p50": 0.0023169293999671936,
+            "p95": 0.004085702449083328,
+            "max": 0.004473775625228882
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.026205587198255022,
+            "p50": 0.028719952194906643,
+            "p95": 0.046052244478648634,
+            "max": 0.050841491679131615
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.03427718909969016,
+            "p50": 0.02786362348927203,
+            "p95": 0.07192056450169829,
+            "max": 0.08114090233202928
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0032020090768734616,
+            "p50": 0.002016805112361908,
+            "p95": 0.01188070755451917,
+            "max": 0.021381758153438568
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2010914",
+      "completed_sha256": "5b69ec37426153ed1149cac7156fe223d91ec97f81c01d5733496bc36e9bdcf1",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2012485,
+      "episode_id": "episode_001020",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2012485",
+      "steps": 900,
+      "replans": 14,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 152,
+      "first_detach_control_step": 237,
+      "max_same_fruit_held_steps": 469,
+      "ik_failed_steps": 184,
+      "ik_failed_rate": 0.20444444444444446,
+      "action_clipped_steps": 328,
+      "action_clipped_rate": 0.36444444444444446,
+      "dwell_timeouts": 6,
+      "planned_pregrasp_min_tcp_distance_m": 0.0243075330692924,
+      "nearest_pregrasp_min_tcp_distance_m": 0.0243075330692924,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 2,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.011410153826751302,
+            "p50": 0.013412914693631896,
+            "p95": 0.01826223744553382,
+            "max": 0.019358583776693875
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.017274620392264108,
+            "p50": 0.01942367654560945,
+            "p95": 0.02604421135798418,
+            "max": 0.027240173450683726
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.002165621519088745,
+            "p50": 0.0017340779304504395,
+            "p95": 0.003744369745254516,
+            "max": 0.004123382270336151
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.0447536061491841,
+            "p50": 0.052485398974206815,
+            "p95": 0.07405831660431407,
+            "max": 0.07794689759835646
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.0374099871960488,
+            "p50": 0.03549601180980923,
+            "p95": 0.07908329232593903,
+            "max": 0.0808376185018157
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.003127393995722135,
+            "p50": 0.002188540995121002,
+            "p95": 0.007855057716369625,
+            "max": 0.01191965863108635
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2012485",
+      "completed_sha256": "3c4eb9b6d30c446b45a03abaa8332d73994d5680a331f2a1ceae45f17dc6af72",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2015716,
+      "episode_id": "episode_002270",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2015716",
+      "steps": 900,
+      "replans": 8,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 114,
+      "first_detach_control_step": 161,
+      "max_same_fruit_held_steps": 787,
+      "ik_failed_steps": 546,
+      "ik_failed_rate": 0.6066666666666667,
+      "action_clipped_steps": 494,
+      "action_clipped_rate": 0.5488888888888889,
+      "dwell_timeouts": 18,
+      "planned_pregrasp_min_tcp_distance_m": 0.0252400539771843,
+      "nearest_pregrasp_min_tcp_distance_m": 0.0252400539771843,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.012596679463870285,
+            "p50": 0.014367863380615279,
+            "p95": 0.01972873106231421,
+            "max": 0.020696918759843475
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.018833839475482873,
+            "p50": 0.020756956028933286,
+            "p95": 0.02921635645123317,
+            "max": 0.03041860479876797
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0024476319551467894,
+            "p50": 0.002257242798805237,
+            "p95": 0.004305502772331237,
+            "max": 0.004736296832561493
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.016150648621280024,
+            "p50": 0.014216662486019186,
+            "p95": 0.030262819129462177,
+            "max": 0.034739342725479405
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.02815964243953024,
+            "p50": 0.026171586008115137,
+            "p95": 0.04935753159758249,
+            "max": 0.056022210657390346
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0022464695076147715,
+            "p50": 0.0016952455043792725,
+            "p95": 0.006776864081621166,
+            "max": 0.007925678044557571
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2015716",
+      "completed_sha256": "6a8385b10a623f9549e4b9715c902086685c8b055dd9ba16988249e16b57ec50",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2014362,
+      "episode_id": "episode_001750",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2014362",
+      "steps": 900,
+      "replans": 18,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": 79,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 48,
+      "ik_failed_steps": 76,
+      "ik_failed_rate": 0.08444444444444445,
+      "action_clipped_steps": 171,
+      "action_clipped_rate": 0.19,
+      "dwell_timeouts": 2,
+      "planned_pregrasp_min_tcp_distance_m": 0.028901854738785676,
+      "nearest_pregrasp_min_tcp_distance_m": 0.028901854738785676,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 1,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.01789300161643012,
+            "p50": 0.019549219408740874,
+            "p95": 0.0274411945631959,
+            "max": 0.028019924725075498
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.02372911980980925,
+            "p50": 0.025335001754469302,
+            "p95": 0.03743158683664145,
+            "max": 0.03860218501259808
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0031687043607234954,
+            "p50": 0.0030310936272144318,
+            "p95": 0.005235308408737182,
+            "max": 0.005699440836906433
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.0299684720105575,
+            "p50": 0.025638244831966295,
+            "p95": 0.0673472604060287,
+            "max": 0.08586781709556403
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.03499642742487517,
+            "p50": 0.029275592909834648,
+            "p95": 0.08334091318123002,
+            "max": 0.09820314155688882
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0024079824487368267,
+            "p50": 0.0016507618129253387,
+            "p95": 0.00705125201493501,
+            "max": 0.01355024054646492
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2014362",
+      "completed_sha256": "4cdbe3ab21230fca3454fe1a50b83cfcbad3330364ce4c6fcf1c4b79b41a608d",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2015751,
+      "episode_id": "episode_002290",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2015751",
+      "steps": 900,
+      "replans": 9,
+      "grasp": true,
+      "held15": true,
+      "grasp_by_step300": true,
+      "held15_qualified_by_step300": true,
+      "any_detach": true,
+      "grasp_and_any_detach": true,
+      "success": false,
+      "first_grasp_control_step": 76,
+      "first_detach_control_step": 164,
+      "max_same_fruit_held_steps": 308,
+      "ik_failed_steps": 434,
+      "ik_failed_rate": 0.4822222222222222,
+      "action_clipped_steps": 292,
+      "action_clipped_rate": 0.3244444444444444,
+      "dwell_timeouts": 14,
+      "planned_pregrasp_min_tcp_distance_m": 0.021055886868336874,
+      "nearest_pregrasp_min_tcp_distance_m": 0.021055886868336874,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 1,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.009331424622188387,
+            "p50": 0.008757899108158418,
+            "p95": 0.015583970522154529,
+            "max": 0.016041468517605986
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.014878032742223254,
+            "p50": 0.014864274841470293,
+            "p95": 0.023936172680397105,
+            "max": 0.024263928752333533
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.0019629091024398805,
+            "p50": 0.0014666244387626648,
+            "p95": 0.0036391079425811762,
+            "max": 0.004036016762256622
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.02568372575439749,
+            "p50": 0.028992191937519892,
+            "p95": 0.043896640484626076,
+            "max": 0.05124250442625305
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.05095966277748439,
+            "p50": 0.04759768237979304,
+            "p95": 0.10113372248953645,
+            "max": 0.11012729637354009
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0028949628273646035,
+            "p50": 0.0013994202017784119,
+            "p95": 0.009679483994841573,
+            "max": 0.010141070932149887
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2015751",
+      "completed_sha256": "343355496bd2406f3083954ac96fec24505ff0f636d21741172cbbafb5f80193",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    },
+    {
+      "arm": "B",
+      "checkpoint_step": 4000,
+      "comparison_role": "secondary_train_best",
+      "cohort": "dev",
+      "scene_seed": 2011310,
+      "episode_id": "episode_000540",
+      "inference_seed": 42,
+      "job_id": "B_trainbest_step4000_rng42_reach-conditioned_2011310",
+      "steps": 900,
+      "replans": 17,
+      "grasp": false,
+      "held15": false,
+      "grasp_by_step300": false,
+      "held15_qualified_by_step300": false,
+      "any_detach": false,
+      "grasp_and_any_detach": false,
+      "success": false,
+      "first_grasp_control_step": null,
+      "first_detach_control_step": null,
+      "max_same_fruit_held_steps": 0,
+      "ik_failed_steps": 38,
+      "ik_failed_rate": 0.042222222222222223,
+      "action_clipped_steps": 164,
+      "action_clipped_rate": 0.18222222222222223,
+      "dwell_timeouts": 1,
+      "planned_pregrasp_min_tcp_distance_m": 0.045057207257917814,
+      "nearest_pregrasp_min_tcp_distance_m": 0.045057207257917814,
+      "held_apple_id_at_first_success": null,
+      "release_observed_strictly_before_success": null,
+      "release_observed_by_success_boundary": null,
+      "observed_release_count": 0,
+      "same_grasped_fruit_detach_verified": null,
+      "first_chunk_teacher_error": {
+        "first5": {
+          "position_error_m": {
+            "count": 5,
+            "mean": 0.02242058295650052,
+            "p50": 0.024631248524658797,
+            "p95": 0.03350394723001987,
+            "max": 0.034852879887860636
+          },
+          "rotation_error_rad": {
+            "count": 5,
+            "mean": 0.028303557612084314,
+            "p50": 0.02985012210512639,
+            "p95": 0.04374657103362969,
+            "max": 0.04605106209038857
+          },
+          "width_absolute_error_m": {
+            "count": 5,
+            "mean": 0.003871448338031769,
+            "p50": 0.003998182713985443,
+            "p95": 0.006338179111480713,
+            "max": 0.006837606430053711
+          }
+        },
+        "full30": {
+          "position_error_m": {
+            "count": 30,
+            "mean": 0.03445306970652532,
+            "p50": 0.03525727154971031,
+            "p95": 0.05705347675084183,
+            "max": 0.05830970876051368
+          },
+          "rotation_error_rad": {
+            "count": 30,
+            "mean": 0.033856411278341415,
+            "p50": 0.029662098714598472,
+            "p95": 0.064763425112902,
+            "max": 0.07619420986300722
+          },
+          "width_absolute_error_m": {
+            "count": 30,
+            "mean": 0.0031301448742548626,
+            "p50": 0.003125488758087158,
+            "p95": 0.007575728185474868,
+            "max": 0.010115310549736023
+          }
+        },
+        "interpretation": "Unclipped decoded first-chunk world targets versus teacher targets at the same reset; fitting diagnostic only, not a requirement to choose the teacher fruit."
+      },
+      "source_directory": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_trainbest_step4000_rng42_reach-conditioned_2011310",
+      "completed_sha256": "dbe89ecd8af5c197f8c25694cbcf383378ef73e8e8ca6a072aae8d1d328294be",
+      "raw_step_threshold_reconstruction": {
+        "raw_steps": 900,
+        "grasp_held15_300_success_release_recomputed": true,
+        "reach_position_rotation_max_dwell_recomputed": true,
+        "IK_clipping_timeout_counts_recomputed": true
+      }
+    }
+  ],
+  "limits": [
+    "Secondary B4000 was selected by TRAIN-only best rule before closed-loop testing and separately authorized before primary queue completed.",
+    "Only fixed dev8 seed42 was evaluated; no heldout best-checkpoint testing or checkpoint replacement.",
+    "Primary remains A8000 vs B8000. A8000 is reused because its train-only best equals the primary endpoint.",
+    "Same unchanged full30 reach loop, 900-step budget, control limits, benchmark_assist and fixed reset.",
+    "Held15 is consecutive control boundaries, not imposed pose holding or physics-substep proof.",
+    "Any-detach is aggregate; benchmark bucket success is not inherently an explicit-release completion."
+  ]
+}

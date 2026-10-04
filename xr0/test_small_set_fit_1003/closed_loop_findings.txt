@@ -1,0 +1,49 @@
+M0 闭环独立诊断（仅分析既有 trace；无新增 GPU 实验）
+
+固定四个易见、GT 回放干净场景：GT 4/4 抓取、摘离、入桶；原 10k 0/4 抓取；best step2000 2/4 抓取并摘离、0/4 入桶。新增抓取各有一条 train 和 val；这是小样本能力证据，不是总体成功率估计。
+
+正式契约保持 reach-conditioned：位置 0.01m、姿态 0.08rad、最多等待30步、预算900控制步、完整30目标；未新增预抓保持门槛。所有12回合 scene/reset 检查通过、无运行时错误、observer mismatch=0，step/grasp/success 汇总一致。
+
+配对概要：provider seed split steps replans grasp detach success IK dwell
+gt           2013322 train 489  0 1 1 1   0  0
+original_10k 2013322 train 900  9 0 0 0 177  5
+best         2013322 train 900 11 1 1 0 324 11
+gt           2014461 train 514  0 1 1 1   0  0
+original_10k 2014461 train 900 10 0 0 0  67  2
+best         2014461 train 900 16 0 0 0   0  0
+gt           2010914 val   484  0 1 1 1   0  0
+original_10k 2010914 val   900 11 0 0 0  97  3
+best         2010914 val   900  7 1 1 0 326 11
+gt           2012485 val   544  0 1 1 1   0  0
+original_10k 2012485 val   900 11 0 0 0   0  0
+best         2012485 val   900 12 0 0 0 301 10
+
+第一 chunk：30目标均全部到达，三组所有12回合均 IK=0、超时=0；hold 表示等待目标追踪的控制调用，不等于 grasp。字段：provider seed calls hold teacher-pos-MAE(mm) own-track-p50/p95(mm) nearest-TCP(mm,含抓住之后) first-grasp-step。
+gt           2013322  98  68    0.00  14.11/ 42.56    5.93 (apple 17, step 82, held=17) 77
+original_10k 2013322  52  22  315.08   9.48/ 21.04  345.12 (apple 17, step 1, held=None) -
+best         2013322 131 101   25.94  16.57/ 54.10    7.06 (apple 17, step 107, held=17) 101
+gt           2014461 108  78    0.00  14.17/ 43.78    6.89 (apple 28, step 92, held=28) 86
+original_10k 2014461  56  26  326.28   9.58/ 21.51  369.20 (apple 28, step 1, held=None) -
+best         2014461 141 111   25.86  16.69/ 56.98   33.03 (apple 28, step 111, held=None) -
+gt           2010914  97  67    0.00  14.81/ 42.70    3.35 (apple 3, step 83, held=3) 78
+original_10k 2010914  58  28  319.12   9.76/ 22.82  348.83 (apple 3, step 1, held=None) -
+best         2010914 127  97   29.51  16.19/ 51.33   13.05 (apple 3, step 108, held=3) 102
+gt           2012485  99  69    0.00  13.97/ 43.20    2.26 (apple 17, step 80, held=17) 77
+original_10k 2012485  59  29  325.81   9.87/ 24.80  290.74 (apple 27, step 1, held=None) -
+best         2012485 106  76  123.85  13.39/ 54.92  103.15 (apple 17, step 59, held=None) -
+
+逐场景 best 解释：
+1. train2013322 / episode_001319：step101（chunk0/k16）抓果17，step207摘离。初次关闭意图 step73。直到预算结束仍持果，无释放转换；前10个 chunks IK=0，最后 chunk10 在 step565 起出现全部324次 IK失败，11次 dwell 超时。该例已经越过抓取/摘离，后段运输/放置目标及跟踪失效需要单独定位，不能再归为 NO_GRASP。
+2. train2014461 / episode_001796：全900步 IK=0、dwell=0，共16次规划、470个 reached advances，仍未抓。最接近发生 step111/chunk0/k16，果28 TCP距33.0286mm，hand-local=(-24.6599,-3.3972,125.1081)mm；负 intent、目标开度53.1948mm、实际58.7463mm、日志双指contacts，但 z 比严格掌内上界高0.1081mm，before/after 均无 geometry-eligible。初次负 intent 为 step80。后续各 chunk 最近距离总体增大，最后 chunk 最近601.24mm。现有证据指向抓取几何配合未达成及之后继续走离，而非 IK 或完全没有闭合意图；边界0.108mm裕量不能排除细微精度/动态影响，也不能据此宣布修改 gate 即可修复。
+3. val2010914 / episode_000380：step102（chunk0/k17）抓果3，step198摘离，初次负 intent step72。直到预算结束仍持果，未释放；前6个 chunks IK=0，最后 chunk6 在 step566 起出现全部326次 IK失败，11次 dwell 超时。与 train2013322 同为前段正面证据和后段失败，不能将抓持后近零 TCP果距当成持续到果精度。
+4. val2012485 / episode_001020：第一 chunk step59/chunk0/k13 最近果17仍为103.153mm，hand-local=(-22.4678,-8.7751,203.6929)mm，距掌体积78.6929mm；负 intent、目标开度59.8728mm、实际67.7658mm，未进入掌内。初次负 intent step14。前11个 chunks 均 IK=0/dwell=0；全部301次 IK失败集中在最后 chunk11，自 step600/k9 开始，后有10次 dwell 超时。不能用这批后段 IK失败解释最初没有到果。
+
+无抓两例 before/after 采样均无 geometry-eligible，因而没有“几何满足但 intent 不允许”的正面证据。负 intent 并不证明开度时序最佳，只说明不是完全未触发 close。before/after 观察不到每个内部物理子步；真实 grasp_assist_triggered 才是实际抓持事件。
+
+生产精度探针：原10k all-BF16 对 FP32-master/autocast 面板，在4个 reset 窗的最大位置差为0.87–1.12mm；best 为2.14–7.03mm（最大来自 val2012485）。这说明部署输出不完全相同；独立干预尚未做，不能将残余失败直接归咎精度，也不能忽略 train2014461 的极小几何裕量。
+
+工程含义：M0 已提供真实抓取与摘离进展，新增训练不是仅让动作更合法；但完整任务仍0/4。接下来应分开处理“未进入可靠抓持几何”与“已摘离后持续输出不可追踪目标且未放果”。不应再以全局 IK/clip 单值或只看离线 loss 选方案。
+
+溯源与边界：所有 step 为1基已完成控制调用；chunk/k 为0基。第一 chunk teacher-target 误差只是拟合诊断，实际模型仍仅输入观测与 Pick an apple；nearest ID 被保留，未作为决策输入。四条场景预先固定，两 train 两 val；没有总体泛化结论。GT报告保留旧selection/source SHA，gt_selection_revision_check.json证明4场景元数据与 final selection 精确相同。随后 evaluate_reach 仅增加模型加载后的精度探针和 selection 修订配对逻辑，原正式 reach loop 未改变。
+
+完整数值、事件坐标、每chunk分布、原trace SHA：closed_loop_findings.json；每条原始记录路径见 JSON directory/source_sha256。

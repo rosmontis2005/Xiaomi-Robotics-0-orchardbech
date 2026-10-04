@@ -1,0 +1,116 @@
+{
+  "created_utc": "2026-10-03T12:28:10.209578+00:00",
+  "purpose": "Diagnosis only; no production changes or training",
+  "cohort": [
+    {
+      "seed": 2010027,
+      "episode_id": "episode_000010"
+    },
+    {
+      "seed": 2010042,
+      "episode_id": "episode_000020"
+    },
+    {
+      "seed": 2010067,
+      "episode_id": "episode_000030"
+    }
+  ],
+  "rollout_matrix": {
+    "providers": [
+      "gt",
+      "step_10000"
+    ],
+    "modes": [
+      "time-indexed",
+      "reach-conditioned"
+    ],
+    "budget": 900,
+    "control_hz": 30,
+    "horizon": 30,
+    "position_tolerance_m": 0.01,
+    "rotation_tolerance_rad": 0.08,
+    "max_dwell": 30,
+    "inference_seed": 42
+  },
+  "gt_anchor": "Recorded expert anchor, assert decoded world targets equal recorded actions; same native adapter and scheduling as model",
+  "model_anchor": "Captured live observation once per predict; latest observation used for each command",
+  "offline": {
+    "episodes": 8,
+    "windows_per_episode": 10,
+    "models": [
+      "mean_baseline",
+      "pretrained",
+      "step_10000"
+    ],
+    "inference_seed": 42
+  },
+  "stop_rules": [
+    "No repair or hyperparameter tuning",
+    "No short-prefix scheduler in this diagnosis",
+    "Semantic failures are retained, not retried",
+    "Infrastructure failures recorded separately"
+  ],
+  "source_sha256_before": {
+    "/home/rosmontis/Projects/orchardbench/treesim/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/rosmontis/Projects/orchardbench/treesim/arm_motion.py": "2ea7a9820ad8e6a11567b2d3ad09673f01bdc37e3ec09c9a110f0fb7254e3315",
+    "/home/rosmontis/Projects/orchardbench/treesim/breaking.py": "6abdd97795a9b22527979a2bbadee09e40724f6448b3d72e22416a66c4394732",
+    "/home/rosmontis/Projects/orchardbench/treesim/builder.py": "534710afdb6ebe95b5f668bb55af25045603e8e6f6293b70596f57e439ee93f9",
+    "/home/rosmontis/Projects/orchardbench/treesim/config.py": "35c8806a1c4a19a359283fd5fdc8cbf356e3751e6249f43eb598c14fae1e5870",
+    "/home/rosmontis/Projects/orchardbench/treesim/domainrand.py": "5a98c2720f39ba7a50cf801650018c57039dc4baa9f7321afb9729c865f3e3f8",
+    "/home/rosmontis/Projects/orchardbench/treesim/domainrand_gpu.py": "0301a8f37635f06de2de5ec7f0cf871352da1e376269dd165eba69594b89aa48",
+    "/home/rosmontis/Projects/orchardbench/treesim/expert_diagnostics.py": "9d7a25064b5bfeb710aed328dbd41fdddf2f21c20e58e954814163c425682cec",
+    "/home/rosmontis/Projects/orchardbench/treesim/fixed_base_picker.py": "0318d6ef9c72b30d36b0b308e0229017eb10d88e4cb21a037a7b217548860b55",
+    "/home/rosmontis/Projects/orchardbench/treesim/foliage.py": "c63f5a3eb59571a14ab6ce2ad2110d1016739e5a2b4444b6f8d80d4f63cfb948",
+    "/home/rosmontis/Projects/orchardbench/treesim/fruit.py": "0e20750ec3035a2b44edf034231bebaa2d4b4e8aecc9c3975c4d501936892855",
+    "/home/rosmontis/Projects/orchardbench/treesim/lsystem.py": "e889397b7f7b6fbfcb6e3cce74b1acc5c588c41eeb93b6d043f8db12ee3d59fb",
+    "/home/rosmontis/Projects/orchardbench/treesim/metrics.py": "47779af24f9b5d6ce6b3818bf3feeaeef910c7075e4560275aade0c4714a44b9",
+    "/home/rosmontis/Projects/orchardbench/treesim/orchard_action.py": "1e54d88994d9f001b2a3db82526561a9eaee38da5a43d51db7edd952d7df3866",
+    "/home/rosmontis/Projects/orchardbench/treesim/perception.py": "a854776fcf675340363e249703f53473a037e036a73c070a0ba0892dc4e96878",
+    "/home/rosmontis/Projects/orchardbench/treesim/physics.py": "b499c99e9e332e63231147fe823b88d52d20659dd1d2e4dd7e1fcbab8396b4d8",
+    "/home/rosmontis/Projects/orchardbench/treesim/picker.py": "9f4474ba688fa0c415ce91f3a626605830a2800b45ed4ba40972e6c0f3d855eb",
+    "/home/rosmontis/Projects/orchardbench/treesim/robot.py": "eedd2615210a76c15021dc215dd48042792e302e01493b299ab41f2a38a59dfb",
+    "/home/rosmontis/Projects/orchardbench/treesim/sim.py": "e45258c4d9563bf0e587c2b874c85913fbe0ac22f01d9aee59672c2c895a8348",
+    "/home/rosmontis/Projects/orchardbench/treesim/skeleton.py": "9a7a47a15b50bf628a4d370b9cd2f394f3972bb64910fe012f081e658d4d3856",
+    "/home/rosmontis/Projects/orchardbench/treesim/springs.py": "b59f1715b21fc862497da88836a48a0b7d9de12e3fea0779bc16a531554529c0",
+    "/home/rosmontis/Projects/orchardbench/treesim/target_visibility.py": "e7434aaf751a0546ff309276b9cc2535d178fbda31813b3b3f0d9c500b908b0b",
+    "/home/rosmontis/Projects/orchardbench/treesim/viz.py": "b4eb7f0b555b36bc587c4c15e6b631b318cd4e48dbb1a06f9bc83e146e19fa88",
+    "/home/rosmontis/Projects/orchardbench/treesim/vla_camera.py": "890e88d8e5fd8da800621e53fe85ce1954c55fa9c0f761b36f102494f60976fd",
+    "/home/rosmontis/Projects/orchardbench/treesim/vla_env.py": "2731a4d747d9c6fbecd37db8ce2c8367b94f2b1a5c196bd0243c65a4a0635c57",
+    "/home/rosmontis/Projects/orchardbench/treesim/xr0_adapter.py": "93ed63c5df0dc73cd565e6200e4612e1258c672f6d9957a247d3a5a19775acb7",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/__init__.py": "01665478ec7a8e143a19f508c0767490653a9d581b610a42e03651ed4ef5ffbe",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/__init__.py": "9b1e24c50356f2e496373760df988b24691fb73a9f651a96fa57771fa78b3140",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/collate/custom_collate.py": "32465023198f8706d2885df7d3c6147bb1997bcef5d8b8b5a9a555c63fb494bc",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/datamodule/base_datamodule.py": "059bafbc39006be32645cc2c6a39e660c844883f7e0060833d712a9c34159c30",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/datamodule/orchardbench_datamodule.py": "060daed3cd24b7e242b5bc9ccb65e0425d684b8084effb32d5d4f9cb65ee79b1",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/datasets/json_dataset.py": "96834aefaf57e95db07ceed308e8f0c4cd091bf0fc268e07098fc7011c92c65d",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/datasets/orchardbench_dataset.py": "50a0bcb8775e961a79dbdffba9ef8556fe10aa7902fc824fc51034ee3cf7fb33",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/models/VLA/XR0.py": "353961360187f70ec8cf079cb13fcf26c2a1811ed485e6a15041869142e1d3fe",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/models/VLM/qwen3vl.py": "af36805f82ba023ba93cd160f4a4e547c9152eeb2e8ca41d5611993c370289ef",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/models/__init__.py": "715687ac15ca08400dc1997a5a9fd1601993032b999ab26adeb30ac84483c071",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/models/runner/base_runner.py": "8f48df873a15bcab43bbe5991f49a5ca1b713551f04b9271afec3aa8760e3c14",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/models/runner/orchard_runner.py": "0f3e84b0e8d6a79e149d1c6cfe74b408034f9afd108611ef7bb69821400928bd",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/server/deploy.py": "8b528110c098e61cb0b17a6f0064f8d99869ba360a14f131e01edbe4b8dde257",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/server/orchard_policy.py": "737781475659df77c265841b222e3f6724d14aa29c987986226b56178febc0e7",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/server/runtime/client.py": "55c56daaa0a295f9e0ab1a91adb0cf7ee047da6bd749b9a13456b1b001e1a1b2",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/server/runtime/server.py": "c78bd1ca1792cb52dbc30814c8f813ffc01831497773ef00f993a8e61bf54cb1",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/__init__.py": "89555df2f6efb2c83968cfcd637edcbe998eb0e74b8bdf8af3c823164ac6068a",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/cfg_utils.py": "9eb85557c2759b26d074d437d29bc5f8b50927113c1dcef734791c31a8ad16fe",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/cosine_warmup.py": "977f5755f66f6532e5369cdfe6743f752d97be68087e95e11d792e05acf5c50c",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/io.py": "720e341ae9d347cedec47fbfe5e165608bed812c40858603f7ad1afd4ecb4ad2",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/model_utils.py": "bde29f62ca12a7eaa22622b97a1b232a3105026dc14a582e6caec03e48179566",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/orchard_checkpoint.py": "f0064856129656dc483aa45c9b02947080e90df7ff594e6ddfca18bb42a6e2f8",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/tools/eval_orchard_learning_curve.py": "bf39ba80aa6ba5c6887a9b5516e524e8bfc507f26da8c5fb9c8eed003709f727",
+    "/home/rosmontis/Projects/orchardbench/log/v1_2650_collection_replay_filter/sources/frozen_gate1_oracle.py": "6142e7a9c1b84168f804c0567e99271470fbfd27b90cb81ff05efe42ca54acbb",
+    "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/action_stats.json": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371"
+  },
+  "checkpoint_identity": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "size": 12217731697,
+    "mtime_ns": 1790909587980094161
+  },
+  "gpu_execution": "Sequential jobs on GPU 0; model loaded once per job",
+  "limits": [
+    "3 known GT-pass validation examples are diagnostic development cases, not unbiased success-rate estimate",
+    "Contact snapshots before/after control step may miss transient physics-substep contacts"
+  ]
+}

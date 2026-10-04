@@ -1,0 +1,42 @@
+M0 小样本拟合结果（仅训练与离线生成，不替代 reach 闭环）
+
+2000 updates 完成；80 个训练窗每窗恰好 25 次，验证窗 0 次参与更新。best=final=step2000，选择依据始终仅为预先固定的 train 门槛。
+原 full30 flow loss / 原 stats / 原 processor / frozen VLM 均保持；所有记录的梯度有限，VLM 参数逐字节 SHA 前后一致，输出权重最大变化 0.000676449。
+训练 288.48 s，五次生成面板 245.74 s，总计 545.56 s；峰值 GPU reserved 13.81 GB（十进制）。首 80 次 loss 均值 0.22644，末 80 次 0.06989；随机 flow 时间/noise 不同，不能当固定验证损失。
+
+基线 → step2000：全 30 targets 的物理误差均值（位置 cm / 姿态 rad / 总宽度 mm）
+train/all: position 11.89 → 2.95; rotation 0.1484 → 0.0486; width 10.83 → 3.48
+val/all: position 12.04 → 8.53; rotation 0.1751 → 0.1577; width 10.22 → 6.97
+train/reset: position 26.93 → 2.67; rotation 0.1433 → 0.0406; width 16.33 → 2.92
+val/reset: position 21.79 → 7.43; rotation 0.1599 → 0.0855; width 13.18 → 7.07
+
+位置误差均值，按 horizon 分层，单位 cm（baseline→2000）
+train/all: h1 1.89→1.16, h1_5 4.65→1.75, h6_15 11.10→2.92, h16_30 14.82→3.38, full 11.89→2.95
+val/all: h1 1.85→1.39, h1_5 4.49→3.09, h6_15 11.54→7.91, h16_30 14.89→10.75, full 12.04→8.53
+train/reset: h1 0.81→0.86, h1_5 5.83→2.15, h6_15 26.11→3.81, h16_30 34.51→2.09, full 26.93→2.67
+val/reset: h1 1.13→0.98, h1_5 5.57→2.95, h6_15 21.45→8.66, h16_30 27.42→8.11, full 21.79→7.43
+
+phase 以窗口起点定义；完整窗口可能跨 phase。全 30 位置/姿态/宽度误差：
+train/phase_GRASP: position 7.87→2.78 cm; rotation 0.1151→0.0447 rad; width 9.19→3.40 mm
+train/phase_PULL: position 3.69→1.80 cm; rotation 0.0604→0.0291 rad; width 10.06→2.79 mm
+train/phase_REACH: position 20.57→3.38 cm; rotation 0.1414→0.0454 rad; width 13.60→3.35 mm
+train/phase_TRANSPORT: position 19.89→5.04 cm; rotation 0.4992→0.1188 rad; width 10.26→5.83 mm
+val/phase_GRASP: position 9.30→6.94 cm; rotation 0.1498→0.1356 rad; width 9.54→7.22 mm
+val/phase_PULL: position 5.32→8.77 cm; rotation 0.0830→0.1630 rad; width 10.23→6.78 mm
+val/phase_REACH: position 17.79→7.54 cm; rotation 0.1636→0.0944 rad; width 10.75→6.30 mm
+val/phase_TRANSPORT: position 19.65→17.12 cm; rotation 0.5034→0.4218 rad; width 11.27→8.39 mm
+
+验证集 8/8 reset 窗的全 30 位置误差改善；但 val/PULL 位置 5.33→8.77 cm、姿态 .0830→.1630 rad，说明跨 episode 迁移并不均匀。
+全 30 按窗配对改善数：train position/rotation/width=76/78/79（各 80 窗）；val=61/60/68。h1:5 则 train=71/72/66，val=56/66/52。
+最终 6 项拟合门槛仅过 3 项，不能写成 M0 全通过：
+通过：train reset full30 position mean=26.71 mm≤30；first5 rotation p90=.06176 rad≤.08；GT close switch 缺失数=0。
+未通过：first5 position p90=35.89 mm>10；first5 width mean=4.63 mm>3；first-close intent proxy 最大 target offset=15>2。
+
+宽度与闭合 proxy 的解释边界：
+GT 宽度是示教下一帧的实测总开度。预测更快张开可能增加宽度 MAE，不能直接推断抓取更差。reset h1 宽度误差 train 5.31→10.79 mm、val 9.18→11.76 mm，需结合 raw width 和实际闭环。
+最终最坏 proxy offset 的三个例子均是 reset、noise seed43：episode613/1796/1212 的 GT first-close h17，而预测 h2；h1→h2 下降分别约 5.98/3.94/1.79 mm，随后 raw width 又升至开放区。
+该代理调用原 width-intent 规则，对 >1 mm 下降和连续 5 次开放输入敏感。reach-conditioned 会重复保持目标，实际控制步上的 open 计数和切换时间不同。因此这里的 15 是 targets 的代理偏差，不能解释成真实夹爪提前 15 控制步收拢。门槛仍按冻结规则原样保留。
+
+结论：原结构/冻结路线具备明显的小样本拟合响应；2000 步尚未满足全部拟合门槛，且验证 PULL 有回退。可进入已安排的相同 reach 通路检验，但离线改善本身不能宣称抓取能力。
+没有用重叠窗口或三 noise seeds 构造独立样本置信区间；8+8 episodes 仅用于此次固定诊断，不构成总体成功率。
+机器可读完整值、每窗改善计数、各 horizon/phase 统计、source SHA 与 close proxy 实例见 training_findings.json。

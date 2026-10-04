@@ -1,0 +1,18 @@
+本轮数据准备与边界
+
+保持原128训练episode、旧B8000逐步采样表、原归一化与原240离线面板完全不变。
+L采用首次PULL physics_frame/60作为专家目标关联代理，区间[-0.30,+0.10]秒，对真实未来状态时间赋raw2，其余raw1。不是学生真实held标签。
+128 train全部闭合参考目标均在区间，但最早一次width-intent因细小开度回落提前0.30秒。模型输入完全不含事件、phase、果实ID。
+
+旧B的240000个目标中58035个处于事件区间(24.18125%)；5665/8000窗口受影响。逐窗有效维均值归一后事件监督权重份额35.3673%。
+独立整数physics-tick实现验证所有144 episode masks、8000 schedule行、240000 target flags，与时间戳实现一致。
+
+新增辅助面板144窗：旧8train/旧8val/新8val每场景各3near和3late；其中49窗与旧240重复，95窗新增。面板分层独立，不进入训练或checkpoint挑选。
+near窗口的未来目标仍包含PULL，需要按target event/phase及horizon分组；不能只用anchor阶段汇总。late面板新增1704 DROP和120 DONE目标，修复旧240中DROP目标为零的覆盖缺口。
+所有144源episode在DONE进入时下一步实测宽度下降11.1–18.1mm；不能把尾部负intent简单等同于“未释放”。不修改旧标签，分DROP/DONE评估，并以实际held解除和桶内稳定验收。
+
+冻结24个新heldout，来自83个历史可靠可见、未使用的val候选，按固定几何尺度确定性选取。与所有train、旧dev/oldval/newval/heldout和诊断4例排除集无交叉。
+这是历史curated validation样本，不是重新生成的随机场景；仅用于最后候选对B的测试，禁止调参。当前执行路径GT和实际输入视觉审核尚未执行，不能称本轮GT通过。
+
+24个train源场景事件审核图已经生成，选择覆盖闭合与PULL时间差异，包含实际prepare_rgb的static/wrist。大量近接触wrist果实位于下边缘或局部裁切，static视角较远，无法由这些图保证毫米级误差可观测，也不能以图确认精确学生held时刻。
+CPU cache172MB，由实际Dataset/Collate生成，动作/状态/归一化与部署输入一致；没有GPU或训练调用。

@@ -1,0 +1,18 @@
+{
+  "A": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/A/checkpoints/step_8000_trainable.pt",
+    "step": 8000,
+    "sha256": "82dc7ec697a5aeac24ebf62fa93eb9889b49174ca26a4bf4c4aa445a388bc69b",
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "training_summary_sha256": "893fb94fb942972eeb9b4a5028429a42f2351068fa0c15f2f14cdc6a3c7ccbf7"
+  },
+  "B": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt",
+    "step": 8000,
+    "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "training_summary_sha256": "95cf44a7aad699e4f6f5aff75ced437e087a71254aa38f3a37e8e21efc425627"
+  }
+}

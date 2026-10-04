@@ -1,0 +1,32 @@
+[
+  {
+    "seed": 2010027,
+    "first_chunk_steps": 61,
+    "first_chunk_ik_failed": 0,
+    "first_chunk_timeouts": 0,
+    "first_chunk_reached_targets": 30,
+    "tracking_median_m": 0.010593870993244492,
+    "nearest_apple_min_m": 0.25292853352388994,
+    "first_chunk_last_target_k": 29
+  },
+  {
+    "seed": 2010042,
+    "first_chunk_steps": 142,
+    "first_chunk_ik_failed": 0,
+    "first_chunk_timeouts": 0,
+    "first_chunk_reached_targets": 30,
+    "tracking_median_m": 0.019059187225485295,
+    "nearest_apple_min_m": 0.1610682147549777,
+    "first_chunk_last_target_k": 29
+  },
+  {
+    "seed": 2010067,
+    "first_chunk_steps": 62,
+    "first_chunk_ik_failed": 0,
+    "first_chunk_timeouts": 0,
+    "first_chunk_reached_targets": 30,
+    "tracking_median_m": 0.010147242838668056,
+    "nearest_apple_min_m": 0.46410906304329325,
+    "first_chunk_last_target_k": 29
+  }
+]

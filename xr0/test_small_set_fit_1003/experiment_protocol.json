@@ -1,0 +1,31 @@
+{
+  "status": "authorized_execution",
+  "scope": "M0 only; no global resampling trial or production edits",
+  "train_episodes": 8,
+  "validation_episodes": 8,
+  "windows_per_episode": 10,
+  "max_updates": 2000,
+  "initialization": "original 10k weights only",
+  "optimizer": "fresh AdamW lr1e-5 betas(.9,.95) wd.1 clip1",
+  "batch_size": 1,
+  "accumulation": 1,
+  "frozen_vlm": true,
+  "loss": "original full30 flow matching",
+  "stats": "original full-train stats unchanged",
+  "selection": "fixed before model outcomes; reliable GT replay and visibly identifiable target checked on real processed views",
+  "checkpoints_to_evaluate": [
+    0,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "generation_seeds": [
+    42,
+    43,
+    44
+  ],
+  "closed_loop": "2 fixed train + 2 fixed val, GT vs original10k vs selectedM0; reach-conditioned .01m/.08rad dwell30 budget900 full30",
+  "scope_boundary": "do not begin S1 or conditional architecture/loss/data changes automatically",
+  "success_interpretation": "microfit and generalization reported separately; newly proposed goal-hold is not an acceptance requirement"
+}

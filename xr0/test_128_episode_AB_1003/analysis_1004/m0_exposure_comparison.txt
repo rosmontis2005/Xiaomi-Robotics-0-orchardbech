@@ -1,0 +1,37 @@
+Actual M0 versus B exposure: completed optimizer logs only.
+M0: 2000 updates / 8 episodes / 80 unique windows; every exact window 25 presentations.
+B: 8000 updates / 128 episodes / 3931 unique windows; exact windows 1–13 presentations.
+Reset frame0: M0 200/8 =25 per episode; B 1600/128 =12.5 (12 or13 per episode). Reset exposure per scene halves despite four times as many optimizer updates.
+All samples per episode:250 ->62.5. Frames0..4:53.125 ->18.75. GRASP-anchor(frame>=5):90.625 ->15.625.
+B hits51/80 original M0 exact windows, totaling207 presentations versus M0 2000; neighboring overlapping windows are not included.
+
+Actual per-episode old-eight comparison:
+{"episode_id": "episode_000023", "M0_all_presentations": 250, "B_all_presentations": 61, "M0_reset_presentations": 25, "B_reset_presentations": 12, "M0_exact_windows_seen_in_B": 6, "B_presentations_of_M0_exact_windows": 29}
+{"episode_id": "episode_000613", "M0_all_presentations": 250, "B_all_presentations": 63, "M0_reset_presentations": 25, "B_reset_presentations": 13, "M0_exact_windows_seen_in_B": 4, "B_presentations_of_M0_exact_windows": 18}
+{"episode_id": "episode_000703", "M0_all_presentations": 250, "B_all_presentations": 64, "M0_reset_presentations": 25, "B_reset_presentations": 12, "M0_exact_windows_seen_in_B": 6, "B_presentations_of_M0_exact_windows": 28}
+{"episode_id": "episode_000974", "M0_all_presentations": 250, "B_all_presentations": 63, "M0_reset_presentations": 25, "B_reset_presentations": 13, "M0_exact_windows_seen_in_B": 7, "B_presentations_of_M0_exact_windows": 32}
+{"episode_id": "episode_001129", "M0_all_presentations": 250, "B_all_presentations": 51, "M0_reset_presentations": 25, "B_reset_presentations": 12, "M0_exact_windows_seen_in_B": 5, "B_presentations_of_M0_exact_windows": 19}
+{"episode_id": "episode_001212", "M0_all_presentations": 250, "B_all_presentations": 63, "M0_reset_presentations": 25, "B_reset_presentations": 12, "M0_exact_windows_seen_in_B": 9, "B_presentations_of_M0_exact_windows": 27}
+{"episode_id": "episode_001319", "M0_all_presentations": 250, "B_all_presentations": 63, "M0_reset_presentations": 25, "B_reset_presentations": 13, "M0_exact_windows_seen_in_B": 7, "B_presentations_of_M0_exact_windows": 32}
+{"episode_id": "episode_001796", "M0_all_presentations": 250, "B_all_presentations": 62, "M0_reset_presentations": 25, "B_reset_presentations": 12, "M0_exact_windows_seen_in_B": 7, "B_presentations_of_M0_exact_windows": 22}
+
+Limits:
+Reconstructed from actual completed optimizer logs, with consecutive step indices and exact per-window count agreement to training summaries. B additionally agrees row-for-row with its frozen schedule; M0 logged windows agree with selection metadata. Not inferred from configured budgets.
+GRASP comparison uses anchor phase and frame>=5 for both arms; no M0 GRASP-anchor presentation occurs at frame<5. Anchor exposure is not target-phase exposure or gradient contribution.
+Exact-window overlap excludes neighboring windows that may share observations/targets. The 2000-to-207 count is not an equivalent reduction in useful information.
+M0 and B differ in cohort, sampling, budget, and historical initialization precision. B restores exact source FP32 weights; M0 used the earlier load path. Exposure dilution alone is not a causal attribution of outcomes.
+Deterministic presentation counts are not a statistical significance test. Repeated windows are not independent validation samples.
+
+Source path and SHA256:
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/training_steps.jsonl 77866774937b98c24107bf064d8520eb4bc0016741ca2df49eb1e27e6c4bf052
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/training_summary.json bbd68921f2b20aa1204df10c3f5ef0f7899bcdd71e1dc5c1c665e7dafc221869
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/selection.json b4ac020fd2be3bf679f7e47f19132e5938195f5545c31da5d95a33bed74e12c6
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/config.json 5649b0f8a32ce46c90b1ba094f361b64143931e69e9cc994d7aea521935393c3
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/run_manifest.json 067ba5c272a7b312d5029a7bf44b3b6ec83433cce3ad3cdb425d2f1687977315
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_steps.jsonl 909b89d92edf472bacf64dca3c2318cdb99247e6942951613efa685c0cf8e5b3
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_summary.json 95cf44a7aad699e4f6f5aff75ced437e087a71254aa38f3a37e8e21efc425627
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/schedules/B.jsonl f96439ae2ee50ce206cc225ac09f3c71b436af1ee096b2beb4f71c6703abfcd5
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/selection.json 996d0537d8a15c14034a6a9b311e26a0560955640e016f1fd72f96372c96e206
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/config_ab.json 89ea984713392900e4451e76f07d6b97c01012d32bf5ed734150d442b3a10f71
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/run_manifest.json 9ce710d9c334d05ce64a4d9fe6857082eb10f51175a11123bbca80826abe1858
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/precision_fix.json a13b781712eb342f4ee283d0ecab8fc16eab34a9f5bc5b93e7a317bb04fb229e

@@ -1,0 +1,74 @@
+Offline analysis of saved predictions (CPU only)
+Primary comparison: A8000 vs B8000. B4000 is train-panel-selected secondary evidence.
+Each original panel contains 8 scenes × 10 fixed windows × 3 noise seeds; val_combined has16 disjoint scenes. Seeds/overlapping targets are not independent scenes.
+Position: Euclidean m; rotation: SO(3) radians; width: total-opening absolute m; all before controller clipping.
+first5_anchor_frames means observation frame 0..4; h1_5 means first 5 future targets. These are different axes.
+Anchor-phase metrics may include targets from later phases. target_PHASE uses independently checked expert timestamps.
+Coverage limitation: 240×30=7200 target slots contain REACH246, GRASP936, PULL5298, TRANSPORT720 and DROP0 (before3noise replication). DROP anchors are also0. These panels cannot validate late-release/DROP prediction; full30 is not full-task coverage.
+old_train means episodes used by training; not all80 exact anchor windows were drawn. See training_audit exposure counts.
+Exact pooled counts and scene means/deltas/95% descriptive bootstrap intervals are in JSON. Curated n=8 scenes per panel; intervals are not natural-population guarantees.
+FP32 baseline uses corrected direct FP32 initialization from original 10k checkpoint. Historic M0 initial BF16 roundtrip differs and is not this paired baseline.
+No heldout model outcomes read; no checkpoint selected by validation; full30 production loss preserved.
+One training run/seed42 per arm. The3 inference noise seeds are repeated predictions, not independent training replicates; scene bootstrap does not quantify training-run uncertainty.
+A is window-uniform without replacement; B combines phase quotas + episode balancing + replacement. Isolating phase-only causality is unsupported.
+
+old_train (pooled mean position cm: all/full, reset/full, reset/h1_5, target_GRASP/full, target_PULL/full)
+  A0: 11.879, 26.849, 5.839, 14.736, 10.471
+  A2000: 9.629, 11.088, 3.726, 8.839, 8.909
+  A4000: 8.118, 10.494, 3.936, 7.801, 6.673
+  A8000: 7.517, 7.205, 3.274, 6.073, 6.361
+  B0: 11.879, 26.849, 5.839, 14.736, 10.471
+  B2000: 6.805, 5.067, 1.430, 6.466, 5.088
+  B4000: 7.540, 4.062, 1.301, 5.184, 6.161
+  B8000: 8.380, 4.077, 3.059, 5.674, 7.302
+
+old_val (pooled mean position cm: all/full, reset/full, reset/h1_5, target_GRASP/full, target_PULL/full)
+  A0: 12.047, 21.821, 5.584, 14.609, 10.727
+  A2000: 12.280, 15.525, 3.782, 10.612, 12.127
+  A4000: 10.359, 15.544, 3.967, 10.761, 9.164
+  A8000: 10.039, 9.956, 3.499, 8.360, 9.069
+  B0: 12.047, 21.821, 5.584, 14.609, 10.727
+  B2000: 7.871, 5.688, 1.719, 8.422, 6.179
+  B4000: 8.497, 4.881, 1.680, 6.751, 7.312
+  B8000: 9.478, 4.636, 3.365, 6.865, 8.695
+
+new_val (pooled mean position cm: all/full, reset/full, reset/h1_5, target_GRASP/full, target_PULL/full)
+  A0: 11.054, 24.599, 5.233, 13.957, 9.467
+  A2000: 8.643, 9.433, 3.439, 8.006, 7.371
+  A4000: 7.452, 8.433, 3.659, 5.922, 6.148
+  A8000: 7.710, 7.940, 3.329, 5.942, 6.387
+  B0: 11.054, 24.599, 5.233, 13.957, 9.467
+  B2000: 5.865, 3.935, 1.418, 5.680, 3.936
+  B4000: 6.652, 3.910, 1.057, 4.237, 5.263
+  B8000: 7.280, 3.562, 2.806, 4.098, 6.104
+
+val_combined (pooled mean position cm: all/full, reset/full, reset/h1_5, target_GRASP/full, target_PULL/full)
+  A0: 11.551, 23.210, 5.409, 14.309, 10.090
+  A2000: 10.461, 12.479, 3.611, 9.411, 9.722
+  A4000: 8.906, 11.989, 3.813, 8.532, 7.639
+  A8000: 8.875, 8.948, 3.414, 7.246, 7.713
+  B0: 11.551, 23.210, 5.409, 14.309, 10.090
+  B2000: 6.868, 4.811, 1.568, 7.159, 5.045
+  B4000: 7.574, 4.395, 1.368, 5.593, 6.276
+  B8000: 8.379, 4.099, 3.086, 5.590, 7.384
+
+Rotation rad / width mm (all windows, full 30 targets):
+  old_train A0: rotation 0.14751 rad, width 10.797 mm
+  old_train A8000: rotation 0.12058 rad, width 9.887 mm
+  old_train B0: rotation 0.14751 rad, width 10.797 mm
+  old_train B4000: rotation 0.11203 rad, width 8.532 mm
+  old_train B8000: rotation 0.12088 rad, width 8.543 mm
+  old_val A0: rotation 0.17446 rad, width 10.202 mm
+  old_val A8000: rotation 0.18765 rad, width 9.889 mm
+  old_val B0: rotation 0.17446 rad, width 10.202 mm
+  old_val B4000: rotation 0.13551 rad, width 8.668 mm
+  old_val B8000: rotation 0.15595 rad, width 9.695 mm
+  new_val A0: rotation 0.14852 rad, width 9.448 mm
+  new_val A8000: rotation 0.12392 rad, width 8.891 mm
+  new_val B0: rotation 0.14852 rad, width 9.448 mm
+  new_val B4000: rotation 0.10597 rad, width 7.296 mm
+  new_val B8000: rotation 0.11715 rad, width 7.438 mm
+Interpretation boundary: any 4k→8k worsening shared by train and val is not sufficient evidence of classic train-improves/val-worsens overfitting; it may reflect horizon/phase tradeoffs. Offline prediction gains do not establish contact, grasp, or success.
+Width-close timing is a target-sequence proxy at 30Hz, not actual reach-conditioned execution timing.
+Baseline exact comparison: {"status": "PASS", "windows": 240, "noise_seeds": [42, 43, 44], "array_comparisons": 4320, "all_arrays_bit_exact": true, "note": "Dtype, shape, and raw array bytes identical; not zip-file byte identity. Covers predictions, physical targets, errors, phases, and all saved fields."}
+Available evaluations: A0, A2000, A4000, A8000, B0, B2000, B4000, B8000

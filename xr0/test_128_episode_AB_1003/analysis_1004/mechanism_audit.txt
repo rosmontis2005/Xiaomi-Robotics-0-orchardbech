@@ -1,0 +1,136 @@
+A8000/B8000 dev8配对失败机制审计（seed42，仅被动CPU分析）
+
+首chunk目标相对GT误差与实际追踪自身目标的误差是不同量；规划果ID仅用于诊断，任何合法果实抓持均计入能力。closest只统计第一次抓持前，避免持果后果实贴近TCP污染接近距离。
+geometry/intent来自控制边界快照，不等同完整物理子步轨迹；不据此修改任何抓持门槛。
+
+scene 2010914:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=85.97mm; own-target tracking mean/p95=14.98/32.57mm; reached30=True; firstIK=431
+    nearest planned before grasp=76.81mm @step54/after/chunk0/k12; handlocal=[-51.756, 1.662, 160.137]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=76.81mm (apple3); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step431，晚于首chunk结束step92；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=True @ 94, detach=183, success=False; firstchunk GT target position mean=27.41mm; own-target tracking mean/p95=20.70/47.51mm; reached30=True; firstIK=376
+    nearest planned before grasp=21.84mm @step93/after/chunk0/k15; handlocal=[-2.847, -3.566, 124.761]mm; intent=-1.0; inside=True; both_fingers=True
+    nearest ANY fruit before grasp=21.84mm (apple3); eligible boundaries=2, nonclosing=0, closing=2
+    post_grasp={"first_grasp_step": 94, "first_detach_step": 183, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 376, "IK_steps_after_grasp": 525, "max_target_width_m": 0.05849529057741165, "max_commanded_width_m": 0.05849529057741165, "positive_intent_steps": 0, "release_count": 0, "release_events": [], "final_held_apple_id": 3, "held15": true}
+    tags: actual_grasp, grasped_but_still_held_without_release, no_positive_open_intent_after_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+
+scene 2011310:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=77.86mm; own-target tracking mean/p95=16.15/36.99mm; reached30=True; firstIK=687
+    nearest planned before grasp=73.05mm @step55/after/chunk0/k12; handlocal=[-51.217, -10.918, 154.33]mm; intent=1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=73.05mm (apple27); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step687，晚于首chunk结束step101；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=True @ 87, detach=171, success=False; firstchunk GT target position mean=25.97mm; own-target tracking mean/p95=19.17/44.60mm; reached30=True; firstIK=385
+    nearest planned before grasp=28.63mm @step86/after/chunk0/k14; handlocal=[-17.71, 1.818, 125.826]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=28.63mm (apple27); eligible boundaries=0, nonclosing=0, closing=0
+    post_grasp={"first_grasp_step": 87, "first_detach_step": 171, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 385, "IK_steps_after_grasp": 360, "max_target_width_m": 0.06212298199534416, "max_commanded_width_m": 0.06212298199534416, "positive_intent_steps": 0, "release_count": 0, "release_events": [], "final_held_apple_id": 27, "held15": true}
+    tags: actual_grasp, grasped_but_still_held_without_release, no_positive_open_intent_after_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+
+scene 2012485:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=104.55mm; own-target tracking mean/p95=16.87/41.39mm; reached30=True; firstIK=491
+    nearest planned before grasp=101.55mm @step54/after/chunk0/k12; handlocal=[-85.387, -4.274, 158.21]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=101.55mm (apple17); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step491，晚于首chunk结束step90；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=True @ 110, detach=197, success=False; firstchunk GT target position mean=33.76mm; own-target tracking mean/p95=18.45/42.79mm; reached30=True; firstIK=547
+    nearest planned before grasp=25.61mm @step109/after/chunk1/k2; handlocal=[-25.558, 1.428, 102.578]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=25.61mm (apple17); eligible boundaries=0, nonclosing=0, closing=0
+    post_grasp={"first_grasp_step": 110, "first_detach_step": 197, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 547, "IK_steps_after_grasp": 320, "max_target_width_m": 0.07929685711860657, "max_commanded_width_m": 0.07929685711860657, "positive_intent_steps": 134, "release_count": 1, "release_events": [{"control_step": 767, "completed_control_steps": 767, "boundary": "after", "chunk_id": 9, "target_k": 4, "intent": 1.0, "target_width_m": 0.07661519944667816, "actual_width_m": 0.07642846554517746, "commanded_width_m": 0.07661519944667816, "held_apple_id": null}], "final_held_apple_id": null, "held15": true}
+    tags: actual_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+
+scene 2013322:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=78.97mm; own-target tracking mean/p95=14.87/32.83mm; reached30=True; firstIK=426
+    nearest planned before grasp=72.99mm @step55/after/chunk0/k12; handlocal=[-49.344, 0.496, 157.175]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=72.99mm (apple17); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step426，晚于首chunk结束step90；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=True @ 91, detach=167, success=False; firstchunk GT target position mean=25.80mm; own-target tracking mean/p95=20.21/44.18mm; reached30=True; firstIK=359
+    nearest planned before grasp=23.03mm @step90/after/chunk0/k15; handlocal=[3.139, 1.464, 126.164]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=23.03mm (apple17); eligible boundaries=0, nonclosing=0, closing=0
+    post_grasp={"first_grasp_step": 91, "first_detach_step": 167, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 359, "IK_steps_after_grasp": 540, "max_target_width_m": 0.06061844527721405, "max_commanded_width_m": 0.06061844527721405, "positive_intent_steps": 0, "release_count": 0, "release_events": [], "final_held_apple_id": 17, "held15": true}
+    tags: actual_grasp, grasped_but_still_held_without_release, no_positive_open_intent_after_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+
+scene 2014362:
+  A: grasp=True @ 98, detach=127, success=False; firstchunk GT target position mean=40.48mm; own-target tracking mean/p95=17.18/38.93mm; reached30=True; firstIK=342
+    nearest planned before grasp=22.15mm @step96/after/chunk0/k25; handlocal=[-0.281, -0.37, 125.549]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=22.15mm (apple13); eligible boundaries=0, nonclosing=0, closing=0
+    post_grasp={"first_grasp_step": 98, "first_detach_step": 127, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 342, "IK_steps_after_grasp": 555, "max_target_width_m": 0.06272817403078079, "max_commanded_width_m": 0.06272817403078079, "positive_intent_steps": 0, "release_count": 0, "release_events": [], "final_held_apple_id": 13, "held15": true}
+    tags: actual_grasp, grasped_but_still_held_without_release, no_positive_open_intent_after_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+  B: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=50.87mm; own-target tracking mean/p95=18.76/43.50mm; reached30=True; firstIK=564
+    nearest planned before grasp=28.34mm @step93/after/chunk0/k20; handlocal=[27.008, 3.417, 111.284]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=28.34mm (apple13); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step564，晚于首chunk结束step106；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+
+scene 2014461:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=95.74mm; own-target tracking mean/p95=15.22/34.58mm; reached30=True; firstIK=545
+    nearest planned before grasp=44.17mm @step308/after/chunk4/k27; handlocal=[-13.321, -17.066, 141.899]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=44.17mm (apple28); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step545，晚于首chunk结束step95；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=28.99mm; own-target tracking mean/p95=20.66/47.09mm; reached30=True; firstIK=693
+    nearest planned before grasp=35.56mm @step93/after/chunk0/k15; handlocal=[-31.571, 1.248, 119.725]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=35.56mm (apple28); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step693，晚于首chunk结束step117；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+
+scene 2015716:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=50.35mm; own-target tracking mean/p95=16.45/37.55mm; reached30=True; firstIK=367
+    nearest planned before grasp=36.83mm @step110/after/chunk0/k28; handlocal=[-33.223, -1.665, 119.199]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=36.83mm (apple32); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step367，晚于首chunk结束step111；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=True @ 96, detach=168, success=False; firstchunk GT target position mean=31.70mm; own-target tracking mean/p95=20.63/45.93mm; reached30=True; firstIK=517
+    nearest planned before grasp=22.85mm @step95/after/chunk0/k15; handlocal=[4.693, -1.477, 125.717]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=22.85mm (apple32); eligible boundaries=0, nonclosing=0, closing=0
+    post_grasp={"first_grasp_step": 96, "first_detach_step": 168, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 517, "IK_steps_after_grasp": 378, "max_target_width_m": 0.08038236200809479, "max_commanded_width_m": 0.07999999821186066, "positive_intent_steps": 48, "release_count": 1, "release_events": [{"control_step": 210, "completed_control_steps": 210, "boundary": "after", "chunk_id": 2, "target_k": 3, "intent": 1.0, "target_width_m": 0.07541022449731827, "actual_width_m": 0.07515425980091095, "commanded_width_m": 0.07541022449731827, "held_apple_id": null}], "final_held_apple_id": null, "held15": true}
+    tags: actual_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+
+scene 2015751:
+  A: grasp=False @ None, detach=None, success=False; firstchunk GT target position mean=54.71mm; own-target tracking mean/p95=15.98/36.13mm; reached30=True; firstIK=373
+    nearest planned before grasp=41.73mm @step57/after/chunk0/k12; handlocal=[7.365, -7.882, 143.715]mm; intent=-1.0; inside=False; both_fingers=True
+    nearest ANY fruit before grasp=41.73mm (apple0); eligible boundaries=0, nonclosing=0, closing=0
+    tags: no_observed_grasp_geometry, all_first_chunk_predicted_goals_reached_without_IK_or_forced_advance, IK_begins_after_first_chunk, moves_farther_from_planned_fruit_after_closest_approach
+    未观察到任一果实同时满足掌内与双指接触条件；需同时查看最近任意果实和专家规划果实，不能将规划果ID设为成功门槛。
+    首chunk30个预测目标均按到达推进，无IK/强制超时；首段未抓不能仅解释为不给执行器等待时间。预测几何与夹爪配合仍须区分。
+    首个IK失败在step373，晚于首chunk结束step96；不能用全程IK比例解释之前已发生的接近偏差。
+    最近接近后最终离规划果实超过最小距离10cm；这是观察到的后续偏离，尚未隔离导致偏离的原因。
+  B: grasp=True @ 74, detach=182, success=False; firstchunk GT target position mean=34.24mm; own-target tracking mean/p95=17.53/41.73mm; reached30=True; firstIK=538
+    nearest planned before grasp=28.26mm @step73/after/chunk0/k13; handlocal=[18.349, -0.235, 124.897]mm; intent=-1.0; inside=True; both_fingers=True
+    nearest ANY fruit before grasp=28.26mm (apple0); eligible boundaries=2, nonclosing=0, closing=2
+    post_grasp={"first_grasp_step": 74, "first_detach_step": 182, "same_grasped_fruit_detach_verified": null, "first_IK_after_grasp": 538, "IK_steps_after_grasp": 363, "max_target_width_m": 0.0779082179069519, "max_commanded_width_m": 0.0779082179069519, "positive_intent_steps": 6, "release_count": 1, "release_events": [{"control_step": 311, "completed_control_steps": 311, "boundary": "after", "chunk_id": 3, "target_k": 6, "intent": 1.0, "target_width_m": 0.0779082179069519, "actual_width_m": 0.07721669226884842, "commanded_width_m": 0.0779082179069519, "held_apple_id": null}], "final_held_apple_id": null, "held15": true}
+    tags: actual_grasp, IK_after_grasp
+    抓持与抓后阶段分别报告；抓后的高IK比例不能回溯否定已经发生的抓持，也不能将其与未抓组直接作为运输能力排名。
+
+仅16个开发回合，未做参数/检查点选择；heldout汇总另由独立统计分析负责。首chunkGT误差仅衡量示教拟合，不代表只有示教路径才合法。

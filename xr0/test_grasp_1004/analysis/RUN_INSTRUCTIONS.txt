@@ -1,0 +1,30 @@
+CPU离线分析使用说明
+
+脚本：analyze_paired_offline.py
+运行环境：xr0/.venv-orchard/bin/python -B
+
+只读查询输出准备状态：
+  python -B analyze_paired_offline.py --inspect
+也可通过importlib导入并调用collect_readonly()，函数不写文件、不导入torch/CUDA。
+
+B8000辅助面板和L8000两个面板全部完成后：
+  python -B analyze_paired_offline.py --run
+默认输出 analysis/B8000_vs_L8000/paired_offline.json、summary.csv、report.txt。
+所有输出采用独占创建，不覆盖已有结果。输入路径也可以通过--b-original、--l-original、--b-aux、--l-aux显式指定。
+默认固定8000主终点。缺失报告、缺失NPZ、错误seed/GT、误差数组不匹配、重叠预测不一致时中止，不静默删样本。
+
+统计口径：
+- original240和auxiliary144独立报告；联合分析union335按split/episode_id/frame去重49。
+- 重叠49窗两个checkpoint的旧/新缓存预测均逐array一致，否则不联合。
+- 配对同窗、同未来目标、同推理seed42/43/44。
+- first1/5/10/30表示预测未来目标前N项，不是物理控制步。
+- actual target phase与contact_event(time proxy)分别统计；DROP/DONE分开。
+- near_h1/h5/h10是相对PULL事件的源录制目标观测位置，不是实际held时间。
+- pooled-target和scene-equal均值分开；bootstrap只重采样场景，CI描述curated小样本，不将推理seed或重叠目标当独立样本。
+- close_switch是30Hz目标序列的width-intent代理，不能据此声称实际闭环抓持/释放。
+- 无目标的分层明确NO_TARGETS，不能误写零误差。
+- fresh24只在数据独立性检查读取annotation/metadata，不读其模型结果，不进入此离线面板或checkpoint选择。
+
+CPU检查：
+analysis_preflight.json / data_independence.json：真实单窗三物理量重算、恒等/差量/空阶段测试、fresh24对全部2144训练scene seed及旧测试集合零交叉。
+analysis_full_selftest.json：240真实B窗口全部恒等配对与误差重算、144合成辅助窗口分组、近接触3种观测每cohort8scene、DROP1704与DONE120目标计数。

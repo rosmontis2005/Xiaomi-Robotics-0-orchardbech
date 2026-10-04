@@ -1,0 +1,74 @@
+{
+  "created": "2026-10-04T00:09:24.148207+08:00",
+  "authorization": "2026-10-04 user requests A training, completion, testing and AB analysis",
+  "training_A": {
+    "same_frozen_cohort": 128,
+    "same_source_checkpoint": "original10k FP32 direct restore",
+    "same_fresh_optimizer": true,
+    "updates": 8000,
+    "sampling": "frozen schedules/A.jsonl: window-uniform without replacement",
+    "freeze_existing_B_and_training_artifacts": true
+  },
+  "primary_comparison": {
+    "checkpoints": "A/B step8000; training-best reported separately, not substituted",
+    "offline_windows": 240,
+    "generation_seeds": [
+      42,
+      43,
+      44
+    ],
+    "development": {
+      "scenes": 8,
+      "inference_seeds": [
+        42
+      ]
+    },
+    "heldout": {
+      "scenes": 12,
+      "inference_seeds": [
+        42,
+        43
+      ]
+    },
+    "model_episodes": 64,
+    "gt_positive_controls": {
+      "unique_scenes": 20,
+      "reuse_old_4_only_if_same_protocol_and_identity_verified": true,
+      "new_required": 16
+    }
+  },
+  "execution": {
+    "reach_position_m": 0.01,
+    "reach_rotation_rad": 0.08,
+    "maximum_dwell_control_steps": 30,
+    "chunk_targets": 30,
+    "control_step_budget": 900,
+    "grasp_mode": "benchmark_assist",
+    "no_new_pregrasp_or_gripper_control_gate": true
+  },
+  "outcomes": [
+    "real grasp",
+    "same-fruit consecutive held >=15 control steps after grasp",
+    "first grasp control step",
+    "detach",
+    "release",
+    "bucket success",
+    "branch breaks",
+    "IK/dwell and target tracking"
+  ],
+  "proposed_engineering_gates": {
+    "development_stable_grasp_min": 6,
+    "development_total": 8,
+    "heldout_scene_both_seeds_stable_grasp_min": 9,
+    "heldout_total": 12,
+    "first_grasp_300_steps": "reported efficiency target; does not truncate rollouts"
+  },
+  "interpretation": [
+    "Report development train2 and val6 separately as well as aggregate",
+    "Heldout is curated observable historical replay-PASS cohort, not natural seed population estimate",
+    "If current GT replay fails, retain and report that scene; no silent replacement/exclusion",
+    "A/B identifies joint phase+episode sampling change, not either component independently",
+    "No claim that clipping/IK reduction alone proves task competence",
+    "Tests consume full existing task termination/budget, no early stop after grasp"
+  ]
+}

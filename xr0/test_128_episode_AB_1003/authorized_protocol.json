@@ -1,0 +1,28 @@
+{
+  "time": "2026-10-03T23:06:33.177824+08:00",
+  "event": "authorized_scope",
+  "message": "修复并验证训练/部署精度一致性；建立128 episode A/B共用脚本与检查；本轮仅启动B并确认正常运行后交接，A另行执行。",
+  "arms": {
+    "A": "same128 window-uniform, NOT launched this turn",
+    "B": "same128 exact stage quotas and episode-balanced sampling"
+  },
+  "max_updates_per_arm": 8000,
+  "initialization": "original 10k; fresh optimizer; M0 overlay only for precision diagnosis/reference",
+  "reach_protocol": {
+    "position_tolerance_m": 0.01,
+    "rotation_tolerance_rad": 0.08,
+    "max_dwell_control_steps": 30,
+    "chunk_targets": 30,
+    "episode_control_budget": 900
+  },
+  "B_quota": {
+    "reset": 1600,
+    "early_1_4": 800,
+    "REACH": 1200,
+    "GRASP": 2000,
+    "PULL": 1200,
+    "TRANSPORT": 800,
+    "DROP": 400
+  },
+  "baseline_repo_worktree": "Existing orchardbench changes and untracked dataset/log files observed; these are preserved."
+}

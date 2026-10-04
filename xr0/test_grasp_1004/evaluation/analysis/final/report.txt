@@ -1,0 +1,16 @@
+D0 deployment diagnostic: COMPLETE
+Frozen protocol: 74d71006104fe63c3a963c724adbdeed0f31db867c072662d6bfb3bc69b73eb0
+Completed 34/34 episodes
+
+stage | n | held15 | held15by300 | samefruit detach | legacy ever | strict60 | release episodes | mean replans
+GT30 | 8 | 8 | 8 | 8 | 8 | 8 | 8 | 0.00
+GT5 | 8 | 8 | 8 | 8 | 8 | 8 | 8 | 0.00
+B30 | 8 | 6 | 6 | 6 | 0 | 0 | 4 | 8.75
+B5 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 16.50
+regression_B30 | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 6.50
+
+All outcomes and per-step files retained; no scene exclusion.
+Development8 is exposed and includes2training scenes; not a generalization estimate.
+Historical success scene2010600 seeds42/43 is a separate regression cohort.
+Strict placement is same-fruit control-boundary evidence; internal substeps are not continuously observed.
+Original final success and ever success remain distinct from strict release60 success.

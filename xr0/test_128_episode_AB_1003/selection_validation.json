@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "selection_sha256": "996d0537d8a15c14034a6a9b311e26a0560955640e016f1fd72f96372c96e206",
+  "train_episodes": 128,
+  "m0_train_retained": 8,
+  "added_train": 120,
+  "old_train_windows_exact": true,
+  "old_val_windows_exact": true,
+  "new_val_episodes": 8,
+  "new_val_windows": 80,
+  "heldout_episodes": 12,
+  "development_scenes": 8,
+  "all_new_roles_seed_disjoint": true,
+  "all_annotations_hashes_match": true,
+  "video_metadata_and_sampled_frame_validation": "296 videos: len/FPS checked, reset and closure frame decoded through actual prepare_rgb; not full video re-decoding",
+  "processed_coverage_frames": 592,
+  "group_full_window_counts": {
+    "reset": 128,
+    "first1_4": 512,
+    "REACH": 282,
+    "GRASP": 1033,
+    "PULL": 6114,
+    "TRANSPORT": 14632,
+    "DROP": 512
+  },
+  "schedule_quota_counts": {
+    "PULL": 1200,
+    "first1_4": 800,
+    "GRASP": 2000,
+    "reset": 1600,
+    "REACH": 1200,
+    "DROP": 400,
+    "TRANSPORT": 800
+  },
+  "A_unique_windows": 8000,
+  "B_unique_windows": 3931,
+  "actual_processed_image_sheets": {
+    "train": [
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_01.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_02.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_03.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_04.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_05.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_06.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_07.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_08.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_09.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_10.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_11.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_12.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_13.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_14.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_15.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/train_16.png"
+    ],
+    "new_val": [
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/new_val_01.png"
+    ],
+    "heldout": [
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/heldout_01.png",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/contact_sheets/heldout_02.png"
+    ]
+  },
+  "manual_visual_review": "Pending root spot-check; no exhaustive visual-identifiability claim",
+  "cuda_initialized": false
+}

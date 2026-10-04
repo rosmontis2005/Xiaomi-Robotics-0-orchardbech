@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-03T12:47:22.590486+00:00",
+  "report": "diagnosis_report.txt",
+  "formal_execution": "reach-conditioned",
+  "gt_reach_success": 3,
+  "gt_reach_episodes": 3,
+  "model_reach_success": 0,
+  "model_reach_grasp": 0,
+  "model_reach_episodes": 3,
+  "negative_control_gt_time_episodes": 3,
+  "model_time_episodes": 0,
+  "offline_expert_windows": 80,
+  "offline_sources": [
+    "mean_action",
+    "pretrained",
+    "step_10000"
+  ],
+  "repaired": false,
+  "trained": false,
+  "verification": "PASS",
+  "main_finding": "All three first model chunks reached all 30 predicted targets with zero IK failure and zero dwell timeout, but did not approach a graspable apple configuration; teacher-observation predictions already have large early-phase trajectory errors."
+}

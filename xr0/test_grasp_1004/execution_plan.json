@@ -1,0 +1,112 @@
+{
+  "schema": "orchard_grasp_repair_plan_1004_v1",
+  "created": "2026-10-04T12:55:41.096153+08:00",
+  "authorization": "User requests sequential implementation and diagnosis from the discussed plan; all products under test_grasp_1004",
+  "stage_order": [
+    "E0_event_labels_panels_and_strict_eval_cpu_validation",
+    "D0_B8000_full30_vs_processed5_reach_and_GT_controls",
+    "L_event_target_weight2_vs_existing_B_same_schedule8000",
+    "post_L_decision_on_event_sampler_S_or_student_recovery_R"
+  ],
+  "initial_scope": {
+    "D0": {
+      "GT_dev_scenes": 8,
+      "GT_commit_lengths": [
+        30,
+        5
+      ],
+      "B_dev_scenes": 8,
+      "B_inference_seeds": [
+        42
+      ],
+      "B_commit_lengths": [
+        30,
+        5
+      ],
+      "historical_auxiliary_scene": 2010600,
+      "historical_auxiliary_seeds": [
+        42,
+        43
+      ],
+      "historical_auxiliary_commit_length": 30,
+      "total_rollouts": 34
+    },
+    "L": {
+      "source_init": "Original full10k, fresh optimizer, never B8000 weights",
+      "schedule": "Same frozen B8000 schedule, no sampling changes",
+      "updates": 8000,
+      "event_reference": "first PULL entry in expert trace is a proxy; not physical student-held truth",
+      "event_interval_s": [
+        -0.3,
+        0.1
+      ],
+      "event_raw_loss_weight": 2.0,
+      "other_raw_loss_weight": 1.0,
+      "weight_application": "Only active7 flow residual, original mean normalization, binary action_mask unchanged",
+      "lr": 1e-05,
+      "batch_size": 1,
+      "gradient_accumulation": 1,
+      "freeze_vlm": true,
+      "train_seed": 42,
+      "precision": "FP32 non-VLM master; BF16 frozen VLM/autocast",
+      "horizon": 30,
+      "old_evaluation_windows": 240,
+      "eval_updates": [
+        0,
+        2000,
+        4000,
+        8000
+      ],
+      "primary_endpoint": 8000
+    }
+  },
+  "execution_contract": {
+    "reach_position_m": 0.01,
+    "reach_rotation_rad": 0.08,
+    "maximum_dwell": 30,
+    "control_budget": 900,
+    "grasp_mode": "benchmark_assist",
+    "processed_target_definition": "Advance after reached or existing maximum dwell; five processed targets then replan, not five time steps",
+    "strict_metric": "same fruit held15 -> same fruit detached -> observed release ->60 consecutive control boundaries unheld, detached and in bucket",
+    "stable_bucket_steps": 60,
+    "legacy_success_preserved": true,
+    "strict_observation_within_budget": true,
+    "GT_exhausted_behavior": "hold last absolute target/width until strict success or budget; flag terminal_hold separately"
+  },
+  "integrity": {
+    "prior_production_and_experiment_sources_not_modified": true,
+    "single_gpu_serial": true,
+    "step0_L_predictions_must_match_old_B0": true,
+    "full30_B_dev_rollouts_must_match_old_B_control_prefix": true,
+    "metadata_not_policy_input": true,
+    "new_heldout_only_after_candidate_frozen": true
+  },
+  "decisions_deferred": [
+    "Whether short commit improves closed loop",
+    "Whether L improves grasp enough to stop data reweight escalation",
+    "Whether S or actual-student recovery R is necessary",
+    "Any learning-rate or budget experiment remains separate"
+  ],
+  "sources": {
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/config_ab.json": {
+      "sha256": "89ea984713392900e4451e76f07d6b97c01012d32bf5ed734150d442b3a10f71",
+      "bytes": 1728
+    },
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/schedules/B.jsonl": {
+      "sha256": "f96439ae2ee50ce206cc225ac09f3c71b436af1ee096b2beb4f71c6703abfcd5",
+      "bytes": 2919547
+    },
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/selection.json": {
+      "sha256": "996d0537d8a15c14034a6a9b311e26a0560955640e016f1fd72f96372c96e206",
+      "bytes": 10707791
+    },
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/result_summary_1004.json": {
+      "sha256": "0aa8691c6e45433a299b1983676fcde5bb1d77af560dbb62a73fee9757c15ae7",
+      "bytes": 4445
+    },
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/protocol.json": {
+      "sha256": "e1f4f9fc6368cb02cd39503a2d6b5713283c9363d55d375a818e9b041f55ae9a",
+      "bytes": 259754
+    }
+  }
+}

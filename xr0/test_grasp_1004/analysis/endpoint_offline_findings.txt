@@ -1,0 +1,35 @@
+L8000相对B8000：固定面板与同seed配对的解释
+单位：位置和总开度以mm展示；旋转rad。下列均按scene等权，非按目标数替代scene数量。
+
+old_train（训练episode来源8场景 / 验证16场景）
+contact_event/first5: pos 37.25->38.97mm (1改善/7变差); rot 0.0662->0.0716rad; width 5.78->5.87mm
+contact_event/first30: pos 55.41->57.02mm (3改善/5变差); rot 0.0826->0.0884rad; width 5.38->5.69mm
+observation_reset/all_targets/first5: pos 30.59->35.58mm (0改善/8变差); rot 0.0249->0.0279rad; width 3.61->4.74mm
+observation_reset/all_targets/first30: pos 40.77->41.67mm (2改善/6变差); rot 0.0553->0.0535rad; width 4.26->4.64mm
+near_h1/contact_event/first5: pos 25.28->28.06mm (2改善/6变差); rot 0.0471->0.0549rad; width 10.43->11.63mm
+near_h1/contact_event/first30: pos 25.28->28.06mm (2改善/6变差); rot 0.0471->0.0549rad; width 10.43->11.63mm
+near_h5/contact_event/first5: pos 54.85->57.83mm (3改善/5变差); rot 0.0945->0.1027rad; width 7.80->7.18mm
+near_h5/contact_event/first30: pos 65.11->71.26mm (2改善/6变差); rot 0.1009->0.1159rad; width 10.43->10.69mm
+near_h10/contact_event/first5: pos 30.77->29.23mm (7改善/1变差); rot 0.0483->0.0491rad; width 1.18->0.75mm
+near_h10/contact_event/first30: pos 55.50->55.11mm (1改善/7变差); rot 0.0806->0.0855rad; width 3.25->3.30mm
+
+combined_val（训练episode来源8场景 / 验证16场景）
+contact_event/first5: pos 34.87->36.05mm (2改善/14变差); rot 0.0683->0.0731rad; width 5.55->5.79mm
+contact_event/first30: pos 50.37->52.03mm (2改善/14变差); rot 0.0868->0.0931rad; width 6.17->6.47mm
+observation_reset/all_targets/first5: pos 30.86->35.29mm (2改善/14变差); rot 0.0242->0.0265rad; width 4.02->5.08mm
+observation_reset/all_targets/first30: pos 40.99->43.96mm (4改善/12变差); rot 0.0664->0.0662rad; width 5.25->5.61mm
+near_h1/contact_event/first5: pos 21.27->23.66mm (4改善/12变差); rot 0.0533->0.0586rad; width 10.63->11.59mm
+near_h1/contact_event/first30: pos 21.27->23.66mm (4改善/12变差); rot 0.0533->0.0586rad; width 10.63->11.59mm
+near_h5/contact_event/first5: pos 56.64->60.22mm (2改善/14变差); rot 0.1076->0.1166rad; width 5.36->4.94mm
+near_h5/contact_event/first30: pos 63.26->68.04mm (1改善/15变差); rot 0.1131->0.1250rad; width 9.43->9.76mm
+near_h10/contact_event/first5: pos 20.63->19.37mm (13改善/3变差); rot 0.0349->0.0357rad; width 3.25->2.94mm
+near_h10/contact_event/first30: pos 46.79->46.05mm (8改善/8变差); rot 0.0809->0.0858rad; width 4.91->4.70mm
+
+解释：
+1. 来自训练episode的固定窗口也退化，不能仅凭本结果认定经典“训练更好、验证更差”的过拟合。原训练80窗中51窗曾被B/L相同schedule直接抽到，其余仍来自同8条训练episode。
+2. 接触代理actual-target位置误差在训练8场景与验证16场景均增大，旋转总体也变差。near_h5的first5开度变好（训练7/8、验证10/16），同时位置/旋转变差；这是局部维度取舍证据，不是全局定位改善。
+3. near_h1的完整30目标均值含大量后续PULL，不能把全部恶化幅度归于瞬间接触。仅contact mask下验证位置21.27->23.66mm；全30是107.69->136.12mm。
+4. near_h10前5位置有改善（训练7/8、验证13/16），接近PULL进入的near_h5/h1反而退化。单一宽事件窗2倍权重没有形成稳定的末段对准收益。
+5. auxiliary144晚段固定观测中actual DROP位置/开度改善，不等同于旧240运输进入观测改善。旧早transport full位置212.50->216.29mm；晚drop-entry full37.52->27.96mm。两者仅各自在相同窗上比较。
+6. DROP全目标16验证scene均值位置39.74->30.54mm，14/16改善。episode_001750贡献约104mm的单scene改善；去掉它的敏感性分析仍改善约2.87mm，仅用于解释均值，不修改主样本。
+7. 以上均为专家状态下预测误差；必须完成18条L闭环，不能用离线较差提前停止或据DROP改善宣称释放能力提高。

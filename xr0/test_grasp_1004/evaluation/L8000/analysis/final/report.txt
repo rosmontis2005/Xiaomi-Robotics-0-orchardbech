@@ -1,0 +1,6 @@
+L8000 vs current B8000, matching scheduler: COMPLETE
+arm/scheduler | n | held15 | samefruit detach | releases | strict60 | legacy ever | mean replans
+B_targets30 | 8 | 6 | 6 | 4 | 0 | 0 | 8.75
+L_targets30 | 8 | 7 | 7 | 6 | 0 | 0 | 8.12
+B_targets5 | 8 | 0 | 0 | 0 | 0 | 0 | 16.50
+L_targets5 | 8 | 0 | 0 | 0 | 0 | 0 | 22.88

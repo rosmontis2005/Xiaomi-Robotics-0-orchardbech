@@ -1,0 +1,146 @@
+M0 小数据集拟合验证报告
+日期：2026-10-03
+目录：/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003
+实验状态：已完成筛选、训练、离线生成验证、闭环对照及完整性校验。
+
+结论
+
+本轮产生了真实的前段能力改善：沿用冻结VLM和正式reach-conditioned执行方式，仅在筛选后的8条训练episode、80个窗口上追加2000次更新，模型从固定四场景0/4抓取，提升到2/4抓取并摘离；新增抓取分别来自一条训练场景和一条未参与优化的验证场景。
+但严格小集拟合门槛仅通过3/6，完整入桶仍为0/4，尚不能宣布reach已稳定解决或系统已可用。工程链路校验PASS、监督拟合部分通过、闭环能力部分改善是三个不同结论。
+
+一、做了什么及未改变的条件
+
+完成用户授权的第一阶段M0，不自动进入全量S1、超参网格或新数据大规模采集。所有新增脚本、缓存、日志、权重和报告保存在本目录。
+训练：原10k权重初始化，fresh AdamW，lr=1e-5，batch=1，accum=1，betas=(.9,.95)，weight_decay=.1，clip_norm=1；冻结VLM，FP32可训练master参数、bf16计算；原full30 flow matching、原stats、原[30,32]动作契约不变。training_repeat=1、async=false、freq=false、5步Euler生成。
+执行：正式reach-conditioned，位置0.01m、姿态0.08rad、最大等待30控制步，总预算900控制步，完整执行30目标chunk。固定chunk解码锚点，同一student adapter/controller。没有新增预抓停留门槛、调高限幅或修改抓持门槛。
+环境仍为原benchmark_assist抓持模式；抓持证据来自环境grasp_assist_triggered/held，未以预测夹爪宽度代替。模型只获得原双视角RGB、proprio和原任务prompt，GT果位/ID/phase没有作为策略输入或在线阶段切换信号。
+
+二、样本筛选和启动前检查
+
+最终8 train + 8 val，各10个固定完整窗口，共160个唯一窗口；train/val在episode和seed层面隔离。验证episode不含此前反复诊断的4条val。
+先按既有GT strict PASS、IK=0、dwell_timeout=0和原始最佳视角目标>=128像素筛候选，再按接近方向、距离、高度等覆盖选取，最后检查真实prepare_rgb后的图像。全程未使用模型成绩筛样本。
+目视排除初版train000656（reset目标仅下沿小片）和000598（叶片遮挡、难以辨认），补入000613和001129。替换发生在任何模型运行之前；初版清单、校验和图像保存在pre_visual_review，旧CPU准备缓存保存在preparation_revision_01。
+最终训练ID：001319、000023、000613、000974、001796、000703、001129、001212。
+最终验证ID：000380、002440、000210、000430、001020、002430、000630、000110。
+train窗口anchor为REACH24、GRASP29、PULL19、TRANSPORT8；val为24、31、17、8。每split有8个reset窗口。阶段按anchor命名，30个future targets可能跨越阶段。
+train初始目标最佳原图可见像素132–232，TCP到目标距离0.257–0.392m；val为128–221像素、0.241–0.390m。它们是可见性筛选的开发小集，不代表原自然场景分布；部分输入仍有下沿截断、局部遮挡或多果歧义，没有声称所有目标居中无遮挡或已从图像唯一确认果ID。
+
+启动前检查全部通过：
+- 32路视频完整解码，帧数/FPS与annotation一致；160个窗口均在完整30目标合法范围内。
+- actions与下一帧实测state对齐；位姿编码/解码误差为浮点精度量级。
+- 构建完整train/val Dataset后使用Subset，保留原full-train stats fingerprint，未用小集重算normalization。
+- 原Dataset collate与部署policy预处理在同窗输入上的张量一致性通过；CPU缓存只存输入，不缓存VLM特征。
+- 固定2train+2val场景在当前学生通路的GT回放全部成功，成功步数489/514/484/544，IK和dwell timeout均0。
+- 最终两条train替换不涉及四个闭环场景；gt_selection_revision_check.json证实其场景及episode元数据与初版完全相同，旧GT报告SHA未覆盖。GT运行后，新实验评估脚本仅追加模型精度探针和selection修订配对逻辑，正式reach loop未改；脚本SHA差异及原因保存在closed_loop_findings中。
+
+三、训练实际执行情况
+
+完成2000次更新，80个训练窗口各曝光25次，共2000次窗口呈现；val优化次数0。基线及250/500/1000/2000五个检查点均对80train+80val执行真实generate，固定生成seed42/43/44，共2400次生成。每次从zero action生成，没有GT action prefix；评估前后恢复训练随机数状态。
+最佳模型按预先固定的训练集拟合规则选择，val只报告、不用于挑checkpoint；最后选中step2000，best与final参数逐张量完全一致。
+训练纯更新耗时288.48秒，五次离线评估245.74秒，训练进程记录总计约545.6秒（不含此前数据/仿真准备和后续闭环）。全部梯度/损失finite，输出层权重最大绝对更新约0.00067645；VLM所有参数逐字节hash前后相同。
+
+四、真实生成动作拟合结果
+
+以下对比均为同一批窗口、同一三组生成随机种子；位置为欧氏距离、姿态为SO(3)角、开度为绝对总宽度误差，统计在控制器裁剪之前。
+所有窗口：完整30目标位置平均误差（cm）: train 11.8884 -> 2.9540; val 12.0387 -> 8.5266
+reset窗口：完整30目标位置平均误差（cm）: train 26.9274 -> 2.6714; val 21.7882 -> 7.4327
+所有窗口：前5目标位置平均误差（cm）: train 4.6482 -> 1.7510; val 4.4861 -> 3.0913
+所有窗口：完整30目标姿态平均误差（rad）: train 0.1484 -> 0.0486; val 0.1751 -> 0.1577
+所有窗口：完整30目标开度平均误差（mm）: train 10.8271 -> 3.4823; val 10.2210 -> 6.9678
+
+相对于horizon-conditioned均值动作基线，最终完整30位置误差也显著更低：均值动作train/val为17.17/17.44cm，M0为2.95/8.53cm。
+按窗口配对，80个train中位置/姿态/开度分别有76/78/79个改善；80个val中分别61/60/68个改善。所有8个val reset窗口的完整30位置误差均改善。这支持存在跨episode的起步改善，不能仅归为某一条样本拉低平均数。
+同时存在明确的训练-验证差距：完整30位置train2.95cm、val8.53cm；val的PULL-anchor完整chunk位置误差从5.33cm增至8.77cm，姿态从0.0830增至0.1630rad。阶段按anchor定义，不能把这些窗口全部称为纯PULL动作；但它说明前段收益不能代替后段泛化验证。
+reset首目标位置误差train约8.13->8.61mm、val11.32->9.77mm，改善主要来自后续目标序列，而非所有horizon同步改善。
+reset首目标宽度误差train约5.31->10.79mm、val9.18->11.76mm。早期检查中误差增长主要表现为比专家next-state实测标签更快张爪。宽度拟合误差与对抓持有害不是同义词，需要看实际reach执行时的宽度和事件。
+
+五、拟合门槛：3项通过、3项未通过
+
+拟议门槛从实验前固定，未因结果调整：
+- train前5目标位置误差p90：35.89mm，门槛<=10mm，未通过。
+- train前5目标姿态误差p90：0.06176rad，门槛<=0.08rad，通过。
+- train前5目标宽度MAE：4.63mm，门槛<=3mm，未通过。
+- train reset完整chunk位置MAE：26.71mm，门槛<=30mm，通过。
+- 闭合意图代理的最坏目标索引偏差：15，门槛<=2，未通过。
+- 有GT闭合过渡而预测完全缺失的数量：0，通过。
+
+闭合代理按专家30Hz目标序列逐目标运行原intent规则，不是实际reach控制时刻。仍保持较大开度时的毫米级下降也可能超过1mm deadband而短暂触发负intent，随后重新张开。因此“偏差15”不能写成“实际提前15个控制步闭合”。该门槛照实报告，但不据此否认已经观察到的抓持。
+
+六、相同场景闭环结果
+
+三组各4回合，共12回合；模型推理seed固定42；scene/reset原始RGB和状态逐项配对一致。没有根据结果替换场景。
+
+组别             抓持    摘离    入桶成功
+GT学生回放       4/4     4/4     4/4
+原10k模型        0/4     0/4     0/4
+M0 step2000      2/4     2/4     0/4
+
+M0分场景：
+train 2013322 / episode001319：step101抓果17，step207摘离，最终仍持果，未入桶。
+train 2014461 / episode001796：未抓，900步IK=0、dwell timeout=0。
+val   2010914 / episode000380：step102抓果3，step198摘离，最终仍持果，未入桶。
+val   2012485 / episode001020：未抓，后段出现IK失败。
+
+第一chunk三组所有12回合都完成了30目标，IK=0、dwell timeout=0。M0对teacher首30世界目标的平均位置误差按上述四场景分别为25.94/25.86/29.51/123.85mm；原10k约315–326mm。这解释了为什么仅看“controller能追上”不足以评价动作质量。
+
+两个未抓场景的分叉：
+- train2014461最接近时TCP距果33.03mm，负intent已触发且日志存在双指contact，但果实手坐标约(-24.660,-3.397,125.108)mm，z高于严格掌内上界125mm约0.108mm，x也非常靠近25mm边界。before/after记录始终没有geometry-eligible。后续继续远离；不能归因IK或完全未闭合，也不能把一个窄边界时刻当稳健抓取裕量，更不能直接放宽gate来制造成功。
+- val2012485在第一chunk最近仍距果103.15mm，未进入掌内；全部301次IK失败从step600的chunk11才开始，前11个chunk均无IK失败。因此前段仍是目标/接近几何与时机问题，后段IK不是起始失败解释。
+
+两条抓取成功案例的分叉：
+- 抓持与摘离均真实发生，之后一直持果，没有held->None释放转换；抓住以后目标宽度从未达到75mm，正intent次数为0。
+- train2013322的324次IK失败从step565的最后chunk10开始；val2010914的326次从step566的最后chunk6开始。两者各有11次dwell超时。
+- 这暴露了后段运输/放置目标与跟踪问题，但不能据原模型未抓到时的日志比较其运输能力强弱，也不能只因全程IK变高就否定本轮新增抓取能力。
+
+四场景为2train+2val的固定开发面板，且筛过可见性和GT可回放性。2/4只代表这四条，不是总体抓取成功率估计；每场景没有重复多个推理seed，稳定性尚未验证。
+
+七、训练评估与部署精度的补充核验
+
+训练评估保留FP32可训练master参数并bf16计算；当前生产OrchardPolicy模型参数全BF16。本轮未改这个生产行为，另外在相同CPU缓存、同seed42的4个reset窗口做了对照。
+原10k两条路径的最大位置输出差为0.87–1.12mm；M0为2.14–7.03mm，最大出现在val2012485。M0平均差约0.76–2.94mm。
+这小于失败val场景约10cm的接近偏差，但对于train2014461窄几何边界可能有影响；没有执行精度干预的闭环对照，不能将残余失败直接归咎精度，也不能把两种推理路径说成数值完全相同。该probe用相同离线观察，未混入视频压缩与live render差异。
+
+八、对当前情况的诊断
+
+已得到支持的判断：
+1. 当前冻结VLM、现有动作头与reach执行通路可以通过追加小集训练产生有效接近、抓持和摘离；此前零抓取不是这条路线必然无效的证据。
+2. 起步及接近监督值得继续投入。本次reset误差显著下降，并且抓取出现在独立val场景，收益超过仅降低IK或裁剪的层面。
+3. reach还不稳定：一个训练场景仍表现为最后接近时未满足抓持几何条件，一个验证场景存在更大的目标/路径误差；尚未因果隔离精度、目标和动力学各自的贡献。专家观察上的平均拟合不足以保证闭环稳定。
+4. 已跨过抓持的样本暴露出后段问题，完整任务仍不可用。当前应把“尚未可靠抓到”和“已摘离却未运输/释放”分别跟踪。
+
+尚不能声称：
+- 不能说M0已完全通过严格拟合或已经收敛；2k只是这次固定预算。
+- 不能把2/4当总体泛化率，也不能证明模型真正学会了视觉目标理解；状态相关性和目标多义性还未单独消融。
+- 本次同时增加训练步数并集中于80个窗口，没有等预算uniform续训对照，不能分离更多更新与采样分布改变各自的因果贡献。
+- 不能由后段IK上升宣布模型退化，也不能由一个0.108mm边界差值宣布应修改抓持定义。
+
+九、下一步建议（未执行）
+
+继续保留reach-conditioned和冻结VLM主线，保留本次80train/80val固定面板与四场景作为开发回归集。
+先围绕未抓两例的最后接近，检查前段更连续窗口的监督覆盖以及小集拟合精度；若增加窗口或调整优化预算/学习率，分成单因素试验，不立刻同时改loss、控制限幅和VLM冻结状态。现有近端误差仍未过门槛，尚不宜直接跳到全量长训并期待自动解决。
+可以优先做一次低成本的推理精度对照：保持同一checkpoint/输入/执行协议，仅比较当前BF16部署与训练评估对应的FP32 head状态；重点观察窄几何失败例。它用于量化影响，不作为已经找到根因的声明。
+当专家观察上的接近目标足够准确而学生执行后仍失配时，再补学生真实等待/轻微偏离状态的teacher目标监督。监督当前有效目标并相对学生锚点重编码，避免学到因跟踪慢而近乎不动的next state。
+之后扩展前段episode覆盖和阶段重采样时，保留后段验证，尤其跟踪此次PULL-anchor验证误差回退。对已能抓持/摘离的两例另看运输/释放目标，不能把它们继续归类为NO_GRASP。
+不在本轮自动执行S1、重采数据、修改抓持门槛或解冻VLM。
+
+十、工程验证与产物使用
+
+verification.json为PASS：97个受保护源码/配置/统计文件、原10k checkpoint、16份annotation和32路视频均未改变；2000更新全部使用train，VLM未更新；2400次生成无GT动作前缀；12闭环scene/reset检查全部通过，observer和summary mismatch均0，无运行时错误。
+这里的PASS仅表示工程和证据一致性，不覆盖行为门槛未完全通过的事实。
+
+best和final均为仅包含可训练参数的FP32 overlay，约1.1GB，二者参数完全相同。必须先加载原10k完整模型，再用本目录checkpoint_io.load_trainable_overlay加载；不能直接将其当完整生产checkpoint。payload包含base路径/SHA、step、精确参数keys和配置元数据。
+
+关键文件：
+report.txt：本报告。
+summary.json：紧凑机器可读结论。
+selection.json / selection_validation.json / dataset_summary.txt / contact_sheets/：最终样本、窗口及筛选证据。
+experiment_protocol.json / config.json / run_manifest.json：预先冻结规则、实际配置和溯源。
+training_steps.jsonl / training_summary.json / training_findings.txt：优化、曝光和离线解释。
+evaluations/step_0000,0250,0500,1000,2000/：每个窗口的预测、GT、误差及报告。
+analysis.json / generated_action_learning_curves.png / training_loss.png：独立重算与图表。
+closed_loop_findings.txt/json / rollout_analysis.json / rollout_comparison.csv / rollout_diagnostics.png：闭环分叉分析。
+rollouts/：12条原始轨迹及首场景双视角视频。
+grasp_and_later_failure_filmstrip.png：成功抓持但后段未放置的实际视频关键帧，已目视核对。
+deployment_precision/：训练评估与生产精度路径的4窗对照。
+checkpoints/best_trainable.pt / final_trainable.pt：step2000增量权重。
+verification.json / integrity_before.json：最后一致性和原始文件保护证据。

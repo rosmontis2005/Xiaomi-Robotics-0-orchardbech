@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-10-03T12:39:25.778861+00:00",
+  "reason": "User clarified reach-conditioned is the already-decided production contract",
+  "formal_model_modes": [
+    "reach-conditioned"
+  ],
+  "completed_gt_time_indexed": "Retained only as a diagnostic negative control",
+  "cancelled_process": 13623,
+  "cancelled_job": "model rollout process stopped to change arguments; not a semantic model outcome",
+  "existing_model_rollout_directories": [],
+  "offline_completed": true
+}

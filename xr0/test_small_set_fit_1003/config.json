@@ -1,0 +1,79 @@
+{
+  "schema": "orchard_m0_config_v1",
+  "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+  "stats": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/action_stats.json",
+  "processor_path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D",
+  "vlm_config_path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D/config.json",
+  "max_updates": 2000,
+  "eval_steps": [
+    0,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "batch_size": 1,
+  "accumulate_grad_batches": 1,
+  "train_seed": 42,
+  "sampler_seed": 42,
+  "prediction_seeds": [
+    42,
+    43,
+    44
+  ],
+  "precision": "bf16 autocast, FP32 trainable master weights; no GradScaler",
+  "freeze_vlm": true,
+  "action_shape": [
+    30,
+    32
+  ],
+  "state_shape": [
+    1,
+    32
+  ],
+  "training_repeat": 1,
+  "async_train": false,
+  "enable_freq": false,
+  "flow_sampling": "beta",
+  "num_steps": 5,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 1e-05,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "weight_decay": 0.1,
+    "eps": 1e-08,
+    "foreach": false
+  },
+  "scheduler": {
+    "type": "ConstantLR",
+    "factor": 1.0,
+    "total_iters": 1
+  },
+  "gradient_clip_norm": 1.0,
+  "objective": "Unchanged production full-30 masked normalized flow velocity MSE, coefficient .5",
+  "sampling": "Complete fixed 80 train windows, shuffled without replacement per cycle with independent CPU generator.",
+  "cache": "CPU preprocessed/collated inputs only; no VLM feature/KV cache or model-output cache.",
+  "evaluation": "All 80 train + 80 val windows, generation from zeros action and fixed seed per window; three independent calls with seeds42/43/44, no GT action/prefix supplied.",
+  "best_rule": {
+    "criterion": "lexicographic, selected TRAIN panel only; VAL is report-only",
+    "order": [
+      "number_of_failed_proposed_train_fit_gates",
+      "train_reset_full_position_mae_m",
+      "train_h1_5_position_p90_m"
+    ],
+    "tie": "keep earlier checkpoint",
+    "baseline_eligible": true,
+    "gates": {
+      "h1_5_position_p90_m": 0.01,
+      "h1_5_rotation_p90_rad": 0.08,
+      "h1_5_width_mae_m": 0.003,
+      "reset_full_position_mae_m": 0.03,
+      "close_switch_abs_target_offset_max": 2,
+      "missing_gt_close_switch_predictions": 0
+    },
+    "note": "These are fitting diagnostics, not task success. Width intent is a 30Hz target-sequence proxy."
+  }
+}

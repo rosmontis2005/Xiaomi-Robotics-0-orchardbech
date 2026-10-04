@@ -1,0 +1,12 @@
+Secondary TRAIN-best B4000: fixed dev8 seed42; primary endpoints remain8000.
+A8000: {"grasp": 1, "held15": 1, "grasp_by_step300": 1, "held15_qualified_by_step300": 1, "any_detach": 1, "grasp_and_any_detach": 1, "success": 0} /8
+B8000: {"grasp": 6, "held15": 6, "grasp_by_step300": 6, "held15_qualified_by_step300": 6, "any_detach": 6, "grasp_and_any_detach": 6, "success": 0} /8
+B4000: {"grasp": 5, "held15": 5, "grasp_by_step300": 5, "held15_qualified_by_step300": 5, "any_detach": 4, "grasp_and_any_detach": 4, "success": 0} /8
+Paired B4000 vs B8000: {"grasp": {"scenes": 8, "B4000_only": 1, "B8000_only": 2, "both": 4, "neither": 1}, "held15": {"scenes": 8, "B4000_only": 1, "B8000_only": 2, "both": 4, "neither": 1}, "grasp_by_step300": {"scenes": 8, "B4000_only": 1, "B8000_only": 2, "both": 4, "neither": 1}, "held15_qualified_by_step300": {"scenes": 8, "B4000_only": 1, "B8000_only": 2, "both": 4, "neither": 1}, "any_detach": {"scenes": 8, "B4000_only": 0, "B8000_only": 2, "both": 4, "neither": 2}, "grasp_and_any_detach": {"scenes": 8, "B4000_only": 0, "B8000_only": 2, "both": 4, "neither": 2}, "success": {"scenes": 8, "B4000_only": 0, "B8000_only": 0, "both": 0, "neither": 8}}
+
+Secondary B4000 was selected by TRAIN-only best rule before closed-loop testing and separately authorized before primary queue completed.
+Only fixed dev8 seed42 was evaluated; no heldout best-checkpoint testing or checkpoint replacement.
+Primary remains A8000 vs B8000. A8000 is reused because its train-only best equals the primary endpoint.
+Same unchanged full30 reach loop, 900-step budget, control limits, benchmark_assist and fixed reset.
+Held15 is consecutive control boundaries, not imposed pose holding or physics-substep proof.
+Any-detach is aggregate; benchmark bucket success is not inherently an explicit-release completion.

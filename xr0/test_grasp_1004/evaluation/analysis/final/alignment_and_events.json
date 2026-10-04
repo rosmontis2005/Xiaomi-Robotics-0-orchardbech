@@ -1,0 +1,2030 @@
+{
+  "protocol_sha256": "74d71006104fe63c3a963c724adbdeed0f31db867c072662d6bfb3bc69b73eb0",
+  "analysis_source_sha256": "101192da870e1a0d57e9fc8283541b22b7edb3ab5334f4bc00f1cf113e421627",
+  "gt_pairs": [
+    {
+      "seed": 2013322,
+      "GT30_steps": 548,
+      "GT5_steps": 548,
+      "GT30_unique_indices": 218,
+      "GT5_unique_indices": 218,
+      "common_indices": 218,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 77,
+        "first_detach": 140,
+        "releases": [
+          {
+            "step": 482,
+            "apple_id": 17
+          }
+        ],
+        "first_legacy_success": 489,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 77,
+        "first_detach": 140,
+        "releases": [
+          {
+            "step": 482,
+            "apple_id": 17
+          }
+        ],
+        "first_legacy_success": 489,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 17,
+          "step": 548,
+          "release_step": 482,
+          "held15_step": 91,
+          "first_detach_after_grasp_step": 140
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 17,
+          "step": 548,
+          "release_step": 482,
+          "held15_step": 91,
+          "first_detach_after_grasp_step": 140
+        }
+      ]
+    },
+    {
+      "seed": 2014461,
+      "GT30_steps": 572,
+      "GT5_steps": 573,
+      "GT30_unique_indices": 200,
+      "GT5_unique_indices": 200,
+      "common_indices": 200,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 86,
+        "first_detach": 168,
+        "releases": [
+          {
+            "step": 506,
+            "apple_id": 28
+          }
+        ],
+        "first_legacy_success": 513,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 86,
+        "first_detach": 168,
+        "releases": [
+          {
+            "step": 507,
+            "apple_id": 28
+          }
+        ],
+        "first_legacy_success": 514,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 28,
+          "step": 572,
+          "release_step": 506,
+          "held15_step": 100,
+          "first_detach_after_grasp_step": 168
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 28,
+          "step": 573,
+          "release_step": 507,
+          "held15_step": 100,
+          "first_detach_after_grasp_step": 168
+        }
+      ]
+    },
+    {
+      "seed": 2010914,
+      "GT30_steps": 543,
+      "GT5_steps": 543,
+      "GT30_unique_indices": 224,
+      "GT5_unique_indices": 224,
+      "common_indices": 224,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 78,
+        "first_detach": 146,
+        "releases": [
+          {
+            "step": 477,
+            "apple_id": 3
+          }
+        ],
+        "first_legacy_success": 484,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 78,
+        "first_detach": 146,
+        "releases": [
+          {
+            "step": 477,
+            "apple_id": 3
+          }
+        ],
+        "first_legacy_success": 484,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 3,
+          "step": 543,
+          "release_step": 477,
+          "held15_step": 92,
+          "first_detach_after_grasp_step": 146
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 3,
+          "step": 543,
+          "release_step": 477,
+          "held15_step": 92,
+          "first_detach_after_grasp_step": 146
+        }
+      ]
+    },
+    {
+      "seed": 2012485,
+      "GT30_steps": 603,
+      "GT5_steps": 603,
+      "GT30_unique_indices": 223,
+      "GT5_unique_indices": 223,
+      "common_indices": 223,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 77,
+        "first_detach": 148,
+        "releases": [
+          {
+            "step": 536,
+            "apple_id": 17
+          }
+        ],
+        "first_legacy_success": 544,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 77,
+        "first_detach": 148,
+        "releases": [
+          {
+            "step": 536,
+            "apple_id": 17
+          }
+        ],
+        "first_legacy_success": 544,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 17,
+          "step": 603,
+          "release_step": 536,
+          "held15_step": 91,
+          "first_detach_after_grasp_step": 148
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 17,
+          "step": 603,
+          "release_step": 536,
+          "held15_step": 91,
+          "first_detach_after_grasp_step": 148
+        }
+      ]
+    },
+    {
+      "seed": 2015716,
+      "GT30_steps": 558,
+      "GT5_steps": 558,
+      "GT30_unique_indices": 219,
+      "GT5_unique_indices": 219,
+      "common_indices": 219,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 80,
+        "first_detach": 147,
+        "releases": [
+          {
+            "step": 492,
+            "apple_id": 32
+          }
+        ],
+        "first_legacy_success": 499,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 80,
+        "first_detach": 147,
+        "releases": [
+          {
+            "step": 492,
+            "apple_id": 32
+          }
+        ],
+        "first_legacy_success": 499,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 32,
+          "step": 558,
+          "release_step": 492,
+          "held15_step": 94,
+          "first_detach_after_grasp_step": 147
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 32,
+          "step": 558,
+          "release_step": 492,
+          "held15_step": 94,
+          "first_detach_after_grasp_step": 147
+        }
+      ]
+    },
+    {
+      "seed": 2014362,
+      "GT30_steps": 551,
+      "GT5_steps": 551,
+      "GT30_unique_indices": 194,
+      "GT5_unique_indices": 194,
+      "common_indices": 194,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 72,
+        "first_detach": 134,
+        "releases": [
+          {
+            "step": 486,
+            "apple_id": 13
+          }
+        ],
+        "first_legacy_success": 492,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 72,
+        "first_detach": 134,
+        "releases": [
+          {
+            "step": 486,
+            "apple_id": 13
+          }
+        ],
+        "first_legacy_success": 492,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 13,
+          "step": 551,
+          "release_step": 486,
+          "held15_step": 86,
+          "first_detach_after_grasp_step": 134
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 13,
+          "step": 551,
+          "release_step": 486,
+          "held15_step": 86,
+          "first_detach_after_grasp_step": 134
+        }
+      ]
+    },
+    {
+      "seed": 2015751,
+      "GT30_steps": 545,
+      "GT5_steps": 545,
+      "GT30_unique_indices": 223,
+      "GT5_unique_indices": 223,
+      "common_indices": 223,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 68,
+        "first_detach": 140,
+        "releases": [
+          {
+            "step": 480,
+            "apple_id": 0
+          }
+        ],
+        "first_legacy_success": 486,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 68,
+        "first_detach": 140,
+        "releases": [
+          {
+            "step": 480,
+            "apple_id": 0
+          }
+        ],
+        "first_legacy_success": 486,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 0,
+          "step": 545,
+          "release_step": 480,
+          "held15_step": 82,
+          "first_detach_after_grasp_step": 140
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 0,
+          "step": 545,
+          "release_step": 480,
+          "held15_step": 82,
+          "first_detach_after_grasp_step": 140
+        }
+      ]
+    },
+    {
+      "seed": 2011310,
+      "GT30_steps": 554,
+      "GT5_steps": 554,
+      "GT30_unique_indices": 221,
+      "GT5_unique_indices": 221,
+      "common_indices": 221,
+      "same_visited_index_set": true,
+      "absolute_goals_by_source_index_exact": true,
+      "GT30_strict_success": true,
+      "GT5_strict_success": true,
+      "GT30_events": {
+        "first_held": 80,
+        "first_detach": 148,
+        "releases": [
+          {
+            "step": 488,
+            "apple_id": 27
+          }
+        ],
+        "first_legacy_success": 495,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT5_events": {
+        "first_held": 80,
+        "first_detach": 148,
+        "releases": [
+          {
+            "step": 488,
+            "apple_id": 27
+          }
+        ],
+        "first_legacy_success": 495,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 0,
+        "branch_break_count": 0
+      },
+      "GT30_strict": [
+        {
+          "apple_id": 27,
+          "step": 554,
+          "release_step": 488,
+          "held15_step": 94,
+          "first_detach_after_grasp_step": 148
+        }
+      ],
+      "GT5_strict": [
+        {
+          "apple_id": 27,
+          "step": 554,
+          "release_step": 488,
+          "held15_step": 94,
+          "first_detach_after_grasp_step": 148
+        }
+      ]
+    }
+  ],
+  "model_rows": [
+    {
+      "stage": "B30",
+      "seed": 2013322,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 91,
+        "first_detach": 168,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 538,
+        "dwell_timeout_count": 17,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {
+          "17": {
+            "first_grasp_step": 91,
+            "held15_step": 105,
+            "first_detach_after_grasp_step": 168,
+            "release_step": null,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 7,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 128.57142857142858,
+      "completed_targets": 209,
+      "prediction_seconds": 1.1794454410046455,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 782,
+          "target_rotation": 782,
+          "target_width": 697,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 883,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 134,
+          "dwell_steps": 661
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 119,
+          "target_rotation": 119,
+          "target_width": 119,
+          "advance": 135,
+          "dwell_steps": 136
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.03570235389457044,
+          "target_rotation": 0.04757139464197152,
+          "target_width": 0.016812030225992203,
+          "measured_position": 0.013315439224243164,
+          "measured_quaternion": 0.024243682622909546,
+          "measured_width": 0.00815580040216446,
+          "requested_command": 0.0,
+          "position_error_m": 0.022621954590806476,
+          "rotation_error_rad": 0.05335485110491615,
+          "advance": 0.0,
+          "dwell_steps": 27.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": true,
+          "detached_count": false,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.01462386247613555,
+          "rotation_geodesic_rad": 0.05631190042815694,
+          "width_m": 0.00815580040216446
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2013322",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 91,
+        "first_detach": 167,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 540,
+        "dwell_timeout_count": 18,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2014461,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 244,
+        "dwell_timeout_count": 8,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 11,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 81.81818181818181,
+      "completed_targets": 314,
+      "prediction_seconds": 1.1426562009946792,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 783,
+          "target_rotation": 783,
+          "target_width": 769,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 887,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 254,
+          "dwell_steps": 521
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 118,
+          "target_rotation": 118,
+          "target_width": 118,
+          "advance": 222,
+          "dwell_steps": 223
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.09249366497233069,
+          "target_rotation": 0.20732714295639754,
+          "target_width": 0.020910944789648056,
+          "measured_position": 0.12196230888366699,
+          "measured_quaternion": 0.0699334591627121,
+          "measured_width": 0.01865071803331375,
+          "requested_command": 0.0,
+          "position_error_m": 0.061416870927743374,
+          "rotation_error_rad": 0.1684586269022843,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": true,
+          "detached_count": true,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.13352893892770254,
+          "rotation_geodesic_rad": 0.221148786260675,
+          "width_m": 0.01865071803331375
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2014461",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 120,
+        "dwell_timeout_count": 4,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2010914,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 94,
+        "first_detach": 182,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 521,
+        "dwell_timeout_count": 17,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {
+          "3": {
+            "first_grasp_step": 94,
+            "held15_step": 108,
+            "first_detach_after_grasp_step": 182,
+            "release_step": null,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 7,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 128.57142857142858,
+      "completed_targets": 206,
+      "prediction_seconds": 0.7293880970028113,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 782,
+          "target_rotation": 782,
+          "target_width": 774,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 882,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 131,
+          "dwell_steps": 650
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 119,
+          "target_rotation": 119,
+          "target_width": 121,
+          "advance": 173,
+          "dwell_steps": 174
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.0403188699402558,
+          "target_rotation": 0.05116525294155294,
+          "target_width": 0.015979457646608353,
+          "measured_position": 0.02008950710296631,
+          "measured_quaternion": 0.11001135408878326,
+          "measured_width": 0.010785244405269623,
+          "requested_command": 0.0,
+          "position_error_m": 0.020784910116266528,
+          "rotation_error_rad": 0.22581904153217747,
+          "advance": 0.0,
+          "dwell_steps": 27.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": true,
+          "detached_count": false,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.02631778488993227,
+          "rotation_geodesic_rad": 0.23251077147883648,
+          "width_m": 0.010785244405269623
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2010914",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 94,
+        "first_detach": 183,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 525,
+        "dwell_timeout_count": 17,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2012485,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 110,
+        "first_detach": 197,
+        "releases": [
+          {
+            "step": 448,
+            "apple_id": 17
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 235,
+        "dwell_timeout_count": 8,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {
+          "17": {
+            "first_grasp_step": 110,
+            "held15_step": 124,
+            "first_detach_after_grasp_step": 197,
+            "release_step": 448,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [
+          {
+            "apple_id": 17,
+            "step": 448,
+            "had_held15": true,
+            "detached_at_release": true,
+            "valid_chain": true
+          }
+        ],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 10,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 90.0,
+      "completed_targets": 289,
+      "prediction_seconds": 1.0397385649994249,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 797,
+          "target_rotation": 797,
+          "target_width": 785,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 876,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 214,
+          "dwell_steps": 579
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 104,
+          "target_rotation": 104,
+          "target_width": 104,
+          "advance": 175,
+          "dwell_steps": 176
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.2904401136806932,
+          "target_rotation": 0.23249635224175724,
+          "target_width": 0.04399498552083969,
+          "measured_position": 0.25341618061065674,
+          "measured_quaternion": 0.09455326199531555,
+          "measured_width": 0.026064433157444,
+          "requested_command": 0.0,
+          "position_error_m": 0.07425990856233665,
+          "rotation_error_rad": 0.19034836697014884,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": false,
+          "detached_count": true,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.35763149909702996,
+          "rotation_geodesic_rad": 0.25565128314653346,
+          "width_m": 0.026064433157444
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2012485",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 110,
+        "first_detach": 197,
+        "releases": [
+          {
+            "step": 767,
+            "apple_id": 17
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 320,
+        "dwell_timeout_count": 10,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2015716,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 96,
+        "first_detach": 168,
+        "releases": [
+          {
+            "step": 215,
+            "apple_id": 32
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 417,
+        "dwell_timeout_count": 13,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {
+          "32": {
+            "first_grasp_step": 96,
+            "held15_step": 110,
+            "first_detach_after_grasp_step": 168,
+            "release_step": 215,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [
+          {
+            "apple_id": 32,
+            "step": 215,
+            "had_held15": true,
+            "detached_at_release": true,
+            "valid_chain": true
+          }
+        ],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 9,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 100.0,
+      "completed_targets": 259,
+      "prediction_seconds": 0.9361114869971061,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 781,
+          "target_rotation": 781,
+          "target_width": 775,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 877,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 189,
+          "dwell_steps": 608
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 120,
+          "target_rotation": 120,
+          "target_width": 120,
+          "advance": 160,
+          "dwell_steps": 161
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.16505876225847171,
+          "target_rotation": 0.27302727814656025,
+          "target_width": 0.034589629620313644,
+          "measured_position": 0.15205925703048706,
+          "measured_quaternion": 0.0681336522102356,
+          "measured_width": 0.033266451209783554,
+          "requested_command": 0.0,
+          "position_error_m": 0.0392532509413651,
+          "rotation_error_rad": 0.10266650553540026,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": false,
+          "detached_count": true,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.15652643661633883,
+          "rotation_geodesic_rad": 0.24534640620243556,
+          "width_m": 0.033266451209783554
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2015716",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 96,
+        "first_detach": 168,
+        "releases": [
+          {
+            "step": 210,
+            "apple_id": 32
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 378,
+        "dwell_timeout_count": 12,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2014362,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 289,
+        "dwell_timeout_count": 9,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 9,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 100.0,
+      "completed_targets": 259,
+      "prediction_seconds": 0.9339207520024502,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 794,
+          "target_rotation": 794,
+          "target_width": 783,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 875,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 227,
+          "dwell_steps": 627
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 107,
+          "target_rotation": 107,
+          "target_width": 107,
+          "advance": 164,
+          "dwell_steps": 165
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.10666412717388343,
+          "target_rotation": 0.14280932120812476,
+          "target_width": 0.018940988928079605,
+          "measured_position": 0.0725058913230896,
+          "measured_quaternion": 0.055704981088638306,
+          "measured_width": 0.01675771176815033,
+          "requested_command": 0.0,
+          "position_error_m": 0.0835130235215676,
+          "rotation_error_rad": 0.12506640892109286,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": true,
+          "detached_count": true,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.09563005219138844,
+          "rotation_geodesic_rad": 0.14904059803468697,
+          "width_m": 0.01675771176815033
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2014362",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 280,
+        "dwell_timeout_count": 9,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2015751,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 74,
+        "first_detach": 179,
+        "releases": [
+          {
+            "step": 291,
+            "apple_id": 0
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 345,
+        "dwell_timeout_count": 11,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {
+          "0": {
+            "first_grasp_step": 74,
+            "held15_step": 88,
+            "first_detach_after_grasp_step": 179,
+            "release_step": 291,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [
+          {
+            "apple_id": 0,
+            "step": 291,
+            "had_held15": true,
+            "detached_at_release": true,
+            "valid_chain": true
+          }
+        ],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 10,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 90.0,
+      "completed_targets": 274,
+      "prediction_seconds": 1.0398209519989905,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 801,
+          "target_rotation": 801,
+          "target_width": 798,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 890,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 191,
+          "dwell_steps": 620
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 100,
+          "target_rotation": 100,
+          "target_width": 100,
+          "advance": 124,
+          "dwell_steps": 125
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.07287765868494023,
+          "target_rotation": 0.14084904753135052,
+          "target_width": 0.025802303105592728,
+          "measured_position": 0.05747067928314209,
+          "measured_quaternion": 0.050300486385822296,
+          "measured_width": 0.021724294871091843,
+          "requested_command": 0.0,
+          "position_error_m": 0.09055871743675013,
+          "rotation_error_rad": 0.14306472703932355,
+          "advance": 0.0,
+          "dwell_steps": 28.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": false,
+          "detached_count": false,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.08803166364781768,
+          "rotation_geodesic_rad": 0.11219055870277991,
+          "width_m": 0.021724294871091843
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2015751",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 74,
+        "first_detach": 182,
+        "releases": [
+          {
+            "step": 311,
+            "apple_id": 0
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 363,
+        "dwell_timeout_count": 12,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B30",
+      "seed": 2011310,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 87,
+        "first_detach": 173,
+        "releases": [
+          {
+            "step": 258,
+            "apple_id": 27
+          }
+        ],
+        "first_legacy_success": null,
+        "ik_fail_count": 456,
+        "dwell_timeout_count": 15,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {
+          "27": {
+            "first_grasp_step": 87,
+            "held15_step": 101,
+            "first_detach_after_grasp_step": 173,
+            "release_step": 258,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [
+          {
+            "apple_id": 27,
+            "step": 258,
+            "had_held15": true,
+            "detached_at_release": true,
+            "valid_chain": true
+          }
+        ],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 7,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 128.57142857142858,
+      "completed_targets": 209,
+      "prediction_seconds": 0.7292340850108303,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 900,
+        "current_steps": 900,
+        "reference_steps": 900,
+        "field_mismatch_steps": {
+          "target_position": 791,
+          "target_rotation": 791,
+          "target_width": 791,
+          "measured_position": 900,
+          "measured_quaternion": 900,
+          "measured_width": 887,
+          "requested_command": 899,
+          "position_error_m": 900,
+          "rotation_error_rad": 900,
+          "advance": 263,
+          "dwell_steps": 663
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 110,
+          "target_rotation": 110,
+          "target_width": 110,
+          "advance": 126,
+          "dwell_steps": 127
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.37449376728364325,
+          "target_rotation": 0.20014695175182343,
+          "target_width": 0.0385991632938385,
+          "measured_position": 0.3797866106033325,
+          "measured_quaternion": 0.07005906105041504,
+          "measured_width": 0.023718535900115967,
+          "requested_command": 0.0,
+          "position_error_m": 0.04735582005151308,
+          "rotation_error_rad": 0.12649353538220817,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": false,
+          "detached_count": false,
+          "legacy_success": true,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.4269895810915002,
+          "rotation_geodesic_rad": 0.2147286557223381,
+          "width_m": 0.023718535900115967
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2011310",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 87,
+        "first_detach": 171,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 360,
+        "dwell_timeout_count": 12,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "B5",
+      "seed": 2013322,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 462,
+        "dwell_timeout_count": 15,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 36,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 25.0,
+      "completed_targets": 177,
+      "prediction_seconds": 3.924710140985553,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2014461,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 22,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 13,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 69.23076923076923,
+      "completed_targets": 63,
+      "prediction_seconds": 1.3475722479925025,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2010914,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 21,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 14,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 64.28571428571429,
+      "completed_targets": 67,
+      "prediction_seconds": 1.4547596169941244,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2012485,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 54,
+        "dwell_timeout_count": 22,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 15,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 60.0,
+      "completed_targets": 72,
+      "prediction_seconds": 1.5609858449970488,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2015716,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": 466,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 23,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 11,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 81.81818181818181,
+      "completed_targets": 53,
+      "prediction_seconds": 1.1439315079987864,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2014362,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 0,
+        "dwell_timeout_count": 23,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 12,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 75.0,
+      "completed_targets": 58,
+      "prediction_seconds": 1.2478960919979727,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2015751,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 172,
+        "dwell_timeout_count": 25,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 10,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 90.0,
+      "completed_targets": 47,
+      "prediction_seconds": 1.0399281100035296,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "B5",
+      "seed": 2011310,
+      "inference_seed": 42,
+      "held_any": false,
+      "held15": false,
+      "events": {
+        "first_held": null,
+        "first_detach": null,
+        "releases": [],
+        "first_legacy_success": null,
+        "ik_fail_count": 579,
+        "dwell_timeout_count": 19,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": false,
+        "first_legacy_success_step": null,
+        "fruit_chains": {},
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 21,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 42.857142857142854,
+      "completed_targets": 102,
+      "prediction_seconds": 2.1852139589973376,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": null,
+      "control_regression": null
+    },
+    {
+      "stage": "regression_B30",
+      "seed": 2010600,
+      "inference_seed": 42,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 99,
+        "first_detach": 168,
+        "releases": [],
+        "first_legacy_success": 814,
+        "ik_fail_count": 272,
+        "dwell_timeout_count": 9,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": true,
+        "first_legacy_success_step": 814,
+        "fruit_chains": {
+          "26": {
+            "first_grasp_step": 99,
+            "held15_step": 113,
+            "first_detach_after_grasp_step": 168,
+            "release_step": null,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 7,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 128.57142857142858,
+      "completed_targets": 185,
+      "prediction_seconds": 0.9148441079887562,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 760,
+        "current_steps": 900,
+        "reference_steps": 760,
+        "field_mismatch_steps": {
+          "target_position": 635,
+          "target_rotation": 635,
+          "target_width": 629,
+          "measured_position": 760,
+          "measured_quaternion": 760,
+          "measured_width": 723,
+          "requested_command": 759,
+          "position_error_m": 760,
+          "rotation_error_rad": 760,
+          "advance": 165,
+          "dwell_steps": 565
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 126,
+          "target_rotation": 126,
+          "target_width": 126,
+          "advance": 170,
+          "dwell_steps": 171
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.3833607607033648,
+          "target_rotation": 1.1190324236446427,
+          "target_width": 0.02545240893959999,
+          "measured_position": 0.37923194468021393,
+          "measured_quaternion": 0.427461463958025,
+          "measured_width": 0.01684996485710144,
+          "requested_command": 0.0,
+          "position_error_m": 0.07960972738002804,
+          "rotation_error_rad": 0.17241937337776128,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": true,
+          "detached_count": false,
+          "legacy_success": false,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.46396646203363484,
+          "rotation_geodesic_rad": 1.3543120166200129,
+          "width_m": 0.01684996485710144
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng42_reach-conditioned_2010600",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 99,
+        "first_detach": 167,
+        "releases": [],
+        "first_legacy_success": 760,
+        "ik_fail_count": 164,
+        "dwell_timeout_count": 5,
+        "branch_break_count": 0
+      }
+    },
+    {
+      "stage": "regression_B30",
+      "seed": 2010600,
+      "inference_seed": 43,
+      "held_any": true,
+      "held15": true,
+      "events": {
+        "first_held": 92,
+        "first_detach": 196,
+        "releases": [],
+        "first_legacy_success": 600,
+        "ik_fail_count": 253,
+        "dwell_timeout_count": 10,
+        "branch_break_count": 0
+      },
+      "strict": {
+        "strict_success": false,
+        "strict_success_events": [],
+        "legacy_success_ever": true,
+        "first_legacy_success_step": 600,
+        "fruit_chains": {
+          "26": {
+            "first_grasp_step": 92,
+            "held15_step": 106,
+            "first_detach_after_grasp_step": 196,
+            "release_step": null,
+            "stable_bucket_steps": 0,
+            "max_stable_bucket_steps": 0,
+            "strict_success_step": null
+          }
+        },
+        "release_events": [],
+        "held_required_boundaries": 15,
+        "bucket_required_boundaries": 60,
+        "boundary_only": true
+      },
+      "replans": 6,
+      "control_steps": 900,
+      "mean_control_steps_per_chunk": 150.0,
+      "completed_targets": 164,
+      "prediction_seconds": 0.62258017899876,
+      "physics_sim_seconds": 29.999999999999577,
+      "first_chunk_target_values_exact_to_history": true,
+      "control_regression": {
+        "compared_steps": 697,
+        "current_steps": 900,
+        "reference_steps": 697,
+        "field_mismatch_steps": {
+          "target_position": 565,
+          "target_rotation": 565,
+          "target_width": 534,
+          "measured_position": 697,
+          "measured_quaternion": 697,
+          "measured_width": 668,
+          "requested_command": 696,
+          "position_error_m": 697,
+          "rotation_error_rad": 697,
+          "advance": 129,
+          "dwell_steps": 445
+        },
+        "first_mismatch": {
+          "measured_position": 1,
+          "measured_quaternion": 1,
+          "measured_width": 1,
+          "position_error_m": 1,
+          "rotation_error_rad": 1,
+          "requested_command": 2,
+          "target_position": 133,
+          "target_rotation": 133,
+          "target_width": 133,
+          "advance": 193,
+          "dwell_steps": 194
+        },
+        "max_numeric_abs_difference": {
+          "target_position": 0.3677663966254755,
+          "target_rotation": 0.8890449455308069,
+          "target_width": 0.02056778222322464,
+          "measured_position": 0.346324160695076,
+          "measured_quaternion": 0.38146741688251495,
+          "measured_width": 0.01383199542760849,
+          "requested_command": 0.0,
+          "position_error_m": 0.05826876132184969,
+          "rotation_error_rad": 0.17441937959093323,
+          "advance": 0.0,
+          "dwell_steps": 29.0
+        },
+        "exact_prefix": false,
+        "targets_exact": false,
+        "event_sequences_exact": {
+          "held_id": true,
+          "detached_count": false,
+          "legacy_success": false,
+          "ik_failed": false,
+          "branch_break_count": true,
+          "advance": false,
+          "dwell_steps": false
+        },
+        "physical_max_difference": {
+          "position_norm_m": 0.4373491575748098,
+          "rotation_geodesic_rad": 1.169769670041631,
+          "width_m": 0.01383199542760849
+        },
+        "gt_numerical_tolerances": {
+          "position_norm_m": 0.0001,
+          "rotation_geodesic_rad": 0.0001,
+          "width_m": 0.0001
+        },
+        "gt_numerical_control_parity": false,
+        "note": "GT numerical tolerance is separate from raw bit equality; never used to declare model predicted targets equal",
+        "reference": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/rollouts/B_step8000_rng43_reach-conditioned_2010600",
+        "role": "Historical full30 control prefix; new observer fields and continuation excluded"
+      },
+      "initial_observation_exact_to_history": true,
+      "historical_events": {
+        "first_held": 92,
+        "first_detach": 195,
+        "releases": [],
+        "first_legacy_success": 697,
+        "ik_fail_count": 176,
+        "dwell_timeout_count": 6,
+        "branch_break_count": 0
+      }
+    }
+  ],
+  "interpretation": "Source-index GT goal identity is a separate assertion from wall-step physical replay equality. CUDA contact dynamics can shift reach threshold crossings. Current-run matching-scheduler B is the baseline for L; model target differences are never hidden under GT physical tolerances."
+}

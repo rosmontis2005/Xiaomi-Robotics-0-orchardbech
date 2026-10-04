@@ -1,0 +1,12 @@
+L 接触目标损失实验训练完成。
+
+8000次更新、128条训练episode、3931个不同窗口；顺序及各窗口曝光与旧B逐条相同，validation参与optimizer次数为0。初始化、fresh AdamW、归一化统计、固定full30动作合同、219个FP32可训练参数和冻结BF16 VLM均保持对照设置。只将first PULL代理事件区间内的未来目标raw loss weight由1变2；每窗有效维度归一化后，接触监督份额由24.18%变为35.37%。
+
+所有工程门禁通过：B8000新增144窗参考的49重叠窗882数组exact；L0原240窗4320数组exact；前100步finite；全部8000 loss/梯度finite；原数据与源码SHA不变；frozen VLM前后及与B完全相同；最终checkpoint重新装载校验通过。独立CPU审计确认L/B最终Python、NumPy、CPU Torch、CUDA Torch四类RNG状态全部exact，新增loss权重与辅助评估未改变随机数消费。
+
+主要端点固定8000，train-only诊断best为4000，不以validation挑checkpoint。训练总进程耗时1839.9秒，含训练1186.1秒、数据116.1秒、评估377.5秒。梯度裁剪L99.7125%、B99.825%，是两者共同现象；不同加权目标的raw loss不能直接比较抓持能力。
+
+最终checkpoint：/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/training/arms/L/checkpoints/step_8000_trainable.pt
+SHA256：6fc073d1f6e1d8b76a2fbfa35ab23ce1ba1095783e64492748dca20504a5535c
+
+训练及参考进程已退出，交接前nvidia-smi compute进程为空。后续由独立closed-loop评估确定抓持与严格放置表现；本训练报告不宣称任务能力改善。完整证据：post_training_audit.json、arms/L/training_summary.json、arms/L/baseline_verification.json、arms/L/first_100_verification.json。

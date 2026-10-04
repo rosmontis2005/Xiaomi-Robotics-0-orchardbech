@@ -1,0 +1,51 @@
+闭环边界证据分型：COMPLETE
+阶段 | 完成/计划 | 持15 | 严格成功 | 分型（未完成阶段不可当最终结论）
+GT30 COMPLETE | 8/8 | 8 | 8 | {'STRICT_RELEASE_BUCKET60': 8}
+GT5 COMPLETE | 8/8 | 8 | 8 | {'STRICT_RELEASE_BUCKET60': 8}
+B30 COMPLETE | 8/8 | 6 | 0 | {'HELD_NO_RELEASE': 2, 'NO_GRASP': 2, 'RELEASED_FAR_FROM_BUCKET': 4}
+B5 COMPLETE | 8/8 | 0 | 0 | {'NO_GRASP': 8}
+regression_B30 COMPLETE | 2/2 | 2 | 0 | {'IN_BUCKET_STILL_HELD': 2}
+
+逐episode证据：
+GT30 seed2013322: STRICT_RELEASE_BUCKET60; grasp=77, held15=91; pregrasp step76 after palm_margin=-1.28mm axes=['z_upper']
+GT30 seed2014461: STRICT_RELEASE_BUCKET60; grasp=86, held15=100; pregrasp step85 after palm_margin=4.32mm axes=[]
+GT30 seed2010914: STRICT_RELEASE_BUCKET60; grasp=78, held15=92; pregrasp step77 after palm_margin=-0.62mm axes=['z_upper']
+GT30 seed2012485: STRICT_RELEASE_BUCKET60; grasp=77, held15=91; pregrasp step76 after palm_margin=-1.70mm axes=['z_upper']
+GT30 seed2015716: STRICT_RELEASE_BUCKET60; grasp=80, held15=94; pregrasp step79 after palm_margin=4.48mm axes=[]
+GT30 seed2014362: STRICT_RELEASE_BUCKET60; grasp=72, held15=86; pregrasp step67 after palm_margin=5.04mm axes=[]
+GT30 seed2015751: STRICT_RELEASE_BUCKET60; grasp=68, held15=82; pregrasp step67 after palm_margin=6.37mm axes=[]
+GT30 seed2011310: STRICT_RELEASE_BUCKET60; grasp=80, held15=94; pregrasp step79 after palm_margin=3.30mm axes=[]
+GT5 seed2013322: STRICT_RELEASE_BUCKET60; grasp=77, held15=91; pregrasp step76 after palm_margin=-1.28mm axes=['z_upper']
+GT5 seed2014461: STRICT_RELEASE_BUCKET60; grasp=86, held15=100; pregrasp step85 after palm_margin=4.32mm axes=[]
+GT5 seed2010914: STRICT_RELEASE_BUCKET60; grasp=78, held15=92; pregrasp step77 after palm_margin=-0.62mm axes=['z_upper']
+GT5 seed2012485: STRICT_RELEASE_BUCKET60; grasp=77, held15=91; pregrasp step76 after palm_margin=-1.70mm axes=['z_upper']
+GT5 seed2015716: STRICT_RELEASE_BUCKET60; grasp=80, held15=94; pregrasp step79 after palm_margin=4.48mm axes=[]
+GT5 seed2014362: STRICT_RELEASE_BUCKET60; grasp=72, held15=86; pregrasp step67 after palm_margin=5.04mm axes=[]
+GT5 seed2015751: STRICT_RELEASE_BUCKET60; grasp=68, held15=82; pregrasp step67 after palm_margin=6.37mm axes=[]
+GT5 seed2011310: STRICT_RELEASE_BUCKET60; grasp=80, held15=94; pregrasp step79 after palm_margin=3.30mm axes=[]
+B30 seed2013322: HELD_NO_RELEASE; grasp=91, held15=105; pregrasp step90 after palm_margin=-1.16mm axes=['z_upper']
+B30 seed2014461: NO_GRASP; grasp=None, held15=None; pregrasp step90 after palm_margin=-6.24mm axes=['x', 'z_upper']
+B30 seed2010914: HELD_NO_RELEASE; grasp=94, held15=108; pregrasp step93 after palm_margin=0.24mm axes=[]
+B30 seed2012485: RELEASED_FAR_FROM_BUCKET; grasp=110, held15=124; pregrasp step109 after palm_margin=-0.16mm axes=['x']
+B30 seed2015716: RELEASED_FAR_FROM_BUCKET; grasp=96, held15=110; pregrasp step95 after palm_margin=-0.72mm axes=['z_upper']
+B30 seed2014362: NO_GRASP; grasp=None, held15=None; pregrasp step93 after palm_margin=-2.01mm axes=['x']
+B30 seed2015751: RELEASED_FAR_FROM_BUCKET; grasp=74, held15=88; pregrasp step73 after palm_margin=0.10mm axes=[]
+B30 seed2011310: RELEASED_FAR_FROM_BUCKET; grasp=87, held15=101; pregrasp step86 after palm_margin=-0.83mm axes=['z_upper']
+B5 seed2013322: NO_GRASP; grasp=None, held15=None; pregrasp step63 after palm_margin=-51.09mm axes=['x', 'z_upper']
+B5 seed2014461: NO_GRASP; grasp=None, held15=None; pregrasp step92 after palm_margin=-24.52mm axes=['x']
+B5 seed2010914: NO_GRASP; grasp=None, held15=None; pregrasp step69 after palm_margin=-73.45mm axes=['x', 'z_upper']
+B5 seed2012485: NO_GRASP; grasp=None, held15=None; pregrasp step66 after palm_margin=-41.30mm axes=['x', 'z_upper']
+B5 seed2015716: NO_GRASP; grasp=None, held15=None; pregrasp step249 after palm_margin=-136.73mm axes=['x', 'z_lower']
+B5 seed2014362: NO_GRASP; grasp=None, held15=None; pregrasp step68 after palm_margin=-111.31mm axes=['x', 'z_upper']
+B5 seed2015751: NO_GRASP; grasp=None, held15=None; pregrasp step85 after palm_margin=-72.44mm axes=['x']
+B5 seed2011310: NO_GRASP; grasp=None, held15=None; pregrasp step70 after palm_margin=-60.29mm axes=['x', 'z_upper']
+regression_B30 seed2010600: IN_BUCKET_STILL_HELD; grasp=99, held15=113; pregrasp step98 after palm_margin=-2.29mm axes=['z_upper']
+regression_B30 seed2010600: IN_BUCKET_STILL_HELD; grasp=92, held15=106; pregrasp step91 after palm_margin=2.81mm axes=[]
+
+Only completed+hash-valid episodes enter counts. Incomplete stages are explicitly PARTIAL and are not final results.
+Front300 boundaries are compatible evidence, not proof of unique causal mechanism or all substep contact states.
+Planned fruit diagnostics and actual held fruit chains are separate; grasp of another fruit counts as actual grasp.
+Same-fruit detach may precede held15 but must occur at or after first grasp and by release.
+Far-release >0.10m is an explanatory diagnostic, not a new success criterion.
+Bucket60/held15 are consecutive control-boundary samples; no claim about unobserved physics substeps.
+No fresh24 heldout model data is read; no simulator or GPU imports.

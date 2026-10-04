@@ -1,0 +1,19 @@
+精度修复与四场景配对结果
+
+生产只修改 mibot/utils/orchard_checkpoint.py：在 strict load_state_dict 复制源权重前将非VLM参数设为FP32。这样现有OrchardRunner和OrchardPolicy共同恢复源精度；VLM保持BF16，BF16 autocast、控制器、动作契约与完整30目标reach不变。
+
+验证通过：真实原10k和M0 overlay均有219个非VLM张量、278,458,368个参数与源FP32逐元素相同。独立Runner与Policy的两组各4个固定reset窗口生成normalized/physical输出完全相同。M0 overlay还与原step2000训练面板4窗完全相同。原M0 step0使用过先BF16载入再float，因此新的源精确初始化与历史step0有约1.98–2.59mm最大位置差；这被单独记录，未强行要求历史舍入基线等同正确源。CPU丢精度区分测试、严格缺key/shape拒绝通过。
+
+闭环结果（同M0 best、同原始reset图像/状态、seed42、900步、reach .01/.08/dwell30/full30）：
+BF16：2/4抓持、2/4摘离、0/4入桶。FP32 head：3/4抓持、3/4摘离、0/4入桶。
+新增抓持发生在原来掌体积边界差约0.108mm的train2014461。此受控对照支持部署精度对该场景有实际行为影响；精度修复仍未解决全部前段或运输/放置问题。
+
+逐场景 BF16 -> FP32：
+2013322: grasp 1->1; detach 1->1; first grasp 101->101; first detach 207->237; IK 324->310; timeout 11->10; first IK 565->579; replans 11->12.
+2014461: grasp 0->1; detach 0->1; first grasp -->112; first detach -->252; IK 0->382; timeout 0->12; first IK -->512; replans 16->6.
+2010914: grasp 1->1; detach 1->1; first grasp 102->101; first detach 198->196; IK 326->357; timeout 11->12; first IK 566->535; replans 7->7.
+2012485: grasp 0->0; detach 0->0; first grasp -->-; first detach -->-; IK 301->317; timeout 10->10; first IK 600->575; replans 12->14.
+
+所有4条reset逐项与旧BF16匹配，observer mismatch=0，无branch break。两种精度均不能凭抓住后的近零果距证明前段精度；所有数值仅代表这4个固定开发场景、一个推理seed。
+
+初次验证脚本在8窗parity通过后，因复用validator的输出子目录缺bootstrap.py退出；原错误完整保留在precision_fix.log/precision_console.log。finish_precision_rollouts.py先在AB根目录做validator检查再迁移输出，完成了真实4场景与受保护文件hash校验，exit0。没有修改M0脚本、数据、权重或日志；生产补丁/前后源码/hash保存在precision_source_backup。

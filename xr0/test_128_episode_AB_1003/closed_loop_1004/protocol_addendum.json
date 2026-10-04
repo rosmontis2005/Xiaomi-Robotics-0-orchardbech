@@ -1,0 +1,8 @@
+{
+  "reason": "Re-run all20 GT: old4 GT full evaluator file SHA predates later precision-probe additions, so strict identical-file reuse condition cannot be established from retained source artifacts.",
+  "old_gt_manifest": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/evaluation_manifest_gt.json",
+  "old_gt_manifest_sha256": "84f755a57ce525b607b2fcacad80967402a15faab5fcb5c17f7163c3f8a0b8dd",
+  "decision": "No old GT episodes are reused in current20-scene outcome totals; old4 remain historical context",
+  "root_approved": true,
+  "production_or_training_sources_modified": false
+}

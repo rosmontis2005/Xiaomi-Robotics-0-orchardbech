@@ -1,0 +1,96 @@
+Orchard XR-0 2026-10-03 检测报告
+
+结论
+在既定 reach-conditioned 执行契约下，学生通路可以执行真实示教，但当前10k模型仍未形成可靠的接近与抓持能力。当前最直接的阻塞点是前段预测目标质量；同时观测到完整chunk等待下重规划频率降低及后续跟踪/IK问题；这些机制可能放大偏差，但本轮未验证各自的实际贡献。不能把本轮失败全部归于time-indexed评测遗漏，也没有证据把夹爪意图状态机边界判定为这三次模型失败的主因。
+
+本次仅诊断。没有改动现有控制器、动作适配器、模型、训练代码、数据、normalization或checkpoint；没有训练、修复、放宽抓持/成功判据、测试短前缀调度。所有新增脚本、日志、视频、图表和缓存位于本目录。
+
+1. 检测方案及执行范围
+
+正式策略按用户补充固定为reach-conditioned。plan.json保留最初方案，protocol_amendment.json记录补充：已完成的3次GT time-indexed只作历史失败机制的负对照，未执行任何模型time-indexed回合。原排队模型进程在权重初始化阶段停止，尚无模型rollout目录；这次进程取消不是模型或仿真错误结果。
+
+场景在看本次模型结果前固定为filtered val的2010027/000010、2010042/000020、2010067/000030，全部有既有GT成功记录。独立rollout_probe.py同时复用原OrchardActionAdapter、OrchardVLAEnv、OrchardPolicy。GT使用冻结oracle的原recorded-anchor chunk并断言解码世界目标等于原示教；模型按predict时的live observation固定chunk锚点，两者每次控制均用最新状态计算native command。
+
+冻结规则：30个目标/chunk；step后位置误差<=0.01m且SO(3)误差<=0.08rad时推进，或单目标等待30个控制步后强制推进一个；900控制步总预算，30Hz；没有passed-waypoint、lookahead、插值、额外terminal hold。GT序列耗尽即停止；模型继续重规划至成功/预算。GT oracle验证绝对目标序列的可执行性，不等价于学生偏离示教后的预测能力。
+
+完成9次有效仿真：3次GT reach、3次GT time负对照、3次10k reach。另完成4 train+4 val共80个专家观察窗口，在mean_action/pretrained/10k上各生成或构造80组预测。Mean baseline是训练集逐horizon动作均值，不是零运动。检查采用相同真实双视角、state、原action contract/stats和模型采样seed42。
+
+2. 闭环结果
+
+seed       GT reach成功/步数   GT time抓取/步数   10k reach抓取/成功/步数   10k重规划次数
+2010027    是 /489             否 /218            否 /否 /900              6
+2010042    是 /516             否 /223            否 /否 /900              9
+2010067    是 /572             否 /204            否 /否 /900              9
+
+GT time的三次终止原因都是target_sequence_exhausted，不是900步预算耗尽。GT reach均抓取、摘离、入桶，IK失败均0；第三条比历史记录少1控制步，任务结果相同。所有9回合的初始双视角图像哈希、状态和reset info均一致（按seed配对）。9次均无运行时错误、无视频错误。
+
+最关键的前段证据：三个10k回合的首chunk分别用了61/142/62控制步，30个预测目标全部以reached推进，IK失败0、dwell timeout0。首chunk仍未抓取；到最近苹果的最小TCP距离分别约25.3/16.1/46.4cm。这表明第一段已经出现“控制器到达预测目标，但目标没有带来有效接近”的问题，不能仅用IK失败或目标推进过快解释。
+
+整个900步中，到任意苹果中心的最小TCP距离为15.28/16.11/16.14cm；控制边界快照没有发现同时满足双指接触与掌内体积的苹果，实际assist-trigger/held记录也全程为空。最近苹果可能切换，因此这些距离仅描述全程最近距离，不是固定目标跟踪误差。
+
+三次模型回合IK失败率为38.89%/14.44%/25.67%；action_clipped率为68.22%/55.89%/40.44%。裁剪主要来自平移和旋转；workspace裁剪均0，宽度裁剪分别0/40/54步。此标志不包含内部关节步长限制。
+
+最大单个chunk已执行时间为12.97/4.73/7.90秒，这些时间按实际已执行控制步计，包含预算结束时可能尚未消费完的chunk。模型共只重规划6/9/9次，说明完整chunk+等待确实使视觉反馈稀疏；这可以放大后续偏移，但不能解释已经发生于初始专家观察上的预测误差。
+
+3. 离线预测检查
+
+80个固定关键窗口，train/val各40个。指标为生成后反归一化、控制裁剪前的物理误差；位置用欧氏距离，姿态用SO(3)测地角，夹爪用绝对总开度差。窗口跨接近、GRASP、PULL、TRANSPORT、DROP，阶段映射使用physics_frame/60对应视频timestamps。
+
+全30目标平均位置误差：
+                 train        val
+mean_action      15.62cm      15.50cm
+pretrained       19.57cm      19.99cm
+10k               9.70cm       9.80cm
+
+10k相较pretrained在位置/姿态/宽度分别有72/74/71个窗口改善；相较均值动作分别有68/73/55个窗口改善。训练并非没有作用。
+
+但8个reset窗口的完整30目标平均位置误差仍31.18cm；其中4个训练样例为32.05cm，与均值动作32.26cm接近。reset首目标误差约5.76mm，前5目标平均误差已53.9mm，后段明显偏离。这些误差已发生在专家观察上，因此不能全部归于学生执行之后的状态偏移。
+
+24个GRASP-anchor窗口也显示总均值会掩盖前段：10k全chunk姿态误差0.138rad，低于pretrained0.299rad；但首目标误差0.054rad，高于pretrained0.038rad。10k在这些窗口的首目标开度误差约16.8mm。8个reset窗口的关闭意图参考均早于GT，提前9–25个目标；该参考按原专家30Hz宽度序列计算，不能直接换算reach执行中的提前秒数。
+
+与单条示教偏离不等于所有预测都物理无效（任务可能存在其他合理路径）；这里的拟合不足结论结合了真实闭环未接近抓持区域的证据。上述样本量和重叠窗口不能给出总体泛化成功率。
+
+4. 夹爪边界与本轮实际失败的区分
+
+CPU隔离调用原_update_width_intent确认：从open状态每步降低0.5mm，累计80mm降到20mm，intent仍保持+1；单步降低2mm可以触发close。这是已复现的接口边界，没有修改原方法。
+
+但实际三次模型回合第一次close发生在控制步5/25/5；step后负intent占比90.89%/82.78%/64.67%。没有观察到“几何抓持条件已经满足、仅关闭意图不对”的控制边界样本。因此不能将此边界当作这三次失败的主因，也不能据此证明夹爪时序已经正确。
+
+contacts只采样每个控制步前后，会漏掉内部physics-frame的瞬态；实际info.grasp_assist_triggered与held记录作为权威事件。所有观测器对原环境clipping、intent、open-counter的逐步预测一致，0 mismatch。
+
+5. 对reach-conditioned数据组织的确认
+
+用户补充的约定成立：reach-conditioned是冻结筛选及正式执行协议，本报告不建议重新选择time-indexed。
+
+所核对4 train+3 val的filtered JSON全部指向原raw JSON，视频仍为专家记录，timestamps为30Hz，action仍是专家下一帧实测状态；没有把学生hold期间的观测重新写入训练序列。三条成功GT reach包含291/313/395个hold控制步。目标序列配合reach推进可以成立，这个事实本身不是数据组织错误；它仅说明当前监督没有直接覆盖学生等待与偏离时的完整状态分布。当前前段预测差的证据在专家观察上就已成立，尚无需把数据时间轴差异认定为根因。
+
+6. 诊断优先级及边界
+
+已确认：原benchmark固定时间执行偏离既定reach契约；GT reach通路有效；10k改用reach后仍0/3 grasp；初始预测段在可被执行时仍未完成有效接近；全局误差改善不能替代抓取前段精度。
+
+优先关注：初始接近目标的拟合，以及接近位置、姿态和开度的配合。已观测到完整chunk等待下反馈频率降低；它是可能放大后续偏移的机制，实际贡献尚未通过调度对照验证。学生状态分布差异、训练曝光不足、视觉目标关联弱等仍属待进一步分离的原因，不能从本轮直接宣布必须增量数据或解冻VLM。夹爪状态机存在边界，但本轮证据不支持先以它解释全NO_GRASP。
+
+本轮未执行任何修复，未追加训练或调参；三个开发场景的0/3或3/3均不是泛化率估计。
+
+7. 文件索引与复核
+
+plan.json / protocol_amendment.json：最初方案及reach正式契约补充。
+protocol_audit.json：冻结协议、归一化/锚点、原夹爪方法隔离测试、训练日志统计。
+selection.json：离线80窗固定选择。
+rollout_comparison.csv / rollout_analysis.json：全部回合汇总和逐事件证据。
+first_chunk_diagnosis.json：首预测段隔离证据。
+offline_comparison.json / offline/*/report.json：离线配对与全部物理误差。
+data_timeline_check.json：reach筛选与实际记录时间轴的精确核对。
+rollout_diagnostics.png / offline_errors.png：时序与误差曲线。
+rollouts/*/{summary.json,initial.json,chunks.jsonl,steps.jsonl,videos/}：原始闭环产物。
+offline/*/*.npz：每个窗口的预测/GT动作、世界位姿、开度、逐目标误差。
+verification.json：9个回合、3x80离线窗口、配对reset和源码完整性检查全部PASS；原源码/stats SHA保持一致，原权重大小和mtime一致（未对12GB checkpoint重算全文件hash）。
+
+复核命令（从本目录执行，不运行新仿真、不训练）：
+../.venv-orchard/bin/python -B analyze_rollouts.py
+../.venv-orchard/bin/python -B analyze_offline.py
+../.venv-orchard/bin/python -B verify_diagnosis.py
+
+原始检测命令保留在job_status.jsonl及run_queue.py。补充后的正式模型命令为：
+../.venv-orchard/bin/python -B -u rollout_probe.py --provider step_10000 --modes reach-conditioned
+该命令拒绝覆盖已有rollout目录，请勿把复核命令误认为需要重跑实验。

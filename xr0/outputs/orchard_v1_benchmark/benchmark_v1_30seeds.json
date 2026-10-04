@@ -1,0 +1,73 @@
+{
+  "schema": "orchard_benchmark_v1_reset_seeds",
+  "benchmark": "OrchardBench V1 Closed-Loop Learning Curve Benchmark",
+  "created_utc": "2026-10-02T03:17:39.771720+00:00",
+  "seed_start": 3010000,
+  "selection": "OrchardVLAEnv.reset only",
+  "protocol": {
+    "environment": {
+      "sim_hz": 60,
+      "action_repeat": 2,
+      "max_control_steps": 900,
+      "detach_force_scale": 1.5,
+      "gripper_open_width": 0.075,
+      "gripper_open_steps": 5,
+      "gripper_close_deadband": 0.001,
+      "substeps": 3,
+      "width": 192,
+      "height": 144,
+      "apple_count": 40,
+      "foliage_density": 0.6,
+      "grasp_mode": "benchmark_assist",
+      "max_translation": 0.02,
+      "max_rotation": 0.05,
+      "max_joint_step": 0.045,
+      "ik_position_tolerance": 0.01,
+      "ik_rotation_tolerance": 0.08,
+      "workspace_lower": [
+        -0.65,
+        -0.85,
+        0.35
+      ],
+      "workspace_upper": [
+        1.0,
+        0.85,
+        1.55
+      ]
+    },
+    "simulator_source_sha256": "2e85ef4c689ebf243dcabe02dbbe061efe752a0201135db9b672f3a7e465bab6"
+  },
+  "seeds": [
+    3010000,
+    3010001,
+    3010002,
+    3010003,
+    3010004,
+    3010005,
+    3010006,
+    3010007,
+    3010008,
+    3010009,
+    3010010,
+    3010011,
+    3010012,
+    3010013,
+    3010014,
+    3010015,
+    3010016,
+    3010017,
+    3010018,
+    3010019,
+    3010020,
+    3010021,
+    3010022,
+    3010023,
+    3010024,
+    3010025,
+    3010026,
+    3010027,
+    3010028,
+    3010029
+  ],
+  "skipped": []
+}

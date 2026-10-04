@@ -1,0 +1,389 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-03T13:43:18.818306+00:00",
+  "selection_path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/selection.json",
+  "selection_sha256": "b4ac020fd2be3bf679f7e47f19132e5938195f5545c31da5d95a33bed74e12c6",
+  "episodes": 16,
+  "train_episodes": 8,
+  "val_episodes": 8,
+  "train_windows": 80,
+  "val_windows": 80,
+  "total_unique_windows": 160,
+  "train_val_seed_disjoint": true,
+  "excluded_previous_val_episode_ids_absent": true,
+  "stats_unchanged": true,
+  "stats_sha256": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371",
+  "contract": "orchard_cartesian_local_rotvec_width_v1",
+  "full_video_decode_count": 32,
+  "phase_anchor_counts": {
+    "train": {
+      "REACH": 24,
+      "GRASP": 29,
+      "PULL": 19,
+      "TRANSPORT": 8
+    },
+    "val": {
+      "REACH": 24,
+      "GRASP": 31,
+      "PULL": 17,
+      "TRANSPORT": 8
+    }
+  },
+  "checks": [
+    {
+      "split": "train",
+      "episode_id": "episode_001319",
+      "seed": 2013322,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.6081822627339217e-08,
+      "roundtrip_max_rotation_rad": 2.7355434458937716e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        218,
+        218
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000023",
+      "seed": 2010054,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.43849869128288e-08,
+      "roundtrip_max_rotation_rad": 3.659821455872081e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        221,
+        221
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000613",
+      "seed": 2011476,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.7321026317996578e-08,
+      "roundtrip_max_rotation_rad": 4.138911346229493e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 3,
+        "PULL": 3,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        191,
+        191
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000974",
+      "seed": 2012376,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.608488939083703e-08,
+      "roundtrip_max_rotation_rad": 2.6590454561824084e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        213,
+        213
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_001796",
+      "seed": 2014461,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 2.28352979101473e-08,
+      "roundtrip_max_rotation_rad": 5.6971703809428056e-08,
+      "roundtrip_max_width_m": 3.469446951953614e-18,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 3,
+        "PULL": 3,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        200,
+        200
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_000703",
+      "seed": 2011728,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.841469228227604e-08,
+      "roundtrip_max_rotation_rad": 5.8837498774517496e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 3,
+        "PULL": 3,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        198,
+        198
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_001129",
+      "seed": 2012769,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.4288750462793384e-08,
+      "roundtrip_max_rotation_rad": 3.010027855167997e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        232,
+        232
+      ]
+    },
+    {
+      "split": "train",
+      "episode_id": "episode_001212",
+      "seed": 2012997,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.6827012972096203e-08,
+      "roundtrip_max_rotation_rad": 5.725728716180208e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        202,
+        202
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000380",
+      "seed": 2010914,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.5819508478736034e-08,
+      "roundtrip_max_rotation_rad": 3.078279396030263e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        224,
+        224
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_002440",
+      "seed": 2016063,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.5115074703174626e-08,
+      "roundtrip_max_rotation_rad": 3.2984048994603406e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        229,
+        229
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000210",
+      "seed": 2010502,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 2.0907365654380482e-08,
+      "roundtrip_max_rotation_rad": 4.620980561077638e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        196,
+        196
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000430",
+      "seed": 2011031,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.3212221404248356e-08,
+      "roundtrip_max_rotation_rad": 3.1579296151580427e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        224,
+        224
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_001020",
+      "seed": 2012485,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.4606620869038892e-08,
+      "roundtrip_max_rotation_rad": 2.84393722898461e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        223,
+        223
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_002430",
+      "seed": 2016038,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 2.0809370373885167e-08,
+      "roundtrip_max_rotation_rad": 5.975397220543569e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        196,
+        196
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000630",
+      "seed": 2011527,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.8221843635556943e-08,
+      "roundtrip_max_rotation_rad": 5.398605077403012e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 3,
+        "PULL": 3,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        198,
+        198
+      ]
+    },
+    {
+      "split": "val",
+      "episode_id": "episode_000110",
+      "seed": 2010257,
+      "status": "PASS",
+      "windows": 10,
+      "next_state_max_abs_error": 0.0,
+      "roundtrip_max_position_m": 1.5784879779676335e-08,
+      "roundtrip_max_rotation_rad": 3.1969856383154535e-08,
+      "roundtrip_max_width_m": 0.0,
+      "anchor_phase_counts": {
+        "REACH": 3,
+        "GRASP": 4,
+        "PULL": 2,
+        "TRANSPORT": 1
+      },
+      "window_landmark_omissions": [],
+      "full_video_frame_count": [
+        218,
+        218
+      ]
+    }
+  ],
+  "contact_sheet_count": 18,
+  "selection_revision": 2,
+  "manual_visual_review": "root accepted M0 after reviewing two overviews and six single-episode sheets before model execution; see selection.visual_review limitations"
+}

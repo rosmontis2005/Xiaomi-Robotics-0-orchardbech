@@ -1,0 +1,1086 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "56e90c22cbce241e97ec27f88dc28a64007916b236e1194c9f4d2ea78030025d",
+  "source_sha256": "91cc25461a19c50c5058b663ddf234e3aa7be5f4e69697ac9fe998e071a22791",
+  "groups": {
+    "GT_pos5mm": {
+      "n": 4,
+      "D1": {
+        "held15": 4,
+        "strict_success": 4,
+        "legacy_success_ever": 4,
+        "same_fruit_detach": 4,
+        "releases": 4,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0
+      },
+      "D0": {
+        "held15": 4,
+        "strict_success": 4,
+        "legacy_success_ever": 4,
+        "same_fruit_detach": 4,
+        "releases": 4,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0
+      }
+    },
+    "B_pos5mm": {
+      "n": 4,
+      "D1": {
+        "held15": 2,
+        "strict_success": 0,
+        "legacy_success_ever": 0,
+        "same_fruit_detach": 2,
+        "releases": 0,
+        "dwell_timeouts": 18,
+        "ik_failed_recorded": 585,
+        "solver_residual_5to10mm_rotation_acceptable": 194,
+        "candidate_arm_command_held": 194,
+        "branch_breaks": 0
+      },
+      "D0": {
+        "held15": 2,
+        "strict_success": 0,
+        "legacy_success_ever": 0,
+        "same_fruit_detach": 2,
+        "releases": 1,
+        "dwell_timeouts": 42,
+        "ik_failed_recorded": 1306,
+        "solver_residual_5to10mm_rotation_acceptable": 72,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "stage": "GT_pos5mm",
+      "seed": 2014461,
+      "D1": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 106,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 806,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0010514851745778927,
+        "solver_position_residual_mean_m": 9.872182715839967e-06,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 105,
+          "negative_and_both_samples": 0,
+          "best_actual_while_negative_and_both": null,
+          "best_target_while_negative_and_both": null,
+          "target_inside_actual_outside_samples": 0,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "D0": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 86,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 572,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0010568495225447875,
+        "solver_position_residual_mean_m": 1.3519120434976256e-05,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 85,
+          "negative_and_both_samples": 0,
+          "best_actual_while_negative_and_both": null,
+          "best_target_while_negative_and_both": null,
+          "target_inside_actual_outside_samples": 0,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/GT_pos5mm_commit30_reach-conditioned_2014461",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/GT_targets30_reach-conditioned_2014461",
+      "source_goal_alignment": {
+        "D1_unique_targets": 200,
+        "D0_unique_targets": 200,
+        "common": 200,
+        "absolute_targets_exact_by_source_index": true
+      }
+    },
+    {
+      "stage": "GT_pos5mm",
+      "seed": 2014362,
+      "D1": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 92,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 771,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0011068443588388053,
+        "solver_position_residual_mean_m": 1.1103048887968642e-05,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 91,
+          "negative_and_both_samples": 0,
+          "best_actual_while_negative_and_both": null,
+          "best_target_while_negative_and_both": null,
+          "target_inside_actual_outside_samples": 0,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "D0": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 72,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 551,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0011057267148373018,
+        "solver_position_residual_mean_m": 1.4928480078834869e-05,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 71,
+          "negative_and_both_samples": 0,
+          "best_actual_while_negative_and_both": null,
+          "best_target_while_negative_and_both": null,
+          "target_inside_actual_outside_samples": 0,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/GT_pos5mm_commit30_reach-conditioned_2014362",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/GT_targets30_reach-conditioned_2014362",
+      "source_goal_alignment": {
+        "D1_unique_targets": 194,
+        "D0_unique_targets": 194,
+        "common": 194,
+        "absolute_targets_exact_by_source_index": true
+      }
+    },
+    {
+      "stage": "GT_pos5mm",
+      "seed": 2013322,
+      "D1": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 94,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 778,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0019281797701906995,
+        "solver_position_residual_mean_m": 0.0001555651654846053,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 93,
+          "negative_and_both_samples": 2,
+          "best_actual_while_negative_and_both": {
+            "step": 93,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": 0.0012327375962469383,
+            "target_margin_m": 0.01469723388182823,
+            "actual_local_xyz_m": [
+              -0.004998678995414277,
+              0.0005438615699277329,
+              0.12376726240375306
+            ],
+            "target_local_xyz_m": [
+              -0.01030276611817177,
+              0.0003588071086874096,
+              0.10918820678202623
+            ],
+            "reached": false,
+            "tracking_position_m": 0.0150406252371153,
+            "target_width_m": 0.06531979888677597,
+            "actual_width_m": 0.07001030445098877,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 92,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.003491648917289397,
+            "target_margin_m": 0.014697510297309873,
+            "actual_local_xyz_m": [
+              -0.0017764571475877282,
+              0.0006262026034140859,
+              0.1284916489172894
+            ],
+            "target_local_xyz_m": [
+              -0.010302489702690128,
+              0.00035881900122613944,
+              0.10918834545657384
+            ],
+            "reached": false,
+            "tracking_position_m": 0.02044391366450586,
+            "target_width_m": 0.06531979888677597,
+            "actual_width_m": 0.07306598871946335,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 1,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "D0": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 77,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 548,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0016906948036160753,
+        "solver_position_residual_mean_m": 9.597553344132009e-05,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 76,
+          "negative_and_both_samples": 2,
+          "best_actual_while_negative_and_both": {
+            "step": 76,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0012826868476003284,
+            "target_margin_m": 0.014705752187221168,
+            "actual_local_xyz_m": [
+              -0.002239943204623248,
+              -9.121345716164201e-05,
+              0.12628268684760033
+            ],
+            "target_local_xyz_m": [
+              -0.010294247812778833,
+              0.0003578624538723888,
+              0.10919259710645174
+            ],
+            "reached": false,
+            "tracking_position_m": 0.018147516857129092,
+            "target_width_m": 0.06531979888677597,
+            "actual_width_m": 0.0700102299451828,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 75,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0070970493593581485,
+            "target_margin_m": 0.014706702661358836,
+            "actual_local_xyz_m": [
+              0.0013796145551638929,
+              2.1234843605210783e-05,
+              0.13209704935935815
+            ],
+            "target_local_xyz_m": [
+              -0.010293297338641165,
+              0.00035778129683826805,
+              0.1091931399114707
+            ],
+            "reached": false,
+            "tracking_position_m": 0.02477462390955785,
+            "target_width_m": 0.06531979888677597,
+            "actual_width_m": 0.07306583970785141,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 2,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/GT_pos5mm_commit30_reach-conditioned_2013322",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/GT_targets30_reach-conditioned_2013322",
+      "source_goal_alignment": {
+        "D1_unique_targets": 218,
+        "D0_unique_targets": 218,
+        "common": 218,
+        "absolute_targets_exact_by_source_index": true
+      }
+    },
+    {
+      "stage": "GT_pos5mm",
+      "seed": 2012485,
+      "D1": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 96,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 850,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0012299084954672198,
+        "solver_position_residual_mean_m": 5.987331351135221e-05,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 95,
+          "negative_and_both_samples": 2,
+          "best_actual_while_negative_and_both": {
+            "step": 95,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": 0.0009247847180759994,
+            "target_margin_m": 0.014395225212433818,
+            "actual_local_xyz_m": [
+              0.002396351070657739,
+              0.0007594159340199398,
+              0.124075215281924
+            ],
+            "target_local_xyz_m": [
+              -0.0034000480916660672,
+              0.0005414629687690988,
+              0.11060477478756618
+            ],
+            "reached": false,
+            "tracking_position_m": 0.014428506357550745,
+            "target_width_m": 0.06563133001327515,
+            "actual_width_m": 0.07021970301866531,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 94,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.003458626351052846,
+            "target_margin_m": 0.014395304092047576,
+            "actual_local_xyz_m": [
+              0.005585633483704413,
+              0.0007518974655331339,
+              0.12845862635105285
+            ],
+            "target_local_xyz_m": [
+              -0.0033999654379794453,
+              0.0005414386206593294,
+              0.11060469590795242
+            ],
+            "reached": false,
+            "tracking_position_m": 0.01964778807321983,
+            "target_width_m": 0.06563133001327515,
+            "actual_width_m": 0.07320885360240936,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 1,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "D0": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 77,
+        "strict_success": true,
+        "legacy_success_ever": true,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 603,
+        "dwell_timeouts": 0,
+        "ik_failed_recorded": 0,
+        "solver_position_residual_max_m": 0.0012299667333643476,
+        "solver_position_residual_mean_m": 5.985755330172723e-05,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 0,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 76,
+          "negative_and_both_samples": 2,
+          "best_actual_while_negative_and_both": {
+            "step": 76,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0017022328981372015,
+            "target_margin_m": 0.014397518535042647,
+            "actual_local_xyz_m": [
+              0.005282171086753097,
+              0.0007260428847043165,
+              0.1267022328981372
+            ],
+            "target_local_xyz_m": [
+              -0.0034020338837263023,
+              0.0005405711958932154,
+              0.11060248146495735
+            ],
+            "reached": false,
+            "tracking_position_m": 0.017905785939362928,
+            "target_width_m": 0.06563133001327515,
+            "actual_width_m": 0.07022669911384583,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 75,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.007181416272810631,
+            "target_margin_m": 0.014397677789896812,
+            "actual_local_xyz_m": [
+              0.009081129321557557,
+              0.0008002255682845941,
+              0.13218141627281063
+            ],
+            "target_local_xyz_m": [
+              -0.0034021615137925522,
+              0.0005404740182207428,
+              0.11060232221010319
+            ],
+            "reached": false,
+            "tracking_position_m": 0.024422563750154332,
+            "target_width_m": 0.06563133001327515,
+            "actual_width_m": 0.073220394551754,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 2,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/GT_pos5mm_commit30_reach-conditioned_2012485",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/GT_targets30_reach-conditioned_2012485",
+      "source_goal_alignment": {
+        "D1_unique_targets": 223,
+        "D0_unique_targets": 223,
+        "common": 223,
+        "absolute_targets_exact_by_source_index": true
+      }
+    },
+    {
+      "stage": "B_pos5mm",
+      "seed": 2014461,
+      "D1": {
+        "held_any": false,
+        "held15": false,
+        "first_grasp": null,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": false,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 6,
+        "ik_failed_recorded": 188,
+        "solver_position_residual_max_m": 0.016586555368240132,
+        "solver_position_residual_mean_m": 0.002324201573280517,
+        "solver_residual_5to10mm_rotation_acceptable": 60,
+        "candidate_arm_command_held": 60,
+        "branch_breaks": 0,
+        "replans": 8,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 900,
+          "negative_and_both_samples": 434,
+          "best_actual_while_negative_and_both": {
+            "step": 115,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0012258089822757973,
+            "target_margin_m": -0.0048620285170511875,
+            "actual_local_xyz_m": [
+              -0.0262258089822758,
+              -0.0008815239879367877,
+              0.12480434011530166
+            ],
+            "target_local_xyz_m": [
+              -0.02986202851705119,
+              -0.002186521781929809,
+              0.11443564680233814
+            ],
+            "reached": false,
+            "tracking_position_m": 0.010312998638692132,
+            "target_width_m": 0.058947063982486725,
+            "actual_width_m": 0.059117391705513,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 117,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0026693023247111834,
+            "target_margin_m": -0.0045205184419547795,
+            "actual_local_xyz_m": [
+              -0.027669302324711185,
+              -4.276156917536811e-05,
+              0.12256254549684585
+            ],
+            "target_local_xyz_m": [
+              -0.02952051844195478,
+              -0.0008935023110395467,
+              0.11668416938577933
+            ],
+            "reached": false,
+            "tracking_position_m": 0.005818349826059607,
+            "target_width_m": 0.058947063982486725,
+            "actual_width_m": 0.05880855768918991,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 0,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "D0": {
+        "held_any": false,
+        "held15": false,
+        "first_grasp": null,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": false,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 8,
+        "ik_failed_recorded": 244,
+        "solver_position_residual_max_m": 0.017828554709179975,
+        "solver_position_residual_mean_m": 0.004377430860144684,
+        "solver_residual_5to10mm_rotation_acceptable": 23,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 11,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 900,
+          "negative_and_both_samples": 152,
+          "best_actual_while_negative_and_both": {
+            "step": 90,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -0.006237904473009995,
+            "target_margin_m": -0.00997209176012663,
+            "actual_local_xyz_m": [
+              -0.031237904473009996,
+              0.00269267492873437,
+              0.13102607055843574
+            ],
+            "target_local_xyz_m": [
+              -0.03497209176012663,
+              -0.0010706489791987945,
+              0.1066874141407791
+            ],
+            "reached": false,
+            "tracking_position_m": 0.023215925846967557,
+            "target_width_m": 0.058947063982486725,
+            "actual_width_m": 0.06413796544075012,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 86,
+            "target_k": 14,
+            "chunk_id": 0,
+            "actual_margin_m": -0.026716481045628876,
+            "target_margin_m": -0.004629607653152658,
+            "actual_local_xyz_m": [
+              -0.024132420174783044,
+              0.0023776820304582612,
+              0.15171648104562888
+            ],
+            "target_local_xyz_m": [
+              -0.02962960765315266,
+              0.00028104405926459273,
+              0.127351572393542
+            ],
+            "reached": false,
+            "tracking_position_m": 0.02320151395305256,
+            "target_width_m": 0.06796182692050934,
+            "actual_width_m": 0.07058294117450714,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 0,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/B8000_pos5mm_commit30_rng42_reach-conditioned_2014461",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2014461"
+    },
+    {
+      "stage": "B_pos5mm",
+      "seed": 2014362,
+      "D1": {
+        "held_any": false,
+        "held15": false,
+        "first_grasp": null,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": false,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 1,
+        "ik_failed_recorded": 41,
+        "solver_position_residual_max_m": 0.013318356878506472,
+        "solver_position_residual_mean_m": 0.0005890674684079376,
+        "solver_residual_5to10mm_rotation_acceptable": 0,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 10,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 900,
+          "negative_and_both_samples": 259,
+          "best_actual_while_negative_and_both": {
+            "step": 118,
+            "target_k": 19,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0005146484429798363,
+            "target_margin_m": 0.002801547355997854,
+            "actual_local_xyz_m": [
+              0.025514648442979838,
+              0.0030199149009118237,
+              0.10927628453584236
+            ],
+            "target_local_xyz_m": [
+              0.022198452644002147,
+              -0.00032430262556880395,
+              0.11346102450665897
+            ],
+            "reached": false,
+            "tracking_position_m": 0.005794048464318042,
+            "target_width_m": 0.043639037758111954,
+            "actual_width_m": 0.04547945410013199,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 120,
+            "target_k": 20,
+            "chunk_id": 0,
+            "actual_margin_m": -0.004960220701219608,
+            "target_margin_m": 0.0036347167395899063,
+            "actual_local_xyz_m": [
+              0.02996022070121961,
+              0.001996948217803598,
+              0.11199253812663791
+            ],
+            "target_local_xyz_m": [
+              0.021365283260410095,
+              0.0031955561028252613,
+              0.11498999013177123
+            ],
+            "reached": false,
+            "tracking_position_m": 0.008993262773480714,
+            "target_width_m": 0.04180179163813591,
+            "actual_width_m": 0.04353734850883484,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 8,
+          "target_inside_actual_outside_marked_reached": 2
+        }
+      },
+      "D0": {
+        "held_any": false,
+        "held15": false,
+        "first_grasp": null,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": false,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 9,
+        "ik_failed_recorded": 289,
+        "solver_position_residual_max_m": 0.027497037930330544,
+        "solver_position_residual_mean_m": 0.006027903349765369,
+        "solver_residual_5to10mm_rotation_acceptable": 5,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 9,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 900,
+          "negative_and_both_samples": 271,
+          "best_actual_while_negative_and_both": {
+            "step": 93,
+            "target_k": 20,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0020074717925967767,
+            "target_margin_m": 0.008162629925649614,
+            "actual_local_xyz_m": [
+              0.027007471792596778,
+              0.003417058813776059,
+              0.11128334334346508
+            ],
+            "target_local_xyz_m": [
+              0.016837370074350388,
+              0.0039609484774581994,
+              0.11398710018517334
+            ],
+            "reached": false,
+            "tracking_position_m": 0.01025112476928363,
+            "target_width_m": 0.04180179163813591,
+            "actual_width_m": 0.043902210891246796,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 93,
+            "target_k": 20,
+            "chunk_id": 0,
+            "actual_margin_m": -0.0020074717925967767,
+            "target_margin_m": 0.008162629925649614,
+            "actual_local_xyz_m": [
+              0.027007471792596778,
+              0.003417058813776059,
+              0.11128334334346508
+            ],
+            "target_local_xyz_m": [
+              0.016837370074350388,
+              0.0039609484774581994,
+              0.11398710018517334
+            ],
+            "reached": false,
+            "tracking_position_m": 0.01025112476928363,
+            "target_width_m": 0.04180179163813591,
+            "actual_width_m": 0.043902210891246796,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 5,
+          "target_inside_actual_outside_marked_reached": 4
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/B8000_pos5mm_commit30_rng42_reach-conditioned_2014362",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2014362"
+    },
+    {
+      "stage": "B_pos5mm",
+      "seed": 2013322,
+      "D1": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 112,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": true,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 10,
+        "ik_failed_recorded": 312,
+        "solver_position_residual_max_m": 0.01877104422481282,
+        "solver_position_residual_mean_m": 0.0049288406521981925,
+        "solver_residual_5to10mm_rotation_acceptable": 90,
+        "candidate_arm_command_held": 90,
+        "branch_breaks": 0,
+        "replans": 7,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 111,
+          "negative_and_both_samples": 20,
+          "best_actual_while_negative_and_both": {
+            "step": 111,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -5.942055193663975e-06,
+            "target_margin_m": 0.016742799515655257,
+            "actual_local_xyz_m": [
+              0.004355632973512799,
+              -0.00028520325677383845,
+              0.12500594205519366
+            ],
+            "target_local_xyz_m": [
+              0.0022439086158696497,
+              -0.0007801690477942852,
+              0.10825720048434474
+            ],
+            "reached": false,
+            "tracking_position_m": 0.016950497661230222,
+            "target_width_m": 0.057552821934223175,
+            "actual_width_m": 0.062318235635757446,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 111,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -5.942055193663975e-06,
+            "target_margin_m": 0.016742799515655257,
+            "actual_local_xyz_m": [
+              0.004355632973512799,
+              -0.00028520325677383845,
+              0.12500594205519366
+            ],
+            "target_local_xyz_m": [
+              0.0022439086158696497,
+              -0.0007801690477942852,
+              0.10825720048434474
+            ],
+            "reached": false,
+            "tracking_position_m": 0.016950497661230222,
+            "target_width_m": 0.057552821934223175,
+            "actual_width_m": 0.062318235635757446,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 8,
+          "target_inside_actual_outside_marked_reached": 1
+        }
+      },
+      "D0": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 91,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": true,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 17,
+        "ik_failed_recorded": 538,
+        "solver_position_residual_max_m": 0.024980962560883627,
+        "solver_position_residual_mean_m": 0.010915953456675384,
+        "solver_residual_5to10mm_rotation_acceptable": 11,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 7,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 90,
+          "negative_and_both_samples": 17,
+          "best_actual_while_negative_and_both": {
+            "step": 90,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -0.001164493281642004,
+            "target_margin_m": 0.018470465782083376,
+            "actual_local_xyz_m": [
+              0.0031393434716233902,
+              0.0014638329451811694,
+              0.126164493281642
+            ],
+            "target_local_xyz_m": [
+              0.0009655463923894201,
+              0.0007823494714622082,
+              0.10652953421791662
+            ],
+            "reached": false,
+            "tracking_position_m": 0.019805870612835494,
+            "target_width_m": 0.057552821934223175,
+            "actual_width_m": 0.0616983026266098,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 90,
+            "target_k": 15,
+            "chunk_id": 0,
+            "actual_margin_m": -0.001164493281642004,
+            "target_margin_m": 0.018470465782083376,
+            "actual_local_xyz_m": [
+              0.0031393434716233902,
+              0.0014638329451811694,
+              0.126164493281642
+            ],
+            "target_local_xyz_m": [
+              0.0009655463923894201,
+              0.0007823494714622082,
+              0.10652953421791662
+            ],
+            "reached": false,
+            "tracking_position_m": 0.019805870612835494,
+            "target_width_m": 0.057552821934223175,
+            "actual_width_m": 0.0616983026266098,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 6,
+          "target_inside_actual_outside_marked_reached": 1
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/B8000_pos5mm_commit30_rng42_reach-conditioned_2013322",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2013322"
+    },
+    {
+      "stage": "B_pos5mm",
+      "seed": 2012485,
+      "D1": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 146,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": true,
+        "releases": 0,
+        "steps": 900,
+        "dwell_timeouts": 1,
+        "ik_failed_recorded": 44,
+        "solver_position_residual_max_m": 0.008957500222816094,
+        "solver_position_residual_mean_m": 0.00033854069807908176,
+        "solver_residual_5to10mm_rotation_acceptable": 44,
+        "candidate_arm_command_held": 44,
+        "branch_breaks": 0,
+        "replans": 9,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 145,
+          "negative_and_both_samples": 61,
+          "best_actual_while_negative_and_both": {
+            "step": 145,
+            "target_k": 1,
+            "chunk_id": 1,
+            "actual_margin_m": 0.0008057470981635041,
+            "target_margin_m": 0.0067694162281848325,
+            "actual_local_xyz_m": [
+              -0.024194252901836497,
+              0.0012093402911828254,
+              0.10354014830481842
+            ],
+            "target_local_xyz_m": [
+              -0.01823058377181517,
+              0.0015820228568960016,
+              0.10062040503731506
+            ],
+            "reached": false,
+            "tracking_position_m": 0.006731581337981644,
+            "target_width_m": 0.06344202160835266,
+            "actual_width_m": 0.06386580318212509,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 141,
+            "target_k": 1,
+            "chunk_id": 1,
+            "actual_margin_m": -0.007821713620481084,
+            "target_margin_m": 0.010263661781915078,
+            "actual_local_xyz_m": [
+              -0.032821713620481086,
+              0.003285598012027612,
+              0.10939867321924203
+            ],
+            "target_local_xyz_m": [
+              -0.014736338218084923,
+              0.0032253035272191625,
+              0.10016290805067134
+            ],
+            "reached": false,
+            "tracking_position_m": 0.020522883354176406,
+            "target_width_m": 0.06344202160835266,
+            "actual_width_m": 0.05529145896434784,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 4,
+          "target_inside_actual_outside_marked_reached": 0
+        }
+      },
+      "D0": {
+        "held_any": true,
+        "held15": true,
+        "first_grasp": 110,
+        "strict_success": false,
+        "legacy_success_ever": false,
+        "same_fruit_detach": true,
+        "releases": 1,
+        "steps": 900,
+        "dwell_timeouts": 8,
+        "ik_failed_recorded": 235,
+        "solver_position_residual_max_m": 0.01931858221246473,
+        "solver_position_residual_mean_m": 0.004364244837713137,
+        "solver_residual_5to10mm_rotation_acceptable": 33,
+        "candidate_arm_command_held": 0,
+        "branch_breaks": 0,
+        "replans": 10,
+        "pregrasp_geometry": {
+          "pregrasp_samples": 109,
+          "negative_and_both_samples": 42,
+          "best_actual_while_negative_and_both": {
+            "step": 109,
+            "target_k": 2,
+            "chunk_id": 1,
+            "actual_margin_m": -0.00015864148145914442,
+            "target_margin_m": 0.009185665559316377,
+            "actual_local_xyz_m": [
+              -0.025158641481459146,
+              0.0013006088962149204,
+              0.10221075960559288
+            ],
+            "target_local_xyz_m": [
+              -0.015814334440683624,
+              0.0017628750020188813,
+              0.09675321817870049
+            ],
+            "reached": false,
+            "tracking_position_m": 0.011034038462822904,
+            "target_width_m": 0.06352537125349045,
+            "actual_width_m": 0.0631902739405632,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "best_target_while_negative_and_both": {
+            "step": 108,
+            "target_k": 2,
+            "chunk_id": 1,
+            "actual_margin_m": -0.0020934588247030726,
+            "target_margin_m": 0.010319641058882952,
+            "actual_local_xyz_m": [
+              -0.027093458824703074,
+              0.002037452216994914,
+              0.10382147516326996
+            ],
+            "target_local_xyz_m": [
+              -0.01468035894111705,
+              0.0024236154476528987,
+              0.09652966292570746
+            ],
+            "reached": false,
+            "tracking_position_m": 0.014662846147412173,
+            "target_width_m": 0.06352537125349045,
+            "actual_width_m": 0.06169464439153671,
+            "negative_intent": true,
+            "both_contact": true
+          },
+          "target_inside_actual_outside_samples": 5,
+          "target_inside_actual_outside_marked_reached": 1
+        }
+      },
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/D1_tolerance/rollouts/B8000_pos5mm_commit30_rng42_reach-conditioned_2012485",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2012485"
+    }
+  ],
+  "missing": [],
+  "interpretation": [
+    "D1 changes both IK result acceptance and actual reach position threshold10mm to5mm; solver32iterations and objective weights unchanged.",
+    "Recorded IK_failed in D0 and D1 uses different thresholds; residual bins and held command counts are reported explicitly.",
+    "Ideal FK residual and measured servo target tracking error are distinct.",
+    "Four predeclared diagnostic scenes are not an unbiased success-rate estimate; no automatic expansion follows failed GT control."
+  ]
+}

@@ -1,0 +1,36 @@
+128 episode A/B 实验运行说明
+
+本轮仅启动 B；A 的数据、8000步采样表、配置与共用训练代码已冻结，未安排自动启动。
+A/B 都从原始10k checkpoint直接恢复FP32非VLM权重，使用新的AdamW；M0模型只用于精度验证。
+训练仍冻结VLM，BF16 autocast，lr=1e-5，batch=1，梯度累积=1，原full30 active7 flow loss、原action stats。
+
+主要文件
+- precision_fix.log / precision_fix.json：精度修复过程、数值一致性、四场景配对回放。
+- precision_source_backup/：唯一生产代码修改的前后备份与patch。
+- selection.json：128 train、固定240离线窗、dev8和独立heldout12。
+- schedules/A.jsonl、B.jsonl：每个优化步使用的完整窗口，训练中按表执行。
+- config_ab.json、train_ab.py：A/B共用配置与训练入口。
+- prepared_checks.json：CPU完整检查与源码/数据/原checkpoint哈希。
+- arms/B/status.json：状态、PID、已完成优化步、最近心跳；此文件随训练更新。
+- arms/B/console.log、training_steps.jsonl：后台输出与逐次真实优化记录。
+- arms/B/evaluations/step_0000、step_2000、step_4000、step_8000：固定240窗口、seed42/43/44真实生成评估。
+- arms/B/checkpoints/：每500更新原子保存latest_resume.pt；评估节点保存trainable overlay。
+
+查看进展
+读取 arms/B/status.json，或 tail -n 5 arms/B/console.log。
+启动回执在 arms/B/launch_receipt.json；进程以独立session运行，输出已重定向，当前对话结束不主动停止它。
+status=COMPLETE并存在training_summary.json才表示8000更新与终点评估完成；启动成功不等于训练完成。
+
+故障后续跑（须先核对原进程已退出，不要重复启动）
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python -B /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/launch_B.py --launch --resume
+恢复FP32可训练参数、Adam状态、scheduler、Python/numpy/CPU/CUDA RNG和采样游标；至多重放上次500步保存点后的499次更新。源文件/数据哈希变化会拒绝恢复。
+
+A后续另行执行
+共用入口 train_ab.py --arm A --run；与B共用GPU互斥锁，不能同时运行。本轮不执行这条命令。
+
+结果解读
+主对照是预先指定的step8000。best_trainable仅按旧train80窗口选择，val不选checkpoint。
+checkpoint为FP32可训练参数overlay，加载时需要原10k base与checkpoint_io.load_trainable_overlay；不是独立完整模型。
+前段代理误差与close-switch索引仅用于诊断，不替代实际reach闭环抓持事件。
+新增dev4与heldout12的当前执行通路GT阳性验证及新模型闭环测试留到后续；其历史回放成功不记作本轮已完成验证。
+heldout属于筛选后的可见、历史回放可靠场景，不代表自然新seed总体成功率。

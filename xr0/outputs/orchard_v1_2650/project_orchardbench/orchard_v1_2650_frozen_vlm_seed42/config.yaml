@@ -1,0 +1,70 @@
+data:
+  params:
+    num_workers: 2
+    processor_path: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D
+    train_datasets:
+      action_length: 30
+      batch_size: 1
+      episode_ids: null
+      root: /home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered
+      split: train
+      stats_path: /home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/action_stats.json
+  type: OrchardBenchDataModule
+model:
+  params:
+    diagnostic_path: null
+    freeze_vlm: true
+    model:
+      action_shape:
+      - 30
+      - 32
+      async_train: false
+      dit_num_layers: 16
+      enable_freq: false
+      prefix_mask_prob: 0.5
+      state_shape:
+      - 1
+      - 32
+      training_repeat: 1
+      type: XR0
+      vlm_config_path: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D/config.json
+    pretrained: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D
+  type: OrchardRunner
+trainer:
+  accelerator: gpu
+  accumulate_grad_batches: 1
+  ckpt_path: null
+  default_root_dir: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42
+  enable_progress_bar: true
+  exp_name: orchard_v1_2650_frozen_vlm_seed42
+  gradient_clip_algorithm: norm
+  gradient_clip_val: 1.0
+  limit_val_batches: 0
+  max_epochs: -1
+  max_steps: 10000
+  num_nodes: 1
+  num_sanity_val_steps: 0
+  optimizer:
+    params:
+      betas:
+      - 0.9
+      - 0.95
+      eps: 1.0e-08
+      foreach: false
+      lr: 1.0e-05
+      weight_decay: 0.1
+    type: torch.optim.AdamW
+  precision: bf16-mixed
+  profiler: null
+  project: orchardbench
+  save_interval: 1000
+  scheduler:
+    params:
+      factor: 1.0
+      total_iters: 1
+    type: torch.optim.lr_scheduler.ConstantLR
+  seed: 42
+  strategy:
+    params: {}
+    type: auto
+  val_check_interval: 1.0

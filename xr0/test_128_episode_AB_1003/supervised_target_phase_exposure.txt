@@ -1,0 +1,19 @@
+实际监督目标 phase 曝光（已完成 A/B，各 8000×30=240000 targets）
+
+使用专家60Hz trace的frame/60与30Hz timestamps映射每个f+1..f+30目标；不是按窗口anchor phase直接归类。按实际schedule呈现次数累计，包含B重复抽样。
+
+目标phase: A count/share | B count/share
+REACH: 925 / 0.385% | 13679 / 5.700%
+GRASP: 3775 / 1.573% | 35949 / 14.979%
+PULL: 56869 / 23.695% | 142400 / 59.333%
+TRANSPORT: 151803 / 63.251% | 32745 / 13.644%
+DROP: 26163 / 10.901% | 14263 / 5.943%
+DONE: 465 / 0.194% | 964 / 0.402%
+
+GRASP anchor组的30目标分布：
+A: 349 windows，REACH=0(0.000%), GRASP=1297(12.388%), PULL=9173(87.612%), TRANSPORT=0(0.000%), DROP=0(0.000%), DONE=0(0.000%)
+B: 2000 windows，REACH=0(0.000%), GRASP=7025(11.708%), PULL=52975(88.292%), TRANSPORT=0(0.000%), DROP=0(0.000%), DONE=0(0.000%)
+
+原始trace存在少量terminal DONE，已独立列出，未静默合并为DROP；所有比例以完整240000为分母。
+目标计数不等于梯度贡献或真实抓取学习量：仍受flow随机时间/noise、horizon normalization以及共享窗口锚点条件影响。GRASP anchor窗口继续监督PULL是现有future chunk定义的自然结果，不能只凭这张表认定标签错误。
+每个sampling group到target phase的完整交叉计数及逐horizon分布见同名JSON；未改训练代码、数据或schedule。

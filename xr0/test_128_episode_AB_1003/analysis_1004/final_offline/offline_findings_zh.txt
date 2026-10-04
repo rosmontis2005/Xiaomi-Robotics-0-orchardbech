@@ -1,0 +1,35 @@
+A/B 离线比较：独立 CPU 解读
+
+主端点固定为各追加8000 optimizer updates；B4000是既有train-only best的次要诊断，未用val重新挑checkpoint。
+主要发现：B的reset完整chunk与未来REACH/GRASP目标更接近专家，优势集中于较长跨度；首5目标尚无跨场景一致优势，TRANSPORT长程预测仍差。这里没有闭环抓取/释放成功结论。
+
+合并16个验证场景（旧8+新8），下表均先对每个场景的相关窗口/目标/3个noise seed求均值，再场景等权；与PNG/summary中的目标池化均值可能不同。
+指标 | A8000 | B8000 | B改善场景/16（其余变差）
+reset/full/position_error_m | 8.948cm | 4.099cm | 14/16
+all/h1_5/position_error_m | 3.372cm | 3.420cm | 8/16
+target_REACH/full/position_error_m | 4.144cm | 2.863cm | 13/16
+target_GRASP/full/position_error_m | 6.903cm | 4.918cm | 10/16
+target_PULL/full/position_error_m | 7.824cm | 7.439cm | 8/16
+target_TRANSPORT/full/position_error_m | 21.106cm | 21.250cm | 3/16
+all/full/rotation_error_rad | 0.156rad | 0.137rad | 13/16
+all/full/width_error_m | 9.390mm | 8.567mm | 10/16
+
+reset/full的B-A配对场景均差为-4.849cm，10,000次场景bootstrap描述性95%区间[-6.810,-2.914]cm。all/full位置8.875→8.379cm、9/16改善，描述性区间跨0；不能从总平均宣称全面胜出。
+B4000→B8000，reset首5误差在24/24场景（含旧train8）都增大，16val均值1.368→3.086cm；同时reset/full 4.395→4.099cm。训练与验证同步退化的部分不构成“训练继续好转而验证变差”的经典过拟合证据，更直接的是阶段/时间跨度取舍。
+GRASP anchor完整窗口误差不能等同接触阶段误差；该窗口大量后续目标实际属于PULL。target_phase使用annotation的60Hz trace事件与30Hz时间戳重新核对。
+宽度关闭代理：16val的336个存在GT close switch的窗口×noise条目中，A有175个、B有233个落在±2目标内，双方missing均0。这些是相关重复且只是30Hz目标序列代理，不代表reach执行时的真实关爪时刻。
+A/B8000均仍有5项train拟合gate未通过，仅missing-close预测计数门通过；没有把低控制干预或离线误差当抓取能力。
+
+实验审计：
+A0/B0的240窗×18字段共4320数组dtype、shape和原始bytes完全一致；所有checkpoint的GT字段也完全一致。8次panel共1920窗×3noise的保存误差从物理位姿/开度独立复算通过。
+A/B各8000日志逐条对应冻结schedule，源stats与annotation SHA匹配、生产与训练源SHA未变，val/heldout optimizer rows=0。VLM前后hash相同的运行记录一致，非VLM FP32主参数确有更新，所有记录loss/grad有限；分析未重新加载全模型称重验证。
+A8000个unique窗；B3931个unique窗。B实际quotas严格reset1600、first1_4 800、REACH1200、GRASP2000、PULL1200、TRANSPORT800、DROP400。A对应31、182、93、349、2066、5097、182。
+old_train80仅指训练episode的固定面板：A实际曝光29/80个anchor窗、B51/80；reset A5/8、B8/8。不可将80窗都称为已直接拟合的样本。
+B组合了phase重加权、episode平衡和有放回采样，不能把效果归因于其中单独一项。每arm只有一个训练随机种子42；推理42/43/44不是三个训练复现实验。
+本轮共同初始化是修正后的原始10k FP32参数直接装载；历史M0初始化经过BF16往返，不能把旧M0 baseline直接拼成本次配对端点。
+
+离线覆盖缺口：
+240×30=7200目标槽中REACH246、GRASP936、PULL5298、TRANSPORT720、DROP0；DROP anchor也0。full只指选中窗口的完整30个目标，不覆盖完整任务。训练虽有DROP样本，本固定离线面板不评估晚期释放，不能据此声称释放预测正常。面板未改变。
+全部场景是可观察性/历史GT可回放性筛选的有限cohort；置信区间是描述性场景重采样，并非自然新seed总体保证，也不包含训练复现方差。
+
+具体方向与幅度辅助证据见 ../displacement_diagnostic/displacement_report.txt；主闭环64模型回合及20GT由独立队列完成后汇总，当前未读取holdout模型结果来选型。

@@ -1,0 +1,57 @@
+{
+  "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/training/arms/L/checkpoints/step_4000_trainable.pt",
+  "step": 4000,
+  "format": "orchard_m0_trainable_v1",
+  "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+  "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+  "trainable_tensors": 219,
+  "trainable_parameters": 278458368,
+  "bytes": 1113910729,
+  "checkpoint_sha256": "ee48285283219076e378efb908efce7e0df9910fb8c6fe9118fe9fb8172be99a",
+  "fit_gate": {
+    "values": {
+      "h1_5_position_p90_m": 0.06797042187126558,
+      "h1_5_rotation_p90_rad": 0.13003671508408243,
+      "h1_5_width_mae_m": 0.007898629481593767,
+      "reset_full_position_mae_m": 0.04026751783486514,
+      "close_switch_abs_target_offset_max": 15,
+      "missing_gt_close_switch_predictions": 0
+    },
+    "pass_by_gate": {
+      "h1_5_position_p90_m": false,
+      "h1_5_rotation_p90_rad": false,
+      "h1_5_width_mae_m": false,
+      "reset_full_position_mae_m": false,
+      "close_switch_abs_target_offset_max": false,
+      "missing_gt_close_switch_predictions": true
+    },
+    "failed_gates": 5,
+    "all_pass": false,
+    "ranking": [
+      5,
+      0.04026751783486514,
+      0.06797042187126558
+    ],
+    "selection_basis": "train fitting gates only; validation never used for checkpoint selection",
+    "gt_switch_predictions": 168
+  },
+  "rule": {
+    "criterion": "lexicographic, selected TRAIN panel only; VAL is report-only",
+    "order": [
+      "number_of_failed_proposed_train_fit_gates",
+      "train_reset_full_position_mae_m",
+      "train_h1_5_position_p90_m"
+    ],
+    "tie": "keep earlier checkpoint",
+    "baseline_eligible": true,
+    "gates": {
+      "h1_5_position_p90_m": 0.01,
+      "h1_5_rotation_p90_rad": 0.08,
+      "h1_5_width_mae_m": 0.003,
+      "reset_full_position_mae_m": 0.03,
+      "close_switch_abs_target_offset_max": 2,
+      "missing_gt_close_switch_predictions": 0
+    },
+    "note": "These are fitting diagnostics, not task success. Width intent is a 30Hz target-sequence proxy."
+  }
+}

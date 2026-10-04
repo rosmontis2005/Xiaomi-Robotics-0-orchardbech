@@ -1,0 +1,135 @@
+{
+  "status": "COMPLETE",
+  "scope": "M0 only",
+  "created_utc": "2026-10-03T14:18:00.863112+00:00",
+  "main_diagnosis": "Small-set updates produced actual grasp and detach in one train and one val scene; strict fitting gates only 3/6 and full task still 0/4.",
+  "train_episodes": 8,
+  "val_episodes": 8,
+  "windows_per_split": 80,
+  "updates": 2000,
+  "presentations_per_train_window": 25,
+  "val_updates": 0,
+  "best_step": 2000,
+  "frozen_vlm": true,
+  "reach_conditioned": true,
+  "fit_gates_passed": 3,
+  "fit_gates_total": 6,
+  "fit_gate": {
+    "values": {
+      "h1_5_position_p90_m": 0.03588804988271028,
+      "h1_5_rotation_p90_rad": 0.061757515943718755,
+      "h1_5_width_mae_m": 0.004630864962625007,
+      "reset_full_position_mae_m": 0.026714189676355034,
+      "close_switch_abs_target_offset_max": 15,
+      "missing_gt_close_switch_predictions": 0
+    },
+    "pass_by_gate": {
+      "h1_5_position_p90_m": false,
+      "h1_5_rotation_p90_rad": true,
+      "h1_5_width_mae_m": false,
+      "reset_full_position_mae_m": true,
+      "close_switch_abs_target_offset_max": false,
+      "missing_gt_close_switch_predictions": true
+    },
+    "failed_gates": 3,
+    "all_pass": false,
+    "ranking": [
+      3,
+      0.026714189676355034,
+      0.03588804988271028
+    ],
+    "selection_basis": "train fitting gates only; validation never used for checkpoint selection",
+    "gt_switch_predictions": 168
+  },
+  "offline_full30_position_mae_m": {
+    "train": {
+      "step_0000": 0.1188842531966687,
+      "step_2000": 0.029540072468146186
+    },
+    "val": {
+      "step_0000": 0.12038702180116467,
+      "step_2000": 0.08526629494250389
+    }
+  },
+  "offline_reset_full30_position_mae_m": {
+    "train": {
+      "step_0000": 0.2692740025105398,
+      "step_2000": 0.026714189676355034
+    },
+    "val": {
+      "step_0000": 0.21788234180573995,
+      "step_2000": 0.07432666622901896
+    }
+  },
+  "closed_loop": {
+    "gt": {
+      "episodes": 4,
+      "grasp": 4,
+      "detach": 4,
+      "success": 4,
+      "by_split": {
+        "train": {
+          "episodes": 2,
+          "grasp": 2
+        },
+        "val": {
+          "episodes": 2,
+          "grasp": 2
+        }
+      }
+    },
+    "original_10k": {
+      "episodes": 4,
+      "grasp": 0,
+      "detach": 0,
+      "success": 0,
+      "by_split": {
+        "train": {
+          "episodes": 2,
+          "grasp": 0
+        },
+        "val": {
+          "episodes": 2,
+          "grasp": 0
+        }
+      }
+    },
+    "best": {
+      "episodes": 4,
+      "grasp": 2,
+      "detach": 2,
+      "success": 0,
+      "by_split": {
+        "train": {
+          "episodes": 2,
+          "grasp": 1
+        },
+        "val": {
+          "episodes": 2,
+          "grasp": 1
+        }
+      }
+    }
+  },
+  "engineering_verification": "PASS",
+  "production_modified": false,
+  "further_repairs_executed": false,
+  "best_checkpoint": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/checkpoints/best_trainable.pt",
+    "step": 2000,
+    "format": "orchard_m0_trainable_v1",
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "trainable_tensors": 219,
+    "trainable_parameters": 278458368,
+    "bytes": 1113907849,
+    "checkpoint_sha256": "a24480f154b2dd4c9b775a31fae5e63171c6ecec90996ce4caae86899a22207c"
+  },
+  "report": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_small_set_fit_1003/report.txt",
+  "limits": [
+    "Four closed-loop cases are a selected development panel, not a population success-rate estimate.",
+    "Offline noise seeds are repetitions, not new episodes.",
+    "Only one training configuration and one closed-loop generation seed were tested.",
+    "Do not conflate engineering PASS, partial fitting, and task success."
+  ]
+}

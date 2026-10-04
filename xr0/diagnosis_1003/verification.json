@@ -1,0 +1,238 @@
+{
+  "status": "PASS",
+  "checks": {
+    "production_sources_and_stats_unchanged": true,
+    "checkpoint_size_mtime_unchanged": true,
+    "gt/reach-conditioned/2010027": true,
+    "gt/time-indexed/2010027": true,
+    "step_10000/reach-conditioned/2010027": true,
+    "gt/reach-conditioned/2010042": true,
+    "gt/time-indexed/2010042": true,
+    "step_10000/reach-conditioned/2010042": true,
+    "gt/reach-conditioned/2010067": true,
+    "gt/time-indexed/2010067": true,
+    "step_10000/reach-conditioned/2010067": true,
+    "all_paired_resets_identical": true,
+    "offline_mean_action_80_windows": true,
+    "offline_pretrained_80_windows": true,
+    "offline_step_10000_80_windows": true
+  },
+  "rollouts": [
+    {
+      "provider": "gt",
+      "mode": "reach-conditioned",
+      "seed": 2010027,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true
+      }
+    },
+    {
+      "provider": "gt",
+      "mode": "time-indexed",
+      "seed": 2010027,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true
+      }
+    },
+    {
+      "provider": "step_10000",
+      "mode": "reach-conditioned",
+      "seed": 2010027,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true,
+        "predict_count_matches": true
+      }
+    },
+    {
+      "provider": "gt",
+      "mode": "reach-conditioned",
+      "seed": 2010042,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true
+      }
+    },
+    {
+      "provider": "gt",
+      "mode": "time-indexed",
+      "seed": 2010042,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true
+      }
+    },
+    {
+      "provider": "step_10000",
+      "mode": "reach-conditioned",
+      "seed": 2010042,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true,
+        "predict_count_matches": true
+      }
+    },
+    {
+      "provider": "gt",
+      "mode": "reach-conditioned",
+      "seed": 2010067,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true
+      }
+    },
+    {
+      "provider": "gt",
+      "mode": "time-indexed",
+      "seed": 2010067,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true
+      }
+    },
+    {
+      "provider": "step_10000",
+      "mode": "reach-conditioned",
+      "seed": 2010067,
+      "checks": {
+        "completed_without_error": true,
+        "step_count_matches": true,
+        "indices_contiguous": true,
+        "within_budget": true,
+        "observer_all_consistent": true,
+        "clipping_matches": true,
+        "ik_matches": true,
+        "chunk_count_matches": true,
+        "video_errors_absent": true,
+        "predict_count_matches": true
+      }
+    }
+  ],
+  "paired_resets": [
+    {
+      "provider": "gt",
+      "mode": "reach-conditioned",
+      "seed": 2010027,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "gt",
+      "mode": "time-indexed",
+      "seed": 2010027,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "step_10000",
+      "mode": "reach-conditioned",
+      "seed": 2010027,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "gt",
+      "mode": "reach-conditioned",
+      "seed": 2010042,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "gt",
+      "mode": "time-indexed",
+      "seed": 2010042,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "step_10000",
+      "mode": "reach-conditioned",
+      "seed": 2010042,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "gt",
+      "mode": "reach-conditioned",
+      "seed": 2010067,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "gt",
+      "mode": "time-indexed",
+      "seed": 2010067,
+      "obs_equal": true,
+      "info_equal": true
+    },
+    {
+      "provider": "step_10000",
+      "mode": "reach-conditioned",
+      "seed": 2010067,
+      "obs_equal": true,
+      "info_equal": true
+    }
+  ],
+  "expected_rollouts": 9,
+  "source_files_checked": 51,
+  "checkpoint_identity_check": "Size and mtime only; original checkpoint is read-only throughout diagnostics",
+  "protocol_amendment": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/diagnosis_1003/protocol_amendment.json"
+}

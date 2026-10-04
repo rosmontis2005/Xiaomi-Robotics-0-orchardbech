@@ -1,0 +1,88 @@
+"""Assemble the final report only after primary and authorized secondary audits pass."""
+from pathlib import Path
+import json, hashlib, datetime
+ROOT=Path(__file__).resolve().parent.parent
+
+def read(p):return json.loads((ROOT/p).read_text())
+def sha(p):return hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
+
+def main():
+    primary=read('analysis_1004/closed_loop_final/closed_loop_summary.json')
+    secondary=read('closed_loop_1004/secondary_train_best_analysis/summary.json')
+    assert primary['status']==secondary['status']=='PASS'
+    assert read('closed_loop_1004/queue_status.json')['status']=='COMPLETE'
+    assert read('closed_loop_1004/stage_B_trainbest_complete.json')['status']=='COMPLETE'
+    arms={}
+    for arm in ['A','B']:
+        t=read(f'arms/{arm}/training_summary.json')
+        assert t['status']=='COMPLETE' and t['completed_updates']==8000 and t['frozen_vlm_unchanged']
+        dev=primary['aggregate'][f'{arm}/dev/all'];held=primary['aggregate'][f'{arm}/heldout/all']
+        rows=[r for r in primary['episodes'] if r['arm']==arm]
+        raw=[json.loads((Path(r['source_directory'])/'summary.json').read_text()) for r in rows]
+        arms[arm]={'updates':8000,'train_episodes':128,'unique_windows':t['unique_train_windows_seen'],'dev':dev['counts'],'heldout_repeated':held['counts'],'heldout_both_seed_grasp_scenes':primary['heldout_robust_counts'][arm]['held15']['both_seeds'],'grasp_total':sum(r['held15'] for r in rows),'benchmark_success_total':sum(r['success'] for r in rows),'success_with_release_before':sum(r['success'] and r['release_observed_strictly_before_success'] is True for r in rows),'branch_break_episodes':sum(s['max_branch_break_count']>0 for s in raw),'branch_break_max':max(s['max_branch_break_count'] for s in raw),'dev_gate_6_of8':dev['counts']['held15']>=6,'heldout_gate_9_of12':primary['heldout_robust_counts'][arm]['held15']['both_seeds']>=9}
+    assert arms['A']['grasp_total']==11 and arms['B']['grasp_total']==22
+    sc=secondary['aggregate']['B4000']['counts'];pair=secondary['paired_B4000_B8000']['held15']
+    refs=['experiment_plan_1004.json','training_comparison_audit.json','supervised_target_phase_exposure.json','analysis_1004/final_offline/offline_analysis.json','analysis_1004/displacement_diagnostic/displacement.json','analysis_1004/m0_exposure_comparison.json','analysis_1004/mechanism_audit.json','analysis_1004/mechanism_release_followup.json','analysis_1004/closed_loop_final/closed_loop_summary.json','closed_loop_1004/secondary_train_best_analysis/summary.json','closed_loop_1004/protocol.json']
+    result={'status':'COMPLETE','created':datetime.datetime.now().astimezone().isoformat(),'task':'A training completed, fixed A/B primary and secondary tests completed and analyzed','primary_endpoint':8000,'arms':arms,'GT':{'scenes':20,'grasp':20,'held15':20,'bucket_flag':20,'release_before_success':20,'IK_failures':0,'dwell_timeouts':0},'primary_model_episodes':64,'primary_all_episodes':84,'secondary_model_episodes':8,'all_test_episodes':92,'secondary_B4000_dev8':sc,'secondary_paired':pair,'complete_released_placement_verified_for_model':False,'sources_sha256':{p:sha(p) for p in refs},'new_production_repairs_this_turn':False,'recommendations_only_not_executed':['Retain B sampling direction, refine close-contact geometry and per-target supervision.','Validate release and bucket persistence separately from existing success flag.','Use actual per-episode exposure and intermediate paired closed-loop checks rather than blindly extending constant-LR training.','For fastest engineering closure, separately evaluate a hybrid with verified transport/release after VLA grasp; keep its result separate from model-only capability.']}
+    (ROOT/'result_summary_1004.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    secondary_text=(f'B4000 的固定 dev8：持续抓持 {sc["held15"]}/8，原环境成功 {sc["success"]}/8。对 B8000，B4000独有持续抓持 {pair["B4000_only"]} 条、B8000独有持续抓持 {pair["B8000_only"]} 条、共同 {pair["both"]} 条。')
+    if sc['held15']>6:secondary_text+='这支持继续关注训练后期退化，但只在开发集成立；没有测试B4000的heldout，不能替换主比较或称其泛化最好。'
+    elif sc['held15']==6:secondary_text+='较小的离线前段误差没有提高本开发集抓持总数；需看逐场景变化，不能据此判B4000整体更优。'
+    else:secondary_text+='较小的离线前段误差没有转化为更高的开发集抓持率；不能只靠离线单项误差挑部署checkpoint。'
+    text=f'''本轮 A/B 训练与闭环验证报告（2026-10-04）
+
+结论：A 已完成8000次更新，主84回合及辅助8回合全部测试、独立校验完成。B的数据采样组合已带来可复现的抓取收益，但可靠抓取门槛尚未完全通过，完整松爪入桶能力仍未得到验证。当前首要问题已不再是“学生执行器不能按reach语义执行正确目标”，而是模型接触几何的残余误差，以及抓后运输、释放的预测与闭环表现。
+
+1. 实验设计与实际执行
+A/B使用同128条train episodes、同原10k初始化、同修复后的精度契约（非VLM FP32、冻结VLM BF16）、fresh AdamW、lr1e-5、batch1/accum1、8000次更新和原full30 flow loss。仅采样组合不同：A为窗口均匀无放回，B为阶段配额+episode均衡+有放回。该实验验证的是整个采样组合，不能把收益单独归因于阶段配额。
+A实际8000个不同窗口，B3931个不同窗口；两组均覆盖128episodes，验证更新0。初始化219个FP32参数张量对源逐项精确相等，固定240窗×3噪声的4320个保存数组逐字节一致；训练日志与schedule逐条匹配，VLM哈希前后相同。A耗时约32.1分钟；B是本轮开始前已完成的实验，本次未重训B。
+正式比较固定A8000/B8000，开发集8场景×seed42，预留集12场景×seeds42/43，每臂32回合。先经同学生adapter/controller跑20个GT阳性对照。统一reach阈值1cm/0.08rad、每目标最长30控制步、完整30目标chunk、900步预算、benchmark_assist。持果稳定定义为同一果实连续15个控制边界，不添加控制等待门槛。
+
+2. 主闭环结果
+指标                                      A8000       B8000
+开发集持续抓持                            1/8         6/8
+预留集持续抓持（12场景×2噪声）             10/24       16/24
+预留集两噪声均持续抓持（独立场景）          4/12        8/12
+全部模型回合持续抓持                      11/32       22/32
+原环境入桶success flag                    0/32        2/32
+成功前已观测释放                          0/32        0/32
+发生树枝断裂的回合                        1/32        0/32
+
+A的树枝断裂发生于2010387/seed43，最大计数2。全部已发生的抓持均在300步内并达到held15。预留集seed42配对为B独有4、A独有0；seed43为B独有2、A独有0；按两噪声都成功统计，B多4个场景、没有丢掉A的稳健场景。
+预先设定的开发集6/8门槛B通过；预留集9/12双噪声门槛B为8/12，尚未通过。GT20/20全部抓持、摘离、先释放再入桶，IK失败/等待超时/树枝断裂均0。GT成功说明当前通路可执行正确目标，并不保证错误预测多等待即可被修正。
+必须保留成功口径边界：B的2条success均为场景2010600，seeds42/43分别在760/697步终止；当时仍持有果实26，释放次数0。原环境以“摘离果实处于桶内”判成功，并不要求松爪。本轮证明它在一个预留场景上可持果到达桶内，未证明松爪后的稳定放置；由于已终止，也不能推断继续运行一定不会松爪。
+
+3. 离线收益及局限
+同16个验证episode上，reset完整30目标位置误差A8.95cm→B4.10cm，14/16场景改善；按真实未来目标phase统计，GRASP完整误差7.25→5.59cm。但所有窗口前5目标总体误差3.37→3.42cm，没有一致改善。TRANSPORT完整误差约21.1→21.3cm，仍差。
+B reset第30目标的位移幅度接近GT（34.62 vs34.68cm），但前5目标运动偏大；TRANSPORT第30目标仅16.60cm，对应GT45.52cm，同时存在方向偏差。这支持按阶段和预测距离诊断，不能统称模型恒定输出或忽略图像。
+B4k到8k的reset前5误差在24/24离线场景变差，而完整reset误差仍可改善；训练episode面板也有退化，证据不足以简单称为经典“训练变好、验证变差”的过拟合。A8000/B8000/B4000均未通过整套六项拟合门槛（仅无缺失close预测一项通过）。固定离线240窗的7200未来目标中DROP为0，不能用这套面板验收释放。
+
+4. 逐轨迹机制证据
+开发集A/B共16个首chunk均推进完30个目标，均无首chunk IK或等待超时。A2013322首段目标误差79mm，最近距离仍73mm，首次IK在426步；B同场景目标误差26mm，step91抓持，IK在359步以后。2012485对应A105mm/最近102mm，B34mm/最近26mm并在step110抓持。这里主要改善来自目标几何更正确。
+B剩余两个开发失败2014461/2014362，最近时都有closing intent和双指contact，但掌局部横向分别-31.6/+27.0mm，超出±25mm范围约6.6/2.0mm。它们都很晚才首次IK；边界采样支持“接触精度还差一点”，并非没有发合拢指令。这不是对所有物理子步的证明。
+B六条开发抓持轨迹中三条未释放且后期IK停滞；最后150步各有145–150次IK失败，命令大多无变化。另三条在767/210/311步释放，但距同场景GT释放位置水平0.746/1.004/0.879m，约17–18步后落到地面；全程bucket_count=0且仍余充分预算。它们不属于入桶后弹出，也不能用“统一不会松爪”概括。
+
+5. 数据和学习目标暴露出的具体问题
+B虽然把25%更新分给GRASP-anchor窗口，该组未来目标却有88.29%已经属于PULL。按全部8000×30目标实际计数，B的REACH/GRASP/PULL/TRANSPORT/DROP约为5.70/14.98/59.33/13.64/5.94%，另0.40%DONE。A的GRASP仅1.57%，TRANSPORT63.25%。B确实增加了抓取监督，但anchor配额不是接触目标的真实监督份额；目标数也不等于梯度贡献。
+实际日志显示M0小数据训练每个episode reset恰25次，本次B为12–13次；每episode全部样本平均250→62.5次，GRASP-anchor平均90.6→15.6次。将8episode扩大16倍至128episode、总更新只扩大4倍，关键状态曝光明显稀释。该对照还包含cohort/采样/历史精度差异，不能单凭曝光认定性能因果，更不能直接推出多训必然更好。
+
+6. 辅助checkpoint实验
+{secondary_text}
+本辅助checkpoint在闭环前由训练面板规则选出，授权和固定dev8已留档；正式A/B8000结果始终单独保存。
+
+7. 下一轮建议（本轮未实施）
+优先保留B采样方向，把目标收敛到可靠接触抓持；保持当前已验证的reach语义和控制限制。先补训练集中的近接触偏差状态及学生实际观察，明确位置/姿态/夹爪总开度的联合监督；对每个未来目标phase和前段精度设置监控，避免只增加GRASP-anchor数量。DROP与抓后状态加入固定离线验收面板。
+训练预算按每episode关键状态的实际曝光设计，保留中间checkpoint及固定开发闭环；结合学习率衰减和分阶段目标检查晚期退化，不能仅按总步数或单一offline均值选模型。新的heldout验收应独立冻结，不继续围绕本次12场景反复调参后声称泛化。
+完整任务验收应将原success flag与“已释放且果实稳定留桶”并列记录；当前两条still-held success必须继续保留原统计，不能事后改写旧结果。
+若工程目标是尽快可用，可另立混合策略实验：VLA负责接近抓持，真实抓持确认后交给现有已验证的运输/释放执行器，并在实际VLA抓持末态上验证该交接。GT回放成功不能直接证明这个交接也成功。混合策略结果单独标注，不作为端到端VLA能力。模型完整学习路线再按抓后状态数据和运输/释放监督推进。
+
+8. 产物与复核
+本轮所有产物位于本目录。result_summary_1004.json汇总核心结果及来源SHA；training_comparison_audit.*与supervised_target_phase_exposure.*为训练审计；analysis_1004/final_offline/为同窗物理误差；analysis_1004/closed_loop_final/为主84回合独立汇总；closed_loop_1004/secondary_train_best_analysis/为辅助8回合；analysis_1004/mechanism*.txt与m0_exposure_comparison.*为机制/曝光证据；analysis_1004/rollout_figures/含同场景目标、前300步时序和视频抽帧。
+20个GT、64个主模型和8个辅助模型回合均完整保留steps/chunks/summary/完成标记与SHA。独立主审计重算67265个控制步的推进、持果和事件口径，与日志一致。本轮只有一个训练随机种子/arm，推理噪声不是独立训练重复；场景来自筛选后的可回放cohort，因此结果属于工程开发对照，不能直接当作自然场景成功率估计。
+'''
+    (ROOT/'result_report_1004.txt').write_text(text)
+    event={'event':'A_training_and_AB_analysis_complete','timestamp':result['created'],'status':'COMPLETE','A_updates':8000,'primary_episodes':84,'secondary_episodes':8,'A_held15':11,'B_held15':22,'B_benchmark_success':2,'B_success_with_release_before':0,'report':str(ROOT/'result_report_1004.txt'),'summary':str(ROOT/'result_summary_1004.json')}
+    with (ROOT/'run_log.jsonl').open('a') as f:f.write(json.dumps(event,ensure_ascii=False)+'\n')
+    with (ROOT/'run_log.txt').open('a') as f:f.write('\n'+result['created']+' A训练与A/B完整测试分析完成。主84+辅助8；报告 result_report_1004.txt，机读 result_summary_1004.json。\n')
+    print(json.dumps(event,ensure_ascii=False))
+if __name__=='__main__':main()

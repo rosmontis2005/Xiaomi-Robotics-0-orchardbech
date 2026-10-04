@@ -1,7 +1,20 @@
 # Local post-training environments and generated runtime caches.
 .venv-orchard/
 __pycache__/
-outputs/
 wandb/
 assets/config.py
 artifacts/orchardbench/runs/
+
+# Keep the completed benchmark's aggregate results and reproduction metadata.
+outputs/**
+!outputs/**/
+!outputs/orchard_v1_benchmark/benchmark_report.md
+!outputs/orchard_v1_benchmark/summary.json
+!outputs/orchard_v1_benchmark/episodes.csv
+!outputs/orchard_v1_benchmark/benchmark_v1_30seeds.json
+!outputs/orchard_v1_benchmark/benchmark_visual_seeds.json
+!outputs/orchard_v1_benchmark/checkpoint_manifest.json
+
+# Preserve the resolved training configuration, not checkpoints or run logs.
+!outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/config.py
+!outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/config.yaml

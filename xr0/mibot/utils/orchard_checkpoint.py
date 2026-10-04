@@ -27,7 +27,19 @@ def load_weights(model, path):
         if model.vlm.lm_head.weight is not model.vlm.get_input_embeddings().weight:
             raise ValueError('Cannot restore omitted lm_head unless destination ties embeddings')
         state[head] = state[embedding]
+    # XR0 constructs all parameters in BF16. Set the Orchard action head's
+    # destination precision BEFORE copying checkpoint values: promoting after
+    # load would preserve already-rounded values instead of FP32 master weights.
+    # Both OrchardRunner and OrchardPolicy use this weights-only loader. The
+    # VLM keeps its constructed precision; generation still uses BF16 autocast.
+    action_head_tensors = 0
+    for name, parameter in model.named_parameters():
+        if not name.startswith('vlm.'):
+            parameter.data = parameter.data.float()
+            action_head_tensors += 1
     # strict=True rejects every unexpected/missing tensor and shape mismatch.
     model.load_state_dict(state, strict=True)
     return dict(path=str(path.resolve()), format=source_format, tensors=len(state),
-                strict=True, optimizer_restored=False, scheduler_restored=False)
+                strict=True, optimizer_restored=False, scheduler_restored=False,
+                action_head_dtype='torch.float32', action_head_tensors=action_head_tensors,
+                action_head_precision_set_before_load=True)

@@ -1,0 +1,120 @@
+{
+  "status": "COMPLETE",
+  "created": "2026-10-04T01:47:42.758502+08:00",
+  "task": "A training completed, fixed A/B primary and secondary tests completed and analyzed",
+  "primary_endpoint": 8000,
+  "arms": {
+    "A": {
+      "updates": 8000,
+      "train_episodes": 128,
+      "unique_windows": 8000,
+      "dev": {
+        "grasp": 1,
+        "held15": 1,
+        "grasp_by_step300": 1,
+        "held15_qualified_by_step300": 1,
+        "any_detach": 1,
+        "grasp_and_any_detach": 1,
+        "success": 0
+      },
+      "heldout_repeated": {
+        "grasp": 10,
+        "held15": 10,
+        "grasp_by_step300": 10,
+        "held15_qualified_by_step300": 10,
+        "any_detach": 11,
+        "grasp_and_any_detach": 10,
+        "success": 0
+      },
+      "heldout_both_seed_grasp_scenes": 4,
+      "grasp_total": 11,
+      "benchmark_success_total": 0,
+      "success_with_release_before": 0,
+      "branch_break_episodes": 1,
+      "branch_break_max": 2,
+      "dev_gate_6_of8": false,
+      "heldout_gate_9_of12": false
+    },
+    "B": {
+      "updates": 8000,
+      "train_episodes": 128,
+      "unique_windows": 3931,
+      "dev": {
+        "grasp": 6,
+        "held15": 6,
+        "grasp_by_step300": 6,
+        "held15_qualified_by_step300": 6,
+        "any_detach": 6,
+        "grasp_and_any_detach": 6,
+        "success": 0
+      },
+      "heldout_repeated": {
+        "grasp": 16,
+        "held15": 16,
+        "grasp_by_step300": 16,
+        "held15_qualified_by_step300": 16,
+        "any_detach": 16,
+        "grasp_and_any_detach": 15,
+        "success": 2
+      },
+      "heldout_both_seed_grasp_scenes": 8,
+      "grasp_total": 22,
+      "benchmark_success_total": 2,
+      "success_with_release_before": 0,
+      "branch_break_episodes": 0,
+      "branch_break_max": 0,
+      "dev_gate_6_of8": true,
+      "heldout_gate_9_of12": false
+    }
+  },
+  "GT": {
+    "scenes": 20,
+    "grasp": 20,
+    "held15": 20,
+    "bucket_flag": 20,
+    "release_before_success": 20,
+    "IK_failures": 0,
+    "dwell_timeouts": 0
+  },
+  "primary_model_episodes": 64,
+  "primary_all_episodes": 84,
+  "secondary_model_episodes": 8,
+  "all_test_episodes": 92,
+  "secondary_B4000_dev8": {
+    "grasp": 5,
+    "held15": 5,
+    "grasp_by_step300": 5,
+    "held15_qualified_by_step300": 5,
+    "any_detach": 4,
+    "grasp_and_any_detach": 4,
+    "success": 0
+  },
+  "secondary_paired": {
+    "scenes": 8,
+    "B4000_only": 1,
+    "B8000_only": 2,
+    "both": 4,
+    "neither": 1
+  },
+  "complete_released_placement_verified_for_model": false,
+  "sources_sha256": {
+    "experiment_plan_1004.json": "0b0ceae45a5f5e9e238c57f2e8583a5d530f547a3a256de845144af8346e7822",
+    "training_comparison_audit.json": "4eda87100fa8a0bcc77975fbfe62481b55d84f7def9799741509ce49c4a39999",
+    "supervised_target_phase_exposure.json": "e4e96b8b9105e2619c0fd77a650090dedd727fa170b509ac744ee67c6d4c116f",
+    "analysis_1004/final_offline/offline_analysis.json": "f0b9a2f9c124eb82568ac95efe767a10660e9a5d2b30ae55742b17f2f600ed9a",
+    "analysis_1004/displacement_diagnostic/displacement.json": "28a5b1c8abe21ef3cd8bd07564f01d82e1e385b55281460489e3fc3a38feca4d",
+    "analysis_1004/m0_exposure_comparison.json": "a9bfe0a42bc8931f073f9c372cbe6f793c6f6ac118439d8426f4113496ec168c",
+    "analysis_1004/mechanism_audit.json": "40171bd86685195aafa2596b8c3e471be5f19ee8a75fd6949839ff2500828bfe",
+    "analysis_1004/mechanism_release_followup.json": "9f2c41d57825c1c724375732eb23e9edcbe776fe45a057754b06ff64b5a11ed2",
+    "analysis_1004/closed_loop_final/closed_loop_summary.json": "31ae199736ba69f25d082d3ce318aed7729760fff90de2e97451a0f038276142",
+    "closed_loop_1004/secondary_train_best_analysis/summary.json": "fc133b2fb7ed56236fd9edb764bf72ba77ff0f52878b9f412a90621ab147a52c",
+    "closed_loop_1004/protocol.json": "e1f4f9fc6368cb02cd39503a2d6b5713283c9363d55d375a818e9b041f55ae9a"
+  },
+  "new_production_repairs_this_turn": false,
+  "recommendations_only_not_executed": [
+    "Retain B sampling direction, refine close-contact geometry and per-target supervision.",
+    "Validate release and bucket persistence separately from existing success flag.",
+    "Use actual per-episode exposure and intermediate paired closed-loop checks rather than blindly extending constant-LR training.",
+    "For fastest engineering closure, separately evaluate a hybrid with verified transport/release after VLA grasp; keep its result separate from model-only capability."
+  ]
+}
