@@ -1,0 +1,16 @@
+{
+  "case": "Case D",
+  "scope": "冻结 D*、current-only frozen-VLM/action-head、既定900-step已消费dev8和历史辅助协议；不构成fresh泛化结论。",
+  "conclusion": "真实 R03-8k live late-state supervision 已补齐，但三轮 S8/J8/J16 的合格 strict placement 均为0；停止以“再补一点局部数据”为主的 patch-style continuation。未形成可冻结的完整任务 endpoint，fresh24 保持未使用。",
+  "comparison": "S8 vs J8：Round1 的 held15/detach 为7/8 vs5/8，B warm-start有前段优势；Round2为7/8 vs7/8，Round3为6/8 vs6/8，优势不稳定，所有主strict均0/8。S8 vs J16：Round1 held7/8 vs5/8，但J16 arrival2/8、stable bucket2/8，均因合理释放不成立而主strict0；Round2 held7/8 vs4/8，Round3 held6/8 vs5/8，主strict仍全0。相同新增8k预算和full10k后累计约16k预算两种比较，都没有形成B curriculum在完整任务上的可靠收益，也没有证明direct integrated已成功。按完整strict停止规则选择Case D，不把零成功的并列包装为Case B/C。",
+  "capability_tradeoffs": "存在局部能力交换：Round1 S保留较多抓取，J16部分运果/落桶进步但释放不合格；Round2提高共同grasp与late transport/release曝光，使J8 held从5升至7，但S/J8 long-held stall都增至6，先前部分到桶/落桶消失。J继续16k时grasp降至4且loss继续下降。Round3唯一共同lr减半后S/J8 held均6、J16 held5；相较Round2 J16抓取仅回升1个case，仍弱于其J8，历史辅助J16仍无held。Round3 dev premature-release 为S0/J8 2/J16 2，long-held stall为5/4/3；stall计数降低同时伴随held不足或错误release，不能解释为完整transport成功。九个endpoint合理释放均0，三轮所有source loss头尾均下降，却未与主strict改善同步。正式闭环physical-anomaly全0。以上是反复消费小dev cohort的描述，不能当统计显著性或泛化证明。",
+  "excluded_explanations": "本轮已排除或显著削弱的具体工程解释：训练数据完全没有来自当前R03真实late-state的监督（已新增72条/36个source）；teacher suffix必须依赖reset后prefix regeneration（实际同env接管）；接管通过teleport、伪造held、直接写physics/controller获得成功（接管digest与真实native命令边界已检查）；S/J新增8k比较使用不同D_A或复用B optimizer momentum（逐更新样本相同、fresh AdamW）；Round3差异来自新数据/新sampling（逐字节复用并核对实际样本）；history输入或多个mining checkpoints混杂（仅current-only R03）；production physics/controller/action adapter更改或已记录physical-anomaly主导失败（生产文件无改动、正式诊断均0）。这些结论只针对本轮已核查的路径，不能排除所有模拟器或建模问题。",
+  "remaining_explanations": "尚存的合理解释：当前两路单帧RGB+proprio可能不足以识别持果偏移、遮挡、速度/动态与release时机，而truth teacher可以利用这些信息；frozen VLM/action-head-only容量或表征不足；normalized flow/Euler5动作拟合与离散release及稳定placement事件目标不一致；本轮自然near-bucket/no-release仅2条、固定R03 mining分布不能覆盖训练后S/J全部新偏差；original task pool为既定128个episodes而非全部2650，任务多样性仍有限；有限训练预算下仍可能未充分拟合关键事件，loss下降不能单独排除underfit。数据类型缺口已补，但不能由本轮证明数据覆盖充分或某一深层假说成立。停止patch-style主线，本轮不实现新观测/history、解冻VLM、RL、目标函数改造等后续方向。",
+  "fresh24_result": "没有满足完整 strict 的可晋级 endpoint，按用户规则不运行 fresh24；其冻结cohort未用于mining、checkpoint选择、调参或本轮恢复数据。",
+  "maximum_rounds": 3,
+  "completed_rounds": 3,
+  "further_training_allowed": false,
+  "final_endpoint": null,
+  "fresh24_used": false,
+  "created_at_utc": "2026-10-05T15:31:00.028196+00:00"
+}

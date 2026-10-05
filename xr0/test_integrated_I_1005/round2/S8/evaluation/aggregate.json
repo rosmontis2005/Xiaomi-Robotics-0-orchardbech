@@ -1,0 +1,112 @@
+{
+  "dev8": {
+    "n": 8,
+    "held15": 7,
+    "same_fruit_detach": 7,
+    "release": 0,
+    "valid_chain_release": 0,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 6,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 6,
+      "transport_incomplete_no_release": 1,
+      "no_stable_grasp": 1
+    },
+    "min_held_bucket_distance_m": {
+      "2013322/rng42": 0.6210942426494536,
+      "2014461/rng42": 0.7591334188045709,
+      "2010914/rng42": 0.6210656224546343,
+      "2012485/rng42": 0.542428940617597,
+      "2015716/rng42": 0.7556293908498994,
+      "2014362/rng42": null,
+      "2015751/rng42": 0.6869445954544419,
+      "2011310/rng42": 0.7622948260130405
+    },
+    "strict_original_observer": 0,
+    "stable_bucket": 0,
+    "premature_release": 0
+  },
+  "dev8_train2": {
+    "n": 2,
+    "held15": 2,
+    "same_fruit_detach": 2,
+    "release": 0,
+    "valid_chain_release": 0,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 2,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 2
+    },
+    "min_held_bucket_distance_m": {
+      "2013322/rng42": 0.6210942426494536,
+      "2014461/rng42": 0.7591334188045709
+    },
+    "strict_original_observer": 0,
+    "stable_bucket": 0,
+    "premature_release": 0
+  },
+  "dev8_val6": {
+    "n": 6,
+    "held15": 5,
+    "same_fruit_detach": 5,
+    "release": 0,
+    "valid_chain_release": 0,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 4,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 4,
+      "transport_incomplete_no_release": 1,
+      "no_stable_grasp": 1
+    },
+    "min_held_bucket_distance_m": {
+      "2010914/rng42": 0.6210656224546343,
+      "2012485/rng42": 0.542428940617597,
+      "2015716/rng42": 0.7556293908498994,
+      "2014362/rng42": null,
+      "2015751/rng42": 0.6869445954544419,
+      "2011310/rng42": 0.7622948260130405
+    },
+    "strict_original_observer": 0,
+    "stable_bucket": 0,
+    "premature_release": 0
+  },
+  "historical_seed42_43": {
+    "n": 2,
+    "held15": 2,
+    "same_fruit_detach": 2,
+    "release": 0,
+    "valid_chain_release": 0,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 2,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 2
+    },
+    "min_held_bucket_distance_m": {
+      "2010600/rng42": 0.7119582482216447,
+      "2010600/rng43": 0.7703320615531124
+    },
+    "strict_original_observer": 0,
+    "stable_bucket": 0,
+    "premature_release": 0
+  }
+}

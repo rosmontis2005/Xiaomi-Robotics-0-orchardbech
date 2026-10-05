@@ -1,0 +1,61 @@
+{
+  "candidate_id": "episode_002028_rng43_transport_stall_s0673",
+  "category": "transport_stall",
+  "source_episode_id": "episode_002028",
+  "inference_seed": 43,
+  "student_control_step": 673,
+  "accepted": false,
+  "teacher_status": "REJECT",
+  "reason": "teacher_budget",
+  "annotation": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/recoveries/episode_002028_rng43_transport_stall_s0673/trajectory.json",
+  "annotation_sha256": "951d89013438d43a9e0f3643b3ba400793c98fff631230a82c6d0806f7d35f7e",
+  "num_frames": 901,
+  "same_live_env": true,
+  "collection_code_sha256": "c20297da700f52a84e79fd8cb54c3b14f64da16f42fd0a6a60224e47f0115444",
+  "student_checkpoint_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+  "student_prefix_sha256": "35f50d0aa3e3e1de12cb3f2abe54804d3f2ef91521b1032b7f95f6178b97abf8",
+  "student_steps_sha256": "e028285302ed88f3bd4107f9569e2a052c02e6616f854ceac2d1bb30187bf1ff",
+  "teacher_result": {
+    "student_budget_control_steps": 900,
+    "teacher_suffix_budget_control_steps": 900,
+    "collection_episode_budget": 1800,
+    "evaluation_budget_unchanged": 900,
+    "status": "REJECT",
+    "reason": "teacher_budget",
+    "strict": {
+      "strict_success": false,
+      "strict_success_events": [],
+      "legacy_success_ever": false,
+      "first_legacy_success_step": null,
+      "fruit_chains": {
+        "28": {
+          "first_grasp_step": 74,
+          "held15_step": 88,
+          "first_detach_after_grasp_step": 672,
+          "release_step": null,
+          "stable_bucket_steps": 0,
+          "max_stable_bucket_steps": 0,
+          "strict_success_step": null
+        }
+      },
+      "release_events": [],
+      "held_required_boundaries": 15,
+      "bucket_required_boundaries": 60,
+      "boundary_only": true
+    },
+    "reasonable_release": false,
+    "frames": 901,
+    "wall_seconds": 21.21585462899384,
+    "same_live_env": true,
+    "initialization_audit": {
+      "physical_digest_before": "401c89cfb75a595f4629228751e0f3ac5a08fd3bbeb1ebc0d638856f80cc3039",
+      "physical_digest_after": "401c89cfb75a595f4629228751e0f3ac5a08fd3bbeb1ebc0d638856f80cc3039",
+      "physics_unchanged": true,
+      "command_joints_initialized_from_measured": true,
+      "motion_limiter_initialized_from_measured": true,
+      "initial_state": "TRANSPORT",
+      "no_home_reset": true,
+      "no_teleport": true
+    }
+  }
+}

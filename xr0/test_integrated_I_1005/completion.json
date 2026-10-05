@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETE",
+  "completed_rounds": 3,
+  "maximum_rounds": 3,
+  "optimizer_updates": 72000,
+  "accepted_live_trajectories": 72,
+  "unique_accepted_source_episodes": 36,
+  "evaluated_endpoints": 9,
+  "closed_loop_case_records": 90,
+  "case_records_are_repeated_development_protocol": true,
+  "dataset_manifest_sha256": "ce6e342fe115c73076a2c286c393e0265fa98c9563194fb27622f0ce3a00a526",
+  "closed_loop_summary_sha256": {
+    "round1": "c9343286db63274d7d4e320fa3c4b0de102441e90ae58a1ebf9c3f6add29cf4a",
+    "round2": "1a746c27d78143540b19d877675bc083def1219e65e0aa925800d020a3eee439",
+    "round3": "ad2c267785dfa36ed8346bf79f5ba67c08ba42c1187b6be01e610e4fbdb2187f"
+  },
+  "route_decision_sha256": "021f01246de2783eac8512850d7c9b3bbc82b211d62c4ee1cbf9133933d5afeb",
+  "actual_D_A_S_J_parity_all_rounds": true,
+  "round3_actual_lr_only_control": {
+    "S": {
+      "updates": 8000,
+      "identical_executed_rows": true,
+      "identical_initialization_and_other_configuration": true,
+      "fresh_optimizer": true,
+      "previous_lr": 1e-05,
+      "current_lr": 5e-06
+    },
+    "J": {
+      "updates": 16000,
+      "identical_executed_rows": true,
+      "identical_initialization_and_other_configuration": true,
+      "fresh_optimizer": true,
+      "previous_lr": 1e-05,
+      "current_lr": 5e-06
+    }
+  },
+  "all_frozen_vlm_hashes_unchanged": true,
+  "all_training_completed": true,
+  "all_required_closed_loop_completed": true,
+  "round4_started": false,
+  "final_endpoint": null,
+  "fresh24_used": false,
+  "case": "Case D",
+  "repository_status": {
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0": "?? tools/\n?? xr0/test_integrated_I_1005/\n",
+    "/home/rosmontis/Projects/orchardbench": ""
+  },
+  "preexisting_untracked_tools_preserved": true,
+  "production_controller_physics_action_adapter_unchanged": true,
+  "old_Gate0_Gate1_rerun": false,
+  "completed_at_utc": "2026-10-05T15:31:00.028943+00:00"
+}

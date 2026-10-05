@@ -1,0 +1,10 @@
+{
+  "actual_D_A_updates": 8000,
+  "identical_S_J_executed_rows": true,
+  "compared_fields": [
+    "step",
+    "source",
+    "group",
+    "window_id"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "pid": 239854,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/freeze_data.py"
+  ],
+  "time": 1791196472.5970378
+}

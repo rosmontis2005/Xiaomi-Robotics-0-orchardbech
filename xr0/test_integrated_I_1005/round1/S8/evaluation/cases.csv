@@ -1,0 +1,11 @@
+seed,inference_seed,cohort,held15,same_fruit_detach,bucket_neighborhood,reasonable_release,stable_bucket,strict,long_held_stall,premature_release,physical_anomaly,min_held_fruit_bucket_distance_m,failure
+2013322,42,dev8,True,True,False,False,False,False,True,False,False,0.7322624437789773,held_transport_stall
+2014461,42,dev8,True,True,False,False,False,False,True,False,False,0.6625225417159639,held_transport_stall
+2010914,42,dev8,True,True,False,False,False,False,True,False,False,0.7450660717216687,held_transport_stall
+2012485,42,dev8,True,True,False,False,True,False,False,True,False,0.21306189144005808,strict_success
+2015716,42,dev8,True,True,False,False,False,False,False,False,False,0.7277008155885585,transport_incomplete_no_release
+2014362,42,dev8,False,False,False,False,False,False,False,False,False,,no_stable_grasp
+2015751,42,dev8,True,True,False,False,False,False,False,True,False,0.6606499051198682,release_far_or_outside_bucket
+2011310,42,dev8,True,True,False,False,False,False,False,True,False,0.7601414236526991,release_far_or_outside_bucket
+2010600,42,historical_seed42_43,True,True,False,False,False,False,True,False,False,0.7139122340346273,held_transport_stall
+2010600,43,historical_seed42_43,True,True,False,False,False,False,True,False,False,0.7853706087011728,held_transport_stall

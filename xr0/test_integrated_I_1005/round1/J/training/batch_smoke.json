@@ -1,0 +1,105 @@
+{
+  "checks": {
+    "original": {
+      "input_ids": [
+        1,
+        109
+      ],
+      "attention_mask": [
+        1,
+        109
+      ],
+      "pixel_values": [
+        192,
+        1536
+      ],
+      "image_grid_thw": [
+        2,
+        3
+      ],
+      "action": [
+        1,
+        30,
+        32
+      ],
+      "action_mask": [
+        1,
+        30,
+        32
+      ],
+      "state": [
+        1,
+        1,
+        32
+      ]
+    },
+    "existing_R": {
+      "input_ids": [
+        1,
+        109
+      ],
+      "attention_mask": [
+        1,
+        109
+      ],
+      "pixel_values": [
+        192,
+        1536
+      ],
+      "image_grid_thw": [
+        2,
+        3
+      ],
+      "action": [
+        1,
+        30,
+        32
+      ],
+      "action_mask": [
+        1,
+        30,
+        32
+      ],
+      "state": [
+        1,
+        1,
+        32
+      ]
+    },
+    "live_late": {
+      "input_ids": [
+        1,
+        109
+      ],
+      "attention_mask": [
+        1,
+        109
+      ],
+      "pixel_values": [
+        192,
+        1536
+      ],
+      "image_grid_thw": [
+        2,
+        3
+      ],
+      "action": [
+        1,
+        30,
+        32
+      ],
+      "action_mask": [
+        1,
+        30,
+        32
+      ],
+      "state": [
+        1,
+        1,
+        32
+      ]
+    }
+  },
+  "finite": true,
+  "current_only": true
+}

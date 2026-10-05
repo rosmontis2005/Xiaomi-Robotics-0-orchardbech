@@ -1,0 +1,16 @@
+{
+  "pid": 358161,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/evaluate_next.py",
+    "--round",
+    "2",
+    "--endpoint",
+    "J16",
+    "--checkpoint",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/J/training/checkpoints/step_16000_trainable.pt"
+  ],
+  "time": 1791207692.3050692
+}

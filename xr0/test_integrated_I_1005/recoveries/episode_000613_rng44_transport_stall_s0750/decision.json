@@ -1,0 +1,7 @@
+{
+  "candidate_id": "episode_000613_rng44_transport_stall_s0750",
+  "category": "transport_stall",
+  "source_episode_id": "episode_000613",
+  "accepted": false,
+  "reason": "collection_interrupted_for_teacher_motion_repair"
+}

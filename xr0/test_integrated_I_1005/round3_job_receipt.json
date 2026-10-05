@@ -1,0 +1,12 @@
+{
+  "pid": 358770,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/run_next.py",
+    "--round",
+    "3"
+  ],
+  "time": 1791208392.6550686
+}

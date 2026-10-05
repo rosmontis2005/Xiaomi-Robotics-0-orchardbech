@@ -1,0 +1,142 @@
+{
+  "candidate_id": "episode_000974_rng44_premature_release_precursor_s0629",
+  "category": "premature_release_precursor",
+  "step": 629,
+  "chunk": 14,
+  "k": 1,
+  "scene": {
+    "episode_id": "episode_000974",
+    "seed": 2012376,
+    "split": "train",
+    "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_000974.json",
+    "annotation_sha256": "3a9e5a42f68cceff1b2786be9140de815aecbc9126e63d7463dc3f56ef8ba23e"
+  },
+  "scene_seed": 2012376,
+  "source_episode_id": "episode_000974",
+  "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/student_sources/episode_000974_rng44",
+  "inference_seed": 44,
+  "student_checkpoint_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+  "truth": {
+    "debug_usage": "NOT POLICY INPUT",
+    "sim_time": 20.966666666666757,
+    "joint_pos": [
+      -0.9020867943763733,
+      -1.6687991619110107,
+      -0.11067274957895279,
+      -2.7622785568237305,
+      1.2970582246780396,
+      2.488274574279785,
+      -0.4670003056526184,
+      0.03560012951493263,
+      0.03900958225131035
+    ],
+    "joint_vel": [
+      0.5298891067504883,
+      0.5068207383155823,
+      0.40708959102630615,
+      0.16130664944648743,
+      1.424079418182373,
+      0.8013895153999329,
+      -0.9517221450805664,
+      -0.024595430120825768,
+      0.0781833603978157
+    ],
+    "tcp_position": [
+      0.975053071975708,
+      -0.39377152919769287,
+      1.0348197221755981
+    ],
+    "tcp_quaternion": [
+      0.20278069376945496,
+      0.5636722445487976,
+      0.33957210183143616,
+      -0.7251511216163635
+    ],
+    "width": 0.07460971176624298,
+    "fruit_id": 14,
+    "fruit_pose": [
+      0.9787896871566772,
+      -0.39772945642471313,
+      1.0310008525848389,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "fruit_velocity": [
+      -0.11000247299671173,
+      0.12313765287399292,
+      0.13558141887187958,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bucket_position": [
+      1.375632007450029,
+      -0.7735346340186264,
+      0.4596552405063995
+    ],
+    "base_pose": [
+      1.1490044593811035,
+      -0.6460985541343689,
+      -0.0003447594936005771,
+      0.0,
+      0.0,
+      0.9673790335655212,
+      0.25333335995674133
+    ],
+    "held": [
+      14
+    ],
+    "detached": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "branch_breaks": 0,
+    "fruit_bucket_distance": 0.7906637509861512,
+    "tcp_fruit_distance": 0.006649153772741556,
+    "palm_local_fruit": [
+      -0.00210297426538878,
+      -0.00036405645272678496,
+      0.09710264477022214
+    ]
+  }
+}

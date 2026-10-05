@@ -1,0 +1,47 @@
+{
+  "status": "REJECT",
+  "reason": "teacher_budget",
+  "strict": {
+    "strict_success": false,
+    "strict_success_events": [],
+    "legacy_success_ever": true,
+    "first_legacy_success_step": 895,
+    "fruit_chains": {
+      "14": {
+        "first_grasp_step": 69,
+        "held15_step": 83,
+        "first_detach_after_grasp_step": 174,
+        "release_step": 885,
+        "stable_bucket_steps": 6,
+        "max_stable_bucket_steps": 6,
+        "strict_success_step": null
+      }
+    },
+    "release_events": [
+      {
+        "apple_id": 14,
+        "step": 885,
+        "had_held15": true,
+        "detached_at_release": true,
+        "valid_chain": true
+      }
+    ],
+    "held_required_boundaries": 15,
+    "bucket_required_boundaries": 60,
+    "boundary_only": true
+  },
+  "reasonable_release": false,
+  "frames": 272,
+  "wall_seconds": 12.449870356998872,
+  "same_live_env": true,
+  "initialization_audit": {
+    "physical_digest_before": "9ac595c6c266bc5dafe7a93566f84a135934ac35608a440c9b06a1c9cecf5465",
+    "physical_digest_after": "9ac595c6c266bc5dafe7a93566f84a135934ac35608a440c9b06a1c9cecf5465",
+    "physics_unchanged": true,
+    "command_joints_initialized_from_measured": true,
+    "motion_limiter_initialized_from_measured": true,
+    "initial_state": "TRANSPORT",
+    "no_home_reset": true,
+    "no_teleport": true
+  }
+}

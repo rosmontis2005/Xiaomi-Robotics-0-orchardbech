@@ -1,0 +1,9 @@
+{
+  "candidate_id": "episode_000023_rng42_transport_stall_s0350",
+  "category": "transport_stall",
+  "source_episode_id": "episode_000023",
+  "accepted": false,
+  "reason": "engineering_exception",
+  "error": "active_phases must be a nonempty tuple of manipulation phases",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/collect_live.py\", line 117, in mine\n    traj,result=teacher_live(env,obs,strict,candidate,recovery)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/collect_live.py\", line 40, in teacher_live\n    picker=LiveRecoveryTeacher(env,'R3',source['orchardbench']['arm_motion_profile'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_teacher.py\", line 14, in __init__\n    AutoPicker.__init__(self,env.sim,env.tm,None,env.driver,env.driver.rp,ik=ik,arm_motion_profile=ArmMotionProfile(**profile))\n                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 8, in __init__\n  File \"/home/rosmontis/Projects/orchardbench/treesim/arm_motion.py\", line 21, in __post_init__\n    raise ValueError('active_phases must be a nonempty tuple of manipulation phases')\nValueError: active_phases must be a nonempty tuple of manipulation phases\n"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN",
+  "round": 2,
+  "time": 1791202512.2114744,
+  "training_started": false,
+  "dataset_manifest_sha256": "ce6e342fe115c73076a2c286c393e0265fa98c9563194fb27622f0ce3a00a526",
+  "original_freeze_sha256": "a29de294a72d059dbe7d26a2844d68c4a245a1acce77debc43cc64453ebb0625",
+  "files": {
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/config.json": "e84e9075b969c0fc745100e29ff56ecedf0daeadc91bbc20d19d28ebe1f52cc8",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/schedule_statistics.json": "1df816d86552daedb3316e1213b297e5867a167c8b2fef30ff1adf84fa606fd9",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/schedule_D_A.jsonl": "39785a561df69634ffb1c88deda4939aadf5370e93a6df94f142c9760c35528f",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/schedule_D_B.jsonl": "5aaa3778e0ccea16c29c5cf88386d0e4c64c470ef1e1021be30f7281fed3a1c7",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/freeze_round2.py": "ee76b2ee0b532a62dcb3d0331db7d4b00298b75e2a86d8147f194b3f93012b0c",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/train_integrated_next.py": "b6a5f537cdfbbaacb8ab37910ff49a3d1db7dbd5788ce9416facaa4cbb61bbc4",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/evaluate_next.py": "f167d4b55c018f69a5160b59a12d20730d0bc68860b3f7422631c7e28c2e43ad",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/run_next.py": "1946eacb2b0408e85514afd16a32ac4de26c5fec864e5dfb44a31a4c04de1461"
+  }
+}

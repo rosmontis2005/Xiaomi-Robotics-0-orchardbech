@@ -1,0 +1,7 @@
+{
+  "candidate_id": "episode_001212_rng42_transport_stall_s0350",
+  "category": "transport_stall",
+  "source_episode_id": "episode_001212",
+  "accepted": false,
+  "reason": "interrupted_for_collection_suffix_budget_repair"
+}

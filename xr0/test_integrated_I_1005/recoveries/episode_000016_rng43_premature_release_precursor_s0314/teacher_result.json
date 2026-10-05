@@ -1,0 +1,43 @@
+{
+  "student_budget_control_steps": 900,
+  "teacher_suffix_budget_control_steps": 900,
+  "collection_episode_budget": 1800,
+  "evaluation_budget_unchanged": 900,
+  "status": "REJECT",
+  "reason": "teacher_budget",
+  "strict": {
+    "strict_success": false,
+    "strict_success_events": [],
+    "legacy_success_ever": false,
+    "first_legacy_success_step": null,
+    "fruit_chains": {
+      "8": {
+        "first_grasp_step": 84,
+        "held15_step": 98,
+        "first_detach_after_grasp_step": 181,
+        "release_step": null,
+        "stable_bucket_steps": 0,
+        "max_stable_bucket_steps": 0,
+        "strict_success_step": null
+      }
+    },
+    "release_events": [],
+    "held_required_boundaries": 15,
+    "bucket_required_boundaries": 60,
+    "boundary_only": true
+  },
+  "reasonable_release": false,
+  "frames": 901,
+  "wall_seconds": 28.056518623998272,
+  "same_live_env": true,
+  "initialization_audit": {
+    "physical_digest_before": "db45e879b830636eb9c50c02e1067b30a6936dc7b944db1173948bc61e503cb5",
+    "physical_digest_after": "db45e879b830636eb9c50c02e1067b30a6936dc7b944db1173948bc61e503cb5",
+    "physics_unchanged": true,
+    "command_joints_initialized_from_measured": true,
+    "motion_limiter_initialized_from_measured": true,
+    "initial_state": "TRANSPORT",
+    "no_home_reset": true,
+    "no_teleport": true
+  }
+}

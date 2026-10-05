@@ -1,0 +1,907 @@
+{
+  "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/J/training/checkpoints/step_16000_trainable.pt",
+  "checkpoint_sha256": "65a85d6113f4e230afc5af151250cb36e16efa5ac8e8c29c3dbb73539bfa2004",
+  "jobs": [
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2013322",
+      "scene": {
+        "split": "train",
+        "episode_id": "episode_001319",
+        "seed": 2013322,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_001319.json",
+        "annotation_sha256": "5ff26aec465777d9df326f526b468a3f2e23fbb203114d6cf6baf1529f0a1873",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1293
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 165,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 442,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 197,
+          "total_targets": 218,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 170,
+          "control_steps": 489,
+          "sim_duration": 16.300000000000356
+        },
+        "geometry": {
+          "target_world": [
+            -0.8568712543709252,
+            0.4752409709127354,
+            1.0518032890811748
+          ],
+          "reset_tcp_world_rounded": [
+            -1.0882,
+            0.6035,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.2313287456290749,
+            -0.1282590290872646,
+            -0.22169671091882526
+          ],
+          "tcp_to_target_distance_m": 0.3451272210779008,
+          "approach_world_bearing_rad": -0.5062493489604987,
+          "target_height_m": 1.0518032890811748,
+          "initial_best_view_pixels": 165,
+          "base_xy_yaw": [
+            -1.521493583212313,
+            0.8438561616285812,
+            -0.5063860242627577
+          ],
+          "selection_features": [
+            0.8745693472428562,
+            -0.4849004607785029,
+            0.3451272210779008,
+            1.0518032890811748,
+            5.111987788356544
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2013322"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2014461",
+      "scene": {
+        "split": "train",
+        "episode_id": "episode_001796",
+        "seed": 2014461,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_001796.json",
+        "annotation_sha256": "63666dfb8b8b91248a722adebea1df931fa89b514890be3d77cbdd8a6a89812a",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            802
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 216,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 2,
+            "static_visible": true,
+            "wrist_visible_pixels": 617,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 173,
+          "total_targets": 200,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 202,
+          "control_steps": 514,
+          "sim_duration": 17.133333333333642
+        },
+        "geometry": {
+          "target_world": [
+            1.2117502712684938,
+            0.3430437930918214,
+            1.0159086122212069
+          ],
+          "reset_tcp_world_rounded": [
+            1.4663,
+            0.4151,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            -0.25454972873150616,
+            -0.0720562069081786,
+            -0.2575913877787932
+          ],
+          "tcp_to_target_distance_m": 0.3692438007727174,
+          "approach_world_bearing_rad": -2.865736450566024,
+          "target_height_m": 1.0159086122212069,
+          "initial_best_view_pixels": 216,
+          "base_xy_yaw": [
+            1.943011745953348,
+            0.5500622819387104,
+            -2.8657137107437096
+          ],
+          "selection_features": [
+            -0.9621923455790764,
+            -0.2723708686864937,
+            0.3692438007727174,
+            1.0159086122212069,
+            5.37989735354046
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2014461"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2010914",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_000380",
+        "seed": 2010914,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000380.json",
+        "annotation_sha256": "974bf29eb34ee436825b48496ccb148f6344aad18389a6ca7b4b38d6d4436a90",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1141
+          ],
+          "initial": {
+            "static_visible_pixels": 0,
+            "static_visible": false,
+            "wrist_visible_pixels": 175,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 0,
+            "static_visible": false,
+            "wrist_visible_pixels": 480,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 200,
+          "total_targets": 224,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 168,
+          "control_steps": 484,
+          "sim_duration": 16.1333333333337
+        },
+        "geometry": {
+          "target_world": [
+            -0.7268773082841138,
+            0.6794296351578989,
+            1.046057100724367
+          ],
+          "reset_tcp_world_rounded": [
+            -0.9201,
+            0.8601,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.19322269171588624,
+            -0.18067036484210108,
+            -0.227442899275633
+          ],
+          "tcp_to_target_distance_m": 0.3488653920311043,
+          "approach_world_bearing_rad": -0.7518387965512051,
+          "target_height_m": 1.046057100724367,
+          "initial_best_view_pixels": 175,
+          "base_xy_yaw": [
+            -1.282094026086423,
+            1.1984040036114831,
+            -0.7516717554663178
+          ],
+          "selection_features": [
+            0.7304342375961599,
+            -0.6829830338649099,
+            0.3488653920311043,
+            1.046057100724367,
+            5.170483995038151
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2010914"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2012485",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_001020",
+        "seed": 2012485,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_001020.json",
+        "annotation_sha256": "bc04ea67a6b8549c98de5c42eae319e0cfb887f63c9c117ee29bb9dc899e6be1",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1098
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 221,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 544,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 199,
+          "total_targets": 223,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 135,
+          "control_steps": 544,
+          "sim_duration": 18.133333333333585
+        },
+        "geometry": {
+          "target_world": [
+            0.4972751694998838,
+            -0.573221680969551,
+            1.0407516273646804
+          ],
+          "reset_tcp_world_rounded": [
+            0.6706,
+            -0.773,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            -0.17332483050011616,
+            0.19977831903044907,
+            -0.23274837263531967
+          ],
+          "tcp_to_target_distance_m": 0.3523133244527029,
+          "approach_world_bearing_rad": 2.2854116660900776,
+          "target_height_m": 1.0407516273646804,
+          "initial_best_view_pixels": 221,
+          "base_xy_yaw": [
+            0.9952985866650375,
+            -1.1473058859716188,
+            2.2853680541712427
+          ],
+          "selection_features": [
+            -0.655326913502094,
+            0.7553453755996782,
+            0.3523133244527029,
+            1.0407516273646804,
+            5.402677381872279
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2012485"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2015716",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_002270",
+        "seed": 2015716,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_002270.json",
+        "annotation_sha256": "e7e14efb7fb124a9c0926c0fbd4f98aa83c422a947c98b540c0138b051ad27b5",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            658
+          ],
+          "initial": {
+            "static_visible_pixels": 0,
+            "static_visible": false,
+            "wrist_visible_pixels": 176,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 426,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 198,
+          "total_targets": 219,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 155,
+          "control_steps": 499,
+          "sim_duration": 16.63333333333367
+        },
+        "geometry": {
+          "target_world": [
+            -0.42811902435788846,
+            0.9917982684486893,
+            1.0511400288033423
+          ],
+          "reset_tcp_world_rounded": [
+            -0.5329,
+            1.2347,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.10478097564211158,
+            -0.24290173155131056,
+            -0.22235997119665774
+          ],
+          "tcp_to_target_distance_m": 0.3455781544567252,
+          "approach_world_bearing_rad": -1.1635410460844287,
+          "target_height_m": 1.0511400288033423,
+          "initial_best_view_pixels": 176,
+          "base_xy_yaw": [
+            -0.7293170007857773,
+            1.68956597902748,
+            -1.1632986744492475
+          ],
+          "selection_features": [
+            0.396090590474252,
+            -0.9182114375990741,
+            0.3455781544567252,
+            1.0511400288033423,
+            5.176149732573829
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2015716"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2014362",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_001750",
+        "seed": 2014362,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_001750.json",
+        "annotation_sha256": "c2cac012ca611cefd4add2bbc618fc8a1edce78c6b063c29b077ac14b347fa22",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1002
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 164,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 329,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 168,
+          "total_targets": 194,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 198,
+          "control_steps": 492,
+          "sim_duration": 16.40000000000035
+        },
+        "geometry": {
+          "target_world": [
+            -0.13407972778376662,
+            -1.3572368378549724,
+            1.0963373443420092
+          ],
+          "reset_tcp_world_rounded": [
+            -0.1589,
+            -1.6084,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.024820272216233397,
+            0.25116316214502765,
+            -0.17716265565799083
+          ],
+          "tcp_to_target_distance_m": 0.3083595085146057,
+          "approach_world_bearing_rad": 1.4722948317198847,
+          "target_height_m": 1.0963373443420092,
+          "initial_best_view_pixels": 164,
+          "base_xy_yaw": [
+            -0.20759906747757512,
+            -2.1014444654848012,
+            1.4723270770962475
+          ],
+          "selection_features": [
+            0.09834228647399658,
+            0.9951526489393807,
+            0.3083595085146057,
+            1.0963373443420092,
+            5.10594547390058
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2014362"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2015751",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_002290",
+        "seed": 2015751,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_002290.json",
+        "annotation_sha256": "5c44167cf5d57f8d5eed4e8edd31ffc41995af20225365a84e3816889eaeebbe",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1127
+          ],
+          "initial": {
+            "static_visible_pixels": 0,
+            "static_visible": false,
+            "wrist_visible_pixels": 140,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 282,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 203,
+          "total_targets": 223,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 147,
+          "control_steps": 486,
+          "sim_duration": 16.20000000000036
+        },
+        "geometry": {
+          "target_world": [
+            0.4771488460621741,
+            0.4144678448320083,
+            1.091413891631418
+          ],
+          "reset_tcp_world_rounded": [
+            0.6699,
+            0.5819,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            -0.19275115393782594,
+            -0.16743215516799165,
+            -0.18208610836858208
+          ],
+          "tcp_to_target_distance_m": 0.31359509688350823,
+          "approach_world_bearing_rad": -2.4263738071339955,
+          "target_height_m": 1.091413891631418,
+          "initial_best_view_pixels": 140,
+          "base_xy_yaw": [
+            1.0439593783837713,
+            0.9068189040417466,
+            -2.426379410974326
+          ],
+          "selection_features": [
+            -0.7549497435825633,
+            -0.6557826504754619,
+            0.31359509688350823,
+            1.091413891631418,
+            4.948759890378168
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2015751"
+    },
+    {
+      "stage": "integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2011310",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_000540",
+        "seed": 2011310,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000540.json",
+        "annotation_sha256": "0efe173ea91e5612072cdf2b76151f9c2ab6b606b6575e82cc114c9c1ce8c1c0",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            537
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 130,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 341,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 197,
+          "total_targets": 221,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 167,
+          "control_steps": 495,
+          "sim_duration": 16.500000000000345
+        },
+        "geometry": {
+          "target_world": [
+            -0.9967814409390932,
+            -1.1115366413417083,
+            1.0430983312872133
+          ],
+          "reset_tcp_world_rounded": [
+            -1.1734,
+            -1.3085,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.17661855906090684,
+            0.19696335865829173,
+            -0.23040166871278678
+          ],
+          "tcp_to_target_distance_m": 0.350818484410874,
+          "approach_world_bearing_rad": 0.8398031594358537,
+          "target_height_m": 1.0430983312872133,
+          "initial_best_view_pixels": 130,
+          "base_xy_yaw": [
+            -1.5041809363229732,
+            -1.6773508787999454,
+            0.8397742454200728
+          ],
+          "selection_features": [
+            0.6676093888813577,
+            0.7445117217864741,
+            0.350818484410874,
+            1.0430983312872133,
+            4.875197323201151
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "development",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2011310"
+    },
+    {
+      "stage": "regression_integrated30",
+      "provider": "J16_targets30_rng42",
+      "job_id": "J16_targets30_rng42_reach-conditioned_2010600",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_000250",
+        "seed": 2010600,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000250.json",
+        "annotation_sha256": "4be32b27a45aa9fe1f13b89d1722e67459c0e836ec2bcbad176a34c98ac8ab90",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1108
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 199,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 597,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 168,
+          "total_targets": 196,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 219,
+          "control_steps": 496,
+          "sim_duration": 16.533333333333676
+        },
+        "geometry": {
+          "target_world": [
+            -0.05133810414994085,
+            0.8685351293792294,
+            1.0078883948568522
+          ],
+          "reset_tcp_world_rounded": [
+            -0.0669,
+            1.1326,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.015561895850059154,
+            -0.26406487062077066,
+            -0.26561160514314786
+          ],
+          "tcp_to_target_distance_m": 0.3748625792008745,
+          "approach_world_bearing_rad": -1.511932314266795,
+          "target_height_m": 1.0078883948568522,
+          "initial_best_view_pixels": 199,
+          "base_xy_yaw": [
+            -0.09618255094310035,
+            1.6272109325152444,
+            -1.511756181907887
+          ],
+          "selection_features": [
+            0.058830024724724386,
+            -0.9982680142080524,
+            0.3748625792008745,
+            1.0078883948568522,
+            5.298317366548036
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 42,
+      "cohort": "historical_success_regression",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng42_reach-conditioned_2010600"
+    },
+    {
+      "stage": "regression_integrated30",
+      "provider": "J16_targets30_rng43",
+      "job_id": "J16_targets30_rng43_reach-conditioned_2010600",
+      "scene": {
+        "split": "val",
+        "episode_id": "episode_000250",
+        "seed": 2010600,
+        "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/val/episode_000250.json",
+        "annotation_sha256": "4be32b27a45aa9fe1f13b89d1722e67459c0e836ec2bcbad176a34c98ac8ab90",
+        "visibility": {
+          "method": "Newton SensorTiledCamera nearest-hit shape_index_image",
+          "debug_usage": "DEBUG / DATASET GATE ONLY; NOT POLICY INPUT",
+          "min_visible_pixels": 1,
+          "target_shape_indices": [
+            1108
+          ],
+          "initial": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 199,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          },
+          "grasp_entry": {
+            "static_visible_pixels": 1,
+            "static_visible": true,
+            "wrist_visible_pixels": 597,
+            "wrist_visible": true,
+            "any_policy_view_visible": true
+          }
+        },
+        "replay": {
+          "final_phase": "DROP",
+          "final_target_index": 168,
+          "total_targets": 196,
+          "termination_reason": "strict_bucket_success",
+          "grasped": true,
+          "detached": true,
+          "dwell_timeout_count": 0,
+          "forced_advancement_count": 0,
+          "IK_failed_steps": 0,
+          "clipped_steps": 219,
+          "control_steps": 496,
+          "sim_duration": 16.533333333333676
+        },
+        "geometry": {
+          "target_world": [
+            -0.05133810414994085,
+            0.8685351293792294,
+            1.0078883948568522
+          ],
+          "reset_tcp_world_rounded": [
+            -0.0669,
+            1.1326,
+            1.2735
+          ],
+          "target_delta_world_rounded": [
+            0.015561895850059154,
+            -0.26406487062077066,
+            -0.26561160514314786
+          ],
+          "tcp_to_target_distance_m": 0.3748625792008745,
+          "approach_world_bearing_rad": -1.511932314266795,
+          "target_height_m": 1.0078883948568522,
+          "initial_best_view_pixels": 199,
+          "base_xy_yaw": [
+            -0.09618255094310035,
+            1.6272109325152444,
+            -1.511756181907887
+          ],
+          "selection_features": [
+            0.058830024724724386,
+            -0.9982680142080524,
+            0.3748625792008745,
+            1.0078883948568522,
+            5.298317366548036
+          ]
+        },
+        "oracle_strict_success": true
+      },
+      "processed_targets": 30,
+      "is_gt": false,
+      "inference_seed": 43,
+      "cohort": "historical_success_regression",
+      "video": true,
+      "baseline_job_id": "B8000_targets30_rng43_reach-conditioned_2010600"
+    }
+  ],
+  "reach": {
+    "position_tolerance_m": 0.01,
+    "rotation_tolerance_rad": 0.08,
+    "max_dwell": 30,
+    "budget": 900,
+    "fixed_chunk_anchor": true,
+    "grasp_mode": "benchmark_assist"
+  },
+  "strict": {
+    "held_boundaries": 15,
+    "bucket_boundaries": 60,
+    "identity": "same apple ID, detached at observed release, then consecutively not held and detached inside bucket",
+    "termination": "Strict success or900; original success logged unchanged but no early stop",
+    "observation": "Control boundary samples; no assertion about unobserved substeps",
+    "policy": "Model continues normal reach execution throughout; no observer/GT state enters model or scheduling"
+  },
+  "selection_sha256": "996d0537d8a15c14034a6a9b311e26a0560955640e016f1fd72f96372c96e206",
+  "stats_sha256": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371",
+  "no_fresh24": true,
+  "endpoint": "J16",
+  "code_sha256": "f167d4b55c018f69a5160b59a12d20730d0bc68860b3f7422631c7e28c2e43ad"
+}

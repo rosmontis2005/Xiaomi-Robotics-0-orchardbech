@@ -1,0 +1,134 @@
+{
+  "collection": {
+    "source_rollouts": 144,
+    "candidate": 124,
+    "accepted": 72,
+    "rejected": 52,
+    "unique_source_episodes": 36,
+    "accepted_categories": {
+      "transport_stall": 49,
+      "premature_release_precursor": 21,
+      "near_bucket_no_release": 2
+    },
+    "candidate_categories": {
+      "transport_stall": 75,
+      "premature_release_precursor": 44,
+      "near_bucket_no_release": 5
+    },
+    "rejected_reasons": {
+      "teacher_budget": 48,
+      "engineering_exception": 1,
+      "strict_but_unreasonable_release": 1,
+      "collection_interrupted_for_teacher_motion_repair": 1,
+      "interrupted_for_collection_suffix_budget_repair": 1
+    },
+    "teacher_strict_success": 73,
+    "mining_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/r03_extension/training/checkpoints/step_8000_trainable.pt",
+    "mining_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+    "time": 1791196473.7975543,
+    "ready_to_freeze": true
+  },
+  "trajectories_by_source": {
+    "original": 128,
+    "existing_R": 24,
+    "live_late": 72
+  },
+  "available_windows": {
+    "original_early": 922,
+    "original_grasp_pull": 7147,
+    "original_transport": 14632,
+    "original_drop_done": 512,
+    "existing_R1": 360,
+    "existing_R2": 180,
+    "existing_R3": 180,
+    "live_onset": 2160,
+    "live_transport": 36510,
+    "live_release": 2520,
+    "live_settle": 2509
+  },
+  "unique_sources": {
+    "original_early": 128,
+    "original_grasp_pull": 128,
+    "original_transport": 128,
+    "original_drop_done": 128,
+    "existing_R1": 12,
+    "existing_R2": 6,
+    "existing_R3": 4,
+    "live_onset": 36,
+    "live_transport": 36,
+    "live_release": 36,
+    "live_settle": 36
+  },
+  "quotas": {
+    "original_early": 1200,
+    "original_grasp_pull": 1680,
+    "original_transport": 1200,
+    "original_drop_done": 720,
+    "existing_R1": 600,
+    "existing_R2": 300,
+    "existing_R3": 300,
+    "live_onset": 400,
+    "live_transport": 600,
+    "live_release": 700,
+    "live_settle": 300
+  },
+  "schedules": {
+    "D_A": {
+      "seed": 100501,
+      "updates": 8000,
+      "source_counts": {
+        "live_late": 2000,
+        "original": 4800,
+        "existing_R": 1200
+      },
+      "group_counts": {
+        "live_transport": 600,
+        "original_transport": 1200,
+        "live_release": 700,
+        "live_onset": 400,
+        "original_grasp_pull": 1680,
+        "existing_R1": 600,
+        "existing_R3": 300,
+        "original_drop_done": 720,
+        "live_settle": 300,
+        "original_early": 1200,
+        "existing_R2": 300
+      },
+      "unique_windows": 6182
+    },
+    "D_B": {
+      "seed": 100502,
+      "updates": 8000,
+      "source_counts": {
+        "original": 4800,
+        "existing_R": 1200,
+        "live_late": 2000
+      },
+      "group_counts": {
+        "original_grasp_pull": 1680,
+        "original_drop_done": 720,
+        "existing_R1": 600,
+        "original_transport": 1200,
+        "live_transport": 600,
+        "original_early": 1200,
+        "live_onset": 400,
+        "existing_R3": 300,
+        "existing_R2": 300,
+        "live_release": 700,
+        "live_settle": 300
+      },
+      "unique_windows": 6216
+    }
+  },
+  "original_source": "full legal task windows of frozen 128 training episodes; no old B quotas",
+  "existing_R": "accepted real student-state R1/R2/R3 onset windows; historical successful suffixes remain within trajectories",
+  "live_internal_quota_reason": "onset20%, transport30%, release35%, settle15% prevents terminal stationary frames dominating late supervision",
+  "policy_fields": [
+    "messages",
+    "action",
+    "action_mask",
+    "state"
+  ],
+  "no_privileged_input": true,
+  "every_takeover_frame0_in_both_schedules": true
+}

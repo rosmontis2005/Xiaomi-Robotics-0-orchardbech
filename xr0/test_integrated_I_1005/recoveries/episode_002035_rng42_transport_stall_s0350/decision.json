@@ -1,0 +1,77 @@
+{
+  "candidate_id": "episode_002035_rng42_transport_stall_s0350",
+  "category": "transport_stall",
+  "source_episode_id": "episode_002035",
+  "inference_seed": 42,
+  "student_control_step": 350,
+  "accepted": true,
+  "teacher_status": "PASS",
+  "reason": "strict_success",
+  "annotation": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/recoveries/episode_002035_rng42_transport_stall_s0350/trajectory.json",
+  "annotation_sha256": "94787771feb4656a153537b83fa325c3b033de2db71a1bac4d9cfd775c61f803",
+  "num_frames": 868,
+  "same_live_env": true,
+  "collection_code_sha256": "f9cfebdbc125cd2e96f1bac91159055ed48060731dd28ee0e548da29c5d50802",
+  "student_checkpoint_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+  "student_prefix_sha256": "b6fb3ebecb3bcf88831c8907540e045011128cebefa4ad56837dc5eaffe737f2",
+  "student_steps_sha256": "0d16f5611c23f030b0627604c4de0e0691be8766d5510360075856250a48ac33",
+  "teacher_result": {
+    "student_budget_control_steps": 900,
+    "teacher_suffix_budget_control_steps": 900,
+    "collection_episode_budget": 1800,
+    "evaluation_budget_unchanged": 900,
+    "status": "PASS",
+    "reason": "strict_success",
+    "strict": {
+      "strict_success": true,
+      "strict_success_events": [
+        {
+          "apple_id": 27,
+          "step": 1217,
+          "release_step": 1157,
+          "held15_step": 108,
+          "first_detach_after_grasp_step": 172
+        }
+      ],
+      "legacy_success_ever": true,
+      "first_legacy_success_step": 1158,
+      "fruit_chains": {
+        "27": {
+          "first_grasp_step": 94,
+          "held15_step": 108,
+          "first_detach_after_grasp_step": 172,
+          "release_step": 1157,
+          "stable_bucket_steps": 60,
+          "max_stable_bucket_steps": 60,
+          "strict_success_step": 1217
+        }
+      },
+      "release_events": [
+        {
+          "apple_id": 27,
+          "step": 1157,
+          "had_held15": true,
+          "detached_at_release": true,
+          "valid_chain": true
+        }
+      ],
+      "held_required_boundaries": 15,
+      "bucket_required_boundaries": 60,
+      "boundary_only": true
+    },
+    "reasonable_release": true,
+    "frames": 868,
+    "wall_seconds": 28.68925931499689,
+    "same_live_env": true,
+    "initialization_audit": {
+      "physical_digest_before": "810c33b25137fff130ef80827659ac47dc4aeeef26823d8c7178e322b257dbc8",
+      "physical_digest_after": "810c33b25137fff130ef80827659ac47dc4aeeef26823d8c7178e322b257dbc8",
+      "physics_unchanged": true,
+      "command_joints_initialized_from_measured": true,
+      "motion_limiter_initialized_from_measured": true,
+      "initial_state": "TRANSPORT",
+      "no_home_reset": true,
+      "no_teleport": true
+    }
+  }
+}

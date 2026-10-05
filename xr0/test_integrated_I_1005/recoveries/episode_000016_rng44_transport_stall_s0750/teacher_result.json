@@ -1,0 +1,59 @@
+{
+  "student_budget_control_steps": 900,
+  "teacher_suffix_budget_control_steps": 900,
+  "collection_episode_budget": 1800,
+  "evaluation_budget_unchanged": 900,
+  "status": "PASS",
+  "reason": "strict_success",
+  "strict": {
+    "strict_success": true,
+    "strict_success_events": [
+      {
+        "apple_id": 8,
+        "step": 1370,
+        "release_step": 1307,
+        "held15_step": 98,
+        "first_detach_after_grasp_step": 191
+      }
+    ],
+    "legacy_success_ever": true,
+    "first_legacy_success_step": 1311,
+    "fruit_chains": {
+      "8": {
+        "first_grasp_step": 84,
+        "held15_step": 98,
+        "first_detach_after_grasp_step": 191,
+        "release_step": 1307,
+        "stable_bucket_steps": 60,
+        "max_stable_bucket_steps": 60,
+        "strict_success_step": 1370
+      }
+    },
+    "release_events": [
+      {
+        "apple_id": 8,
+        "step": 1307,
+        "had_held15": true,
+        "detached_at_release": true,
+        "valid_chain": true
+      }
+    ],
+    "held_required_boundaries": 15,
+    "bucket_required_boundaries": 60,
+    "boundary_only": true
+  },
+  "reasonable_release": true,
+  "frames": 621,
+  "wall_seconds": 17.854659824995906,
+  "same_live_env": true,
+  "initialization_audit": {
+    "physical_digest_before": "aced7f55e1b57baebed1e97b3f1108a9e399a89189932843608e449af3cf711e",
+    "physical_digest_after": "aced7f55e1b57baebed1e97b3f1108a9e399a89189932843608e449af3cf711e",
+    "physics_unchanged": true,
+    "command_joints_initialized_from_measured": true,
+    "motion_limiter_initialized_from_measured": true,
+    "initial_state": "TRANSPORT",
+    "no_home_reset": true,
+    "no_teleport": true
+  }
+}

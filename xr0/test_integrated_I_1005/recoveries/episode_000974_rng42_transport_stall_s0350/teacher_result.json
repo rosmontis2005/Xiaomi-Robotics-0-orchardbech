@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "reason": "strict_success",
+  "strict": {
+    "strict_success": true,
+    "strict_success_events": [
+      {
+        "apple_id": 14,
+        "step": 621,
+        "release_step": 556,
+        "held15_step": 76,
+        "first_detach_after_grasp_step": 155
+      }
+    ],
+    "legacy_success_ever": true,
+    "first_legacy_success_step": 562,
+    "fruit_chains": {
+      "14": {
+        "first_grasp_step": 62,
+        "held15_step": 76,
+        "first_detach_after_grasp_step": 155,
+        "release_step": 556,
+        "stable_bucket_steps": 60,
+        "max_stable_bucket_steps": 60,
+        "strict_success_step": 621
+      }
+    },
+    "release_events": [
+      {
+        "apple_id": 14,
+        "step": 556,
+        "had_held15": true,
+        "detached_at_release": true,
+        "valid_chain": true
+      }
+    ],
+    "held_required_boundaries": 15,
+    "bucket_required_boundaries": 60,
+    "boundary_only": true
+  },
+  "reasonable_release": true,
+  "frames": 272,
+  "wall_seconds": 11.061742655998387,
+  "same_live_env": true,
+  "initialization_audit": {
+    "physical_digest_before": "00c269751e8d7a60228bbc6e078f15169fd5c0d1466a79267dbdd26b1d11a887",
+    "physical_digest_after": "00c269751e8d7a60228bbc6e078f15169fd5c0d1466a79267dbdd26b1d11a887",
+    "physics_unchanged": true,
+    "command_joints_initialized_from_measured": true,
+    "motion_limiter_initialized_from_measured": true,
+    "initial_state": "TRANSPORT",
+    "no_home_reset": true,
+    "no_teleport": true
+  }
+}

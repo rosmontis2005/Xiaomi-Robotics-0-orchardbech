@@ -1,0 +1,18 @@
+{
+  "S": {
+    "updates": 8000,
+    "identical_executed_rows": true,
+    "identical_initialization_and_other_configuration": true,
+    "fresh_optimizer": true,
+    "previous_lr": 1e-05,
+    "current_lr": 5e-06
+  },
+  "J": {
+    "updates": 16000,
+    "identical_executed_rows": true,
+    "identical_initialization_and_other_configuration": true,
+    "fresh_optimizer": true,
+    "previous_lr": 1e-05,
+    "current_lr": 5e-06
+  }
+}

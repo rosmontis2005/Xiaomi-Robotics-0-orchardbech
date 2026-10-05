@@ -1,0 +1,115 @@
+{
+  "dev8": {
+    "n": 8,
+    "held15": 5,
+    "same_fruit_detach": 5,
+    "release": 3,
+    "valid_chain_release": 3,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 2,
+    "long_held_stall": 2,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 60,
+    "failures": {
+      "release_far_or_outside_bucket": 1,
+      "no_stable_grasp": 3,
+      "strict_success": 2,
+      "held_transport_stall": 2
+    },
+    "min_held_bucket_distance_m": {
+      "2013322/rng42": 0.03213442525003767,
+      "2014461/rng42": null,
+      "2010914/rng42": 0.2056861818731475,
+      "2012485/rng42": null,
+      "2015716/rng42": 0.44517275463512046,
+      "2014362/rng42": 0.12001048729627062,
+      "2015751/rng42": 0.2779377818516124,
+      "2011310/rng42": null
+    },
+    "strict_original_observer": 2,
+    "stable_bucket": 2,
+    "premature_release": 3
+  },
+  "dev8_train2": {
+    "n": 2,
+    "held15": 1,
+    "same_fruit_detach": 1,
+    "release": 1,
+    "valid_chain_release": 1,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 1,
+    "long_held_stall": 0,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "release_far_or_outside_bucket": 1,
+      "no_stable_grasp": 1
+    },
+    "min_held_bucket_distance_m": {
+      "2013322/rng42": 0.03213442525003767,
+      "2014461/rng42": null
+    },
+    "strict_original_observer": 0,
+    "stable_bucket": 0,
+    "premature_release": 1
+  },
+  "dev8_val6": {
+    "n": 6,
+    "held15": 4,
+    "same_fruit_detach": 4,
+    "release": 2,
+    "valid_chain_release": 2,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 1,
+    "long_held_stall": 2,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 60,
+    "failures": {
+      "strict_success": 2,
+      "no_stable_grasp": 2,
+      "held_transport_stall": 2
+    },
+    "min_held_bucket_distance_m": {
+      "2010914/rng42": 0.2056861818731475,
+      "2012485/rng42": null,
+      "2015716/rng42": 0.44517275463512046,
+      "2014362/rng42": 0.12001048729627062,
+      "2015751/rng42": 0.2779377818516124,
+      "2011310/rng42": null
+    },
+    "strict_original_observer": 2,
+    "stable_bucket": 2,
+    "premature_release": 2
+  },
+  "historical_seed42_43": {
+    "n": 2,
+    "held15": 1,
+    "same_fruit_detach": 1,
+    "release": 1,
+    "valid_chain_release": 1,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 1,
+    "long_held_stall": 0,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 60,
+    "failures": {
+      "strict_success": 1,
+      "no_stable_grasp": 1
+    },
+    "min_held_bucket_distance_m": {
+      "2010600/rng42": 0.1479104245920116,
+      "2010600/rng43": null
+    },
+    "strict_original_observer": 1,
+    "stable_bucket": 1,
+    "premature_release": 1
+  }
+}

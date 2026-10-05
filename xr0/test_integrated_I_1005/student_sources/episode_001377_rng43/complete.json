@@ -1,0 +1,15 @@
+{
+  "scene": {
+    "episode_id": "episode_001377",
+    "seed": 2013455,
+    "split": "train",
+    "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_001377.json",
+    "annotation_sha256": "777c03547b22419818e36b492ab840b3b9269eec189047a57c2a543438ac439d"
+  },
+  "inference_seed": 43,
+  "student_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+  "student_steps": 288,
+  "termination": "live_takeover",
+  "candidate": "episode_001377_rng43_premature_release_precursor_s0288",
+  "prefix_end_physics_digest": "a7e3f53523b91dfc9356a399792ad18c6d80245828eb4fd7724ba1931279d851"
+}

@@ -1,0 +1,48 @@
+{
+  "D_A": {
+    "seed": 100511,
+    "updates": 8000,
+    "source_counts": {
+      "original": 4400,
+      "live_late": 2400,
+      "existing_R": 1200
+    },
+    "group_counts": {
+      "original_early": 1100,
+      "original_drop_done": 440,
+      "live_release": 960,
+      "live_transport": 840,
+      "existing_R1": 600,
+      "original_transport": 1100,
+      "original_grasp_pull": 1760,
+      "live_settle": 240,
+      "existing_R3": 300,
+      "live_onset": 360,
+      "existing_R2": 300
+    },
+    "unique_windows": 6367
+  },
+  "D_B": {
+    "seed": 100512,
+    "updates": 8000,
+    "source_counts": {
+      "live_late": 2400,
+      "existing_R": 1200,
+      "original": 4400
+    },
+    "group_counts": {
+      "live_transport": 840,
+      "existing_R1": 600,
+      "original_transport": 1100,
+      "live_release": 960,
+      "existing_R3": 300,
+      "original_grasp_pull": 1760,
+      "original_drop_done": 440,
+      "original_early": 1100,
+      "existing_R2": 300,
+      "live_onset": 360,
+      "live_settle": 240
+    },
+    "unique_windows": 6297
+  }
+}

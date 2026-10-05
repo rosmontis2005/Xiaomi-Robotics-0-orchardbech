@@ -1,0 +1,29 @@
+{
+  "source_rollouts": 144,
+  "candidate": 124,
+  "accepted": 72,
+  "rejected": 52,
+  "unique_source_episodes": 36,
+  "accepted_categories": {
+    "transport_stall": 49,
+    "premature_release_precursor": 21,
+    "near_bucket_no_release": 2
+  },
+  "candidate_categories": {
+    "transport_stall": 75,
+    "premature_release_precursor": 44,
+    "near_bucket_no_release": 5
+  },
+  "rejected_reasons": {
+    "teacher_budget": 48,
+    "engineering_exception": 1,
+    "strict_but_unreasonable_release": 1,
+    "collection_interrupted_for_teacher_motion_repair": 1,
+    "interrupted_for_collection_suffix_budget_repair": 1
+  },
+  "teacher_strict_success": 73,
+  "mining_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/r03_extension/training/checkpoints/step_8000_trainable.pt",
+  "mining_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+  "time": 1791196473.7975543,
+  "ready_to_freeze": true
+}

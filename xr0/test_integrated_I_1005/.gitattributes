@@ -1,0 +1,2 @@
+# CSV writers use CRLF locally; store portable LF text in Git.
+*.csv text eol=lf

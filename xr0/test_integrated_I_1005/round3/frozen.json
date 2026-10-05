@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN",
+  "round": 3,
+  "time": 1791208356.881755,
+  "training_started": false,
+  "dataset_manifest_sha256": "ce6e342fe115c73076a2c286c393e0265fa98c9563194fb27622f0ce3a00a526",
+  "original_freeze_sha256": "a29de294a72d059dbe7d26a2844d68c4a245a1acce77debc43cc64453ebb0625",
+  "previous_round_freeze_sha256": "dae4150177c565c3e4ed859ce867701b5be3bd149a3ecf9b0583542811271337",
+  "files": {
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round3/config.json": "f834d85fe1dc09b41338f69fbf58c755eee3d05893a789b72799fefee1716baf",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round3/schedule_D_A.jsonl": "39785a561df69634ffb1c88deda4939aadf5370e93a6df94f142c9760c35528f",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round3/schedule_D_B.jsonl": "5aaa3778e0ccea16c29c5cf88386d0e4c64c470ef1e1021be30f7281fed3a1c7",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round3/schedule_statistics.json": "1df816d86552daedb3316e1213b297e5867a167c8b2fef30ff1adf84fa606fd9",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/freeze_round3.py": "79770d6f311d34f2ea64f9b08c01aefa4ddd159492ae83ca5e3d2676b3b9f9f4",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/train_integrated_next.py": "b6a5f537cdfbbaacb8ab37910ff49a3d1db7dbd5788ce9416facaa4cbb61bbc4",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/evaluate_next.py": "f167d4b55c018f69a5160b59a12d20730d0bc68860b3f7422631c7e28c2e43ad",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/run_next.py": "1946eacb2b0408e85514afd16a32ac4de26c5fec864e5dfb44a31a4c04de1461"
+  },
+  "reused_schedule_sha256": {
+    "schedule_D_A.jsonl": "39785a561df69634ffb1c88deda4939aadf5370e93a6df94f142c9760c35528f",
+    "schedule_D_B.jsonl": "5aaa3778e0ccea16c29c5cf88386d0e4c64c470ef1e1021be30f7281fed3a1c7"
+  }
+}

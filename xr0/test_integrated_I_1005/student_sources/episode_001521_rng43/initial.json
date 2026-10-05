@@ -1,0 +1,132 @@
+{
+  "scene": {
+    "episode_id": "episode_001521",
+    "seed": 2013829,
+    "split": "train",
+    "annotation": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/json/train/episode_001521.json",
+    "annotation_sha256": "e8aa26c7f94572861dabfa5ac449d767cdd397d3f9cff8a05f473771af718b27"
+  },
+  "inference_seed": 43,
+  "truth": {
+    "debug_usage": "NOT POLICY INPUT",
+    "sim_time": 0.0,
+    "joint_pos": [
+      0.0,
+      -0.7853981852531433,
+      0.0,
+      -1.899999976158142,
+      0.0,
+      2.7699999809265137,
+      0.7853981852531433,
+      0.019999999552965164,
+      0.019999999552965164
+    ],
+    "joint_vel": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tcp_position": [
+      0.2164953202009201,
+      1.1830873489379883,
+      1.273475170135498
+    ],
+    "tcp_quaternion": [
+      0.4332166910171509,
+      -0.5196853280067444,
+      0.47151029109954834,
+      0.5656223893165588
+    ],
+    "width": 0.03999999910593033,
+    "fruit_id": 36,
+    "fruit_pose": [
+      0.17093931138515472,
+      0.9341364502906799,
+      1.0951085090637207,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "fruit_velocity": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bucket_position": [
+      0.35248526423066434,
+      1.9262354633873433,
+      0.4600000000000002
+    ],
+    "base_pose": [
+      0.30568453669548035,
+      1.6704822778701782,
+      0.0,
+      0.0,
+      0.0,
+      -0.7681155204772949,
+      0.6403113603591919
+    ],
+    "held": [],
+    "detached": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "branch_breaks": 0,
+    "fruit_bucket_distance": 1.1918817907272095,
+    "tcp_fruit_distance": 0.30962327122688293,
+    "palm_local_fruit": [
+      -0.1991146204777271,
+      6.7502858046434935e-09,
+      0.3405074435547047
+    ]
+  },
+  "physics_digest": "49136e9a5093670435071af3cf031414c0c1f46c31982f6bbe51e7de24313e43"
+}

@@ -1,0 +1,158 @@
+{
+  "round": 3,
+  "source_ratios": {
+    "original": 0.55,
+    "existing_R": 0.15,
+    "live_late": 0.3
+  },
+  "original_phase_ratios": {
+    "early": 0.25,
+    "grasp_pull": 0.4,
+    "transport": 0.25,
+    "drop_done": 0.1
+  },
+  "live_phase_ratios": {
+    "onset": 0.15,
+    "transport": 0.35,
+    "release": 0.4,
+    "settle": 0.1
+  },
+  "quotas": {
+    "original_early": 1100,
+    "original_grasp_pull": 1760,
+    "original_transport": 1100,
+    "original_drop_done": 440,
+    "existing_R1": 600,
+    "existing_R2": 300,
+    "existing_R3": 300,
+    "live_onset": 360,
+    "live_transport": 840,
+    "live_release": 960,
+    "live_settle": 240
+  },
+  "schedule_seeds": {
+    "D_A": 100511,
+    "D_B": 100512
+  },
+  "updates_per_schedule": 8000,
+  "lr": 5e-06,
+  "rationale": "Round2: S8/J8 held15=7/8 and strict0; J16 held15=4/8 and strict0 despite original/live loss decreasing. Test the hypothesis that a smaller update rate preserves acquisition while fitting late supervision. Change ONLY common lr1e-5->5e-6; same D*, same exact Round2 D_A/D_B rows, same budgets and initialization. This is the final allowed round, not a claim that LR caused the failures.",
+  "evidence": {
+    "S8": {
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/S8/evaluation/aggregate.json",
+      "sha256": "645a33eb97a1195c5aac91d926066e193b4e10702a15ab88d82c47cdb21aad5e",
+      "dev8": {
+        "n": 8,
+        "held15": 7,
+        "same_fruit_detach": 7,
+        "release": 0,
+        "valid_chain_release": 0,
+        "reasonable_release": 0,
+        "strict": 0,
+        "bucket_neighborhood": 0,
+        "long_held_stall": 6,
+        "branch_break": 0,
+        "physical_anomaly": 0,
+        "max_stable_bucket_steps": 0,
+        "failures": {
+          "held_transport_stall": 6,
+          "transport_incomplete_no_release": 1,
+          "no_stable_grasp": 1
+        },
+        "min_held_bucket_distance_m": {
+          "2013322/rng42": 0.6210942426494536,
+          "2014461/rng42": 0.7591334188045709,
+          "2010914/rng42": 0.6210656224546343,
+          "2012485/rng42": 0.542428940617597,
+          "2015716/rng42": 0.7556293908498994,
+          "2014362/rng42": null,
+          "2015751/rng42": 0.6869445954544419,
+          "2011310/rng42": 0.7622948260130405
+        },
+        "strict_original_observer": 0,
+        "stable_bucket": 0,
+        "premature_release": 0
+      }
+    },
+    "J8": {
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/J8/evaluation/aggregate.json",
+      "sha256": "2825126c76134143f2b0803d1087541ed8eb7551868c50866c0374c4b5ff3cd1",
+      "dev8": {
+        "n": 8,
+        "held15": 7,
+        "same_fruit_detach": 7,
+        "release": 0,
+        "valid_chain_release": 0,
+        "reasonable_release": 0,
+        "strict": 0,
+        "bucket_neighborhood": 0,
+        "long_held_stall": 6,
+        "branch_break": 0,
+        "physical_anomaly": 0,
+        "max_stable_bucket_steps": 0,
+        "failures": {
+          "held_transport_stall": 6,
+          "transport_incomplete_no_release": 1,
+          "no_stable_grasp": 1
+        },
+        "min_held_bucket_distance_m": {
+          "2013322/rng42": 0.4048772561463766,
+          "2014461/rng42": 0.7597216203960658,
+          "2010914/rng42": 0.5928141914576635,
+          "2012485/rng42": 0.7338395297498532,
+          "2015716/rng42": 0.7244381118251563,
+          "2014362/rng42": null,
+          "2015751/rng42": 0.6828810809763597,
+          "2011310/rng42": 0.6850489445017944
+        },
+        "strict_original_observer": 0,
+        "stable_bucket": 0,
+        "premature_release": 0
+      }
+    },
+    "J16": {
+      "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/round2/J16/evaluation/aggregate.json",
+      "sha256": "4c8db9cf330c873cc31685f514e0e9dbb4c5b9e17dfe81cf19af7f774fc9e952",
+      "dev8": {
+        "n": 8,
+        "held15": 4,
+        "same_fruit_detach": 4,
+        "release": 1,
+        "valid_chain_release": 1,
+        "reasonable_release": 0,
+        "strict": 0,
+        "bucket_neighborhood": 0,
+        "long_held_stall": 3,
+        "branch_break": 0,
+        "physical_anomaly": 0,
+        "max_stable_bucket_steps": 0,
+        "failures": {
+          "held_transport_stall": 3,
+          "no_stable_grasp": 4,
+          "release_far_or_outside_bucket": 1
+        },
+        "min_held_bucket_distance_m": {
+          "2013322/rng42": 0.7961455673772422,
+          "2014461/rng42": null,
+          "2010914/rng42": null,
+          "2012485/rng42": null,
+          "2015716/rng42": 0.6266922398624326,
+          "2014362/rng42": 0.5232292211618931,
+          "2015751/rng42": 0.8116865370853887,
+          "2011310/rng42": null
+        },
+        "strict_original_observer": 0,
+        "stable_bucket": 0,
+        "premature_release": 1
+      }
+    }
+  },
+  "dataset_manifest_sha256": "ce6e342fe115c73076a2c286c393e0265fa98c9563194fb27622f0ce3a00a526",
+  "original_freeze_sha256": "a29de294a72d059dbe7d26a2844d68c4a245a1acce77debc43cc64453ebb0625",
+  "initialization": "S=B8000 fresh AdamW; J=full10k fresh AdamW; J8->J16 continuous optimizer",
+  "no_new_data": true,
+  "fresh24_used": false,
+  "reused_fixed_schedules_from_round": 2,
+  "maximum_rounds": 3,
+  "stop_after_this_round": true
+}

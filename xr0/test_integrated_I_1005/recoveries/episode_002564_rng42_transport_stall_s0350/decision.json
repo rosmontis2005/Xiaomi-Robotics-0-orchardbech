@@ -1,0 +1,77 @@
+{
+  "candidate_id": "episode_002564_rng42_transport_stall_s0350",
+  "category": "transport_stall",
+  "source_episode_id": "episode_002564",
+  "inference_seed": 42,
+  "student_control_step": 350,
+  "accepted": true,
+  "teacher_status": "PASS",
+  "reason": "strict_success",
+  "annotation": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_integrated_I_1005/recoveries/episode_002564_rng42_transport_stall_s0350/trajectory.json",
+  "annotation_sha256": "615505fe76a982faf9ea94a7809f486f2fa86bd56de58943d5b8252f1df5f73c",
+  "num_frames": 558,
+  "same_live_env": true,
+  "collection_code_sha256": "f9cfebdbc125cd2e96f1bac91159055ed48060731dd28ee0e548da29c5d50802",
+  "student_checkpoint_sha256": "767ab133d24ac6d024c259e9b773aaca84dc9bd4c5b5a74d43d5d1671e309138",
+  "student_prefix_sha256": "c49e49cfd19804f9720d5ceea0fe0217c28a5cf037f59f62e68e20f12653bb7b",
+  "student_steps_sha256": "a3889bce130cdf5c963e6567c593b0f1382aee30ea8047a0f6577613072c328a",
+  "teacher_result": {
+    "student_budget_control_steps": 900,
+    "teacher_suffix_budget_control_steps": 900,
+    "collection_episode_budget": 1800,
+    "evaluation_budget_unchanged": 900,
+    "status": "PASS",
+    "reason": "strict_success",
+    "strict": {
+      "strict_success": true,
+      "strict_success_events": [
+        {
+          "apple_id": 6,
+          "step": 907,
+          "release_step": 841,
+          "held15_step": 86,
+          "first_detach_after_grasp_step": 155
+        }
+      ],
+      "legacy_success_ever": true,
+      "first_legacy_success_step": 848,
+      "fruit_chains": {
+        "6": {
+          "first_grasp_step": 72,
+          "held15_step": 86,
+          "first_detach_after_grasp_step": 155,
+          "release_step": 841,
+          "stable_bucket_steps": 60,
+          "max_stable_bucket_steps": 60,
+          "strict_success_step": 907
+        }
+      },
+      "release_events": [
+        {
+          "apple_id": 6,
+          "step": 841,
+          "had_held15": true,
+          "detached_at_release": true,
+          "valid_chain": true
+        }
+      ],
+      "held_required_boundaries": 15,
+      "bucket_required_boundaries": 60,
+      "boundary_only": true
+    },
+    "reasonable_release": true,
+    "frames": 558,
+    "wall_seconds": 18.078657949001354,
+    "same_live_env": true,
+    "initialization_audit": {
+      "physical_digest_before": "7ffbda90b02e8cd3cc8dfbc7262d1fdc607bb9bb674583ee29482209c40d7984",
+      "physical_digest_after": "7ffbda90b02e8cd3cc8dfbc7262d1fdc607bb9bb674583ee29482209c40d7984",
+      "physics_unchanged": true,
+      "command_joints_initialized_from_measured": true,
+      "motion_limiter_initialized_from_measured": true,
+      "initial_state": "TRANSPORT",
+      "no_home_reset": true,
+      "no_teleport": true
+    }
+  }
+}
