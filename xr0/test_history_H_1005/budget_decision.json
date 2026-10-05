@@ -1,0 +1,244 @@
+{
+  "time": 1791168292.3937333,
+  "H_updates": 8000,
+  "decision_basis": "Multiple validation cases show substantially more bucket-directed transport, with aggregate held/detach preserved; use8k for all H to control dose. Do not claim R03-8k better in strict.",
+  "R03_4k": {
+    "dev8": {
+      "n": 8,
+      "held15": 7,
+      "same_fruit_detach": 7,
+      "release": 1,
+      "valid_chain_release": 1,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 0,
+      "long_held_stall": 5,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "held_transport_stall": 5,
+        "transport_incomplete_no_release": 1,
+        "no_stable_grasp": 1,
+        "release_far_or_outside_bucket": 1
+      },
+      "min_held_bucket_distance_m": {
+        "2013322/rng42": 0.8231943572612939,
+        "2014461/rng42": 0.8575371392208114,
+        "2010914/rng42": 0.8551431727128684,
+        "2012485/rng42": 0.5972951447149412,
+        "2015716/rng42": 0.6063817990011523,
+        "2014362/rng42": null,
+        "2015751/rng42": 0.8406756871956009,
+        "2011310/rng42": 0.8002483082646688
+      }
+    },
+    "dev8_train2": {
+      "n": 2,
+      "held15": 2,
+      "same_fruit_detach": 2,
+      "release": 0,
+      "valid_chain_release": 0,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 0,
+      "long_held_stall": 2,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "held_transport_stall": 2
+      },
+      "min_held_bucket_distance_m": {
+        "2013322/rng42": 0.8231943572612939,
+        "2014461/rng42": 0.8575371392208114
+      }
+    },
+    "dev8_val6": {
+      "n": 6,
+      "held15": 5,
+      "same_fruit_detach": 5,
+      "release": 1,
+      "valid_chain_release": 1,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 0,
+      "long_held_stall": 3,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "held_transport_stall": 3,
+        "transport_incomplete_no_release": 1,
+        "no_stable_grasp": 1,
+        "release_far_or_outside_bucket": 1
+      },
+      "min_held_bucket_distance_m": {
+        "2010914/rng42": 0.8551431727128684,
+        "2012485/rng42": 0.5972951447149412,
+        "2015716/rng42": 0.6063817990011523,
+        "2014362/rng42": null,
+        "2015751/rng42": 0.8406756871956009,
+        "2011310/rng42": 0.8002483082646688
+      }
+    },
+    "historical_seed42_43": {
+      "n": 2,
+      "held15": 2,
+      "same_fruit_detach": 2,
+      "release": 1,
+      "valid_chain_release": 1,
+      "reasonable_release": 1,
+      "strict": 1,
+      "bucket_neighborhood": 2,
+      "long_held_stall": 0,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 60,
+      "failures": {
+        "strict_success": 1,
+        "bucket_approach_no_release": 1
+      },
+      "min_held_bucket_distance_m": {
+        "2010600/rng42": 0.09754642244577072,
+        "2010600/rng43": 0.11915598630147205
+      }
+    }
+  },
+  "R03_8k": {
+    "dev8": {
+      "n": 8,
+      "held15": 7,
+      "same_fruit_detach": 7,
+      "release": 3,
+      "valid_chain_release": 3,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 0,
+      "long_held_stall": 1,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "release_far_or_outside_bucket": 3,
+        "held_transport_stall": 1,
+        "transport_incomplete_no_release": 3,
+        "no_stable_grasp": 1
+      },
+      "min_held_bucket_distance_m": {
+        "2013322/rng42": 0.7573163029471909,
+        "2014461/rng42": 0.784301507598759,
+        "2010914/rng42": 0.5130564027387592,
+        "2012485/rng42": null,
+        "2015716/rng42": 0.6243573360075055,
+        "2014362/rng42": 0.1609652157750816,
+        "2015751/rng42": 0.2432035741922767,
+        "2011310/rng42": 0.7663082205091789
+      }
+    },
+    "dev8_train2": {
+      "n": 2,
+      "held15": 2,
+      "same_fruit_detach": 2,
+      "release": 1,
+      "valid_chain_release": 1,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 0,
+      "long_held_stall": 1,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "release_far_or_outside_bucket": 1,
+        "held_transport_stall": 1
+      },
+      "min_held_bucket_distance_m": {
+        "2013322/rng42": 0.7573163029471909,
+        "2014461/rng42": 0.784301507598759
+      }
+    },
+    "dev8_val6": {
+      "n": 6,
+      "held15": 5,
+      "same_fruit_detach": 5,
+      "release": 2,
+      "valid_chain_release": 2,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 0,
+      "long_held_stall": 0,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "transport_incomplete_no_release": 3,
+        "no_stable_grasp": 1,
+        "release_far_or_outside_bucket": 2
+      },
+      "min_held_bucket_distance_m": {
+        "2010914/rng42": 0.5130564027387592,
+        "2012485/rng42": null,
+        "2015716/rng42": 0.6243573360075055,
+        "2014362/rng42": 0.1609652157750816,
+        "2015751/rng42": 0.2432035741922767,
+        "2011310/rng42": 0.7663082205091789
+      }
+    },
+    "historical_seed42_43": {
+      "n": 2,
+      "held15": 2,
+      "same_fruit_detach": 2,
+      "release": 0,
+      "valid_chain_release": 0,
+      "reasonable_release": 0,
+      "strict": 0,
+      "bucket_neighborhood": 1,
+      "long_held_stall": 2,
+      "branch_break": 0,
+      "physical_anomaly": 0,
+      "max_stable_bucket_steps": 0,
+      "failures": {
+        "held_transport_stall": 1,
+        "bucket_approach_no_release": 1
+      },
+      "min_held_bucket_distance_m": {
+        "2010600/rng42": 0.6899037090969091,
+        "2010600/rng43": 0.06365648104666304
+      }
+    }
+  },
+  "paired_evidence": [
+    {
+      "seed": 2010914,
+      "split": "val",
+      "old_min_held_bucket_m": 0.8551431727128684,
+      "new_min_held_bucket_m": 0.5130564027387592,
+      "interpretation": "Held/detached long stall develops continuous transport toward bucket; remains far"
+    },
+    {
+      "seed": 2015751,
+      "split": "val",
+      "old_min_held_bucket_m": 0.8406756871956009,
+      "new_min_held_bucket_m": 0.2432035741922767,
+      "interpretation": "Large transport advance and release at899, but outside bucket footprint; no stable60"
+    }
+  ],
+  "secondary_new_case": {
+    "seed": 2014362,
+    "old_held15": false,
+    "new_held15": true,
+    "new_min_held_bucket_m": 0.1609652157750816,
+    "interpretation": "New near-bucket held transport, followed by drifting away; not strict"
+  },
+  "limitations": [
+    "dev8 strict remains0/8",
+    "reasonable region release remains0/8",
+    "auxiliary strict regresses1/2\u21920/2; single historical scene, secondary evidence",
+    "2012485 loses stable grasp, 2014362 gains it; totalheld/detach7/8 unchanged",
+    "No claims that training dose explains all failures",
+    "15cm bucket-neighborhood is a passive diagnostic, not a new success gate"
+  ],
+  "training_loss_used_for_budget": false,
+  "decision_frozen_before_H_training": true
+}

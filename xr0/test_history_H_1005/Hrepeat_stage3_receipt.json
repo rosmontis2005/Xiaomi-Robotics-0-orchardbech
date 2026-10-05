@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/summarize_cases.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/Hrepeat/evaluation"
+  ],
+  "time": 1791172239.508257,
+  "pid": 208173
+}

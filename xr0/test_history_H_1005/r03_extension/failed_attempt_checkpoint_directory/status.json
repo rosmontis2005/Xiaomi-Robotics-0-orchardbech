@@ -1,0 +1,11 @@
+{
+  "status": "FAILED",
+  "pid": 168355,
+  "session": 168355,
+  "completed_updates": 4500,
+  "target_updates": 8000,
+  "time": 1791166689.1464512,
+  "elapsed_seconds": 189.56572635300108,
+  "error": "RuntimeError: Parent directory /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/r03_extension/training/checkpoints does not exist.",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/r03_extension/train_R.py\", line 100, in run\n    temp=out/'checkpoints/latest_resume.pt.tmp';torch.save(payload,temp);temp.replace(out/'checkpoints/latest_resume.pt');del payload\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rosmontis/miniconda3/envs/xr0-mibot/lib/python3.12/site-packages/torch/serialization.py\", line 966, in save\n    with _open_zipfile_writer(f) as opened_zipfile:\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rosmontis/miniconda3/envs/xr0-mibot/lib/python3.12/site-packages/torch/serialization.py\", line 828, in _open_zipfile_writer\n    return container(name_or_buffer)  # type: ignore[arg-type]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rosmontis/miniconda3/envs/xr0-mibot/lib/python3.12/site-packages/torch/serialization.py\", line 792, in __init__\n    torch._C.PyTorchFileWriter(\nRuntimeError: Parent directory /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/r03_extension/training/checkpoints does not exist.\n"
+}

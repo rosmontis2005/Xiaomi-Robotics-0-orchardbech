@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/evaluate_followup.py",
+    "--condition",
+    "Hhistory",
+    "--checkpoint",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/Hhistory/training/checkpoints/step_8000_trainable.pt",
+    "--offline"
+  ],
+  "time": 1791173637.1007771,
+  "pid": 222576
+}

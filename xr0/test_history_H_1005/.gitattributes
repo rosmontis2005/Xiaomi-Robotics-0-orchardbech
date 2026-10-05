@@ -1,0 +1,2 @@
+# Preserve the original bytes of csv.writer result tables.
+**/cases.csv -text whitespace=cr-at-eol

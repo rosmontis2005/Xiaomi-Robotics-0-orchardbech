@@ -1,0 +1,101 @@
+{
+  "dev8": {
+    "n": 8,
+    "held15": 6,
+    "same_fruit_detach": 6,
+    "release": 4,
+    "valid_chain_release": 4,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 2,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 2,
+      "no_stable_grasp": 2,
+      "release_far_or_outside_bucket": 4
+    },
+    "min_held_bucket_distance_m": {
+      "2013322/rng42": 0.8006563005544585,
+      "2014461/rng42": null,
+      "2010914/rng42": 0.8010994790783419,
+      "2012485/rng42": 0.8289182219445644,
+      "2015716/rng42": 1.0393138544836424,
+      "2014362/rng42": null,
+      "2015751/rng42": 0.8900283660936592,
+      "2011310/rng42": 0.9710937894335074
+    }
+  },
+  "dev8_train2": {
+    "n": 2,
+    "held15": 1,
+    "same_fruit_detach": 1,
+    "release": 0,
+    "valid_chain_release": 0,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 1,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 1,
+      "no_stable_grasp": 1
+    },
+    "min_held_bucket_distance_m": {
+      "2013322/rng42": 0.8006563005544585,
+      "2014461/rng42": null
+    }
+  },
+  "dev8_val6": {
+    "n": 6,
+    "held15": 5,
+    "same_fruit_detach": 5,
+    "release": 4,
+    "valid_chain_release": 4,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 0,
+    "long_held_stall": 1,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "held_transport_stall": 1,
+      "release_far_or_outside_bucket": 4,
+      "no_stable_grasp": 1
+    },
+    "min_held_bucket_distance_m": {
+      "2010914/rng42": 0.8010994790783419,
+      "2012485/rng42": 0.8289182219445644,
+      "2015716/rng42": 1.0393138544836424,
+      "2014362/rng42": null,
+      "2015751/rng42": 0.8900283660936592,
+      "2011310/rng42": 0.9710937894335074
+    }
+  },
+  "historical_seed42_43": {
+    "n": 2,
+    "held15": 2,
+    "same_fruit_detach": 2,
+    "release": 0,
+    "valid_chain_release": 0,
+    "reasonable_release": 0,
+    "strict": 0,
+    "bucket_neighborhood": 2,
+    "long_held_stall": 1,
+    "branch_break": 0,
+    "physical_anomaly": 0,
+    "max_stable_bucket_steps": 0,
+    "failures": {
+      "bucket_approach_no_release": 2
+    },
+    "min_held_bucket_distance_m": {
+      "2010600/rng42": 0.05883065595253329,
+      "2010600/rng43": 0.04698656005930778
+    }
+  }
+}

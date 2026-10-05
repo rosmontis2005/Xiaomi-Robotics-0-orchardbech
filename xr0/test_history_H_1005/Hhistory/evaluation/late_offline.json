@@ -1,0 +1,505 @@
+{
+  "scope": "TRAINING-SOURCE teacher-continuation mechanism diagnostic; no generalization claim",
+  "windows": 48,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "rows": [
+    {
+      "candidate_id": "episode_000023_rng42_R1_s0085",
+      "source_episode": "episode_000023",
+      "origin_category": "R1",
+      "anchor_frame": 175,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.028812714186159313,
+      "rotation_mae_rad": 0.05813272498878083,
+      "width_mae_m": 0.001984566781255934
+    },
+    {
+      "candidate_id": "episode_000023_rng42_R1_s0085",
+      "source_episode": "episode_000023",
+      "origin_category": "R1",
+      "anchor_frame": 176,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.02560122822673416,
+      "rotation_mae_rad": 0.05138928130941922,
+      "width_mae_m": 0.0013201770683129628
+    },
+    {
+      "candidate_id": "episode_000329_rng42_R1_s0075",
+      "source_episode": "episode_000329",
+      "origin_category": "R1",
+      "anchor_frame": 169,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.02672512907788484,
+      "rotation_mae_rad": 0.19049295225905208,
+      "width_mae_m": 0.0014257188472482894
+    },
+    {
+      "candidate_id": "episode_000329_rng42_R1_s0075",
+      "source_episode": "episode_000329",
+      "origin_category": "R1",
+      "anchor_frame": 170,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.022003466246027,
+      "rotation_mae_rad": 0.19350207193834718,
+      "width_mae_m": 0.0013527870178222656
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R1_s0131",
+      "source_episode": "episode_000613",
+      "origin_category": "R1",
+      "anchor_frame": 143,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.05316521499941013,
+      "rotation_mae_rad": 0.19163333566662596,
+      "width_mae_m": 0.004151367271939914
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R1_s0131",
+      "source_episode": "episode_000613",
+      "origin_category": "R1",
+      "anchor_frame": 144,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.05029272754079128,
+      "rotation_mae_rad": 0.1894038853451676,
+      "width_mae_m": 0.003593343993028005
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R2_s0192",
+      "source_episode": "episode_000613",
+      "origin_category": "R2",
+      "anchor_frame": 98,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.021505737967701093,
+      "rotation_mae_rad": 0.1357507616145356,
+      "width_mae_m": 0.0034641916553179424
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R2_s0192",
+      "source_episode": "episode_000613",
+      "origin_category": "R2",
+      "anchor_frame": 99,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.01844121026487935,
+      "rotation_mae_rad": 0.13983539292482491,
+      "width_mae_m": 0.002772374740905232
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R3_s0465",
+      "source_episode": "episode_000613",
+      "origin_category": "R3",
+      "anchor_frame": 154,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.0233350439518011,
+      "rotation_mae_rad": 0.10019749894184314,
+      "width_mae_m": 0.01110621251993709
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R3_s0465",
+      "source_episode": "episode_000613",
+      "origin_category": "R3",
+      "anchor_frame": 155,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.02314579507994907,
+      "rotation_mae_rad": 0.09523058233567902,
+      "width_mae_m": 0.010246099573042658
+    },
+    {
+      "candidate_id": "episode_000613_rng43_R3_s0217",
+      "source_episode": "episode_000613",
+      "origin_category": "R3",
+      "anchor_frame": 94,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.018495182806610763,
+      "rotation_mae_rad": 0.07700740305546645,
+      "width_mae_m": 0.0038530792627069687
+    },
+    {
+      "candidate_id": "episode_000613_rng43_R3_s0217",
+      "source_episode": "episode_000613",
+      "origin_category": "R3",
+      "anchor_frame": 95,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.015444607380690317,
+      "rotation_mae_rad": 0.07217663981846445,
+      "width_mae_m": 0.003190202390154203
+    },
+    {
+      "candidate_id": "episode_000703_rng42_R1_s0086",
+      "source_episode": "episode_000703",
+      "origin_category": "R1",
+      "anchor_frame": 177,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.014299849123692475,
+      "rotation_mae_rad": 0.03288462117241783,
+      "width_mae_m": 0.0012096425311432944
+    },
+    {
+      "candidate_id": "episode_000703_rng42_R1_s0086",
+      "source_episode": "episode_000703",
+      "origin_category": "R1",
+      "anchor_frame": 178,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.0124683360795898,
+      "rotation_mae_rad": 0.02997472737717493,
+      "width_mae_m": 0.000975927213827769
+    },
+    {
+      "candidate_id": "episode_000703_rng42_R2_s0203",
+      "source_episode": "episode_000703",
+      "origin_category": "R2",
+      "anchor_frame": 95,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.028528914843219032,
+      "rotation_mae_rad": 0.0955715682200018,
+      "width_mae_m": 0.0035241664697726566
+    },
+    {
+      "candidate_id": "episode_000703_rng42_R2_s0203",
+      "source_episode": "episode_000703",
+      "origin_category": "R2",
+      "anchor_frame": 96,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.022415962394488585,
+      "rotation_mae_rad": 0.08414380820818416,
+      "width_mae_m": 0.0029299212826622858
+    },
+    {
+      "candidate_id": "episode_000703_rng42_R3_s0424",
+      "source_episode": "episode_000703",
+      "origin_category": "R3",
+      "anchor_frame": 127,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.032291520453661716,
+      "rotation_mae_rad": 0.0664785678789,
+      "width_mae_m": 0.003154106065630913
+    },
+    {
+      "candidate_id": "episode_000703_rng42_R3_s0424",
+      "source_episode": "episode_000703",
+      "origin_category": "R3",
+      "anchor_frame": 128,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.02879744432943032,
+      "rotation_mae_rad": 0.06034989663996277,
+      "width_mae_m": 0.0023822339872519175
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R1_s0073",
+      "source_episode": "episode_000974",
+      "origin_category": "R1",
+      "anchor_frame": 167,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.02548815842264849,
+      "rotation_mae_rad": 0.04456799016331235,
+      "width_mae_m": 0.002147206457124816
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R1_s0073",
+      "source_episode": "episode_000974",
+      "origin_category": "R1",
+      "anchor_frame": 168,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.02288999152130744,
+      "rotation_mae_rad": 0.03911944465147195,
+      "width_mae_m": 0.0017687006129158867
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R2_s0129",
+      "source_episode": "episode_000974",
+      "origin_category": "R2",
+      "anchor_frame": 126,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.017080704036412982,
+      "rotation_mae_rad": 0.03856209053484564,
+      "width_mae_m": 0.002172400512629085
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R2_s0129",
+      "source_episode": "episode_000974",
+      "origin_category": "R2",
+      "anchor_frame": 127,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.015552910893617735,
+      "rotation_mae_rad": 0.03514816901547613,
+      "width_mae_m": 0.0015450596809387207
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R3_s0436",
+      "source_episode": "episode_000974",
+      "origin_category": "R3",
+      "anchor_frame": 146,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.017819370464243103,
+      "rotation_mae_rad": 0.04017848272718646,
+      "width_mae_m": 0.002214938484960132
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R3_s0436",
+      "source_episode": "episode_000974",
+      "origin_category": "R3",
+      "anchor_frame": 147,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.016103968716828496,
+      "rotation_mae_rad": 0.035827425667773416,
+      "width_mae_m": 0.0015303240882025824
+    },
+    {
+      "candidate_id": "episode_000974_rng43_R3_s0253",
+      "source_episode": "episode_000974",
+      "origin_category": "R3",
+      "anchor_frame": 84,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.016393566537681772,
+      "rotation_mae_rad": 0.11745954002731768,
+      "width_mae_m": 0.0034180216905143525
+    },
+    {
+      "candidate_id": "episode_000974_rng43_R3_s0253",
+      "source_episode": "episode_000974",
+      "origin_category": "R3",
+      "anchor_frame": 85,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.015199864267657756,
+      "rotation_mae_rad": 0.11594459667482315,
+      "width_mae_m": 0.0023182040287388697
+    },
+    {
+      "candidate_id": "episode_001129_rng42_R1_s0105",
+      "source_episode": "episode_001129",
+      "origin_category": "R1",
+      "anchor_frame": 186,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.017095160028269017,
+      "rotation_mae_rad": 0.04185537016440632,
+      "width_mae_m": 0.001558138264550103
+    },
+    {
+      "candidate_id": "episode_001129_rng42_R1_s0105",
+      "source_episode": "episode_001129",
+      "origin_category": "R1",
+      "anchor_frame": 187,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.014517262729167042,
+      "rotation_mae_rad": 0.035055164923155906,
+      "width_mae_m": 0.0011567028860251108
+    },
+    {
+      "candidate_id": "episode_001212_rng42_R1_s0093",
+      "source_episode": "episode_001212",
+      "origin_category": "R1",
+      "anchor_frame": 157,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.01534070040312731,
+      "rotation_mae_rad": 0.06191256465287021,
+      "width_mae_m": 0.0019040962060292562
+    },
+    {
+      "candidate_id": "episode_001212_rng42_R1_s0093",
+      "source_episode": "episode_001212",
+      "origin_category": "R1",
+      "anchor_frame": 158,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.012012238128567974,
+      "rotation_mae_rad": 0.052568403039843274,
+      "width_mae_m": 0.0013092005832327737
+    },
+    {
+      "candidate_id": "episode_001257_rng42_R1_s0096",
+      "source_episode": "episode_001257",
+      "origin_category": "R1",
+      "anchor_frame": 181,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.014204983285371616,
+      "rotation_mae_rad": 0.035820447589422044,
+      "width_mae_m": 0.000773466709587309
+    },
+    {
+      "candidate_id": "episode_001257_rng42_R1_s0096",
+      "source_episode": "episode_001257",
+      "origin_category": "R1",
+      "anchor_frame": 182,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.012664881994829916,
+      "rotation_mae_rad": 0.03197425783249942,
+      "width_mae_m": 0.0005809153533644147
+    },
+    {
+      "candidate_id": "episode_001606_rng42_R1_s0084",
+      "source_episode": "episode_001606",
+      "origin_category": "R1",
+      "anchor_frame": 174,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.020172804755324958,
+      "rotation_mae_rad": 0.04605431775922808,
+      "width_mae_m": 0.001807897827691502
+    },
+    {
+      "candidate_id": "episode_001606_rng42_R1_s0084",
+      "source_episode": "episode_001606",
+      "origin_category": "R1",
+      "anchor_frame": 175,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.017305136346032025,
+      "rotation_mae_rad": 0.039431006210598286,
+      "width_mae_m": 0.0012482888582679961
+    },
+    {
+      "candidate_id": "episode_001606_rng42_R2_s0161",
+      "source_episode": "episode_001606",
+      "origin_category": "R2",
+      "anchor_frame": 92,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.02538654212609761,
+      "rotation_mae_rad": 0.07099155285929476,
+      "width_mae_m": 0.005765085625979636
+    },
+    {
+      "candidate_id": "episode_001606_rng42_R2_s0161",
+      "source_episode": "episode_001606",
+      "origin_category": "R2",
+      "anchor_frame": 93,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.020124444394257666,
+      "rotation_mae_rad": 0.06427415164167181,
+      "width_mae_m": 0.003802456168664826
+    },
+    {
+      "candidate_id": "episode_001606_rng42_R3_s0197",
+      "source_episode": "episode_001606",
+      "origin_category": "R3",
+      "anchor_frame": 90,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.03850670426346264,
+      "rotation_mae_rad": 0.14024816028700945,
+      "width_mae_m": 0.011965240124199125
+    },
+    {
+      "candidate_id": "episode_001606_rng42_R3_s0197",
+      "source_episode": "episode_001606",
+      "origin_category": "R3",
+      "anchor_frame": 91,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.03254345720346672,
+      "rotation_mae_rad": 0.13637795378647155,
+      "width_mae_m": 0.00841936245560646
+    },
+    {
+      "candidate_id": "episode_002028_rng42_R1_s0084",
+      "source_episode": "episode_002028",
+      "origin_category": "R1",
+      "anchor_frame": 174,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.028066910966926845,
+      "rotation_mae_rad": 0.06058203576006865,
+      "width_mae_m": 0.0013008392519421048
+    },
+    {
+      "candidate_id": "episode_002028_rng42_R1_s0084",
+      "source_episode": "episode_002028",
+      "origin_category": "R1",
+      "anchor_frame": 175,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.024399795105145974,
+      "rotation_mae_rad": 0.05179863745366153,
+      "width_mae_m": 0.0010264202952384948
+    },
+    {
+      "candidate_id": "episode_002028_rng42_R2_s0158",
+      "source_episode": "episode_002028",
+      "origin_category": "R2",
+      "anchor_frame": 91,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.01953119434779991,
+      "rotation_mae_rad": 0.07798602319093156,
+      "width_mae_m": 0.0024953244460953605
+    },
+    {
+      "candidate_id": "episode_002028_rng42_R2_s0158",
+      "source_episode": "episode_002028",
+      "origin_category": "R2",
+      "anchor_frame": 92,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.016822685435373498,
+      "rotation_mae_rad": 0.07340605288888193,
+      "width_mae_m": 0.001929196963707606
+    },
+    {
+      "candidate_id": "episode_002413_rng42_R1_s0089",
+      "source_episode": "episode_002413",
+      "origin_category": "R1",
+      "anchor_frame": 169,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.014632180578367326,
+      "rotation_mae_rad": 0.03597247582553645,
+      "width_mae_m": 0.001342699925104777
+    },
+    {
+      "candidate_id": "episode_002413_rng42_R1_s0089",
+      "source_episode": "episode_002413",
+      "origin_category": "R1",
+      "anchor_frame": 170,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.013205984979864294,
+      "rotation_mae_rad": 0.03201336382735212,
+      "width_mae_m": 0.0008187431014246411
+    },
+    {
+      "candidate_id": "episode_002413_rng42_R2_s0173",
+      "source_episode": "episode_002413",
+      "origin_category": "R2",
+      "anchor_frame": 125,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.008551702249559324,
+      "rotation_mae_rad": 0.022588912340824944,
+      "width_mae_m": 0.0014139508207639058
+    },
+    {
+      "candidate_id": "episode_002413_rng42_R2_s0173",
+      "source_episode": "episode_002413",
+      "origin_category": "R2",
+      "anchor_frame": 126,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.007827265989449763,
+      "rotation_mae_rad": 0.021662305577717138,
+      "width_mae_m": 0.0009467348456382752
+    },
+    {
+      "candidate_id": "episode_002617_rng42_R1_s0080",
+      "source_episode": "episode_002617",
+      "origin_category": "R1",
+      "anchor_frame": 157,
+      "anchor_phase": "TRANSPORT",
+      "position_mae_m": 0.03031974158359947,
+      "rotation_mae_rad": 0.12020716223902246,
+      "width_mae_m": 0.002358046422402064
+    },
+    {
+      "candidate_id": "episode_002617_rng42_R1_s0080",
+      "source_episode": "episode_002617",
+      "origin_category": "R1",
+      "anchor_frame": 158,
+      "anchor_phase": "DROP",
+      "position_mae_m": 0.03000872787329624,
+      "rotation_mae_rad": 0.11949876516719524,
+      "width_mae_m": 0.0015665739360782836
+    }
+  ],
+  "by_target_phase": {
+    "DROP": {
+      "target_seed_count": 4248,
+      "position_mae_m": 0.021739058227298658,
+      "rotation_mae_rad": 0.07679292668485534,
+      "width_mae_m": 0.002689893516183966
+    },
+    "DONE": {
+      "target_seed_count": 72,
+      "position_mae_m": 0.024319470314973297,
+      "rotation_mae_rad": 0.09827050581193297,
+      "width_mae_m": 0.01034672666961948
+    }
+  }
+}

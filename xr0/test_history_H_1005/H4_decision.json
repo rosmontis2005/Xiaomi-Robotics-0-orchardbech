@@ -1,0 +1,13 @@
+{
+  "time": 1791174196.898694,
+  "run": false,
+  "H_trainings_completed": 3,
+  "reason": "Hhistory does not outperform Hrepeat on primary development closed loop: held/detach5/8 vs7/8, release2/8 vs2/8 (all outside reasonable region), strict0/8 vs0/8, stable bucket0. Slight offline/conditional transport differences do not offset loss of grasp/pull chain.",
+  "case_A": false,
+  "case_B": false,
+  "no_history_advantage_to_justify_anchor_or_extension": true,
+  "primary_dev8_used": true,
+  "historical_auxiliary_secondary_only": true,
+  "no_rescue_architecture_or_image_history": true,
+  "stop_after_reporting": true
+}

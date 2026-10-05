@@ -1,0 +1,15 @@
+{
+  "continuation_seed": 1005,
+  "continuation_counts": {
+    "original_B": 2800,
+    "R1": 500,
+    "R2": 200,
+    "R3": 200,
+    "R_continuation_teacher": 300
+  },
+  "continuation_sha256": "0bf652e73f48b7236b37e487421c59a17528c9628fed376a694eab960fbcfa5a",
+  "H4000_sha256": "3baf11beb93955b10d8c1e1d634707e90553878a23feb03ca55c146fac49258b",
+  "H8000_sha256": "a92d54ad15d38f4335699e460b68fc544c656fc01428a6bea49b4902359581f6",
+  "same_R03_pools": true,
+  "no_new_labels": true
+}

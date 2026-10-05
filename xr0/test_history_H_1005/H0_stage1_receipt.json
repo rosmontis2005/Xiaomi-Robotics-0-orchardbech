@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/train_H.py",
+    "--condition",
+    "H0",
+    "--updates",
+    "8000",
+    "--run"
+  ],
+  "time": 1791168292.4516518,
+  "pid": 177769
+}

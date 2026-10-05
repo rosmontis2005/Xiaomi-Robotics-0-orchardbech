@@ -1,0 +1,1075 @@
+{
+  "status": "PASS",
+  "recovery_trajectories": 24,
+  "excluded_anchors": 0,
+  "offsets": [
+    -15,
+    -5,
+    -1,
+    0
+  ],
+  "padding": "earliest actual observation",
+  "prefix": "recorded student measured proprio; teacher samples only at local index>=0",
+  "prefix_audit": {
+    "episode_000023_rng42_R1_s0085": {
+      "takeover_control_step": 85,
+      "position_max_m": 1.5497207641601562e-06,
+      "width_m": 1.601874828338623e-07,
+      "joint_max_rad": 2.3096799850463867e-06,
+      "orientation_difference_rad": 3.3252383602895393e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000023_rng42"
+    },
+    "episode_000329_rng42_R1_s0075": {
+      "takeover_control_step": 75,
+      "position_max_m": 8.344650268554688e-07,
+      "width_m": 0.0,
+      "joint_max_rad": 1.1920928955078125e-06,
+      "orientation_difference_rad": 1.4218887160363187e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000329_rng42"
+    },
+    "episode_000613_rng42_R1_s0131": {
+      "takeover_control_step": 131,
+      "position_max_m": 7.748603820800781e-06,
+      "width_m": 3.6209821701049805e-06,
+      "joint_max_rad": 1.2636184692382812e-05,
+      "orientation_difference_rad": 2.2139472287582445e-05,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000613_rng42"
+    },
+    "episode_000613_rng42_R2_s0192": {
+      "takeover_control_step": 192,
+      "position_max_m": 4.76837158203125e-07,
+      "width_m": 1.4901161193847656e-08,
+      "joint_max_rad": 4.472211003303528e-06,
+      "orientation_difference_rad": 1.4419305919317867e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000613_rng42"
+    },
+    "episode_000613_rng42_R3_s0465": {
+      "takeover_control_step": 465,
+      "position_max_m": 1.5020370483398438e-05,
+      "width_m": 7.450580596923828e-09,
+      "joint_max_rad": 5.608797073364258e-05,
+      "orientation_difference_rad": 1.4054759728685937e-05,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000613_rng42"
+    },
+    "episode_000613_rng43_R3_s0217": {
+      "takeover_control_step": 217,
+      "position_max_m": 1.1920928955078125e-06,
+      "width_m": 7.152557373046875e-07,
+      "joint_max_rad": 1.0132789611816406e-06,
+      "orientation_difference_rad": 1.8009273814093578e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000613_rng43"
+    },
+    "episode_000703_rng42_R1_s0086": {
+      "takeover_control_step": 86,
+      "position_max_m": 2.384185791015625e-07,
+      "width_m": 2.2351741790771484e-07,
+      "joint_max_rad": 3.1758099794387817e-06,
+      "orientation_difference_rad": 5.16506764564827e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000703_rng42"
+    },
+    "episode_000703_rng42_R2_s0203": {
+      "takeover_control_step": 203,
+      "position_max_m": 3.5762786865234375e-07,
+      "width_m": 0.0,
+      "joint_max_rad": 3.5390257835388184e-06,
+      "orientation_difference_rad": 5.201468504017969e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000703_rng42"
+    },
+    "episode_000703_rng42_R3_s0424": {
+      "takeover_control_step": 424,
+      "position_max_m": 3.5762786865234375e-07,
+      "width_m": 6.109476089477539e-07,
+      "joint_max_rad": 2.086162567138672e-06,
+      "orientation_difference_rad": 9.448507095520884e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000703_rng42"
+    },
+    "episode_000974_rng42_R1_s0073": {
+      "takeover_control_step": 73,
+      "position_max_m": 2.384185791015625e-07,
+      "width_m": 7.450580596923828e-09,
+      "joint_max_rad": 1.0654330253601074e-06,
+      "orientation_difference_rad": 6.379548947787623e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000974_rng42"
+    },
+    "episode_000974_rng42_R2_s0129": {
+      "takeover_control_step": 129,
+      "position_max_m": 5.960464477539062e-07,
+      "width_m": 2.2351741790771484e-08,
+      "joint_max_rad": 7.152557373046875e-07,
+      "orientation_difference_rad": 7.127426514881921e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000974_rng42"
+    },
+    "episode_000974_rng42_R3_s0436": {
+      "takeover_control_step": 436,
+      "position_max_m": 3.0994415283203125e-06,
+      "width_m": 2.648681402206421e-06,
+      "joint_max_rad": 5.435943603515625e-05,
+      "orientation_difference_rad": 2.2933217914593804e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000974_rng42"
+    },
+    "episode_000974_rng43_R3_s0253": {
+      "takeover_control_step": 253,
+      "position_max_m": 4.76837158203125e-07,
+      "width_m": 8.940696716308594e-07,
+      "joint_max_rad": 1.169741153717041e-06,
+      "orientation_difference_rad": 9.360462212416947e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_000974_rng43"
+    },
+    "episode_001129_rng42_R1_s0105": {
+      "takeover_control_step": 105,
+      "position_max_m": 4.76837158203125e-07,
+      "width_m": 2.2351741790771484e-08,
+      "joint_max_rad": 6.854534149169922e-07,
+      "orientation_difference_rad": 8.381894621237586e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_001129_rng42"
+    },
+    "episode_001212_rng42_R1_s0093": {
+      "takeover_control_step": 93,
+      "position_max_m": 2.384185791015625e-07,
+      "width_m": 2.384185791015625e-07,
+      "joint_max_rad": 4.6193599700927734e-07,
+      "orientation_difference_rad": 3.6934285621587093e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_001212_rng42"
+    },
+    "episode_001257_rng42_R1_s0096": {
+      "takeover_control_step": 96,
+      "position_max_m": 2.384185791015625e-07,
+      "width_m": 4.023313522338867e-07,
+      "joint_max_rad": 2.8312206268310547e-07,
+      "orientation_difference_rad": 5.107269253184087e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_001257_rng42"
+    },
+    "episode_001606_rng42_R1_s0084": {
+      "takeover_control_step": 84,
+      "position_max_m": 4.172325134277344e-07,
+      "width_m": 3.725290298461914e-09,
+      "joint_max_rad": 7.35744833946228e-07,
+      "orientation_difference_rad": 1.07986873515019e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_001606_rng42"
+    },
+    "episode_001606_rng42_R2_s0161": {
+      "takeover_control_step": 161,
+      "position_max_m": 7.152557373046875e-07,
+      "width_m": 5.960464477539063e-08,
+      "joint_max_rad": 1.817941665649414e-06,
+      "orientation_difference_rad": 1.2716721115220279e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_001606_rng42"
+    },
+    "episode_001606_rng42_R3_s0197": {
+      "takeover_control_step": 197,
+      "position_max_m": 4.76837158203125e-07,
+      "width_m": 7.450580596923828e-09,
+      "joint_max_rad": 2.16066837310791e-06,
+      "orientation_difference_rad": 4.099177319100981e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_001606_rng42"
+    },
+    "episode_002028_rng42_R1_s0084": {
+      "takeover_control_step": 84,
+      "position_max_m": 5.364418029785156e-07,
+      "width_m": 4.179775714874268e-06,
+      "joint_max_rad": 7.078051567077637e-07,
+      "orientation_difference_rad": 7.054086371038393e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_002028_rng42"
+    },
+    "episode_002028_rng42_R2_s0158": {
+      "takeover_control_step": 158,
+      "position_max_m": 1.3709068298339844e-06,
+      "width_m": 6.891787052154541e-07,
+      "joint_max_rad": 2.384185791015625e-06,
+      "orientation_difference_rad": 2.2262213898253844e-06,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_002028_rng42"
+    },
+    "episode_002413_rng42_R1_s0089": {
+      "takeover_control_step": 89,
+      "position_max_m": 2.384185791015625e-07,
+      "width_m": 3.725290298461914e-09,
+      "joint_max_rad": 9.760260581970215e-07,
+      "orientation_difference_rad": 4.350962311457945e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_002413_rng42"
+    },
+    "episode_002413_rng42_R2_s0173": {
+      "takeover_control_step": 173,
+      "position_max_m": 4.76837158203125e-07,
+      "width_m": 1.862645149230957e-08,
+      "joint_max_rad": 1.0766088962554932e-06,
+      "orientation_difference_rad": 3.6991213512969797e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_002413_rng42"
+    },
+    "episode_002617_rng42_R1_s0080": {
+      "takeover_control_step": 80,
+      "position_max_m": 5.960464477539062e-07,
+      "width_m": 0.0,
+      "joint_max_rad": 7.152557373046875e-07,
+      "orientation_difference_rad": 8.736709771928983e-07,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/student_sources/episode_002617_rng42"
+    }
+  },
+  "causal_examples": [
+    {
+      "episode": "episode_000023_rng42_R1_s0085",
+      "frame": 0,
+      "global_anchor": 85,
+      "global_indices": [
+        70,
+        80,
+        84,
+        85
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000023_rng42_R1_s0085",
+      "frame": 1,
+      "global_anchor": 86,
+      "global_indices": [
+        71,
+        81,
+        85,
+        86
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000023_rng42_R1_s0085",
+      "frame": 16,
+      "global_anchor": 101,
+      "global_indices": [
+        86,
+        96,
+        100,
+        101
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000329_rng42_R1_s0075",
+      "frame": 0,
+      "global_anchor": 75,
+      "global_indices": [
+        60,
+        70,
+        74,
+        75
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000329_rng42_R1_s0075",
+      "frame": 1,
+      "global_anchor": 76,
+      "global_indices": [
+        61,
+        71,
+        75,
+        76
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000329_rng42_R1_s0075",
+      "frame": 16,
+      "global_anchor": 91,
+      "global_indices": [
+        76,
+        86,
+        90,
+        91
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000613_rng42_R1_s0131",
+      "frame": 0,
+      "global_anchor": 131,
+      "global_indices": [
+        116,
+        126,
+        130,
+        131
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng42_R1_s0131",
+      "frame": 1,
+      "global_anchor": 132,
+      "global_indices": [
+        117,
+        127,
+        131,
+        132
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng42_R1_s0131",
+      "frame": 16,
+      "global_anchor": 147,
+      "global_indices": [
+        132,
+        142,
+        146,
+        147
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000613_rng42_R2_s0192",
+      "frame": 0,
+      "global_anchor": 192,
+      "global_indices": [
+        177,
+        187,
+        191,
+        192
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng42_R2_s0192",
+      "frame": 1,
+      "global_anchor": 193,
+      "global_indices": [
+        178,
+        188,
+        192,
+        193
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng42_R2_s0192",
+      "frame": 16,
+      "global_anchor": 208,
+      "global_indices": [
+        193,
+        203,
+        207,
+        208
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000613_rng42_R3_s0465",
+      "frame": 0,
+      "global_anchor": 465,
+      "global_indices": [
+        450,
+        460,
+        464,
+        465
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng42_R3_s0465",
+      "frame": 1,
+      "global_anchor": 466,
+      "global_indices": [
+        451,
+        461,
+        465,
+        466
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng42_R3_s0465",
+      "frame": 16,
+      "global_anchor": 481,
+      "global_indices": [
+        466,
+        476,
+        480,
+        481
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000613_rng43_R3_s0217",
+      "frame": 0,
+      "global_anchor": 217,
+      "global_indices": [
+        202,
+        212,
+        216,
+        217
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng43_R3_s0217",
+      "frame": 1,
+      "global_anchor": 218,
+      "global_indices": [
+        203,
+        213,
+        217,
+        218
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000613_rng43_R3_s0217",
+      "frame": 16,
+      "global_anchor": 233,
+      "global_indices": [
+        218,
+        228,
+        232,
+        233
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000703_rng42_R1_s0086",
+      "frame": 0,
+      "global_anchor": 86,
+      "global_indices": [
+        71,
+        81,
+        85,
+        86
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000703_rng42_R1_s0086",
+      "frame": 1,
+      "global_anchor": 87,
+      "global_indices": [
+        72,
+        82,
+        86,
+        87
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000703_rng42_R1_s0086",
+      "frame": 16,
+      "global_anchor": 102,
+      "global_indices": [
+        87,
+        97,
+        101,
+        102
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000703_rng42_R2_s0203",
+      "frame": 0,
+      "global_anchor": 203,
+      "global_indices": [
+        188,
+        198,
+        202,
+        203
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000703_rng42_R2_s0203",
+      "frame": 1,
+      "global_anchor": 204,
+      "global_indices": [
+        189,
+        199,
+        203,
+        204
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000703_rng42_R2_s0203",
+      "frame": 16,
+      "global_anchor": 219,
+      "global_indices": [
+        204,
+        214,
+        218,
+        219
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000703_rng42_R3_s0424",
+      "frame": 0,
+      "global_anchor": 424,
+      "global_indices": [
+        409,
+        419,
+        423,
+        424
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000703_rng42_R3_s0424",
+      "frame": 1,
+      "global_anchor": 425,
+      "global_indices": [
+        410,
+        420,
+        424,
+        425
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000703_rng42_R3_s0424",
+      "frame": 16,
+      "global_anchor": 440,
+      "global_indices": [
+        425,
+        435,
+        439,
+        440
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000974_rng42_R1_s0073",
+      "frame": 0,
+      "global_anchor": 73,
+      "global_indices": [
+        58,
+        68,
+        72,
+        73
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng42_R1_s0073",
+      "frame": 1,
+      "global_anchor": 74,
+      "global_indices": [
+        59,
+        69,
+        73,
+        74
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng42_R1_s0073",
+      "frame": 16,
+      "global_anchor": 89,
+      "global_indices": [
+        74,
+        84,
+        88,
+        89
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000974_rng42_R2_s0129",
+      "frame": 0,
+      "global_anchor": 129,
+      "global_indices": [
+        114,
+        124,
+        128,
+        129
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng42_R2_s0129",
+      "frame": 1,
+      "global_anchor": 130,
+      "global_indices": [
+        115,
+        125,
+        129,
+        130
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng42_R2_s0129",
+      "frame": 16,
+      "global_anchor": 145,
+      "global_indices": [
+        130,
+        140,
+        144,
+        145
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000974_rng42_R3_s0436",
+      "frame": 0,
+      "global_anchor": 436,
+      "global_indices": [
+        421,
+        431,
+        435,
+        436
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng42_R3_s0436",
+      "frame": 1,
+      "global_anchor": 437,
+      "global_indices": [
+        422,
+        432,
+        436,
+        437
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng42_R3_s0436",
+      "frame": 16,
+      "global_anchor": 452,
+      "global_indices": [
+        437,
+        447,
+        451,
+        452
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_000974_rng43_R3_s0253",
+      "frame": 0,
+      "global_anchor": 253,
+      "global_indices": [
+        238,
+        248,
+        252,
+        253
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng43_R3_s0253",
+      "frame": 1,
+      "global_anchor": 254,
+      "global_indices": [
+        239,
+        249,
+        253,
+        254
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_000974_rng43_R3_s0253",
+      "frame": 16,
+      "global_anchor": 269,
+      "global_indices": [
+        254,
+        264,
+        268,
+        269
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_001129_rng42_R1_s0105",
+      "frame": 0,
+      "global_anchor": 105,
+      "global_indices": [
+        90,
+        100,
+        104,
+        105
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001129_rng42_R1_s0105",
+      "frame": 1,
+      "global_anchor": 106,
+      "global_indices": [
+        91,
+        101,
+        105,
+        106
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001129_rng42_R1_s0105",
+      "frame": 16,
+      "global_anchor": 121,
+      "global_indices": [
+        106,
+        116,
+        120,
+        121
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_001212_rng42_R1_s0093",
+      "frame": 0,
+      "global_anchor": 93,
+      "global_indices": [
+        78,
+        88,
+        92,
+        93
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001212_rng42_R1_s0093",
+      "frame": 1,
+      "global_anchor": 94,
+      "global_indices": [
+        79,
+        89,
+        93,
+        94
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001212_rng42_R1_s0093",
+      "frame": 16,
+      "global_anchor": 109,
+      "global_indices": [
+        94,
+        104,
+        108,
+        109
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_001257_rng42_R1_s0096",
+      "frame": 0,
+      "global_anchor": 96,
+      "global_indices": [
+        81,
+        91,
+        95,
+        96
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001257_rng42_R1_s0096",
+      "frame": 1,
+      "global_anchor": 97,
+      "global_indices": [
+        82,
+        92,
+        96,
+        97
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001257_rng42_R1_s0096",
+      "frame": 16,
+      "global_anchor": 112,
+      "global_indices": [
+        97,
+        107,
+        111,
+        112
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_001606_rng42_R1_s0084",
+      "frame": 0,
+      "global_anchor": 84,
+      "global_indices": [
+        69,
+        79,
+        83,
+        84
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001606_rng42_R1_s0084",
+      "frame": 1,
+      "global_anchor": 85,
+      "global_indices": [
+        70,
+        80,
+        84,
+        85
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001606_rng42_R1_s0084",
+      "frame": 16,
+      "global_anchor": 100,
+      "global_indices": [
+        85,
+        95,
+        99,
+        100
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_001606_rng42_R2_s0161",
+      "frame": 0,
+      "global_anchor": 161,
+      "global_indices": [
+        146,
+        156,
+        160,
+        161
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001606_rng42_R2_s0161",
+      "frame": 1,
+      "global_anchor": 162,
+      "global_indices": [
+        147,
+        157,
+        161,
+        162
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001606_rng42_R2_s0161",
+      "frame": 16,
+      "global_anchor": 177,
+      "global_indices": [
+        162,
+        172,
+        176,
+        177
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_001606_rng42_R3_s0197",
+      "frame": 0,
+      "global_anchor": 197,
+      "global_indices": [
+        182,
+        192,
+        196,
+        197
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001606_rng42_R3_s0197",
+      "frame": 1,
+      "global_anchor": 198,
+      "global_indices": [
+        183,
+        193,
+        197,
+        198
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_001606_rng42_R3_s0197",
+      "frame": 16,
+      "global_anchor": 213,
+      "global_indices": [
+        198,
+        208,
+        212,
+        213
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_002028_rng42_R1_s0084",
+      "frame": 0,
+      "global_anchor": 84,
+      "global_indices": [
+        69,
+        79,
+        83,
+        84
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002028_rng42_R1_s0084",
+      "frame": 1,
+      "global_anchor": 85,
+      "global_indices": [
+        70,
+        80,
+        84,
+        85
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002028_rng42_R1_s0084",
+      "frame": 16,
+      "global_anchor": 100,
+      "global_indices": [
+        85,
+        95,
+        99,
+        100
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_002028_rng42_R2_s0158",
+      "frame": 0,
+      "global_anchor": 158,
+      "global_indices": [
+        143,
+        153,
+        157,
+        158
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002028_rng42_R2_s0158",
+      "frame": 1,
+      "global_anchor": 159,
+      "global_indices": [
+        144,
+        154,
+        158,
+        159
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002028_rng42_R2_s0158",
+      "frame": 16,
+      "global_anchor": 174,
+      "global_indices": [
+        159,
+        169,
+        173,
+        174
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_002413_rng42_R1_s0089",
+      "frame": 0,
+      "global_anchor": 89,
+      "global_indices": [
+        74,
+        84,
+        88,
+        89
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002413_rng42_R1_s0089",
+      "frame": 1,
+      "global_anchor": 90,
+      "global_indices": [
+        75,
+        85,
+        89,
+        90
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002413_rng42_R1_s0089",
+      "frame": 16,
+      "global_anchor": 105,
+      "global_indices": [
+        90,
+        100,
+        104,
+        105
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_002413_rng42_R2_s0173",
+      "frame": 0,
+      "global_anchor": 173,
+      "global_indices": [
+        158,
+        168,
+        172,
+        173
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002413_rng42_R2_s0173",
+      "frame": 1,
+      "global_anchor": 174,
+      "global_indices": [
+        159,
+        169,
+        173,
+        174
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002413_rng42_R2_s0173",
+      "frame": 16,
+      "global_anchor": 189,
+      "global_indices": [
+        174,
+        184,
+        188,
+        189
+      ],
+      "crosses_prefix": false
+    },
+    {
+      "episode": "episode_002617_rng42_R1_s0080",
+      "frame": 0,
+      "global_anchor": 80,
+      "global_indices": [
+        65,
+        75,
+        79,
+        80
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002617_rng42_R1_s0080",
+      "frame": 1,
+      "global_anchor": 81,
+      "global_indices": [
+        66,
+        76,
+        80,
+        81
+      ],
+      "crosses_prefix": true
+    },
+    {
+      "episode": "episode_002617_rng42_R1_s0080",
+      "frame": 16,
+      "global_anchor": 96,
+      "global_indices": [
+        81,
+        91,
+        95,
+        96
+      ],
+      "crosses_prefix": false
+    }
+  ],
+  "ordinary_B_padding_and_deployment_parity": true,
+  "no_model_input_fields_beyond_proprio": true
+}

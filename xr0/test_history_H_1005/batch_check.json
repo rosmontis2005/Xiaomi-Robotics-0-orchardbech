@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "anchor": "R1/episode_000329_rng42_R1_s0075/frame0000",
+  "conditions": {
+    "H0": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          1,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "Hrepeat": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          4,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "Hhistory": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          4,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    }
+  }
+}

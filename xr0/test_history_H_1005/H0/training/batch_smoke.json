@@ -1,0 +1,14 @@
+{
+  "state_shape": [
+    1,
+    1,
+    32
+  ],
+  "action_shape": [
+    1,
+    30,
+    32
+  ],
+  "finite": true,
+  "checkpoint_compatible": true
+}

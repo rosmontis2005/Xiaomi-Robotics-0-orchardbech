@@ -1,0 +1,11 @@
+model,cohort,seed,inference_seed,split,held15,same_fruit_detach,release,valid_chain_release,reasonable_release,strict,min_held_planned_fruit_bucket_distance_m,bucket_neighborhood,max_stable_bucket_steps,long_held_stall,branch_break,physical_anomaly,failure
+Hrepeat_targets30_rng42,dev8,2013322,42,train,True,True,True,True,False,False,0.7547186722481697,False,0,False,False,False,release_far_or_outside_bucket
+Hrepeat_targets30_rng42,dev8,2014461,42,train,True,True,False,False,False,False,0.7970215300532673,False,0,True,False,False,held_transport_stall
+Hrepeat_targets30_rng42,dev8,2010914,42,val,True,True,False,False,False,False,0.2646554641835115,False,0,True,False,False,held_transport_stall
+Hrepeat_targets30_rng42,dev8,2012485,42,val,False,False,False,False,False,False,,False,0,False,False,False,no_stable_grasp
+Hrepeat_targets30_rng42,dev8,2015716,42,val,True,True,False,False,False,False,0.4345669744470633,False,0,True,False,False,held_transport_stall
+Hrepeat_targets30_rng42,dev8,2014362,42,val,True,True,True,True,False,False,0.3500059843609837,False,0,False,False,False,release_far_or_outside_bucket
+Hrepeat_targets30_rng42,dev8,2015751,42,val,True,True,False,False,False,False,0.784158919802729,False,0,True,False,False,held_transport_stall
+Hrepeat_targets30_rng42,dev8,2011310,42,val,True,True,False,False,False,False,0.21709458718802196,False,0,False,False,False,transport_incomplete_no_release
+Hrepeat_targets30_rng42,historical_seed42_43,2010600,42,val,True,True,False,False,False,False,0.564398393075813,False,0,True,False,False,held_transport_stall
+Hrepeat_targets30_rng43,historical_seed42_43,2010600,43,val,True,True,False,False,False,False,0.062443680864369105,True,0,True,False,False,bucket_approach_no_release

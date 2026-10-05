@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "Input-path smoke only; no experiment success inference",
+  "control_steps": 30,
+  "mode": "Hhistory",
+  "state_shape": [
+    1,
+    4,
+    32
+  ],
+  "actions_finite": true,
+  "calls": [
+    {
+      "control_step": 0,
+      "buffer_updates": 1,
+      "token_control_steps": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "control_step": 30,
+      "buffer_updates": 31,
+      "token_control_steps": [
+        15,
+        25,
+        29,
+        30
+      ]
+    }
+  ],
+  "buffer_updates": 31
+}

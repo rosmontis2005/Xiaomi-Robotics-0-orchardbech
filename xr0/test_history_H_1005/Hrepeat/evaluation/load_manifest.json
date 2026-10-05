@@ -1,0 +1,74 @@
+{
+  "loaded": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/Hrepeat/training/checkpoints/step_8000_trainable.pt",
+    "format": "orchard_m0_trainable_v1",
+    "step": 8000,
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "checkpoint_sha256": "c5f2597c0667ef248e2ad369fa9566f5f8415d6225e8b43851e549bf684e2831",
+    "tensors": 219,
+    "parameters": 278458368,
+    "exact_keys": true,
+    "destination_dtype_counts": {
+      "torch.float32": 219
+    },
+    "metadata": {
+      "baseline": {
+        "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt",
+        "step": 8000,
+        "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+        "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+        "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+        "training_summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_summary.json"
+      },
+      "schedule_sha256": "a92d54ad15d38f4335699e460b68fc544c656fc01428a6bea49b4902359581f6",
+      "manifest_sha256": "2f857fc7af14bf6ea0225f6fc385f1840209a14ec1d10523ab1f471e52b7b71f",
+      "stats_sha256": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371",
+      "config": {
+        "updates": 8000,
+        "checkpoint_steps": [
+          8000
+        ],
+        "optimizer": {
+          "lr": 1e-05,
+          "betas": [
+            0.9,
+            0.95
+          ],
+          "weight_decay": 0.1,
+          "eps": 1e-08,
+          "foreach": false
+        },
+        "batch": 1,
+        "gradient_accumulation": 1,
+        "gradient_clip_norm": 1.0,
+        "lr_schedule": "constant",
+        "training_repeat": 1,
+        "async_train": false,
+        "enable_freq": false,
+        "freeze_vlm": true,
+        "vlm_dtype": "bfloat16",
+        "non_vlm_master_dtype": "float32",
+        "autocast": "bfloat16",
+        "euler_steps": 5,
+        "loss": "original full30 active7 normalized flow, coefficient0.5, no event/contact weighting",
+        "seed": 42
+      },
+      "condition": "Hrepeat",
+      "resume": null,
+      "source_sha256": {
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/train_H.py": "2daa45b908bd69ce19dd5be0840ff22643fe8d79a6b892912007cb4ee13b1703",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/history_inputs.py": "fa7f2c56071ff71959d9a3cfd1dd896f9ae503e6842a07ba43964f454476c357",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_history_H_1005/bootstrap.py": "60f0e1e46dcb729737aecf9889085116dfa85aab7bca9c6dc9228e54de10fe6c"
+      }
+    }
+  },
+  "dtypes": {
+    "vlm": {
+      "torch.bfloat16": 713
+    },
+    "non_vlm": {
+      "torch.float32": 219
+    }
+  }
+}
