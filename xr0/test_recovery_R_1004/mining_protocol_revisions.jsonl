@@ -1,0 +1,1 @@
+{"time": 1791105577.9459782, "rule": "After mechanism PASS, stop each new mining rollout once all3 categories have an actual eligible state; maximum budget remains900, no execution/controller changes; all observed eligible boundaries retained", "mechanism_gate": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/mechanism_gate.json"}

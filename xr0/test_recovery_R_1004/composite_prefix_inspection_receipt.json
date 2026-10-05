@@ -1,0 +1,13 @@
+{
+  "pid": 31232,
+  "session": 31232,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/inspect_composite_prefix.py"
+  ],
+  "log": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/composite_prefix_inspection.log",
+  "detached": true,
+  "time": 1791133243.663331
+}

@@ -1,0 +1,950 @@
+{
+  "schema": "orchard_R_session_archive_v1",
+  "repository": "Xiaomi-Robotics-0",
+  "parent_commit": "1895b806d9d9898f3c040483ca6d6cdbb4056a2c",
+  "session_scope": "Original R pilot plus two additional R training/evaluation cycles and one frozen final paired heldout comparison; no H implementation or fresh24 run.",
+  "files_excluding_index": [
+    {
+      "path": "xr0/.gitignore",
+      "size_bytes": 926,
+      "sha256": "bb8d3c90eed4b2e8266505ee4778d00a52a0f858a6d509f6fc0385ce1fda9911"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/.gitattributes",
+      "size_bytes": 419,
+      "sha256": "37fd40e12d1dd6bcdc9aacbb8b81d3dac4e37cdcbeac3e18a55bdbe4fae7cc4a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/.gitignore",
+      "size_bytes": 2034,
+      "sha256": "29a95478f1edbf8266842e9a8aff95355638e981733781f5e60a0b01bcf72ade"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/R4000_evaluation_receipt.json",
+      "size_bytes": 443,
+      "sha256": "ecc079b58a1b41a2a4734a80c9bde546d23963db30da09a150fd1a208ffde246"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/R4000_evaluation_resume_receipt.json",
+      "size_bytes": 450,
+      "sha256": "aab502d5ea4745313944c3a49f23e734d616e3eea674178d8eef1010ba7af540"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/R4000_takeovers_receipt.json",
+      "size_bytes": 421,
+      "sha256": "05cf135534ead42563fd4c0b8a367e7e4ce1dcc75db6a3b38dd19daa4827dca0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/R4000_takeovers_repaired_receipt.json",
+      "size_bytes": 437,
+      "sha256": "491db5c3bfb54be64111f05dfeb61fb40995bf8cd07c99ef6d7ee09b186f8dad"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/R4000_takeovers_resume_receipt.json",
+      "size_bytes": 435,
+      "sha256": "fb20f64b683baddfb0acaa3bdd9bbb2ece5504400c428e7060936fc1339e001a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/README.md",
+      "size_bytes": 4498,
+      "sha256": "434fc0b6ee1080c061108549a17c875e14a05f7bcb1e1a43531a5293a3d688de"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/add_R3_fallbacks.py",
+      "size_bytes": 1479,
+      "sha256": "d20313fd767db0da27452eb8b4b6b31a1d26a86c664b6ff089e1c693f4d317e5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/baseline_provenance.json",
+      "size_bytes": 641,
+      "sha256": "2273baa3f6a407b0a11598e1b6a3e542811b09e2b0c61a8468f7fe37331d3e85"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/bootstrap.py",
+      "size_bytes": 1339,
+      "sha256": "06ffeb60b3283fc6e7b23c2d3cebd273e0e25caf375fdbfffcaf4a76e1cf09e7"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/candidate_decisions.jsonl",
+      "size_bytes": 25045,
+      "sha256": "140147767444dba38a26be0381a3534c90bc6180c416c6f4d3f506ad3d676667"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/candidate_selection_revisions.jsonl",
+      "size_bytes": 868,
+      "sha256": "ffcdfe8c9ff3951316e5092d9c8e52911efcb38e3f50713897690d46a51ff04c"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/check_loader_pilot.py",
+      "size_bytes": 1490,
+      "sha256": "01a689e76a1b699a2842b8ee180b34cd28101a4caf7842e1e743a5f231000dad"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/checkpoint_io.py",
+      "size_bytes": 4755,
+      "sha256": "2a64ca6aa2cd2bea96e1ce81096e7653d0f23ca172f06877a2b113d8ea8715d0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/collect_onpolicy_R3.py",
+      "size_bytes": 8916,
+      "sha256": "db76815d63867e18791196e88a21c02bb7116aca91535f8e2b73dbf85ef1dc41"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/collect_recovery.py",
+      "size_bytes": 14679,
+      "sha256": "e6450a8e12dbe29df53a0872c049ca8e05d3f054caa36da4f5df07b86bf797bb"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/collection_status.json",
+      "size_bytes": 172,
+      "sha256": "b90ccd25190d6bc9e3d2c7d6bfcb604350872706d41b7cc9c2f64406da8102fe"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/composite_prefix_inspection_receipt.json",
+      "size_bytes": 445,
+      "sha256": "7463efb320e5c84d9528243df3e415be4bd510324e361aa8be8667dac8fc85cd"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/data_audit.json",
+      "size_bytes": 50302,
+      "sha256": "b861a18a4c29f2173e4b6e10e92a0b6c73ec668fcff034e844f22e8ae893edd7"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/engineering_repairs.jsonl",
+      "size_bytes": 1341,
+      "sha256": "cbed25af2f3923487591dc1eae6e71860f536c6771603ffc573f766b7bb89f22"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluate_final_holdout.py",
+      "size_bytes": 6283,
+      "sha256": "7dea4d0778f14078ab8a73e5ad3cbd0b6c745ce6e2e16979e9bc187cfeda058f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluate_followup.py",
+      "size_bytes": 7725,
+      "sha256": "4696463670c1972b96c9ac2878cc78c7a138adc62d74dc62a854c35b327d5eaf"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluate_takeovers.py",
+      "size_bytes": 6355,
+      "sha256": "66d5200bb5383abf66da6473c8cfca0cc413429de2939771abcfc5fe2e92ece8"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/experiment_registry.json",
+      "size_bytes": 482,
+      "sha256": "5206bc5f6e9adb70127f1fa5155d4ce58cd1a0f8ed9e0f6c54d2587b1f583ff5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/cases.csv",
+      "size_bytes": 855,
+      "sha256": "e9033c6557c146da43da037f086ae2670a82f719d9cbc2c14ecbbfa466ae9aea"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/historical_baseline_reproducibility.json",
+      "size_bytes": 929,
+      "sha256": "543e2b648b9a437b8205fc42bf3d991bfe03f4120a7209d67d14e0c1fe4ffab5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/load_B8000.json",
+      "size_bytes": 8988,
+      "sha256": "5c6abf8d2ebd643f41d14b004c2db5a279fa1a47d04477b18fb48ea915efc323"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/load_R_selected.json",
+      "size_bytes": 4103,
+      "sha256": "6d99840b396605506fe32560a45f16efc3549f7a7e5586962353b6335bf551d1"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/protocol.json",
+      "size_bytes": 31397,
+      "sha256": "0f761544b78439c358f2d074120502d6ee5c26de30dea03a6f6c910bcd312096"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/report.json",
+      "size_bytes": 53528,
+      "sha256": "a38633ab408d95dd83ef58990c98e4e21571ec9ff039bcf38c5654769d98ebb5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/report.md",
+      "size_bytes": 1712,
+      "sha256": "4f3ea128fd80e4f3ae2f9b6b840822d458ef9a2bd3dc36f9ca905b790f3f11b5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/results.json",
+      "size_bytes": 101716,
+      "sha256": "771e6a79a0b0e0f472bf202f4a9b911ee0c7ee01ee4b6c82cdf048a5fb7ced39"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/final_holdout12/status.json",
+      "size_bytes": 91,
+      "sha256": "6b7e3cfc4959aa089bf5ddc131cc927a13e2d042540c67f6e62e2c1e4f88cefc"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/next_experiment_proposal.md",
+      "size_bytes": 10503,
+      "sha256": "388449e4f184eb3e273dfb4b3def9d51fd9ec3d58090ae133fd9cb6163cc6449"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/candidate_decisions.jsonl",
+      "size_bytes": 5820,
+      "sha256": "d90bb7f2866e2817ff0416484313cfa2308a61ce94f170a7d2da93224bdc9c0c"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/mining_revisions.jsonl",
+      "size_bytes": 359,
+      "sha256": "f450b21b259a512e6da1ee82b0c22af6c0521c36758f72c3cfffbd06e6f090e1"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/prefix_consistency_audit.json",
+      "size_bytes": 11928,
+      "sha256": "a1fb3a95b34bc3cfb66194aab41ed47028bfd2f56b5ff1c3d50612b0b0e56845"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/source_selection.json",
+      "size_bytes": 8036,
+      "sha256": "aa1b887177639e73a209b420f4cb486292f39cf703c2212318d4d81e7be49420"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/source_selection_first018.json",
+      "size_bytes": 8027,
+      "sha256": "62ae575b02b732713df9072f1a5595c58c9e892948a4bae4e878274c68fe3ed4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/status.json",
+      "size_bytes": 78,
+      "sha256": "8e4cc639362ec62e98d4b7bbd5350551f2a0d29f94df6979ee4c027f10d48572"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/status_first018.json",
+      "size_bytes": 78,
+      "sha256": "98ff775732520c649c248895dbc40867964b538c703da083e2f94bb38bd4ab64"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/selected_endpoint.json",
+      "size_bytes": 958,
+      "sha256": "4978d505ab8b6b207f38103270ff8276c2daaf81e52510b0b1b034457200a772"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/selection_rules.json",
+      "size_bytes": 540,
+      "sha256": "27d23481f3280c86aeaccc41afda269114791efa1350859c5897de14d335a10f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/summary_report.json",
+      "size_bytes": 131654,
+      "sha256": "d66f556786a99c72678dd9911d5d93ab90d8fbc679649d2881f01ac008cfdecb"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/summary_report.md",
+      "size_bytes": 8883,
+      "sha256": "d812d43f4e4dbb302ed1be8d38951c4106884daab55270b3f8a2131918f42668"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/engineering_repairs.jsonl",
+      "size_bytes": 180,
+      "sha256": "64b35a0b72ef98346a97934846d97506a6e98db88dac6df5d06b05b5fcd28c66"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/load_manifest.json",
+      "size_bytes": 4377,
+      "sha256": "36d10683d6a4e693acb5360f5f822f81e02c83dea3c808e3e199b83f4501ff28"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/original_training_snapshot/checkpoint_reference.json",
+      "size_bytes": 215,
+      "sha256": "ffc17464fd1acee1a211fc37e721d6153be381d5df0637db567a5640c31b122c"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/original_training_snapshot/run_manifest.json",
+      "size_bytes": 14535,
+      "sha256": "7faef947c7e8a4976fb73ef4f8f18f200f990f196746766b5c4c8ef4c2301ce5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/original_training_snapshot/status.json",
+      "size_bytes": 227,
+      "sha256": "22a63fd5dd7dbf02c860332b03c89c4a4df5e25880e12ff69c08a81c506fffbf"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/protocol.json",
+      "size_bytes": 30823,
+      "sha256": "2cb85a1ecc2003787d6436299def965d8e7c1cb625023837024a44778751bbc3"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/protocol_initial_cpu_failure.json",
+      "size_bytes": 30823,
+      "sha256": "0f1ad45c1e56dd21ba840092b792b8e493bcb6199328edfd0c42c6a8a24bed77"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/report.json",
+      "size_bytes": 22197,
+      "sha256": "0d78269307a9a0d26b4361dfbe6841c48dee7387efccf8980b97331488a2960f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/report.md",
+      "size_bytes": 7128,
+      "sha256": "fb42953f78defc8cb3325f8a19dceef068bb2cf33177cd7b4ae953a728cad2e5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/results.json",
+      "size_bytes": 42423,
+      "sha256": "4c455b2c546cf6bb03a329e6d9eec439585be9815a129d46c75f71d97f32af57"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/seed_audit.json",
+      "size_bytes": 2065,
+      "sha256": "053e6c71c983dc38207ccdd488f2fd042d4cdea4eee8c20d2452fb0bcf749384"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/status.json",
+      "size_bytes": 105,
+      "sha256": "6767c76b4e2f67a0bdd65448610a3fe6d4046b88447fab9238d64eea0937f517"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/status_initial_cpu_failure.json",
+      "size_bytes": 1348,
+      "sha256": "adf1bab8de25dca35703e09a97e734d20a09a0ae75b73bc8117156b396620824"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/engineering_repairs.jsonl",
+      "size_bytes": 263,
+      "sha256": "55f13e8369295cda89d8b08211172756f199cb7148d0854dd598a43af048c165"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/load_B8000.json",
+      "size_bytes": 8988,
+      "sha256": "5c6abf8d2ebd643f41d14b004c2db5a279fa1a47d04477b18fb48ea915efc323"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/load_R4000.json",
+      "size_bytes": 4103,
+      "sha256": "6d99840b396605506fe32560a45f16efc3549f7a7e5586962353b6335bf551d1"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/offline_B8000.json",
+      "size_bytes": 22472,
+      "sha256": "c3fabfacf867f362904feed9f0001d318bd8e31cfa37c0d9893a7ea992d8e87e"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/offline_R4000.json",
+      "size_bytes": 22544,
+      "sha256": "191bf92eb883cd50458ad39874e23ca096e6d59d4ef5678cec0c7f3857d1bdc4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/protocol.json",
+      "size_bytes": 691,
+      "sha256": "e280838a149d058d1e0872171170759ee1cc729cc7d99a19a4932e16272f8fba"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/protocol_initial.json",
+      "size_bytes": 655,
+      "sha256": "be47ed55e7689b2b2b3b5a7c33ef5f667a8df17ce795ac277769605baf6c34b6"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/results.json",
+      "size_bytes": 54218,
+      "sha256": "c9b363cb5fc897c1f906a331855e4c610dd80ea34bb7e1008c1a7f2a4563477b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/status.json",
+      "size_bytes": 89,
+      "sha256": "da5df481aeb0eb4a5b871f74e4e07e5f17bb494285454153be5ac58797901671"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/takeovers/status_prefix_failure.json",
+      "size_bytes": 996,
+      "sha256": "2b313b6b7f8e3c9850e2e84a700005c323880431d084dd01dc4b6c3cdb36b1d9"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_01/training_audit.json",
+      "size_bytes": 1026,
+      "sha256": "785332ee68f6eadfa296ce55e1baa2535530da4d06acab554b877e0d1a39c747"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/asset_cache_audit.json",
+      "size_bytes": 113,
+      "sha256": "5c4e46f67721f99b9cbeb3dfb80a3a2723c95ce66af7ed80af617e9dc3130cbf"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/bootstrap.py",
+      "size_bytes": 1390,
+      "sha256": "c6f24aeef9ae9c3da76e84590aa26e94f46d73dffaf9069b1a64f34cbf274e64"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/checkpoint_io.py",
+      "size_bytes": 4755,
+      "sha256": "2a64ca6aa2cd2bea96e1ce81096e7653d0f23ca172f06877a2b113d8ea8715d0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/collect_recovery.py",
+      "size_bytes": 14679,
+      "sha256": "e6450a8e12dbe29df53a0872c049ca8e05d3f054caa36da4f5df07b86bf797bb"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/cycle_receipt.json",
+      "size_bytes": 473,
+      "sha256": "38dd0b3af6b6eb3094ba8984a3aa2c454fbc45d32442b995f3a3628d70104e90"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/cycle_repaired_receipt.json",
+      "size_bytes": 481,
+      "sha256": "f56a62e3b4fa638934293fceb71bf679f6301f0ca42200a9122151755b637394"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/cycle_resume_receipt.json",
+      "size_bytes": 480,
+      "sha256": "98b696c92f143bdad9d4a9f76d1016f1c7e11e2e8c2ff4c79cea45a55207e5d0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/cycle_status.json",
+      "size_bytes": 101,
+      "sha256": "6bdf40cf89e4e3bb0e0184970f8e6e218446e86a3b1337a6cb187591aa56596b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/cycle_status_initial_queue_failure.json",
+      "size_bytes": 560,
+      "sha256": "3240d5816708ea123014e5a320f44f120b5925695928740b739c1bb072e601a4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/data_audit.json",
+      "size_bytes": 30857,
+      "sha256": "c2ba3db9859ec5e1439247ff97d0f06f2df67da4f68c60f89fa7d57981be4884"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/design.json",
+      "size_bytes": 632,
+      "sha256": "81c037222103dfde6f99a3cd5c0ebfbb216f692a8e5be5db4562580c7a0131f5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluate_followup.py",
+      "size_bytes": 7706,
+      "sha256": "4e0bcda34b34090ae4c238ff56a55baaa3f9cacd51162889dbfcf30b0cb2d155"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/load_manifest.json",
+      "size_bytes": 4687,
+      "sha256": "83ca642faa59e6527a9f85518313d691215acdba8b9e950ec7b0aca63459ffb4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/protocol.json",
+      "size_bytes": 30854,
+      "sha256": "bbb4de3fb82d38cf6c5d6ad42c419bccef144a0aa5c6a102f0c36c723fac2ce1"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/results.json",
+      "size_bytes": 42476,
+      "sha256": "fce3619c5b0757346b60b9c4c36a0d89064b175b96051db047ce57ee7123da2f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/status.json",
+      "size_bytes": 106,
+      "sha256": "b5180a0e2367f6877b4ef50282d7a15eab2f5847677a613ab02c7d8ad9235dd3"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/training_audit.json",
+      "size_bytes": 1022,
+      "sha256": "8a3db57dfecd346a122b992e7bc4f94b986637a956dabecacf267347bb280a1c"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation_console_receipt.json",
+      "size_bytes": 346,
+      "sha256": "76493e6522d900e393a35cc1ff585ec989b9abf967460ecdb412aa26bcd4cf8e"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation_engineering_journal.jsonl",
+      "size_bytes": 309,
+      "sha256": "8fbb955b2771fb9fa6bada1af1366e7ddf33a0dcc9f4273d7060c3292f2d7791"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/launch_job.py",
+      "size_bytes": 783,
+      "sha256": "7d9ee06ec0b8cba8c22fbdb22e68c67a365b3977f145716d1e8f4ed868b6b3da"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/mine_student.py",
+      "size_bytes": 5448,
+      "sha256": "cf7faea0a07c4ce4cb20f94bcce0cf6e40bcae78c3538149028aa0fbe5ff660f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/prepare_training.py",
+      "size_bytes": 11800,
+      "sha256": "284a4f2f6eccef8a2aef8c7cca899a0777792258561d47281e20ccb42b4bf250"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/prepared_checks.json",
+      "size_bytes": 15770,
+      "sha256": "9c9a2daa6fef3db248eedfe0b2f201320cb504419650721e48b49c6e4d438b7f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/protocol.json",
+      "size_bytes": 52136,
+      "sha256": "d06bd1c8d409c1c3ffa64b5f381fb97a037a46ec8a95ecc9591d779f4fcdddfa"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/queue_cycle.py",
+      "size_bytes": 1779,
+      "sha256": "901bcc3aa3ac812e913970cd3903102cecb13e4948f4a6730da9528b92b65911"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_common.py",
+      "size_bytes": 4674,
+      "sha256": "44eae08189138124ea9bef32697846ae5901fdafbfdd08640608103c3e87e43a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_dataset.py",
+      "size_bytes": 3350,
+      "sha256": "2e3ea4d3a6e57f4509efdb7f57a68a445a7061d381968ecb9d2cd553a930a5b6"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_manifest.jsonl",
+      "size_bytes": 14201,
+      "sha256": "8805dfe919ad9d1f23cb03c6f7e7435dfe177ac115b494eaaa86ab7ea65ab763"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_teacher.py",
+      "size_bytes": 2394,
+      "sha256": "12c373893f41355cb57bdffb3738ddfd9bad4a75032538af7cb8c6739a760189"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/report.json",
+      "size_bytes": 18654,
+      "sha256": "117210741de12dc5cd60bc45b92e2c1974723f2b1f0068e11815d02bd553bf03"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/report.md",
+      "size_bytes": 3889,
+      "sha256": "60d245f2db32d084ddc782e4db955b7bd66237a51674508de526457a3cb72d05"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/schedule_R.jsonl",
+      "size_bytes": 1775449,
+      "sha256": "27fb419613bdd1ae73fb58ad8119e0fe3b27cd19008c10f1eb61c3cb8f6cf387"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/seed_audit.json",
+      "size_bytes": 2069,
+      "sha256": "9f8c11079010acd49d8564e2a0ad1db4d061d6491135eeff6f00c8bb16d5819e"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/train_R.py",
+      "size_bytes": 9155,
+      "sha256": "12e9649aabca8c9536b429c6932386c6714c8109ffcc41cd0361791305f8f53a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/training/run_manifest.json",
+      "size_bytes": 14814,
+      "sha256": "73f994a1bde4dff6dcdc839bc8e44059502c2d38c2cf38e39a6d007d9fb57d22"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/training/status.json",
+      "size_bytes": 225,
+      "sha256": "13c6aec62aedbc3f5ca6a02fabca92f00f42a207f2df9f11689079b465f3e38b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_02/training_console_receipt.json",
+      "size_bytes": 331,
+      "sha256": "9dd76417605248c5cc800b88754cf36006eabe2b9a3ce1d51925dc434e42fc60"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/bootstrap.py",
+      "size_bytes": 1558,
+      "sha256": "14cf4be52bb9e1e7412f5839eb4cd1803efa7762083ade6fd275036808f91383"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/checkpoint_io.py",
+      "size_bytes": 4755,
+      "sha256": "2a64ca6aa2cd2bea96e1ce81096e7653d0f23ca172f06877a2b113d8ea8715d0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/collect_recovery.py",
+      "size_bytes": 14679,
+      "sha256": "e6450a8e12dbe29df53a0872c049ca8e05d3f054caa36da4f5df07b86bf797bb"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/cycle_receipt.json",
+      "size_bytes": 473,
+      "sha256": "cf84dfedcb6b620b15e611bc536fb86ba2266519d6dd26f1faaf4b4f8cfbca13"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/cycle_status.json",
+      "size_bytes": 101,
+      "sha256": "3bde0bd3b38ef6684e931e4366fdfcfd236085470e634cdd063cd6d26575ae09"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/data_audit.json",
+      "size_bytes": 31438,
+      "sha256": "8f82da3e9a297790e76a2ed9b1c87bff8708ed26ad5931526186d626c02040f7"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/design.json",
+      "size_bytes": 1022,
+      "sha256": "566d83b8e001ca5b6356a23c9ba3725804180fc04bb0d6a2b8a23fcb51f7d806"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluate_followup.py",
+      "size_bytes": 7722,
+      "sha256": "8d3dd23633ce82bafe51aaa42f09e2a783869c1b6a045eb504db32262435b35f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluation/load_manifest.json",
+      "size_bytes": 4687,
+      "sha256": "55ba660ba7a4766b4232739890edd6b2cbbb4571e2231ea7539a3f82c25e22d1"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluation/protocol.json",
+      "size_bytes": 30854,
+      "sha256": "4b4ea852ae1ffd8d4620f49f1f6fc7eaca4bf48bb7c5e01ec4b7e8da5a7cdbf4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluation/results.json",
+      "size_bytes": 43803,
+      "sha256": "e1ced43617cce6b9cf4bdc9404ae17c98b7e254963bf1aa334d4999dea93849c"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluation/status.json",
+      "size_bytes": 105,
+      "sha256": "a2c2321a2c3c7b59128106e3e5bb88162280d986b31c76ba654e71823e967604"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluation/training_audit.json",
+      "size_bytes": 1170,
+      "sha256": "2c180bae132429ec966877762748c12add2c4148a5c1f08c3b9120197acbf4f0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/evaluation_console_receipt.json",
+      "size_bytes": 346,
+      "sha256": "fb287e86edbd2c49dc0cae5948355b8a78acf661d62df3d850ea91d580bbbf9a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/launch_job.py",
+      "size_bytes": 783,
+      "sha256": "7d9ee06ec0b8cba8c22fbdb22e68c67a365b3977f145716d1e8f4ed868b6b3da"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/mine_student.py",
+      "size_bytes": 5448,
+      "sha256": "cf7faea0a07c4ce4cb20f94bcce0cf6e40bcae78c3538149028aa0fbe5ff660f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/prepare_training.py",
+      "size_bytes": 10933,
+      "sha256": "18f682a2abf515b676ee558c9b5a44bbd5d3f9883b23954ee100b247182afd19"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/prepared_checks.json",
+      "size_bytes": 15770,
+      "sha256": "cda9c1cc5e23ba08409cb73a8c3811f0383909baa9b2291eb3eeeeca7381ff52"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/protocol.json",
+      "size_bytes": 52152,
+      "sha256": "8eff750840a90e606fa1ce99775bf79c31fe8a952c88dfecadc4a0a54d60b8b3"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/queue_cycle.py",
+      "size_bytes": 1779,
+      "sha256": "901bcc3aa3ac812e913970cd3903102cecb13e4948f4a6730da9528b92b65911"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/recovery_common.py",
+      "size_bytes": 4674,
+      "sha256": "44eae08189138124ea9bef32697846ae5901fdafbfdd08640608103c3e87e43a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/recovery_dataset.py",
+      "size_bytes": 3410,
+      "sha256": "9ba713c1b1cca5c5b6c799d2fe6d92fefc835c56497d839069ef45782138dcbd"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/recovery_manifest.jsonl",
+      "size_bytes": 24236,
+      "sha256": "2f857fc7af14bf6ea0225f6fc385f1840209a14ec1d10523ab1f471e52b7b71f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/recovery_teacher.py",
+      "size_bytes": 2394,
+      "sha256": "12c373893f41355cb57bdffb3738ddfd9bad4a75032538af7cb8c6739a760189"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/report.json",
+      "size_bytes": 19280,
+      "sha256": "73797b890999f7659bd7e68e0d88d441e93a7d0c5e3c799cf4e60e9c27facecc"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/report.md",
+      "size_bytes": 4102,
+      "sha256": "d95a02f58003b830d8007341139498d6abca123fd534b31e4081471ce31b3ad3"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/schedule_R.jsonl",
+      "size_bytes": 1904513,
+      "sha256": "3baf11beb93955b10d8c1e1d634707e90553878a23feb03ca55c146fac49258b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/seed_audit.json",
+      "size_bytes": 2071,
+      "sha256": "2b410cbc19181205f08c9d473819f0717de960763a73f403f8f858441b2cd819"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/train_R.py",
+      "size_bytes": 9207,
+      "sha256": "617c3d81de3b92d8359e84ba718a9b9af4cf44dbeaca3002479b0084143f3e7d"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/training/run_manifest.json",
+      "size_bytes": 14814,
+      "sha256": "50a86de237f99476732b0ac58275453f273b9e4d0cfcec8894a6bb669e241767"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/training/status.json",
+      "size_bytes": 225,
+      "sha256": "c99a79e99ab4c845380202168b9c8bf22831f927734deb9e05071a53a7b68030"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/version_03/training_console_receipt.json",
+      "size_bytes": 332,
+      "sha256": "c34b27564c6fb9a26c84394c27a7d5a5d7ec43cdd3befad241a04e9ca23e71d6"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/evaluation_followup/versions_summary.json",
+      "size_bytes": 63945,
+      "sha256": "8c5480d17dbc7908d68eaf14311d9fb0eb1ea6447d3639333a97c1a46abef524"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/expand_pilot.py",
+      "size_bytes": 576,
+      "sha256": "a188742d32eadab8d1752e7d612e17948432a077be5d26150a808acd585149d4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/expansion_receipt.json",
+      "size_bytes": 418,
+      "sha256": "918cfaec84ee23403e7b5446103c8699f032ceb3f756dd8852d81a26f07210e7"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/expansion_status.json",
+      "size_bytes": 72,
+      "sha256": "7b5e5bb3c9c8f4c0a59796a292259c37c14d1b1ce6019d9a3f7c12bff7671fb7"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/experiment_methods.txt",
+      "size_bytes": 5527,
+      "sha256": "18b6ce7789267b97463216596dbd45c8c3ca94666ed19f3a3b72fe8420cec3e5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/final_holdout_receipt.json",
+      "size_bytes": 612,
+      "sha256": "1d515534f53671f6e152868c8056115d8e87d01f3ad225d4424d854d2bcc6ee4"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/final_report.json",
+      "size_bytes": 6270,
+      "sha256": "9e340e0a1bb524e102b6972612edf6d82e29fd6e2544f02be1a08211d292eb10"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/final_report.txt",
+      "size_bytes": 3814,
+      "sha256": "da593cb1d13b287c758e2371c267ab95dbd41e2e8f0d82aa7e15cb6da0b6340c"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/finalize_followup_report.py",
+      "size_bytes": 15594,
+      "sha256": "5b8d22f4b7f7e03d503d065d57c7ee12096c8f62825806520ccd0901491b1aad"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/inspect_composite_prefix.py",
+      "size_bytes": 1725,
+      "sha256": "33905082b5f5728f687da53ed75cea487b444428a180e3e0a645736af61fae80"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/inspect_sources.py",
+      "size_bytes": 1352,
+      "sha256": "5b2427b4ef7e9b492857379d448e6f207702547bf0910bf834b2653e44303a3e"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/launch_job.py",
+      "size_bytes": 781,
+      "sha256": "039e1a473790bea1479e6ddce70883f73da8570f4213d45855241513c4d12dd9"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/loader_pilot_check.json",
+      "size_bytes": 3910,
+      "sha256": "8292993def26f5d0df4295ecbd72c7bd3d6acfbe53e27c74c627bab396fb8eb1"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mechanism_fallback_receipt.json",
+      "size_bytes": 489,
+      "sha256": "11aac8e442e1123c3ba6cca492c2d24af9789988e3ef724d8bc35d57823f39fc"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mechanism_gate.json",
+      "size_bytes": 2897,
+      "sha256": "91504fec22156d13f8e26bd69db8805c4a21fb3453ffeb381cd225a704e6a22b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mechanism_gate.py",
+      "size_bytes": 1310,
+      "sha256": "744dfbd6096bde50e51a44127778b3952e8514f306372665c74601fee884206b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mechanism_manifest.jsonl",
+      "size_bytes": 3851,
+      "sha256": "8047ef848160e2cdfc70d41902f79944a78a98de1eb6c1fde98a34c3f026ecc3"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mechanism_receipt.json",
+      "size_bytes": 453,
+      "sha256": "598f8be2d16b630dc69ac5e601834f39df53ce9400e25561e67889f06614aa90"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mechanism_retry_receipt.json",
+      "size_bytes": 487,
+      "sha256": "257a920aeed1eab5a29865627e2510591e2fd4b86b7995063235587eff616153"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mine_initial_receipt.json",
+      "size_bytes": 445,
+      "sha256": "99fc139d53085a30b37031b769ef48c3752e45471e9ca2d0671d18dd1027d4f9"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mine_student.py",
+      "size_bytes": 5448,
+      "sha256": "cf7faea0a07c4ce4cb20f94bcce0cf6e40bcae78c3538149028aa0fbe5ff660f"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/mining_protocol_revisions.jsonl",
+      "size_bytes": 362,
+      "sha256": "663d5d5f4a16c24a59a4a68cbf3b2a85bc11c38fbf557c9a60d3af7e3ce13c65"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/onpolicy_R3_collection_receipt.json",
+      "size_bytes": 449,
+      "sha256": "4c341be825b8bd1949bd5c8c11ef7189e97b087f0ab78967f13adcda1be69792"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/onpolicy_R3_earlier_collection_receipt.json",
+      "size_bytes": 456,
+      "sha256": "7aaaa2e76abc615994955508d6df864431dae2f0e271ef3abdfef2c7a77131d6"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/prepare_training.py",
+      "size_bytes": 11009,
+      "sha256": "f1e43434d1f853d4ae62f1e0ec4bcfb4b66834bb2f6b054b34c638d5ddb17d07"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/prepared_checks.json",
+      "size_bytes": 15770,
+      "sha256": "55b763e29c0e774a03e27211046afea126ce82d03cd69c0c55ee334932e1a246"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/protocol.json",
+      "size_bytes": 51893,
+      "sha256": "613f02e755ab42941cd169db0cf10e289277a190d2b9d4a5295bf831e8947227"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/queue_takeovers.py",
+      "size_bytes": 391,
+      "sha256": "6561441f1bb1f91eed5a2af3fe14144df20aba5490bb31419ae457d122b8f63e"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/recovery_common.py",
+      "size_bytes": 4674,
+      "sha256": "44eae08189138124ea9bef32697846ae5901fdafbfdd08640608103c3e87e43a"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/recovery_continuation_diagnostic.py",
+      "size_bytes": 5327,
+      "sha256": "66591da389bc7733925547c3f6921cfdee48868c7216ad878b2c4198b9d95e75"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/recovery_dataset.py",
+      "size_bytes": 3350,
+      "sha256": "2e3ea4d3a6e57f4509efdb7f57a68a445a7061d381968ecb9d2cd553a930a5b6"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/recovery_manifest.jsonl",
+      "size_bytes": 15398,
+      "sha256": "b841b2ec098f158a4956ea6c7cca3f8754b4c393f34fa83fd4b7ca9bf6688b01"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/recovery_teacher.py",
+      "size_bytes": 2394,
+      "sha256": "12c373893f41355cb57bdffb3738ddfd9bad4a75032538af7cb8c6739a760189"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/retry_engineering.py",
+      "size_bytes": 699,
+      "sha256": "a5d7ba1efd9a00853a3249ae9fab1f3c016666c2d9ff2f99a90bf6fbded131da"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/schedule_R.jsonl",
+      "size_bytes": 1820301,
+      "sha256": "f27c741be8bbe65fdca5d30ab03bf3dae0fd4d1ce71f738d5959b6449d58c548"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/seed43_supplement_complete.json",
+      "size_bytes": 44,
+      "sha256": "497b45a30c4cb5f4bce1ae3b5aade4f621d12f334cc518cca13fb7d7adba8dd0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/seed43_supplement_protocol.json",
+      "size_bytes": 476,
+      "sha256": "77597d8e3a69817d4035c3076aa16a1c23e9181a5e0b2aed3bb97c4c8d6ad6bf"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/setup_protocol.py",
+      "size_bytes": 3563,
+      "sha256": "4e0f2c8ca18e53e79af6465f0b252e51470ffb24415f9c833b205a746d0e408b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/student_load_manifest.json",
+      "size_bytes": 9780,
+      "sha256": "94945b2dbac0cb894fd176afcb251ef9b5056e963d60b173cbfed01c5e5106d0"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/summarize_followup.py",
+      "size_bytes": 9294,
+      "sha256": "c092462ded0bb377e6d2852e2461f0a45a80bbefd5514d2059a04910f8005d63"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/supplement43_receipt.json",
+      "size_bytes": 426,
+      "sha256": "0ea0bf7945d01cf96fc6ec063b134867b04be32da9eabd5637e5f79660c401cf"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/supplement_seed43.py",
+      "size_bytes": 1441,
+      "sha256": "0cc01a8523e14e1b23a1ecae814a25f7f5db924941eb7e19bb836a3e7b122e8b"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/train_R.py",
+      "size_bytes": 9156,
+      "sha256": "552b101287468e6c7c7c11a8227137a1134ad394868e66d731762a94ddda8d02"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/training/run_manifest.json",
+      "size_bytes": 14535,
+      "sha256": "7faef947c7e8a4976fb73ef4f8f18f200f990f196746766b5c4c8ef4c2301ce5"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/training/status.json",
+      "size_bytes": 227,
+      "sha256": "22a63fd5dd7dbf02c860332b03c89c4a4df5e25880e12ff69c08a81c506fffbf"
+    },
+    {
+      "path": "xr0/test_recovery_R_1004/training_receipt.json",
+      "size_bytes": 425,
+      "sha256": "a5cf603f6b324e83b7715a95babd2cdb9961afd40cda4804f6c8f5efd011afc4"
+    }
+  ],
+  "total_bytes_excluding_index": 7204654,
+  "file_count_excluding_index": 186,
+  "local_only": [
+    "checkpoints/optimizer weights",
+    "recovery sensor/action trajectories",
+    "student rollout traces",
+    "per-step/chunk logs",
+    "per-window prediction binaries",
+    "videos",
+    "runtime caches/temp/locks"
+  ],
+  "canonical_report": "xr0/test_recovery_R_1004/evaluation_followup/summary_report.md"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "FAILED",
+  "pid": 6912,
+  "time": 1791129694.6501336,
+  "error": "module 'bootstrap' has no attribute 'AB'",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluate_followup.py\", line 47, in <module>\n    helpers=module(AB/'closed_loop_1004/evaluate_ab.py','R_old_helpers');helpers.ROOT=OUT\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_common.py\", line 25, in module\n    s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m\n                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/closed_loop_1004/evaluate_ab.py\", line 24, in <module>\n    ROOT,AB,XR0,ORCHARD=bootstrap.ROOT,bootstrap.AB,bootstrap.XR0,bootstrap.ORCHARD\n                                       ^^^^^^^^^^^^\nAttributeError: module 'bootstrap' has no attribute 'AB'\n"
+}

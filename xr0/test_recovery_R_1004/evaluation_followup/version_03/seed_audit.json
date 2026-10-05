@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2013322",
+      "declared": 42,
+      "actual_calls": 14,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2014461",
+      "declared": 42,
+      "actual_calls": 13,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2010914",
+      "declared": 42,
+      "actual_calls": 13,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2012485",
+      "declared": 42,
+      "actual_calls": 15,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2015716",
+      "declared": 42,
+      "actual_calls": 10,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2014362",
+      "declared": 42,
+      "actual_calls": 21,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2015751",
+      "declared": 42,
+      "actual_calls": 11,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2011310",
+      "declared": 42,
+      "actual_calls": 11,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng42_reach-conditioned_2010600",
+      "declared": 42,
+      "actual_calls": 8,
+      "actual_seed": 42,
+      "legacy_summary_seed": 42
+    },
+    {
+      "job": "R4000_targets30_rng43_reach-conditioned_2010600",
+      "declared": 43,
+      "actual_calls": 7,
+      "actual_seed": 43,
+      "legacy_summary_seed": 42
+    }
+  ],
+  "note": "Frozen core summary stores legacy default42 even in rng43 provider; actual delivery calls and per-step metadata confirm43. Raw traces are retained unchanged; report uses protocol and actual delivery."
+}

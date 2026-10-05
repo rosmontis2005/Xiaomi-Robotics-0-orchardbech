@@ -1,0 +1,7 @@
+{
+  "status": "FAILED",
+  "pid": 8755,
+  "time": 1791130549.3423085,
+  "error": "('width', 0.00012856721878051758)",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluate_takeovers.py\", line 47, in <module>\n    env,obs,tracker,prefix=regenerate(c);fruit=int(env._reset_stance['apple_index']);base=env.sim.body_q_np()[env.chassis].copy();initial=truth(env);steps=[];chunks=[];k=30;dwell=0;reason='budget'\n                           ^^^^^^^^^^^^^\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/collect_recovery.py\", line 28, in regenerate\n    difference=float(np.max(np.abs(np.asarray(t[field])-expected[field])));checks[field]=difference;assert difference<=1e-4,(field,difference)\n                                                                                                           ^^^^^^^^^^^^^^^^\nAssertionError: ('width', 0.00012856721878051758)\n"
+}

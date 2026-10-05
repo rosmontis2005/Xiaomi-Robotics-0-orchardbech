@@ -1,0 +1,309 @@
+{
+  "candidates": [
+    {
+      "category": "R3",
+      "step": 499,
+      "chunk": 5,
+      "k": 10,
+      "rule": "R4000_actual_stable_detached_held_first_near_bucket_le_018_before720",
+      "truth": {
+        "debug_usage": "NOT POLICY INPUT",
+        "sim_time": 16.63333333333367,
+        "joint_pos": [
+          -1.5375709533691406,
+          0.7511014342308044,
+          -0.5636109113693237,
+          -3.0406341552734375,
+          0.9667128920555115,
+          4.514071941375732,
+          1.9133613109588623,
+          0.03203202411532402,
+          0.029793208464980125
+        ],
+        "joint_vel": [
+          -0.5584626197814941,
+          0.7415847778320312,
+          0.6771264672279358,
+          0.03925347328186035,
+          0.44522160291671753,
+          0.04223771393299103,
+          0.5437180399894714,
+          0.13624973595142365,
+          0.046291667968034744
+        ],
+        "tcp_position": [
+          -0.40864962339401245,
+          -2.449378490447998,
+          0.5218557119369507
+        ],
+        "tcp_quaternion": [
+          0.3190338611602783,
+          -0.683950662612915,
+          0.5095642805099487,
+          0.4132469892501831
+        ],
+        "width": 0.061825230717659,
+        "fruit_id": 22,
+        "fruit_pose": [
+          -0.4113539755344391,
+          -2.4457995891571045,
+          0.5256590843200684,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fruit_velocity": [
+          -0.5991244316101074,
+          0.13271252810955048,
+          0.02078520692884922,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bucket_position": [
+          -0.5636258456249046,
+          -2.5017790724536586,
+          0.4595670914358925
+        ],
+        "base_pose": [
+          -0.5064710974693298,
+          -2.248138904571533,
+          -0.00043290856410749257,
+          0.0,
+          0.0,
+          0.6245694756507874,
+          0.7809692621231079
+        ],
+        "held": [
+          22
+        ],
+        "detached": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "branch_breaks": 0,
+        "fruit_bucket_distance": 0.17518155295121327,
+        "tcp_fruit_distance": 0.005881130695343018,
+        "palm_local_fruit": [
+          0.00456218385902415,
+          0.001662724754116276,
+          0.1000819921526523
+        ]
+      },
+      "source_episode_id": "episode_000613",
+      "scene_seed": 2011476,
+      "inference_seed": 42,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/student_sources/episode_000613_Bprefix_R4000_rng42_R3_s0499",
+      "candidate_id": "episode_000613_Bprefix_R4000_rng42_R3_s0499",
+      "student_policy_sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+      "prefix_policy_lineage": [
+        {
+          "policy": "B8000",
+          "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+          "start_step": 0,
+          "end_step": 192
+        },
+        {
+          "policy": "R4000",
+          "sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+          "start_step": 193,
+          "end_step": 499
+        }
+      ]
+    },
+    {
+      "category": "R3",
+      "step": 568,
+      "chunk": 5,
+      "k": 12,
+      "rule": "R4000_actual_stable_detached_held_first_near_bucket_le_018_before720",
+      "truth": {
+        "debug_usage": "NOT POLICY INPUT",
+        "sim_time": 18.93333333333354,
+        "joint_pos": [
+          -1.6159363985061646,
+          0.5102126002311707,
+          -0.6013452410697937,
+          -3.0421228408813477,
+          0.9694476127624512,
+          4.516996383666992,
+          1.6644742488861084,
+          0.03089439868927002,
+          0.03462575003504753
+        ],
+        "joint_vel": [
+          -0.11608830839395523,
+          0.06103110313415527,
+          0.06994125247001648,
+          -0.0008106580935418606,
+          0.08278683573007584,
+          -0.003323253709822893,
+          0.02963799238204956,
+          -0.01102242898195982,
+          -0.01008223183453083
+        ],
+        "tcp_position": [
+          1.0021793842315674,
+          -2.5943338871002197,
+          0.5630373954772949
+        ],
+        "tcp_quaternion": [
+          0.46783140301704407,
+          -0.5871207118034363,
+          0.5945995450019836,
+          0.2878793179988861
+        ],
+        "width": 0.06552015244960785,
+        "fruit_id": 26,
+        "fruit_pose": [
+          1.0032224655151367,
+          -2.5911905765533447,
+          0.5622479319572449,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fruit_velocity": [
+          0.02254558727145195,
+          -0.007200943771749735,
+          0.0410158671438694,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bucket_position": [
+          0.9036890503593383,
+          -2.69971588731936,
+          0.45969261357909996
+        ],
+        "base_pose": [
+          0.8211464881896973,
+          -2.4531662464141846,
+          -0.0003073864209000021,
+          0.0,
+          0.0,
+          0.8116253614425659,
+          0.5841783285140991
+        ],
+        "held": [
+          26
+        ],
+        "detached": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "branch_breaks": 0,
+        "fruit_bucket_distance": 0.179449817879761,
+        "tcp_fruit_distance": 0.003404654562473297,
+        "palm_local_fruit": [
+          -0.0017703573469967835,
+          -0.0010468116141356086,
+          0.1006868325195447
+        ]
+      },
+      "source_episode_id": "episode_000703",
+      "scene_seed": 2011728,
+      "inference_seed": 42,
+      "source_folder": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/onpolicy_R3/student_sources/episode_000703_Bprefix_R4000_rng42_R3_s0568",
+      "candidate_id": "episode_000703_Bprefix_R4000_rng42_R3_s0568",
+      "student_policy_sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+      "prefix_policy_lineage": [
+        {
+          "policy": "B8000",
+          "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+          "start_step": 0,
+          "end_step": 203
+        },
+        {
+          "policy": "R4000",
+          "sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+          "start_step": 204,
+          "end_step": 568
+        }
+      ]
+    }
+  ],
+  "protected_scenes_excluded": true,
+  "policy_input_unchanged": true,
+  "source_policy": "Actual R4000 continuation after B8000 prefix; training-source diagnostic scenes only",
+  "not_clean_R_reset_rollout": true,
+  "no_teleport_or_snapshot_restore": true
+}

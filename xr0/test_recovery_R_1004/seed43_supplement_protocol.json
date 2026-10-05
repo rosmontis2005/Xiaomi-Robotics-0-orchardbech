@@ -1,0 +1,15 @@
+{
+  "status": "AUTHORIZED_SCOPE",
+  "reason": "R3 seed42 pool accepted4/6; preserve all failures; fixed seed43 supplement on four original B train sources with actual seed42 R3 behavior, selected before seed43 outcomes",
+  "source_episode_ids": [
+    "episode_000613",
+    "episode_000974",
+    "episode_000703",
+    "episode_001606"
+  ],
+  "inference_seed": 43,
+  "additional_seed_count": 1,
+  "category_to_collect": "R3",
+  "max_scenes": 4,
+  "acceptance_unchanged": true
+}

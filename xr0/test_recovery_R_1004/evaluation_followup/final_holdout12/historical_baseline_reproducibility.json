@@ -1,0 +1,26 @@
+[
+  {
+    "job": "B8000_targets30_rng42_reach-conditioned_2010600",
+    "first_anchor_exact": true,
+    "first_chunk_max_absolute_difference": {
+      "target_positions": 0.0,
+      "target_rotations": 0.0,
+      "target_widths": 0.0
+    },
+    "first_measured_divergence": {
+      "measured_position": {
+        "first_difference_step": 1,
+        "maximum_absolute_difference_at_first": 1.1920928955078125e-07
+      },
+      "measured_quaternion": {
+        "first_difference_step": 1,
+        "maximum_absolute_difference_at_first": 5.960464477539063e-08
+      },
+      "measured_width": {
+        "first_difference_step": 1,
+        "maximum_absolute_difference_at_first": 7.450580596923828e-09
+      }
+    },
+    "interpretation": "Exact reset and first model chunk, but long physical rollout is not bitwise reproducible; root cause not isolated. Use newly paired final B run and retain historical auxiliary outcomes."
+  }
+]

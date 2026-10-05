@@ -1,0 +1,10 @@
+{
+  "maximum_additional_training_cycles": 3,
+  "version_01": "Original R4000 complete and evaluated",
+  "version_02": "Additional training1 COMPLETE4000, dev8 strict0/8, rejected as endpoint upgrade",
+  "version_03": "Additional training2 prepared with separately labelled sparse teacher bridge windows",
+  "additional_training3": "Not requested automatically; decision after version03",
+  "onpolicy_late_candidates": 4,
+  "onpolicy_late_accepted": 0,
+  "time": 1791134491.7787097
+}

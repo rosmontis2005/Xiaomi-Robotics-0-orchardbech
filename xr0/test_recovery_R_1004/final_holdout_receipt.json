@@ -1,0 +1,17 @@
+{
+  "pid": 57220,
+  "session": 57220,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluate_final_holdout.py",
+    "--checkpoint",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/training/checkpoints/step_4000_trainable.pt",
+    "--version",
+    "version_01"
+  ],
+  "log": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/final_holdout.log",
+  "detached": true,
+  "time": 1791137653.1554742
+}

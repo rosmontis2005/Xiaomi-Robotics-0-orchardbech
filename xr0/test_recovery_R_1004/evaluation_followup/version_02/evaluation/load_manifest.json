@@ -1,0 +1,82 @@
+{
+  "loaded": {
+    "path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/training/checkpoints/step_4000_trainable.pt",
+    "format": "orchard_m0_trainable_v1",
+    "step": 4000,
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "checkpoint_sha256": "c8e2e3605850682f84113a4e74cf4172ece91ba8719e5d3c89458aadde786766",
+    "tensors": 219,
+    "parameters": 278458368,
+    "exact_keys": true,
+    "destination_dtype_counts": {
+      "torch.float32": 219
+    },
+    "metadata": {
+      "baseline": {
+        "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt",
+        "step": 8000,
+        "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+        "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+        "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+        "training_summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_summary.json"
+      },
+      "schedule_sha256": "27fb419613bdd1ae73fb58ad8119e0fe3b27cd19008c10f1eb61c3cb8f6cf387",
+      "manifest_sha256": "8805dfe919ad9d1f23cb03c6f7e7435dfe177ac115b494eaaa86ab7ea65ab763",
+      "stats_sha256": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371",
+      "frozen_vlm_sha256": "3742eee03f638e8f85f356960bb327f8f621e925266c5d0d3c0a49feea4c20e2",
+      "config": {
+        "updates": 4000,
+        "checkpoint_steps": [
+          0,
+          1000,
+          2000,
+          4000
+        ],
+        "optimizer": {
+          "lr": 1e-05,
+          "betas": [
+            0.9,
+            0.95
+          ],
+          "weight_decay": 0.1,
+          "eps": 1e-08,
+          "foreach": false
+        },
+        "batch": 1,
+        "gradient_accumulation": 1,
+        "gradient_clip_norm": 1.0,
+        "lr_schedule": "constant",
+        "training_repeat": 1,
+        "async_train": false,
+        "enable_freq": false,
+        "freeze_vlm": true,
+        "vlm_dtype": "bfloat16",
+        "non_vlm_master_dtype": "float32",
+        "autocast": "bfloat16",
+        "euler_steps": 5,
+        "loss": "original full30 active7 normalized flow, coefficient0.5, no event/contact weighting",
+        "seed": 42
+      },
+      "source_sha256": {
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/train_R.py": "12e9649aabca8c9536b429c6932386c6714c8109ffcc41cd0361791305f8f53a",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_dataset.py": "2e3ea4d3a6e57f4509efdb7f57a68a445a7061d381968ecb9d2cd553a930a5b6",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/prepare_training.py": "284a4f2f6eccef8a2aef8c7cca899a0777792258561d47281e20ccb42b4bf250",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_teacher.py": "12c373893f41355cb57bdffb3738ddfd9bad4a75032538af7cb8c6739a760189",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/mine_student.py": "cf7faea0a07c4ce4cb20f94bcce0cf6e40bcae78c3538149028aa0fbe5ff660f",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/collect_recovery.py": "e6450a8e12dbe29df53a0872c049ca8e05d3f054caa36da4f5df07b86bf797bb",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/recovery_common.py": "44eae08189138124ea9bef32697846ae5901fdafbfdd08640608103c3e87e43a",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/checkpoint_io.py": "2a64ca6aa2cd2bea96e1ce81096e7653d0f23ca172f06877a2b113d8ea8715d0",
+        "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/bootstrap.py": "c6f24aeef9ae9c3da76e84590aa26e94f46d73dffaf9069b1a64f34cbf274e64"
+      }
+    }
+  },
+  "dtypes": {
+    "vlm": {
+      "torch.bfloat16": 713
+    },
+    "non_vlm": {
+      "torch.float32": 219
+    }
+  }
+}

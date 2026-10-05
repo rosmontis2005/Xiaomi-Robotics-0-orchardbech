@@ -1,0 +1,8 @@
+{
+  "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt",
+  "step": 8000,
+  "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+  "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+  "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+  "training_summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_summary.json"
+}

@@ -1,0 +1,25 @@
+{
+  "retry_number": 2,
+  "parent_version": "version_02",
+  "counts": {
+    "original_B": 2800,
+    "R1": 500,
+    "R2": 200,
+    "R3": 200,
+    "R_continuation_teacher": 300
+  },
+  "continuation_groups": {
+    "transport_to_drop": 150,
+    "DROP_transition": 100,
+    "DONE_settle": 50
+  },
+  "initialization": "full10k -> formal B8000; fresh AdamW; fixed4000",
+  "scope_change_from_first_pilot": "For this dataset modification, teacher-continuation anchors beyond29 are allowed only as separately labelled 7.5% bridge supervision. True R1/R2/R3 anchors retain first30 bounds and R1 actual-unheld filter.",
+  "source": "Same24 accepted live B8000-state teacher recovery trajectories, full student oracle replay PASS; not original expert suffix, not new student takeover records.",
+  "onpolicy_candidate_attempts": 4,
+  "onpolicy_candidate_accepted": 0,
+  "rejected_candidates_not_used": true,
+  "teacher_oracle_success_gate_unchanged": true,
+  "policy_input_and_loss_unchanged": true,
+  "production_code_unchanged": true
+}

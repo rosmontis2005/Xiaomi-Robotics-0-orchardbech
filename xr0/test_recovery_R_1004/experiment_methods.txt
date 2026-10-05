@@ -1,0 +1,75 @@
+R student-state recovery dataset pilot, 2026-10-04
+
+Student source: actual B endpoint8000 full30 reach-conditioned rollout on original
+B train cohort only. Load original full10000 before verified endpoint overlay.
+Dev8 (including its training IDs), heldout12, M0 validation, all canonical validation
+IDs/seeds and frozen fresh24 IDs/seeds are excluded from recovery mining. Original
+B replay remains its existing train-only sampler. Simulator truth is teacher/debug
+only; policy input is the unchanged two-view RGB, measured proprio and prompt.
+
+Mining: fixed inference seed42 first, original cohort order after exclusions; bounded
+initial4 and at most36 scenes before seed43 supplements missing categories. After the
+six-trajectory mechanism PASS, stop new mining once all categories have an eligible
+state, retaining900 as the maximum budget; journal this optimization. Save
+all eligible boundaries, including those not selected. R1 is actual TCP within9cm
+plus closing intent or finger contact, no held/detached planned fruit; contact score
+prefers dual then single finger contact, then closing and smaller TCP error. R2 is
+same planned fruit held15, nontrivial bucket transport distance; earliest detached
+stable-held boundary preferred. R3 is imminent sustained-open width away from bucket
+or late held/detached transport stall, never automatic DROP. Same source/seed/step
+cannot appear in different categories. No validation source changes role.
+
+Recovery teacher: experiment-local subclass skips clean-reset-only constructor
+checks and calls the official AutoPicker bookkeeping constructor. Immediately
+replace HOME command caches and limiter seed with measured joints. Keep the actual
+fruit/tree/robot/bucket/base/time and held spring untouched. R1 starts GRASP in the
+near-contact region; held attached starts PULL with current TCP pull reference;
+held detached starts TRANSPORT, including R3. Original expert stage methods and
+success-independent physics remain; only already-held PULL/TRANSPORT maintains a
+closed finger command. Remove the stale student arm bias force command when
+teacher commands take over; this is control, not a state/physics reset. Hash physical
+positions/velocities/held flags/time before and after initialization to prove no
+teleport. Original speed-aligned expert arm motion profile comes from source metadata.
+
+Recording: frame0 is exact takeover RGB and measured proprio, then every2 physics
+frames at30Hz. Actions[i] is measured proprio[i+1], with the original terminal repeat
+convention. RGB uses existing cameras and collector ffmpeg settings. Recovery schema
+is explicitly distinct from clean-reset expert demonstrations. Privileged metadata
+is labeled NOT POLICY INPUT. All eligible recovery anchors are only frames0..29,
+limited by num_frames-30; frame0 receives a guaranteed schedule exposure. Future
+30 targets may cross phases; phase exposure is measured separately.
+
+Oracle replay: reset same training scene, deterministically replay previously
+predicted B8000 chunks through the unchanged adapter/native controller, preserving
+original target indices and dwell history until the takeover. This reuses actual
+student outputs, never expert prefix or a physics restore. Compare takeover joint,
+TCP, gripper, fruit pose/velocity, held/detached, base/time, and all physical arrays
+against teacher start (positions1e-4, velocities1e-3 tolerances). Encode teacher
+measured states with encode_window and decode at their recorded anchor; use live
+observations for each native command. Full30,10mm/.08rad,maximum dwell30, total
+student episode budget900. Continue legacy bucket success only for strict validation.
+Acceptance for every category is same fruit held15, detached, release, then60
+consecutive unheld bucket boundaries. Branch breaks, incidental detaches, base
+motion, identity discontinuity and nonfinite data reject the trajectory. Failed
+candidates and engineering failures remain in their folders and decision journal.
+
+Training: frozen4000 schedule before launch: original_B2000,R1=1000,R2=500,R3=500.
+Original B uses existing group quotas quarter-scaled:400,200,300,500,300,200,100;
+original episode floor/ceil quota allocation, uniform frame draws with replacement
+and final shuffle. Recovery uses episode-balanced floor/ceil quotas, uniform legal
+anchors within source episode after reserving each trajectory's frame0. Report
+actual unique/repeated windows, source and trajectory exposure, and future phases.
+Original action_stats unchanged; report5-sigma outliers without clipping/recompute.
+Full10k -> B8000 -> fresh AdamW at1e-5,(.9,.95),wd.1,eps1e-8,clip1; original parameter
+weight-decay grouping, constant LR,batch1/accum1. Frozen BF16 VLM, FP32 non-VLM masters,
+BF16 autocast, repeat1,async false,frequency off,Euler5. Unmodified full30 active7
+normalized flow loss. No L event/contact weighting. Save0/1000/2000/4000. No training
+completion wait or post-training closed-loop evaluation in this task.
+
+Engineering history: initial intermediate native-command equality assertion was
+replaced by passive difference diagnostics, because feedback commands can differ
+while physical takeover matches. Actual takeover position/joint1e-4 and velocity
+1e-3 checks and strict success remained unchanged. Archive each original failure
+and separately report repeat attempts; failed late starts remain rejected. At most
+one alternative R3 state per source is selected from recorded eligible boundaries,
+with>=30step separation and<=600step takeover, and a revision journal.

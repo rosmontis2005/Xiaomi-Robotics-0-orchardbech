@@ -1,0 +1,13 @@
+{
+  "pid": 12783,
+  "session": 12783,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluate_takeovers.py"
+  ],
+  "log": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/R4000_takeovers_resume.log",
+  "detached": true,
+  "time": 1791130701.9915853
+}

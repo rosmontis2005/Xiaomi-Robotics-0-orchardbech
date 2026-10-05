@@ -1,0 +1,582 @@
+{
+  "version": "version_02",
+  "status": "COMPLETE",
+  "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/training/checkpoints/step_4000_trainable.pt",
+  "checkpoint_sha256": "c8e2e3605850682f84113a4e74cf4172ece91ba8719e5d3c89458aadde786766",
+  "step": 4000,
+  "baseline_checkpoint": {
+    "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt",
+    "step": 8000,
+    "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "training_summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_summary.json"
+  },
+  "evaluation_protocol": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/protocol.json",
+  "groups": {
+    "dev8": {
+      "n": 8,
+      "unique_episodes": 8,
+      "B_held15": 6,
+      "B_detached": 6,
+      "B_release": 4,
+      "B_strict": 0,
+      "R_held15": 5,
+      "R_detached": 5,
+      "R_release": 2,
+      "R_strict": 0,
+      "R_branch_break_episodes": 0
+    },
+    "dev8_train2": {
+      "n": 2,
+      "unique_episodes": 2,
+      "B_held15": 1,
+      "B_detached": 1,
+      "B_release": 0,
+      "B_strict": 0,
+      "R_held15": 1,
+      "R_detached": 1,
+      "R_release": 1,
+      "R_strict": 0,
+      "R_branch_break_episodes": 0
+    },
+    "dev8_val6": {
+      "n": 6,
+      "unique_episodes": 6,
+      "B_held15": 5,
+      "B_detached": 5,
+      "B_release": 4,
+      "B_strict": 0,
+      "R_held15": 4,
+      "R_detached": 4,
+      "R_release": 1,
+      "R_strict": 0,
+      "R_branch_break_episodes": 0
+    },
+    "historical_seed42_43": {
+      "n": 2,
+      "unique_episodes": 1,
+      "B_held15": 2,
+      "B_detached": 2,
+      "B_release": 0,
+      "B_strict": 0,
+      "R_held15": 1,
+      "R_detached": 1,
+      "R_release": 0,
+      "R_strict": 0,
+      "R_branch_break_episodes": 0
+    }
+  },
+  "cases": [
+    {
+      "cohort": "dev8",
+      "seed": 2013322,
+      "split": "train",
+      "episode_id": "episode_001319",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2013322",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2013322",
+      "B_held15": true,
+      "R_held15": true,
+      "B_detached": true,
+      "R_detached": true,
+      "B_release": false,
+      "R_release": true,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.0,
+      "R_replans": 20,
+      "R_steps": 900,
+      "R_release_events": [
+        {
+          "apple_id": 17,
+          "step": 514,
+          "had_held15": true,
+          "detached_at_release": true,
+          "valid_chain": true
+        }
+      ],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2014461,
+      "split": "train",
+      "episode_id": "episode_001796",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2014461",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2014461",
+      "B_held15": false,
+      "R_held15": false,
+      "B_detached": false,
+      "R_detached": false,
+      "B_release": false,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.3277777777777778,
+      "R_replans": 12,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2010914,
+      "split": "val",
+      "episode_id": "episode_000380",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2010914",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2010914",
+      "B_held15": true,
+      "R_held15": true,
+      "B_detached": true,
+      "R_detached": true,
+      "B_release": false,
+      "R_release": true,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.4477777777777778,
+      "R_replans": 11,
+      "R_steps": 900,
+      "R_release_events": [
+        {
+          "apple_id": 3,
+          "step": 550,
+          "had_held15": true,
+          "detached_at_release": true,
+          "valid_chain": true
+        }
+      ],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2012485,
+      "split": "val",
+      "episode_id": "episode_001020",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2012485",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2012485",
+      "B_held15": true,
+      "R_held15": false,
+      "B_detached": true,
+      "R_detached": false,
+      "B_release": true,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.0033333333333333335,
+      "R_replans": 13,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2015716,
+      "split": "val",
+      "episode_id": "episode_002270",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2015716",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2015716",
+      "B_held15": true,
+      "R_held15": true,
+      "B_detached": true,
+      "R_detached": true,
+      "B_release": true,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.5177777777777778,
+      "R_replans": 5,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2014362,
+      "split": "val",
+      "episode_id": "episode_001750",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2014362",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2014362",
+      "B_held15": false,
+      "R_held15": true,
+      "B_detached": false,
+      "R_detached": true,
+      "B_release": false,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.5577777777777778,
+      "R_replans": 5,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2015751,
+      "split": "val",
+      "episode_id": "episode_002290",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2015751",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2015751",
+      "B_held15": true,
+      "R_held15": true,
+      "B_detached": true,
+      "R_detached": true,
+      "B_release": true,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.5444444444444444,
+      "R_replans": 5,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "dev8",
+      "seed": 2011310,
+      "split": "val",
+      "episode_id": "episode_000540",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2011310",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2011310",
+      "B_held15": true,
+      "R_held15": false,
+      "B_detached": true,
+      "R_detached": false,
+      "B_release": true,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.0,
+      "R_replans": 17,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "historical_seed42_43",
+      "seed": 2010600,
+      "split": "val",
+      "episode_id": "episode_000250",
+      "inference_seed": 42,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng42_reach-conditioned_2010600",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng42_reach-conditioned_2010600",
+      "B_held15": true,
+      "R_held15": true,
+      "B_detached": true,
+      "R_detached": true,
+      "B_release": false,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.17555555555555555,
+      "R_replans": 7,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    },
+    {
+      "cohort": "historical_seed42_43",
+      "seed": 2010600,
+      "split": "val",
+      "episode_id": "episode_000250",
+      "inference_seed": 43,
+      "baseline_reset_exact": true,
+      "rollout": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluation/rollouts/R4000_targets30_rng43_reach-conditioned_2010600",
+      "baseline": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/rollouts/B8000_targets30_rng43_reach-conditioned_2010600",
+      "B_held15": true,
+      "R_held15": false,
+      "B_detached": true,
+      "R_detached": false,
+      "B_release": false,
+      "R_release": false,
+      "B_strict": false,
+      "R_strict": false,
+      "R_legacy": false,
+      "R_branch_breaks": 0,
+      "R_ik_failure_rate": 0.0,
+      "R_replans": 16,
+      "R_steps": 900,
+      "R_release_events": [],
+      "R_strict_events": [],
+      "R_max_stable_bucket_steps": 0
+    }
+  ],
+  "offline": {
+    "old_train/all": {
+      "position_error_m": {
+        "B": 0.08379509113354888,
+        "R": 0.0522287134548486
+      },
+      "rotation_error_rad": {
+        "B": 0.12088184886300142,
+        "R": 0.0975391071849183
+      },
+      "width_error_m": {
+        "B": 0.00854335182113573,
+        "R": 0.006289058333366282
+      }
+    },
+    "old_val/all": {
+      "position_error_m": {
+        "B": 0.09478183884427842,
+        "R": 0.06234090859972014
+      },
+      "rotation_error_rad": {
+        "B": 0.15595026788798982,
+        "R": 0.12567262083194786
+      },
+      "width_error_m": {
+        "B": 0.009695047162369722,
+        "R": 0.006874264122711288
+      }
+    },
+    "new_val/all": {
+      "position_error_m": {
+        "B": 0.07280375159392415,
+        "R": 0.04766278496356761
+      },
+      "rotation_error_rad": {
+        "B": 0.11714765630153583,
+        "R": 0.10053877705926642
+      },
+      "width_error_m": {
+        "B": 0.007438188361831837,
+        "R": 0.00549629883064578
+      }
+    },
+    "train/reset": {
+      "position_error_m": {
+        "B": 0.04076993481236628,
+        "R": 0.026038537264699346
+      },
+      "rotation_error_rad": {
+        "B": 0.05526262180505385,
+        "R": 0.03630770503006284
+      },
+      "width_error_m": {
+        "B": 0.004256111993971798,
+        "R": 0.0031359243775821396
+      }
+    },
+    "val/reset": {
+      "position_error_m": {
+        "B": 0.04099293182873497,
+        "R": 0.035656251954659816
+      },
+      "rotation_error_rad": {
+        "B": 0.0664221731820358,
+        "R": 0.046574014450364666
+      },
+      "width_error_m": {
+        "B": 0.005247282842174172,
+        "R": 0.003379469628756245
+      }
+    },
+    "val/phase_REACH": {
+      "position_error_m": {
+        "B": 0.04448742898786334,
+        "R": 0.040004794361509666
+      },
+      "rotation_error_rad": {
+        "B": 0.06759029613779453,
+        "R": 0.058934154901647634
+      },
+      "width_error_m": {
+        "B": 0.005076494899198964,
+        "R": 0.004428694611070333
+      }
+    },
+    "val/phase_GRASP": {
+      "position_error_m": {
+        "B": 0.09792315129372264,
+        "R": 0.03975373977615373
+      },
+      "rotation_error_rad": {
+        "B": 0.10930531691826041,
+        "R": 0.06990878564248189
+      },
+      "width_error_m": {
+        "B": 0.009712528721054738,
+        "R": 0.005894750757035853
+      }
+    },
+    "val/phase_PULL": {
+      "position_error_m": {
+        "B": 0.057682679356236145,
+        "R": 0.03113329940730851
+      },
+      "rotation_error_rad": {
+        "B": 0.10623832089969054,
+        "R": 0.06935499853481829
+      },
+      "width_error_m": {
+        "B": 0.00970948405607402,
+        "R": 0.00780421943017091
+      }
+    },
+    "val/phase_TRANSPORT": {
+      "position_error_m": {
+        "B": 0.21249787831661737,
+        "R": 0.21195519195099477
+      },
+      "rotation_error_rad": {
+        "B": 0.5141709465687856,
+        "R": 0.5361170552769384
+      },
+      "width_error_m": {
+        "B": 0.012168751676411679,
+        "R": 0.008663238292663461
+      }
+    }
+  },
+  "training": {
+    "status": {
+      "status": "COMPLETE",
+      "pid": 15141,
+      "session": 15141,
+      "completed_updates": 4000,
+      "target_updates": 4000,
+      "time": 1791131984.9263864,
+      "elapsed_seconds": 782.6487363179999,
+      "post_training_evaluation": false
+    },
+    "checkpoint_sha256": "c8e2e3605850682f84113a4e74cf4172ece91ba8719e5d3c89458aadde786766",
+    "checkpoint_step": 4000,
+    "finite_parameters": true,
+    "trainable_tensors": 219,
+    "sources": {
+      "original_B": 3000,
+      "R1": 500,
+      "R3": 250,
+      "R2": 250
+    },
+    "loss_by_source": {
+      "original_B": {
+        "first500": 0.1200610065023954,
+        "last500": 0.11677077212717701
+      },
+      "R1": {
+        "first500": 0.15358885831006294,
+        "last500": 0.05668042728987833
+      },
+      "R2": {
+        "first500": 0.26408839245905746,
+        "last500": 0.11998841539025307
+      },
+      "R3": {
+        "first500": 0.3214895647019148,
+        "last500": 0.205252714920789
+      }
+    },
+    "data_audit_sha256": "c2ba3db9859ec5e1439247ff97d0f06f2df67da4f68c60f89fa7d57981be4884"
+  },
+  "data": {
+    "accepted_counts": {
+      "R1": 12,
+      "R2": 6,
+      "R3": 6
+    },
+    "unique_source_episodes": 12,
+    "recovery_available_unique_windows": 401,
+    "recovery_schedule_unique_windows": 306,
+    "repeat_draws": 694,
+    "schedule_counts": {
+      "original_B": 3000,
+      "R1": 500,
+      "R3": 250,
+      "R2": 250
+    },
+    "actual_anchor_phase_counts_schedule": {
+      "original_B": {
+        "GRASP": 750,
+        "REACH": 1350,
+        "PULL": 450,
+        "TRANSPORT": 300,
+        "DROP": 150
+      },
+      "R1": {
+        "GRASP": 500
+      },
+      "R3": {
+        "TRANSPORT": 250
+      },
+      "R2": {
+        "TRANSPORT": 250
+      }
+    },
+    "future_target_phase_counts_schedule": {
+      "original_B": {
+        "GRASP": 13559,
+        "PULL": 53529,
+        "REACH": 5125,
+        "TRANSPORT": 12261,
+        "DROP": 5138,
+        "DONE": 388
+      },
+      "R1": {
+        "GRASP": 632,
+        "PULL": 14368
+      },
+      "R3": {
+        "TRANSPORT": 7500
+      },
+      "R2": {
+        "TRANSPORT": 7500
+      }
+    },
+    "schedule_sha256": "27fb419613bdd1ae73fb58ad8119e0fe3b27cd19008c10f1eb61c3cb8f6cf387",
+    "manifest_sha256": "8805dfe919ad9d1f23cb03c6f7e7435dfe177ac115b494eaaa86ab7ea65ab763"
+  },
+  "limitations": [
+    "dev8 includes2 original-train episodes excluded from recovery sources and6 validation episodes; 8 is small",
+    "historical auxiliary is one scene with2 inference seeds, not2 independent scenes",
+    "Heldout12 full-cohort final comparison occurred only after endpoint freeze; auxiliary2010600 is a member of that historical cohort and had already been observed. Selection primary uses dev8; no heldout training sources and no fresh24 runs. Remaining11 reported separately.",
+    "Offline mean errors pool correlated targets and three noise seeds; not independent task-success estimates"
+  ],
+  "production_sources_unchanged": true,
+  "paired_reset_checks": "10/10 exact"
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/evaluate_followup.py",
+    "--offline"
+  ],
+  "pid": 25383,
+  "session": 25383,
+  "time": 1791131985.6997101
+}

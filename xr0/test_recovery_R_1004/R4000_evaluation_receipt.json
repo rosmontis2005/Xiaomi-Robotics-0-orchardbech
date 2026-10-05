@@ -1,0 +1,14 @@
+{
+  "pid": 6912,
+  "session": 6912,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluate_followup.py",
+    "--offline"
+  ],
+  "log": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/R4000_evaluation.log",
+  "detached": true,
+  "time": 1791129538.8440256
+}

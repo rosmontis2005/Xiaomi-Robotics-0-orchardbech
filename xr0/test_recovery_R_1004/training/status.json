@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "pid": 432423,
+  "session": 432423,
+  "completed_updates": 4000,
+  "target_updates": 4000,
+  "time": 1791108337.5070243,
+  "elapsed_seconds": 756.2650694039912,
+  "post_training_evaluation": false
+}

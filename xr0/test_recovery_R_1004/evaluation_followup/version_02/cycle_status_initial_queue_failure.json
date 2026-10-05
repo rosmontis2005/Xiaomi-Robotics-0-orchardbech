@@ -1,0 +1,7 @@
+{
+  "status": "FAILED",
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/evaluation_followup/version_02/queue_cycle.py\", line 15, in <module>\n    assert json.loads((ORIGINAL/'evaluation_followup/version_01/takeovers/status.json').read_text())['status']=='COMPLETE'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "pid": 12784,
+  "time": 1791130702.1716387
+}

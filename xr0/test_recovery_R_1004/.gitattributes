@@ -1,0 +1,6 @@
+# Preserve the bytes of frozen experiment sources and result artifacts.
+# The executed takeover script has one pre-existing trailing space; formatting
+# it would invalidate the source SHA recorded in its frozen protocol.
+evaluate_takeovers.py whitespace=-blank-at-eol
+# csv.writer emitted CRLF; preserve the archived result and its content hash.
+evaluation_followup/final_holdout12/cases.csv -text whitespace=cr-at-eol

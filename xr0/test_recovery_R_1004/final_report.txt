@@ -1,0 +1,57 @@
+training 已启动，但本轮没有等待训练完成，也没有执行训练后评测。
+
+候选/接受/拒绝: R1 12/12/0; R2 6/6/0; R3 11/6/5。另保留3次初始工程断言失败的重试历史，全部尝试共32次。
+
+accepted24条，unique source episodes12；seed42为主，R3补充2条seed43。
+
+Actual B8000 full30 student rollouts, seed42 first and four bounded seed43 mining supplements for R3; regenerate saved actual student chunks, compare live physical takeover, initialize experiment-local teacher from measured command state; all accepted teacher and independent unchanged-controller oracle strictly place same fruit
+
+teacher strict及oracle strict: accepted均24/24；所有accepted无reset/teleport、break、incidental detach、base motion。
+
+recovery合法unique windows720，schedule实际unique663，重复曝光1337。
+
+frozen schedule4000: original_B2000 / R1=1000 / R2=500 / R3=500。
+
+schedule SHA256: f27c741be8bbe65fdca5d30ab03bf3dae0fd4d1ce71f738d5959b6449d58c548
+
+B8000 checkpoint: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt
+
+step: 8000; SHA256: c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31
+
+先加载 full10k: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt
+
+实际训练初始化全部219个non-VLM参数与B8000完全相等；fresh optimizer state entries0。
+
+代码:
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/mine_student.py
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_teacher.py
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/collect_recovery.py
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_dataset.py
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/prepare_training.py
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/train_R.py
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/launch_job.py
+
+产物:
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recoveries
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_manifest.jsonl
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/data_audit.json
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/schedule_R.jsonl
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/prepared_checks.json
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/protocol.json
+/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/candidate_decisions.jsonl
+
+detached launcher: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python -B /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/launch_job.py training train_R.py --run
+
+实际训练command: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python -u -B /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/train_R.py --run
+
+PID/session: 432423/432423
+
+status: /home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/training/status.json
+
+已确认completed updates: 475; optimizer state entries219; output weight delta 0.00013813748955726624
+
+normalization未重算/未clip，max abs z 2.837231，5sigma outlier0。
+
+R1实际anchor phase: GRASP137/PULL863；future targets: GRASP202/PULL28154/TRANSPORT1644。类别按takeover来源；不假设R1整段是GRASP。
+
+training 已启动，但本轮没有等待训练完成，也没有执行训练后评测。

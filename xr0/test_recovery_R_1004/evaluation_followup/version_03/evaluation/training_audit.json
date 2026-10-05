@@ -1,0 +1,46 @@
+{
+  "status": {
+    "status": "COMPLETE",
+    "pid": 36719,
+    "session": 36719,
+    "completed_updates": 4000,
+    "target_updates": 4000,
+    "time": 1791135283.6093178,
+    "elapsed_seconds": 785.7080842470004,
+    "post_training_evaluation": false
+  },
+  "checkpoint_sha256": "5890b0d08f6e396299a47295f2e8b3987aafb477e7bfd571287d875525cb9575",
+  "checkpoint_step": 4000,
+  "finite_parameters": true,
+  "trainable_tensors": 219,
+  "sources": {
+    "original_B": 2800,
+    "R2": 200,
+    "R1": 500,
+    "R3": 200,
+    "R_continuation_teacher": 300
+  },
+  "loss_by_source": {
+    "R1": {
+      "first500": 0.13798270500677673,
+      "last500": 0.05878848239610141
+    },
+    "R2": {
+      "first500": 0.220866908878088,
+      "last500": 0.13608139723539353
+    },
+    "R3": {
+      "first500": 0.300179123878479,
+      "last500": 0.1964327188869638
+    },
+    "R_continuation_teacher": {
+      "first500": 0.20571806146339935,
+      "last500": 0.20081249962707884
+    },
+    "original_B": {
+      "first500": 0.11981080386724334,
+      "last500": 0.1240906896258033
+    }
+  },
+  "data_audit_sha256": "8f82da3e9a297790e76a2ed9b1c87bff8708ed26ad5931526186d626c02040f7"
+}

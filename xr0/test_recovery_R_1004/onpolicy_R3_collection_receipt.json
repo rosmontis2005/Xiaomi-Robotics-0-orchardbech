@@ -1,0 +1,14 @@
+{
+  "pid": 29630,
+  "session": 29630,
+  "command": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+    "-u",
+    "-B",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/collect_onpolicy_R3.py",
+    "--run"
+  ],
+  "log": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/onpolicy_R3_collection.log",
+  "detached": true,
+  "time": 1791132873.3314407
+}

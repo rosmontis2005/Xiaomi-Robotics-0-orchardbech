@@ -1,0 +1,41 @@
+{
+  "status": {
+    "status": "COMPLETE",
+    "pid": 432423,
+    "session": 432423,
+    "completed_updates": 4000,
+    "target_updates": 4000,
+    "time": 1791108337.5070243,
+    "elapsed_seconds": 756.2650694039912,
+    "post_training_evaluation": false
+  },
+  "checkpoint_sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+  "checkpoint_step": 4000,
+  "finite_parameters": true,
+  "trainable_tensors": 219,
+  "sources": {
+    "original_B": 2000,
+    "R3": 500,
+    "R1": 1000,
+    "R2": 500
+  },
+  "loss_by_source": {
+    "original_B": {
+      "first500": 0.11523263642304866,
+      "last500": 0.13610706130686895
+    },
+    "R1": {
+      "first500": 0.11518026705086232,
+      "last500": 0.0779719681878175
+    },
+    "R2": {
+      "first500": 0.2346772935707122,
+      "last500": 0.14539503716905391
+    },
+    "R3": {
+      "first500": 0.23778503804893816,
+      "last500": 0.0999944747665957
+    }
+  },
+  "data_audit_sha256": "b861a18a4c29f2173e4b6e10e92a0b6c73ec668fcff034e844f22e8ae893edd7"
+}

@@ -18,3 +18,6 @@ outputs/**
 # Preserve the resolved training configuration, not checkpoints or run logs.
 !outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/config.py
 !outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/config.yaml
+
+# R keeps a scoped allowlist for frozen schedules and compact audit evidence.
+!test_recovery_R_1004/.gitignore

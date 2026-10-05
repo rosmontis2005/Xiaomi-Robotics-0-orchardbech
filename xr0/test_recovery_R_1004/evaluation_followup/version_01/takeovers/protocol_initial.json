@@ -1,0 +1,18 @@
+{
+  "selection": [
+    "episode_000023_rng42_R1_s0085",
+    "episode_000329_rng42_R1_s0075",
+    "episode_000613_rng42_R2_s0192",
+    "episode_000703_rng42_R2_s0203",
+    "episode_000613_rng42_R3_s0465",
+    "episode_000613_rng43_R3_s0217"
+  ],
+  "count_per_category": 2,
+  "seeds": [
+    42
+  ],
+  "role": "Training-source recovery mechanism diagnostic; not held-out generalization",
+  "original_B_sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+  "R_checkpoint_sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+  "code_sha256": "f18741762077db25615eaf4c1987f0277703c70a308b874b6a066a3286b96d0f"
+}

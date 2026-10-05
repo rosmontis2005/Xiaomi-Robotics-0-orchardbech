@@ -1,0 +1,149 @@
+{
+  "status": "TRAINING_STARTED_STOP_POINT_REACHED",
+  "source_method": "Actual B8000 full30 student rollouts, seed42 first and four bounded seed43 mining supplements for R3; regenerate saved actual student chunks, compare live physical takeover, initialize experiment-local teacher from measured command state; all accepted teacher and independent unchanged-controller oracle strictly place same fruit",
+  "candidate_counts": {
+    "R1": 12,
+    "R2": 6,
+    "R3": 11
+  },
+  "accepted_counts": {
+    "R1": 12,
+    "R2": 6,
+    "R3": 6
+  },
+  "rejected_counts": {
+    "R1": 0,
+    "R2": 0,
+    "R3": 5
+  },
+  "archived_engineering_failures": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recoveries/episode_000703_rng42_R3_s0879/decision_prefix_assertion_1791105165298846826.json",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recoveries/episode_000974_rng42_R3_s0406/decision_prefix_assertion_1791105165298935024.json",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recoveries/episode_000613_rng42_R3_s0465/decision_prefix_assertion_1791105165298613760.json"
+  ],
+  "total_attempts": 32,
+  "unique_source_episodes": 12,
+  "teacher_strict_success": "24/24 accepted",
+  "oracle_strict_success": "24/24 accepted",
+  "recovery_available_unique_windows": 720,
+  "recovery_schedule_unique_windows": 663,
+  "schedule_counts": {
+    "original_B": 2000,
+    "R3": 500,
+    "R1": 1000,
+    "R2": 500
+  },
+  "schedule_sha256": "f27c741be8bbe65fdca5d30ab03bf3dae0fd4d1ce71f738d5959b6449d58c548",
+  "baseline": {
+    "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/checkpoints/step_8000_trainable.pt",
+    "step": 8000,
+    "sha256": "c2a5c22352b916989cae7026ff9af6e06ce8129cf3611a128930f517f8838c31",
+    "base_checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/outputs/orchard_v1_2650/project_orchardbench/orchard_v1_2650_frozen_vlm_seed42/epoch=0-step=10000.ckpt",
+    "base_sha256": "fdb580fe60d4cdeb1d35b2a7ce0ec2d27798396aa717c23d9648866a09f9d109",
+    "training_summary": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_128_episode_AB_1003/arms/B/training_summary.json"
+  },
+  "main_code": [
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/mine_student.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_teacher.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/collect_recovery.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_dataset.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/prepare_training.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/train_R.py",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/launch_job.py"
+  ],
+  "artifacts": {
+    "recoveries": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recoveries",
+    "manifest": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/recovery_manifest.jsonl",
+    "audit": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/data_audit.json",
+    "schedule": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/schedule_R.jsonl",
+    "prepared": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/prepared_checks.json",
+    "protocol": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/protocol.json",
+    "candidate_decisions": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/candidate_decisions.jsonl"
+  },
+  "launch": {
+    "pid": 432423,
+    "session": 432423,
+    "command": [
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/.venv-orchard/bin/python",
+      "-u",
+      "-B",
+      "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/train_R.py",
+      "--run"
+    ],
+    "log": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/training.log",
+    "detached": true,
+    "time": 1791107579.1720693
+  },
+  "training_status_path": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/training/status.json",
+  "training_manifest": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/training/run_manifest.json",
+  "confirmed_completed_updates": 475,
+  "confirmed_status_snapshot": {
+    "status": "RUNNING",
+    "pid": 432423,
+    "session": 432423,
+    "completed_updates": 475,
+    "target_updates": 4000,
+    "time": 1791107766.1783614,
+    "elapsed_seconds": 184.93640554598824,
+    "latest_update": {
+      "step": 475,
+      "source": "R1",
+      "window_id": "R1/episode_002413_rng42_R1_s0089/frame0022",
+      "flow_loss": 0.09086444973945618,
+      "gradient_norm": 3.2562355995178223,
+      "optimizer_state_entries": 219,
+      "lr": 1e-05,
+      "seconds": 0.14204885299841408,
+      "real_optimizer_update": true
+    },
+    "output_weight_max_absolute_update": 0.00013813748955726624,
+    "real_optimizer_update_verified": true
+  },
+  "initialization_exact_B8000": true,
+  "normalization_unchanged": true,
+  "max_abs_normalized": 2.8372314330629003,
+  "phase_exposure": {
+    "original_B": {
+      "GRASP": 8984,
+      "PULL": 35862,
+      "REACH": 3412,
+      "TRANSPORT": 8073,
+      "DROP": 3412,
+      "DONE": 257
+    },
+    "R3": {
+      "TRANSPORT": 15000
+    },
+    "R1": {
+      "PULL": 28154,
+      "TRANSPORT": 1644,
+      "GRASP": 202
+    },
+    "R2": {
+      "TRANSPORT": 15000
+    }
+  },
+  "actual_anchor_phases": {
+    "original_B": {
+      "REACH": 900,
+      "TRANSPORT": 200,
+      "GRASP": 500,
+      "PULL": 300,
+      "DROP": 100
+    },
+    "R3": {
+      "TRANSPORT": 500
+    },
+    "R1": {
+      "PULL": 863,
+      "GRASP": 137
+    },
+    "R2": {
+      "TRANSPORT": 500
+    }
+  },
+  "training_completion_waited": false,
+  "post_training_evaluation_executed": false,
+  "stop_statement": "training 已启动，但本轮没有等待训练完成，也没有执行训练后评测。",
+  "reported_at": 1791107768.4970133
+}

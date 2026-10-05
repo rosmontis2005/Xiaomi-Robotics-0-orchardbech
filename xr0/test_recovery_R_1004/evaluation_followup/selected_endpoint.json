@@ -1,0 +1,37 @@
+{
+  "version": "version_01",
+  "checkpoint": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_recovery_R_1004/training/checkpoints/step_4000_trainable.pt",
+  "sha256": "a929fd15078b6cc72881c200b43ae4d26425a021f1346627414b08723a7a1a7d",
+  "step": 4000,
+  "rankings": [
+    {
+      "version": "version_01",
+      "score": [
+        1,
+        5,
+        -0.10964440649032403
+      ]
+    },
+    {
+      "version": "version_03",
+      "score": [
+        0,
+        7,
+        -0.042094207229097
+      ]
+    },
+    {
+      "version": "version_02",
+      "score": [
+        0,
+        5,
+        -0.035656251954659816
+      ]
+    }
+  ],
+  "selection_only_development": true,
+  "heldout_not_used": true,
+  "created_unix": 1791137155.1061192,
+  "additional_training_cycles_completed": 2,
+  "remaining_allowed_cycle_not_used": "Two data-distribution revisions did not improve primary placement; freeze endpoint instead of continuing undirected retries."
+}

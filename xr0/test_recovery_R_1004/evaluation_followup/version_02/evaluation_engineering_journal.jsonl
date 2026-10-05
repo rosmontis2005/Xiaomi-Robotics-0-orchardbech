@@ -1,0 +1,1 @@
+{"reason": "Supplementary diagnostic insertion was prepared after evaluation process loaded its source, so it did not execute. Restored exact protocol-pinned executed source SHA; retain planned variant separately. Primary10 cases unchanged and supplementary not reported as run.", "time": 1791132862.0270824}

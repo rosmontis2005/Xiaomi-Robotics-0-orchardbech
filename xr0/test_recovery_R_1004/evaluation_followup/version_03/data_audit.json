@@ -1,0 +1,873 @@
+{
+  "status": "PASS",
+  "candidate_counts": {
+    "R1": 12,
+    "R2": 6,
+    "R3": 11
+  },
+  "accepted_counts": {
+    "R1": 12,
+    "R2": 6,
+    "R3": 6
+  },
+  "rejected_counts": {
+    "R3": 5
+  },
+  "unique_source_episodes": 12,
+  "recovery_available_unique_windows": 593,
+  "true_takeover_available_windows": 401,
+  "teacher_continuation_available_windows": 192,
+  "recovery_schedule_unique_windows": 411,
+  "repeat_draws": 789,
+  "schedule_counts": {
+    "original_B": 2800,
+    "R2": 200,
+    "R1": 500,
+    "R3": 200,
+    "R_continuation_teacher": 300
+  },
+  "original_B_groups": {
+    "GRASP": 700,
+    "PULL": 420,
+    "first1_4": 280,
+    "REACH": 420,
+    "reset": 560,
+    "DROP": 140,
+    "TRANSPORT": 280
+  },
+  "teacher_continuation_groups": {
+    "transport_to_drop": 150,
+    "DROP_transition": 100,
+    "DONE_settle": 50
+  },
+  "schedule_sha256": "3baf11beb93955b10d8c1e1d634707e90553878a23feb03ca55c146fac49258b",
+  "manifest_sha256": "2f857fc7af14bf6ea0225f6fc385f1840209a14ec1d10523ab1f471e52b7b71f",
+  "schedule_seed": 42,
+  "actual_anchor_phase_counts_schedule": {
+    "original_B": {
+      "REACH": 1260,
+      "GRASP": 700,
+      "PULL": 420,
+      "TRANSPORT": 280,
+      "DROP": 140
+    },
+    "R2": {
+      "TRANSPORT": 200
+    },
+    "R1": {
+      "GRASP": 500
+    },
+    "R3": {
+      "TRANSPORT": 200
+    },
+    "R_continuation_teacher": {
+      "DROP": 100,
+      "TRANSPORT": 150,
+      "DONE": 50
+    }
+  },
+  "future_target_phase_counts_schedule": {
+    "original_B": {
+      "REACH": 4772,
+      "GRASP": 12668,
+      "PULL": 50128,
+      "TRANSPORT": 10885,
+      "DROP": 5209,
+      "DONE": 338
+    },
+    "R2": {
+      "TRANSPORT": 6000
+    },
+    "R1": {
+      "GRASP": 654,
+      "PULL": 14346
+    },
+    "R3": {
+      "TRANSPORT": 6000
+    },
+    "R_continuation_teacher": {
+      "DROP": 4594,
+      "DONE": 2110,
+      "TRANSPORT": 2296
+    }
+  },
+  "trajectory_exposure": {
+    "episode_000023_rng42_R1_s0085": 66,
+    "episode_000329_rng42_R1_s0075": 66,
+    "episode_000613_rng42_R1_s0131": 49,
+    "episode_000703_rng42_R1_s0086": 51,
+    "episode_000974_rng42_R1_s0073": 51,
+    "episode_001129_rng42_R1_s0105": 66,
+    "episode_001212_rng42_R1_s0093": 66,
+    "episode_001257_rng42_R1_s0096": 68,
+    "episode_001606_rng42_R1_s0084": 48,
+    "episode_002028_rng42_R1_s0084": 54,
+    "episode_002413_rng42_R1_s0089": 56,
+    "episode_002617_rng42_R1_s0080": 67,
+    "episode_000613_rng42_R2_s0192": 37,
+    "episode_000703_rng42_R2_s0203": 36,
+    "episode_000974_rng42_R2_s0129": 35,
+    "episode_001606_rng42_R2_s0161": 40,
+    "episode_002028_rng42_R2_s0158": 45,
+    "episode_002413_rng42_R2_s0173": 46,
+    "episode_000613_rng42_R3_s0465": 39,
+    "episode_000613_rng43_R3_s0217": 25,
+    "episode_000703_rng42_R3_s0424": 63,
+    "episode_000974_rng42_R3_s0436": 32,
+    "episode_000974_rng43_R3_s0253": 32,
+    "episode_001606_rng42_R3_s0197": 62
+  },
+  "source_exposure_by_category": {
+    "R1": {
+      "episode_000023": 41,
+      "episode_000329": 42,
+      "episode_000613": 42,
+      "episode_000703": 42,
+      "episode_000974": 42,
+      "episode_001129": 41,
+      "episode_001212": 41,
+      "episode_001257": 42,
+      "episode_001606": 42,
+      "episode_002028": 41,
+      "episode_002413": 42,
+      "episode_002617": 42
+    },
+    "R2": {
+      "episode_000613": 34,
+      "episode_000703": 33,
+      "episode_000974": 33,
+      "episode_001606": 33,
+      "episode_002028": 33,
+      "episode_002413": 34
+    },
+    "R3": {
+      "episode_000613": 50,
+      "episode_000703": 50,
+      "episode_000974": 50,
+      "episode_001606": 50
+    },
+    "R_continuation_teacher": {
+      "episode_000023": 25,
+      "episode_000329": 24,
+      "episode_000613": 24,
+      "episode_000703": 25,
+      "episode_000974": 25,
+      "episode_001129": 25,
+      "episode_001212": 25,
+      "episode_001257": 26,
+      "episode_001606": 25,
+      "episode_002028": 25,
+      "episode_002413": 26,
+      "episode_002617": 25
+    }
+  },
+  "window_exposure": {
+    "R1/episode_000023_rng42_R1_s0085/frame0000": 18,
+    "R1/episode_000023_rng42_R1_s0085/frame0002": 11,
+    "R1/episode_000023_rng42_R1_s0085/frame0001": 12,
+    "R1/episode_000329_rng42_R1_s0075/frame0000": 10,
+    "R1/episode_000329_rng42_R1_s0075/frame0001": 18,
+    "R1/episode_000329_rng42_R1_s0075/frame0002": 14,
+    "R1/episode_000613_rng42_R1_s0131/frame0000": 42,
+    "R1/episode_000703_rng42_R1_s0086/frame0000": 15,
+    "R1/episode_000703_rng42_R1_s0086/frame0004": 2,
+    "R1/episode_000703_rng42_R1_s0086/frame0001": 8,
+    "R1/episode_000703_rng42_R1_s0086/frame0003": 11,
+    "R1/episode_000703_rng42_R1_s0086/frame0002": 6,
+    "R1/episode_000974_rng42_R1_s0073/frame0000": 9,
+    "R1/episode_000974_rng42_R1_s0073/frame0003": 11,
+    "R1/episode_000974_rng42_R1_s0073/frame0001": 11,
+    "R1/episode_000974_rng42_R1_s0073/frame0002": 11,
+    "R1/episode_001129_rng42_R1_s0105/frame0000": 5,
+    "R1/episode_001129_rng42_R1_s0105/frame0003": 16,
+    "R1/episode_001129_rng42_R1_s0105/frame0002": 10,
+    "R1/episode_001129_rng42_R1_s0105/frame0001": 6,
+    "R1/episode_001129_rng42_R1_s0105/frame0004": 4,
+    "R1/episode_001212_rng42_R1_s0093/frame0000": 7,
+    "R1/episode_001212_rng42_R1_s0093/frame0001": 9,
+    "R1/episode_001212_rng42_R1_s0093/frame0003": 8,
+    "R1/episode_001212_rng42_R1_s0093/frame0002": 6,
+    "R1/episode_001212_rng42_R1_s0093/frame0006": 3,
+    "R1/episode_001212_rng42_R1_s0093/frame0005": 3,
+    "R1/episode_001212_rng42_R1_s0093/frame0004": 5,
+    "R1/episode_001257_rng42_R1_s0096/frame0000": 23,
+    "R1/episode_001257_rng42_R1_s0096/frame0001": 19,
+    "R1/episode_001606_rng42_R1_s0084/frame0000": 16,
+    "R1/episode_001606_rng42_R1_s0084/frame0001": 26,
+    "R1/episode_002028_rng42_R1_s0084/frame0000": 12,
+    "R1/episode_002028_rng42_R1_s0084/frame0002": 8,
+    "R1/episode_002028_rng42_R1_s0084/frame0001": 12,
+    "R1/episode_002028_rng42_R1_s0084/frame0003": 9,
+    "R1/episode_002413_rng42_R1_s0089/frame0000": 24,
+    "R1/episode_002413_rng42_R1_s0089/frame0001": 18,
+    "R1/episode_002617_rng42_R1_s0080/frame0000": 17,
+    "R1/episode_002617_rng42_R1_s0080/frame0001": 14,
+    "R1/episode_002617_rng42_R1_s0080/frame0002": 11,
+    "R2/episode_000613_rng42_R2_s0192/frame0000": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0018": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0006": 4,
+    "R2/episode_000613_rng42_R2_s0192/frame0027": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0001": 3,
+    "R2/episode_000613_rng42_R2_s0192/frame0019": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0004": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0020": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0014": 3,
+    "R2/episode_000613_rng42_R2_s0192/frame0029": 4,
+    "R2/episode_000613_rng42_R2_s0192/frame0011": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0002": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0017": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0013": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0007": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0026": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0016": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0000": 3,
+    "R2/episode_000703_rng42_R2_s0203/frame0012": 2,
+    "R2/episode_000703_rng42_R2_s0203/frame0021": 3,
+    "R2/episode_000703_rng42_R2_s0203/frame0002": 2,
+    "R2/episode_000703_rng42_R2_s0203/frame0025": 3,
+    "R2/episode_000703_rng42_R2_s0203/frame0009": 2,
+    "R2/episode_000703_rng42_R2_s0203/frame0007": 3,
+    "R2/episode_000703_rng42_R2_s0203/frame0020": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0013": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0010": 2,
+    "R2/episode_000703_rng42_R2_s0203/frame0003": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0005": 2,
+    "R2/episode_000703_rng42_R2_s0203/frame0019": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0008": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0028": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0016": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0017": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0001": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0014": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0023": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0000": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0004": 2,
+    "R2/episode_000974_rng42_R2_s0129/frame0012": 4,
+    "R2/episode_000974_rng42_R2_s0129/frame0007": 4,
+    "R2/episode_000974_rng42_R2_s0129/frame0018": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0008": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0029": 2,
+    "R2/episode_000974_rng42_R2_s0129/frame0005": 3,
+    "R2/episode_000974_rng42_R2_s0129/frame0027": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0016": 3,
+    "R2/episode_000974_rng42_R2_s0129/frame0001": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0019": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0024": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0013": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0028": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0002": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0009": 2,
+    "R2/episode_000974_rng42_R2_s0129/frame0021": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0026": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0006": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0000": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0027": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0021": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0023": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0007": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0028": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0013": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0019": 5,
+    "R2/episode_001606_rng42_R2_s0161/frame0020": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0018": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0014": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0011": 3,
+    "R2/episode_001606_rng42_R2_s0161/frame0015": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0005": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0010": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0006": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0016": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0024": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0003": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0001": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0009": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0025": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0000": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0024": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0026": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0013": 3,
+    "R2/episode_002028_rng42_R2_s0158/frame0015": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0022": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0020": 3,
+    "R2/episode_002028_rng42_R2_s0158/frame0004": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0027": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0014": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0007": 3,
+    "R2/episode_002028_rng42_R2_s0158/frame0019": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0010": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0011": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0002": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0021": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0028": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0005": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0016": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0009": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0000": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0025": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0005": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0008": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0009": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0028": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0003": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0011": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0012": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0024": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0014": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0029": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0022": 3,
+    "R2/episode_002413_rng42_R2_s0173/frame0021": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0004": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0013": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0017": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0006": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0023": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0019": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0020": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0027": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0026": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0000": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0000": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0001": 2,
+    "R3/episode_000613_rng43_R3_s0217/frame0018": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0024": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0026": 3,
+    "R3/episode_000613_rng43_R3_s0217/frame0008": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0004": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0003": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0009": 3,
+    "R3/episode_000613_rng43_R3_s0217/frame0025": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0027": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0010": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0022": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0020": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0016": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0017": 2,
+    "R3/episode_000613_rng43_R3_s0217/frame0013": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0006": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0018": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0028": 2,
+    "R3/episode_000613_rng43_R3_s0217/frame0002": 2,
+    "R3/episode_000613_rng43_R3_s0217/frame0022": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0007": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0004": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0010": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0014": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0015": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0020": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0011": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0013": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0012": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0019": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0005": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0008": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0000": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0020": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0015": 4,
+    "R3/episode_000703_rng42_R3_s0424/frame0027": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0013": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0008": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0017": 4,
+    "R3/episode_000703_rng42_R3_s0424/frame0019": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0016": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0014": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0009": 6,
+    "R3/episode_000703_rng42_R3_s0424/frame0002": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0028": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0021": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0001": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0018": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0024": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0026": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0023": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0010": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0025": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0000": 2,
+    "R3/episode_000974_rng43_R3_s0253/frame0000": 6,
+    "R3/episode_000974_rng42_R3_s0436/frame0024": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0023": 2,
+    "R3/episode_000974_rng42_R3_s0436/frame0025": 3,
+    "R3/episode_000974_rng43_R3_s0253/frame0029": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0006": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0009": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0002": 2,
+    "R3/episode_000974_rng43_R3_s0253/frame0001": 2,
+    "R3/episode_000974_rng43_R3_s0253/frame0018": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0028": 2,
+    "R3/episode_000974_rng43_R3_s0253/frame0003": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0017": 3,
+    "R3/episode_000974_rng43_R3_s0253/frame0024": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0008": 2,
+    "R3/episode_000974_rng43_R3_s0253/frame0013": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0016": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0007": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0003": 3,
+    "R3/episode_000974_rng42_R3_s0436/frame0008": 2,
+    "R3/episode_000974_rng42_R3_s0436/frame0020": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0001": 2,
+    "R3/episode_000974_rng42_R3_s0436/frame0007": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0004": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0021": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0015": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0012": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0010": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0022": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0015": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0000": 4,
+    "R3/episode_001606_rng42_R3_s0197/frame0002": 3,
+    "R3/episode_001606_rng42_R3_s0197/frame0020": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0023": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0013": 4,
+    "R3/episode_001606_rng42_R3_s0197/frame0012": 3,
+    "R3/episode_001606_rng42_R3_s0197/frame0029": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0007": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0014": 3,
+    "R3/episode_001606_rng42_R3_s0197/frame0016": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0009": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0021": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0017": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0001": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0027": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0006": 3,
+    "R3/episode_001606_rng42_R3_s0197/frame0019": 4,
+    "R3/episode_001606_rng42_R3_s0197/frame0015": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0008": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0025": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0011": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0004": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0026": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0028": 1,
+    "R1/episode_000023_rng42_R1_s0085/frame0175": 7,
+    "R1/episode_000023_rng42_R1_s0085/frame0147": 2,
+    "R1/episode_000023_rng42_R1_s0085/frame0161": 3,
+    "R1/episode_000329_rng42_R1_s0075/frame0169": 3,
+    "R1/episode_000329_rng42_R1_s0075/frame0155": 3,
+    "R1/episode_000329_rng42_R1_s0075/frame0141": 6,
+    "R3/episode_000613_rng42_R3_s0465/frame0154": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0094": 3,
+    "R3/episode_000613_rng42_R3_s0465/frame0126": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0140": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0080": 2,
+    "R2/episode_000613_rng42_R2_s0192/frame0070": 1,
+    "R1/episode_000613_rng42_R1_s0131/frame0129": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0113": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0099": 2,
+    "R1/episode_000703_rng42_R1_s0086/frame0163": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0127": 1,
+    "R1/episode_000703_rng42_R1_s0086/frame0149": 4,
+    "R2/episode_000703_rng42_R2_s0203/frame0095": 1,
+    "R1/episode_000974_rng42_R1_s0073/frame0139": 2,
+    "R3/episode_000974_rng42_R3_s0436/frame0146": 3,
+    "R3/episode_000974_rng43_R3_s0253/frame0070": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0056": 1,
+    "R1/episode_000974_rng42_R1_s0073/frame0167": 3,
+    "R3/episode_000974_rng42_R3_s0436/frame0118": 1,
+    "R2/episode_000974_rng42_R2_s0129/frame0126": 1,
+    "R1/episode_001129_rng42_R1_s0105/frame0186": 2,
+    "R1/episode_001129_rng42_R1_s0105/frame0158": 7,
+    "R1/episode_001129_rng42_R1_s0105/frame0172": 4,
+    "R1/episode_001212_rng42_R1_s0093/frame0157": 4,
+    "R1/episode_001212_rng42_R1_s0093/frame0143": 3,
+    "R1/episode_001212_rng42_R1_s0093/frame0129": 6,
+    "R1/episode_001257_rng42_R1_s0096/frame0167": 4,
+    "R1/episode_001257_rng42_R1_s0096/frame0153": 3,
+    "R1/episode_001257_rng42_R1_s0096/frame0181": 5,
+    "R2/episode_001606_rng42_R2_s0161/frame0064": 2,
+    "R1/episode_001606_rng42_R1_s0084/frame0174": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0062": 5,
+    "R3/episode_001606_rng42_R3_s0197/frame0090": 1,
+    "R1/episode_001606_rng42_R1_s0084/frame0146": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0078": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0063": 5,
+    "R1/episode_002028_rng42_R1_s0084/frame0160": 1,
+    "R1/episode_002028_rng42_R1_s0084/frame0174": 3,
+    "R2/episode_002028_rng42_R2_s0158/frame0077": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0091": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0111": 2,
+    "R1/episode_002413_rng42_R1_s0089/frame0141": 2,
+    "R1/episode_002413_rng42_R1_s0089/frame0169": 4,
+    "R2/episode_002413_rng42_R2_s0173/frame0097": 2,
+    "R1/episode_002413_rng42_R1_s0089/frame0155": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0125": 1,
+    "R1/episode_002617_rng42_R1_s0080/frame0157": 2,
+    "R1/episode_002617_rng42_R1_s0080/frame0129": 7,
+    "R1/episode_002617_rng42_R1_s0080/frame0143": 4,
+    "R1/episode_000023_rng42_R1_s0085/frame0186": 3,
+    "R1/episode_000023_rng42_R1_s0085/frame0181": 4,
+    "R1/episode_000023_rng42_R1_s0085/frame0176": 1,
+    "R1/episode_000329_rng42_R1_s0075/frame0170": 2,
+    "R1/episode_000329_rng42_R1_s0075/frame0180": 3,
+    "R1/episode_000329_rng42_R1_s0075/frame0175": 3,
+    "R3/episode_000613_rng42_R3_s0465/frame0165": 1,
+    "R3/episode_000613_rng43_R3_s0217/frame0100": 2,
+    "R1/episode_000613_rng42_R1_s0131/frame0149": 1,
+    "R1/episode_000613_rng42_R1_s0131/frame0154": 1,
+    "R1/episode_000613_rng42_R1_s0131/frame0144": 1,
+    "R3/episode_000613_rng42_R3_s0465/frame0155": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0104": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0138": 3,
+    "R3/episode_000703_rng42_R3_s0424/frame0133": 1,
+    "R1/episode_000703_rng42_R1_s0086/frame0188": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0106": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0128": 1,
+    "R1/episode_000703_rng42_R1_s0086/frame0178": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0095": 2,
+    "R2/episode_000974_rng42_R2_s0129/frame0132": 1,
+    "R1/episode_000974_rng42_R1_s0073/frame0173": 2,
+    "R3/episode_000974_rng42_R3_s0436/frame0152": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0085": 1,
+    "R1/episode_000974_rng42_R1_s0073/frame0168": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0090": 1,
+    "R1/episode_001129_rng42_R1_s0105/frame0187": 2,
+    "R1/episode_001129_rng42_R1_s0105/frame0197": 5,
+    "R1/episode_001129_rng42_R1_s0105/frame0192": 1,
+    "R1/episode_001212_rng42_R1_s0093/frame0163": 1,
+    "R1/episode_001212_rng42_R1_s0093/frame0158": 6,
+    "R1/episode_001212_rng42_R1_s0093/frame0168": 1,
+    "R1/episode_001257_rng42_R1_s0096/frame0187": 6,
+    "R1/episode_001257_rng42_R1_s0096/frame0192": 1,
+    "R1/episode_001257_rng42_R1_s0096/frame0182": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0101": 1,
+    "R2/episode_001606_rng42_R2_s0161/frame0098": 2,
+    "R1/episode_001606_rng42_R1_s0084/frame0185": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0091": 2,
+    "R3/episode_001606_rng42_R3_s0197/frame0096": 1,
+    "R1/episode_001606_rng42_R1_s0084/frame0180": 1,
+    "R2/episode_002028_rng42_R2_s0158/frame0102": 1,
+    "R1/episode_002028_rng42_R1_s0084/frame0180": 2,
+    "R1/episode_002028_rng42_R1_s0084/frame0185": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0097": 1,
+    "R1/episode_002028_rng42_R1_s0084/frame0175": 2,
+    "R2/episode_002413_rng42_R2_s0173/frame0126": 3,
+    "R1/episode_002413_rng42_R1_s0089/frame0175": 1,
+    "R1/episode_002413_rng42_R1_s0089/frame0180": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0131": 1,
+    "R2/episode_002413_rng42_R2_s0173/frame0136": 1,
+    "R1/episode_002413_rng42_R1_s0089/frame0170": 2,
+    "R1/episode_002617_rng42_R1_s0080/frame0168": 4,
+    "R1/episode_002617_rng42_R1_s0080/frame0158": 4,
+    "R1/episode_000023_rng42_R1_s0085/frame0211": 4,
+    "R1/episode_000023_rng42_R1_s0085/frame0206": 1,
+    "R1/episode_000329_rng42_R1_s0075/frame0200": 2,
+    "R1/episode_000329_rng42_R1_s0075/frame0205": 2,
+    "R3/episode_000613_rng42_R3_s0465/frame0185": 1,
+    "R2/episode_000613_rng42_R2_s0192/frame0129": 1,
+    "R1/episode_000613_rng42_R1_s0131/frame0174": 2,
+    "R3/episode_000703_rng42_R3_s0424/frame0158": 1,
+    "R2/episode_000703_rng42_R2_s0203/frame0126": 1,
+    "R3/episode_000703_rng42_R3_s0424/frame0163": 1,
+    "R1/episode_000703_rng42_R1_s0086/frame0213": 1,
+    "R3/episode_000974_rng43_R3_s0253/frame0120": 2,
+    "R1/episode_000974_rng42_R1_s0073/frame0198": 1,
+    "R3/episode_000974_rng42_R3_s0436/frame0182": 1,
+    "R1/episode_001129_rng42_R1_s0105/frame0222": 2,
+    "R1/episode_001129_rng42_R1_s0105/frame0217": 2,
+    "R1/episode_001212_rng42_R1_s0093/frame0188": 2,
+    "R1/episode_001212_rng42_R1_s0093/frame0193": 2,
+    "R1/episode_001257_rng42_R1_s0096/frame0212": 4,
+    "R1/episode_001257_rng42_R1_s0096/frame0217": 1,
+    "R3/episode_001606_rng42_R3_s0197/frame0121": 2,
+    "R2/episode_001606_rng42_R2_s0161/frame0128": 2,
+    "R2/episode_002028_rng42_R2_s0158/frame0127": 1,
+    "R1/episode_002028_rng42_R1_s0084/frame0205": 3,
+    "R2/episode_002413_rng42_R2_s0173/frame0156": 2,
+    "R1/episode_002413_rng42_R1_s0089/frame0200": 2,
+    "R1/episode_002617_rng42_R1_s0080/frame0193": 3,
+    "R1/episode_002617_rng42_R1_s0080/frame0188": 1
+  },
+  "tensor_contract": {
+    "original_B": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          1,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "R1": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          1,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "R2": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          1,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "R3": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          1,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "R_continuation_teacher": {
+      "input_ids": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          1,
+          109
+        ],
+        "dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          192,
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          2,
+          3
+        ],
+        "dtype": "torch.int64"
+      },
+      "action": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "action_mask": {
+        "shape": [
+          1,
+          30,
+          32
+        ],
+        "dtype": "torch.int32"
+      },
+      "state": {
+        "shape": [
+          1,
+          1,
+          32
+        ],
+        "dtype": "torch.float32"
+      }
+    }
+  },
+  "privileged_metadata_mutation_invariance": "PASS",
+  "next_state_indexing": "PASS",
+  "roundtrip": "PASS",
+  "teacher_and_oracle_all_accepted": "PASS (existing full trajectories replayed, labels unchanged)",
+  "new_onpolicy_candidates_used": 0,
+  "new_onpolicy_candidate_rejects": 4,
+  "parent_data_audit_sha256": "b861a18a4c29f2173e4b6e10e92a0b6c73ec668fcff034e844f22e8ae893edd7",
+  "normalization": {
+    "path": "/home/rosmontis/Projects/orchardbench/data/orchard_v1_2650/filtered/action_stats.json",
+    "sha256": "63dec8bbf2249d505358f17beac21d800bd49dee1192c9e79ddf3e1085c9b371",
+    "recomputed": false,
+    "labels_clipped": false,
+    "max_abs_z_by_active_dim": [
+      2.3823342323303223,
+      2.8372316360473633,
+      2.2556333541870117,
+      2.518848180770874,
+      3.9880690574645996,
+      4.099773406982422,
+      2.203014850616455
+    ],
+    "outliers_over_5sigma": []
+  },
+  "sampling_scope": "Only8 declared sparse bridge anchors per trajectory plus first30 onsets. Teacher continuation is separately counted; never labelled as student deviations."
+}

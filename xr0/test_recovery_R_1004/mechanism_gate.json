@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "category_counts": {
+    "R1": 2,
+    "R2": 2,
+    "R3": 2
+  },
+  "teacher_and_student_controller_recovery_pass": true,
+  "checks": [
+    {
+      "candidate_id": "episode_000023_rng42_R1_s0085",
+      "category": "R1",
+      "teacher_strict_success": true,
+      "oracle_strict_success": true,
+      "teacher_no_state_reset": true,
+      "takeover_regeneration": {
+        "body_q": 1.3113021850585938e-06,
+        "body_qd": 9.042210876941681e-05,
+        "joint_q": 1.3667158782482147e-06,
+        "joint_qd": 9.042210876941681e-05
+      },
+      "oracle_total_episode_steps": 560
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R1_s0131",
+      "category": "R1",
+      "teacher_strict_success": true,
+      "oracle_strict_success": true,
+      "teacher_no_state_reset": true,
+      "takeover_regeneration": {
+        "body_q": 2.7418136596679688e-06,
+        "body_qd": 9.662285447120667e-05,
+        "joint_q": 3.471970558166504e-06,
+        "joint_qd": 6.215833127498627e-05
+      },
+      "oracle_total_episode_steps": 591
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R2_s0192",
+      "category": "R2",
+      "teacher_strict_success": true,
+      "oracle_strict_success": true,
+      "teacher_no_state_reset": true,
+      "takeover_regeneration": {
+        "body_q": 1.5497207641601562e-06,
+        "body_qd": 2.889410825446248e-05,
+        "joint_q": 3.888271749019623e-06,
+        "joint_qd": 1.2253232853254303e-05
+      },
+      "oracle_total_episode_steps": 605
+    },
+    {
+      "candidate_id": "episode_000613_rng42_R3_s0465",
+      "category": "R3",
+      "teacher_strict_success": true,
+      "oracle_strict_success": true,
+      "teacher_no_state_reset": true,
+      "takeover_regeneration": {
+        "body_q": 3.623589873313904e-05,
+        "body_qd": 0.00046956539154052734,
+        "joint_q": 5.409121513366699e-05,
+        "joint_qd": 0.0004360079765319824
+      },
+      "oracle_total_episode_steps": 887
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R2_s0129",
+      "category": "R2",
+      "teacher_strict_success": true,
+      "oracle_strict_success": true,
+      "teacher_no_state_reset": true,
+      "takeover_regeneration": {
+        "body_q": 5.960464477539062e-07,
+        "body_qd": 1.7315149307250977e-05,
+        "joint_q": 5.662441253662109e-07,
+        "joint_qd": 2.0638108253479004e-05
+      },
+      "oracle_total_episode_steps": 574
+    },
+    {
+      "candidate_id": "episode_000974_rng42_R3_s0436",
+      "category": "R3",
+      "teacher_strict_success": true,
+      "oracle_strict_success": true,
+      "teacher_no_state_reset": true,
+      "takeover_regeneration": {
+        "body_q": 2.0742416381835938e-05,
+        "body_qd": 0.0008263670024462044,
+        "joint_q": 6.902217864990234e-05,
+        "joint_qd": 0.00034186660195700824
+      },
+      "oracle_total_episode_steps": 859
+    }
+  ]
+}

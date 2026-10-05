@@ -1,0 +1,234 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "candidate": "episode_000023_rng42_R1_s0085",
+      "category": "R1",
+      "tensor_shapes": {
+        "input_ids": [
+          1,
+          109
+        ],
+        "attention_mask": [
+          1,
+          109
+        ],
+        "pixel_values": [
+          192,
+          1536
+        ],
+        "image_grid_thw": [
+          2,
+          3
+        ],
+        "action": [
+          1,
+          30,
+          32
+        ],
+        "action_mask": [
+          1,
+          30,
+          32
+        ],
+        "state": [
+          1,
+          1,
+          32
+        ]
+      },
+      "privileged_metadata_invariant": true
+    },
+    {
+      "candidate": "episode_000613_rng42_R1_s0131",
+      "category": "R1",
+      "tensor_shapes": {
+        "input_ids": [
+          1,
+          109
+        ],
+        "attention_mask": [
+          1,
+          109
+        ],
+        "pixel_values": [
+          192,
+          1536
+        ],
+        "image_grid_thw": [
+          2,
+          3
+        ],
+        "action": [
+          1,
+          30,
+          32
+        ],
+        "action_mask": [
+          1,
+          30,
+          32
+        ],
+        "state": [
+          1,
+          1,
+          32
+        ]
+      },
+      "privileged_metadata_invariant": true
+    },
+    {
+      "candidate": "episode_000613_rng42_R2_s0192",
+      "category": "R2",
+      "tensor_shapes": {
+        "input_ids": [
+          1,
+          109
+        ],
+        "attention_mask": [
+          1,
+          109
+        ],
+        "pixel_values": [
+          192,
+          1536
+        ],
+        "image_grid_thw": [
+          2,
+          3
+        ],
+        "action": [
+          1,
+          30,
+          32
+        ],
+        "action_mask": [
+          1,
+          30,
+          32
+        ],
+        "state": [
+          1,
+          1,
+          32
+        ]
+      },
+      "privileged_metadata_invariant": true
+    },
+    {
+      "candidate": "episode_000613_rng42_R3_s0465",
+      "category": "R3",
+      "tensor_shapes": {
+        "input_ids": [
+          1,
+          109
+        ],
+        "attention_mask": [
+          1,
+          109
+        ],
+        "pixel_values": [
+          192,
+          1536
+        ],
+        "image_grid_thw": [
+          2,
+          3
+        ],
+        "action": [
+          1,
+          30,
+          32
+        ],
+        "action_mask": [
+          1,
+          30,
+          32
+        ],
+        "state": [
+          1,
+          1,
+          32
+        ]
+      },
+      "privileged_metadata_invariant": true
+    },
+    {
+      "candidate": "episode_000974_rng42_R2_s0129",
+      "category": "R2",
+      "tensor_shapes": {
+        "input_ids": [
+          1,
+          109
+        ],
+        "attention_mask": [
+          1,
+          109
+        ],
+        "pixel_values": [
+          192,
+          1536
+        ],
+        "image_grid_thw": [
+          2,
+          3
+        ],
+        "action": [
+          1,
+          30,
+          32
+        ],
+        "action_mask": [
+          1,
+          30,
+          32
+        ],
+        "state": [
+          1,
+          1,
+          32
+        ]
+      },
+      "privileged_metadata_invariant": true
+    },
+    {
+      "candidate": "episode_000974_rng42_R3_s0436",
+      "category": "R3",
+      "tensor_shapes": {
+        "input_ids": [
+          1,
+          109
+        ],
+        "attention_mask": [
+          1,
+          109
+        ],
+        "pixel_values": [
+          192,
+          1536
+        ],
+        "image_grid_thw": [
+          2,
+          3
+        ],
+        "action": [
+          1,
+          30,
+          32
+        ],
+        "action_mask": [
+          1,
+          30,
+          32
+        ],
+        "state": [
+          1,
+          1,
+          32
+        ]
+      },
+      "privileged_metadata_invariant": true
+    }
+  ],
+  "cuda_initialized": false
+}

@@ -1,0 +1,9 @@
+{
+  "created_unix": 1791130981.986386,
+  "primary": "Compare fixed4000 endpoints on dev8 strict task success; ties: held15 count, then lower offline val/reset xyz mean",
+  "auxiliary": "Historical2010600 seed42/43 diagnosis only; not independent scenes",
+  "final": "Freeze a selected endpoint before one paired heldout12 evaluation; no subsequent tuning based on heldout outcomes",
+  "fresh24": "Preserve for future final tests; not run automatically",
+  "maximum_additional_training_cycles": 3,
+  "started_additional_training_cycles": 0
+}

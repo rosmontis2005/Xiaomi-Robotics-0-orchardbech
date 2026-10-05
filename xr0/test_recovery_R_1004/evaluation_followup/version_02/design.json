@@ -1,0 +1,20 @@
+{
+  "parent_version": "version_01",
+  "retry_number": 1,
+  "counts": {
+    "original_B": 3000,
+    "R1": 500,
+    "R2": 250,
+    "R3": 250
+  },
+  "rationale": [
+    "R4000 has at least one dev8 strict success but reset/REACH offline regression",
+    "R1 original anchors are 86.3% PULL, so restrict actual unheld first30 anchors",
+    "Preserve B sampler ratios, all labels and normalization; no extra scenes or GT policy signals"
+  ],
+  "initialization": "full10k -> B8000 (not R4000); fresh AdamW",
+  "updates": 4000,
+  "loss_unchanged": true,
+  "controller_unchanged": true,
+  "heldout_and_fresh24_not_used_for_selection": true
+}
