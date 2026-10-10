@@ -1,0 +1,7 @@
+{
+  "reason": "GRASP first5 closing only 7.6%; reserve half group draws for windows reaching closing within full30. Reserve half drop draws within -15/+10 of release command onset.",
+  "group_ratios_unchanged": true,
+  "only_pretraining_revision": true,
+  "episode_cycles": "balanced shuffled cycles within each mutually exclusive group",
+  "reset_updates": 3000
+}

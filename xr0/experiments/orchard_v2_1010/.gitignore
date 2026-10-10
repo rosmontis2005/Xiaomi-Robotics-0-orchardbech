@@ -1,0 +1,13 @@
+arrays/
+cache/
+tmp/
+checkpoints/
+closed_loop/
+*.log
+*.lock
+evaluations/
+training_steps.jsonl
+initial_schedule.jsonl
+schedule.jsonl
+window_index.jsonl
+visibility_gallery/

@@ -1,0 +1,35 @@
+{
+  "artifacts": {
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/config.json": "7011cadf65f5dbfebbf3dfaa11fa97fdb2fe0ca66d8fc95bccdccd6013f1559c",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/train_manifest.jsonl": "e8627041a98ae73af2df73228f3a537ca1dee64748d593db9adcfb4682a12663",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/validation_manifest.jsonl": "638fb8bf83bcbcef6c198629163bc33e74a6e28a64df347735cf883ad43d153b",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/action_stats.json": "0b9798fdf1b3ca9ec745936883e892b3e6fc6bbbd2c637363cbcc0abe13921e4",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/schedule.jsonl": "a92f30b49fc5b7e3087d0941335092a20ac77e2be81c1eb7c8ac0eed343e701e",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/panels.jsonl": "5088504949a60ce29da58fb16ea342c7c75696911ad374c8aea3893b5ea7d3dd",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/scenes.json": "d5198e795fc802c5946b4a91516c3f4bb19d9eafaf8a84ce868f83613155ed0d",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/schedule_revision.json": "a5ca192779fa125354b2a03056543f831a81b47cd5b922d7790192d01c9342f0",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/dataset.py": "d430645a5a66095ac0059ab485d877e31163ad52409b8f4125606860e9d86671",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/audit.py": "26c222dd6ec89947d1c1db6e5723fe24bbb2a6e9713b6718296a996f859f9f0c",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/prepare.py": "413f264847bce98f6ca0eb3436557bfeac190af11255e4336dcfb63b42a9623a",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/refine_schedule.py": "2fe41eebfe9bc739fb569b82beed483e27578b6e72253b61dc3cdd1d900dadc3",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/train.py": "df492e39afd225547a444cacb1cfaf7e42eab4c3da8e826175a6e97c47044a92",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/visibility.py": "3f0ab2aa38670200e49ce9a08ded9436d2e696d36d46896c21add6f3edbfd1dc",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/analyze.py": "bf78028bd288333d7584242b54c872d7ad7d081add18b012c962513ac4f32a02",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/common.py": "b182b42374b495992fac48c6ebe2e9bba1abb6362ccca53395b4c5c212cbc2ac",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/evaluate.py": "de967c3b4e4c7887b94433bc5c4fbf26fd3f30cf6dd2a8534cd054535bf27fdf",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/experiments/orchard_v2_1010/freeze.py": "03d590ff6b8f4e9e6760690db53c9afcd1a954236557974521e7cca0d3bfc541",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/models/VLA/XR0.py": "353961360187f70ec8cf079cb13fcf26c2a1811ed485e6a15041869142e1d3fe",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/utils/orchard_checkpoint.py": "671d16cb542bf509978cf016831e7b632815a49542ef108a0a171d334fddc6d9",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/mibot/data/collate/custom_collate.py": "32465023198f8706d2885df7d3c6147bb1997bcef5d8b8b5a9a555c63fb494bc",
+    "/home/rosmontis/Projects/orchardbench/treesim/orchard_command.py": "0b38d25a3e076a8bb80ae50435f053a670062c9d8783e298366d9ee9579cfae3",
+    "/home/rosmontis/Projects/orchardbench/treesim/orchard_action.py": "1e54d88994d9f001b2a3db82526561a9eaee38da5a43d51db7edd952d7df3866",
+    "/home/rosmontis/Projects/orchardbench/treesim/student_native_expert.py": "08716024e841fade3c8c2dbc3cce44011cb301365ddbcd8bef86034d47c42978",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/xr0/test_grasp_1004/evaluation/strict_metrics.py": "a6fc4bb4d72faf77fcf54364973af56c72eaa1b7f8a7ea542ed4755ccbc448d6"
+  },
+  "original_accepted_manifest_sha256": "c5739d904455aac3b391761ea6c8f39a5bbdddcd205814c68876a60ea4350ca2",
+  "pretrained": {
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D/model-00002-of-00002.safetensors": "320943fd196c437c21dcd5b9fbc7124811e1b247c01e150ad9b484ec4a86e9cf",
+    "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D/model-00001-of-00002.safetensors": "e28ab50ca6e61bf7452ec22c51eaebcae68530df50cb5ff733093c64f96be0ee"
+  },
+  "created_before_model_results": true
+}

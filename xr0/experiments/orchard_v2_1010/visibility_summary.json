@@ -1,0 +1,40 @@
+{
+  "n": 150,
+  "buckets": {
+    "static_visible_pixels": {
+      "1-16": 115,
+      "0": 35
+    },
+    "wrist_visible_pixels": {
+      "0": 25,
+      "1-16": 8,
+      "17-64": 9,
+      "65-128": 18,
+      ">128": 90
+    },
+    "static_crop_pixels": {
+      "1-16": 115,
+      "0": 35
+    },
+    "static_resized_mask_ge_half": {
+      "1-16": 87,
+      "0": 63
+    },
+    "wrist_crop_pixels": {
+      "0": 33,
+      "1-16": 9,
+      "17-64": 3,
+      "65-128": 23,
+      ">128": 82
+    },
+    "wrist_resized_mask_ge_half": {
+      "0": 33,
+      "1-16": 9,
+      "17-64": 5,
+      "65-128": 23,
+      ">128": 80
+    }
+  },
+  "raw_both_zero": 5,
+  "limitations": "Reset rerender verified target identity/geometry; resized binary-mask coverage is geometric diagnostic, not recognition probability. Phase sheets use saved videos; no exact dynamic target masks."
+}

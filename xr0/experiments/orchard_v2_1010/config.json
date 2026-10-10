@@ -1,0 +1,79 @@
+{
+  "contract": "orchard_cartesian_local_rotvec_width_requested_v2",
+  "max_optimizer_updates": 60000,
+  "batch_size": 1,
+  "gradient_accumulation": 1,
+  "optimizer": "AdamW",
+  "lr": 1e-05,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "weight_decay": 0.1,
+  "eps": 1e-08,
+  "foreach": false,
+  "gradient_clip": 1.0,
+  "seed": 42,
+  "lr_schedule": "constant",
+  "pretrained": "/home/rosmontis/Projects/dualsys/Xiaomi-Robotics-0/checkpoints/Xiaomi-Robotics-0-Calvin-ABCD_D",
+  "initialization": "weights-only; direct source to FP32 non-VLM master",
+  "frozen_vlm": true,
+  "vlm_dtype": "bfloat16",
+  "non_vlm_dtype": "float32",
+  "autocast": "bfloat16",
+  "action_shape": [
+    30,
+    32
+  ],
+  "active_dims": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "training_repeat": 1,
+  "enable_freq": false,
+  "async_train": false,
+  "inference_euler_steps": 5,
+  "execution_horizon": 5,
+  "controller_budget": 2100,
+  "phase_ratios": {
+    "reset_early": 0.2,
+    "grasp": 0.2,
+    "pull": 0.1,
+    "transport": 0.25,
+    "drop": 0.2,
+    "transition": 0.05
+  },
+  "reset_fraction": 0.05,
+  "checkpoints": [
+    0,
+    2000,
+    5000,
+    10000,
+    20000,
+    40000,
+    60000
+  ],
+  "closed_loop_checkpoints": [
+    0,
+    10000,
+    20000,
+    40000,
+    60000
+  ],
+  "fixed_panel_per_split": 256,
+  "fixed_loss_interval": 2000,
+  "resume_interval": 500,
+  "closed_loop_inference_seed": 42,
+  "lateral_offsets": [
+    0,
+    -0.08,
+    0.08
+  ],
+  "strict_observer": "original held15/detach/actual release/non-held/bucket60; reasonable release independent diagnostic",
+  "no_second_training": true
+}
